@@ -122,7 +122,7 @@
                               <col width="15%">
                               <col width="40%">
                             </colgroup>
-                            <tbody id="general_director">
+                            <tbody id="general_director" data-course-title="생물안전 교육,LMO 생물안전 교육,생물안전 3등급 교육,동물실험 교육">
                               <tr>
                                 <td class="info_name">성명</td>
                                 <td id="general_director_name">홍길동</td>
@@ -166,27 +166,7 @@
                                 <td class="info_name">휴대 전화</td>
                                 <td id="general_director_phoneno">010-1234-5678</td>
                                 <td class="info_name">교육이수 정보</td>
-                                <td>
-                                     <div class="col-sm-12">
-                                       <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">생물안전 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                       <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">LMO 생물안전 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                        <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">생물안전 3급 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                        <div class="form-group mBot15 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">동물실험 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                      <a class="btn btn-secondary w350 mBot15 text-center"><i class=""></i>입력취소</a>
-                                    </div>
-                                </td>
+                                <td><div id="director_course_info" class="max_w400 fit_content"></div></td>
                               </tr>
                             </tbody>
                           </table>
@@ -204,7 +184,7 @@
                         <div class="flexBetween items-center w1000">
                             <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구원 등록</h5>
                             <div class="mRight10">
-                              <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary" data-toggle="modal" data-target="#modal_staff"><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>
+                              <a href="javascript:void(0);" onclick="openModelOtherStaff()" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal_staff"><i class=""></i>실험 수행자 선택 추가</a>
                             </div>
                         </div>
                         <div class="header_comment">
@@ -213,9 +193,9 @@
                       
                       <div class="row app_content">
                         <div class="col-sm-9">
-                          <table class="table text-center list_table table-bordered">
+                          <table class="table list_table text-center table-bordered">
                             <colgroup>
-                              <col width="130">  
+                              <col width="*">  
                               <col width="*">    
                               <col width="*">    
                               <col width="*">    
@@ -223,7 +203,7 @@
                               <col width="*">    
                               <col width="*">    
                               <col width="*">    
-                              <col width="130">  
+                              <col width="*">  
                             </colgroup>
                             <thead>
                               <tr>
@@ -247,31 +227,12 @@
                                   <td>연구전공</td>
                                   <td>010-0200-0000</td>
                                   <td>fdfdsfsdfds@naver.com</td>
-                                     <td>
-                                     <div class="col-sm-12 mTop10">
-                                       <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">생물안전 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                       <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">LMO 생물안전 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                        <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">생물안전 3급 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                        <div class="form-group mBot10 row flexMid flexNoWrap">
-                                          <label for="" class="mRight10  w120">동물실험 교육 :</label>
-                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
-                                       </div>
-                                      <a class="btn btn-secondary w350 mBot15 text-center"><i class=""></i>입력취소</a>
-                                    </div>
-                                </td>
+                                                 <td><div id="director_course_info" class="max_w400 fit_content"></div></td>
+
                                   <td> <a class="btn btn-outline-danger">삭제</a></td>
 
                                 </tr>
-                                <tr>
+                                <tr class="text-center ">
                                   <td><input type="radio" name="selected-radio" id="selected-radio" value=""></td>
                                   <td>이종길</td>
                                   <td>연구부서</td>
@@ -279,7 +240,7 @@
                                   <td>연구전공</td>
                                   <td>010-0200-0000</td>
                                   <td>fdfdsfsdfds@naver.com</td>
-                                  <td> <a class="btn btn-outline-success w350 mBot15 text-center mTop10" ><i class=""></i>교육이수 정보 입력</a></td>
+                                  <td> <a class="btn btn-outline-success w350 mBot15 mTop10"><i class=""></i>교육이수 정보 입력</a></td>
                                   <td> <a class="btn btn-outline-danger">삭제</a></td>
                                 </tr>
                               <!-- <tr>

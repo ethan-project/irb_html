@@ -2,34 +2,44 @@ function makeExptUserList() {
    var e = "general_expt",
       t = g_AppItemParser.getItemData(e),
       n = '<tbody id="general_expt">';
-   let a = g_AppItemParser.managedItems[e].member;
-   $.each(a, function (e, a) {
-      (a.info.tmp_phoneno = a.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")), (a.info.tmp_edu_date = a.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"));
-      var r = `general_expt_${a.user_seq}_select_1`,
-         o = `general_expt_${a.user_seq}_select_2`;
-      (combo_html_1 = makeComboList(r, "<option selected disabled>구분 선택</option>", t.dataObj.codes, "exp_type_code")),
-         (combo_html_2 = makeComboList(o, "<option selected disabled>경력</option>", t.dataObj.codes, "exp_year_code")),
-         (n += `\n      <tr data-id="${a.user_seq}" item_name="general_expt">\n        <td>${combo_html_1}</td>\n        <td>${a.info.name}</td>\n        <td>${a.info.dept_str}</td>\n        <td>${a.info.position_str}</td>\n        <td>${a.info.tmp_phoneno}</td>\n        <td>${a.info.email}</td>\n        <td>${a.info.edu_course_num}</td>\n        <td>${a.info.edu_institution_str}</td>\n        <td>${combo_html_2}</td>\n        <td>\n          <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class="far fa-trash-alt mRight5"></i>삭제</a>\n        </td>\n      </tr>`);
+   let r = g_AppItemParser.managedItems[e].member;
+   $.each(r, function (e, t) {
+      (t.info.tmp_phoneno = t.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")), (t.info.tmp_edu_date = t.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"));
+      var r = `general_expt_${t.user_seq}_radio`,
+         a = makeCourseList(t.user_seq);
+      n += `\n      <tr data-id="${t.user_seq}" item_name="general_expt">\n        <td>\n          <div class="custom-radio">\n     
+             <input type="radio" id="${r}" name="exp_manager" value="${t.user_seq}">\n       
+                </div>\n        </td>\n      
+                  <td>${t.info.name}</td>\n   
+                       <td>${t.info.dept_str}</td>\n     
+                          <td>${t.info.position_str}</td>\n    
+                              <td>${t.info.major_field_str}</td>\n   
+                                   <td>${t.info.tmp_phoneno}</td>\n     
+                                      <td>${t.info.email}</td>\n      
+                                        <td>${a}</td>\n        <td>\n     
+                                             <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class=""></i>삭제</a>\n        </td>\n      </tr>`;
    }),
-      (n +=
-         '\n  <tr class="add_row">\n    <td colspan="11">\n      <a href="javascript:void(0);" onclick="openModelOtherStaff();" class="btn btn-xs btn-outline-primary" ><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>\n    </td>\n  </tr>\n  </tbody>'),
+      // (n +=
+      //    '\n  <tr class="add_row">\n    <td colspan="11">\n      <a href="javascript:void(0);" onclick="openModelOtherStaff();" class="btn btn-xs btn-outline-primary" ><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>\n    </td>\n  </tr>\n  </tbody>'),
       $("#general_expt").replaceWith(n),
-      $.each(a, function (e, n) {
-         var a = `general_expt_${n.user_seq}_select_1`,
-            r = `general_expt_${n.user_seq}_select_2`;
-         $("#" + a)
-            .find(`option[value='${n.exp_type_code}'`)
-            .attr("selected", !0),
-            $("#" + r)
-               .find(`option[value='${n.exp_year_code}'`)
-               .attr("selected", !0),
-            $("#" + a).on("change", function () {
-               t.changeAttrForMember(n.user_seq, "exp_type_code", this.value);
-            }),
-            $("#" + r).on("change", function () {
-               t.changeAttrForMember(n.user_seq, "exp_year_code", this.value);
-            });
+      $.each(r, function (e, t) {
+         var n = `general_expt_${t.user_seq}_radio`;
+         t.animal_mng_flag > 0 && $("#" + n).prop("checked", !0), t.edu_course && mappingCourseList(t.user_seq, JSON.parse(t.edu_course));
+      }),
+      $("input[name=exp_manager]").on("change", function () {
+         var e = Number($(this).val());
+         t.changeAttrForMember(e, "animal_mng_flag", 1);
       });
+}
+function makeCourseList(e) {
+   let t = $("#general_director").data("course-title")?.split(","),
+      n = `\n    <button class="btn btn-xs btn-outline-primary course_${e} show w100p" data-toggle="collapse" data-target=".course_${e}">교육이수 정보 입력</button>\n    <div class="course_${e} collapse">`;
+   for (course_no in t)
+      n += `\n      <div class="flexMid text-left mBot10">\n       
+            <span class="w110 left mRight5">${t[course_no]}</span>\n      
+            <input type="text" id="${t[course_no]}_${e}" class="form-control form-control-sm w150">\n    
+        </div>\n    `;
+   return (n += `\n      <button class="btn btn-xs btn-outline-secondary w100p mTop5" data-toggle="collapse" data-target=".course_${e}">입력 취소</button>\n    </div>`), n;
 }
 function openModelOtherStaff() {
    makeOtherStaffList(), $("#modal_staff").modal("show");
@@ -62,6 +72,9 @@ function makeOtherStaffList() {
             if (null == n.dataObj.saved_data) return;
             (n.dataObj.saved_data.data[0].animal_mng_flag = 0), n.initMembers();
             let a = n.dataObj.saved_data.data[0];
+            if (a) {
+               console.log("a", a);
+            }
             (a.info.tmp_phoneno = a.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")),
                (a.info.tmp_edu_date = a.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3")),
                $("#general_director_name").text(a.info.name),
@@ -73,6 +86,8 @@ function makeOtherStaffList() {
                $("#general_director_major_field").text(a.info.major_field_str),
                $("#general_director_edu_course_num").text(a.info.edu_course_num),
                $("#general_director_phoneno").text(a.info.tmp_phoneno);
+            $("#director_course_info").append(makeCourseList(n.user_seq));
+
             var r = "general_director_select";
             (combo_html = makeComboList(r, "<option selected disabled>경력 선택</option>", n.dataObj.codes, "exp_year_code")),
                $("#" + r).replaceWith(combo_html),
