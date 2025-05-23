@@ -159,6 +159,7 @@ br+.footer_item::before  { content:none !important; }
 .center     { text-align:center; }
 
 /* Spacing */
+.mLeft-10     { margin-left:-10px      !important; }
 .mLeft0     { margin-left:0      !important; }
 .mLeft3     { margin-left:3px    !important; }
 .mLeft4     { margin-left:4px    !important; }
@@ -347,6 +348,7 @@ br+.footer_item::before  { content:none !important; }
 .w400       { width:400px !important; }
 .w450       { width:450px !important; }
 .w500       { width:500px !important; }
+.w1000       { width:1000px !important; }
 
 .w174       { width:174px !important; }
 

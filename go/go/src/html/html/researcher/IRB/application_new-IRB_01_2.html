@@ -186,7 +186,6 @@
                                        </div>
                                       <a class="btn btn-secondary w350 mBot15 text-center"><i class=""></i>입력취소</a>
                                     </div>
-
                                 </td>
                               </tr>
                             </tbody>
@@ -201,15 +200,20 @@
                         <div class="app_divider sub_divider"></div>
                       </div>
 
-                      
-                      <div class="row app_header">
-                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구원 등록</h5>
-                        <div class="header_comment"></div>
+                      <div class="row app_header justify-between">
+                        <div class="flexBetween items-center w1000">
+                            <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구원 등록</h5>
+                            <div class="mRight10">
+                              <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary" data-toggle="modal" data-target="#modal_staff"><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>
+                            </div>
+                        </div>
+                        <div class="header_comment">
+                        </div>
                       </div>
                       
                       <div class="row app_content">
                         <div class="col-sm-9">
-                          <table class="table text-center list_table">
+                          <table class="table text-center list_table table-bordered">
                             <colgroup>
                               <col width="130">  
                               <col width="*">    
@@ -220,24 +224,65 @@
                               <col width="*">    
                               <col width="*">    
                               <col width="130">  
-                              <col width="80">   
                             </colgroup>
                             <thead>
                               <tr>
-                                <th>연구자 구분</th>
+                                <th>실험 담당</th>
                                 <th>성명</th>
                                 <th>부서</th>
                                 <th>직책</th>
+                                <th>전공 분야</th>
                                 <th>휴대전화</th>
                                 <th>Email</th>
-                                <th>교육이수 번호</th>
-                                <th>교육기관명</th>
-                                <th>동물실험<br>경력년수</th>
+                                <th>교육이수 정보</th>
                                 <th>삭제</th>
                               </tr>
                             </thead>
                             <tbody id="general_expt">
-                              <tr>
+                                <tr>
+                                  <td><input type="radio" name="selected-radio" id="selected-radio" value=""></td>
+                                  <td>이종길</td>
+                                  <td>연구부서</td>
+                                  <td>연구원</td>
+                                  <td>연구전공</td>
+                                  <td>010-0200-0000</td>
+                                  <td>fdfdsfsdfds@naver.com</td>
+                                     <td>
+                                     <div class="col-sm-12 mTop10">
+                                       <div class="form-group mBot10 row flexMid flexNoWrap">
+                                          <label for="" class="mRight10  w120">생물안전 교육 :</label>
+                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
+                                       </div>
+                                       <div class="form-group mBot10 row flexMid flexNoWrap">
+                                          <label for="" class="mRight10  w120">LMO 생물안전 교육 :</label>
+                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
+                                       </div>
+                                        <div class="form-group mBot10 row flexMid flexNoWrap">
+                                          <label for="" class="mRight10  w120">생물안전 3급 교육 :</label>
+                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
+                                       </div>
+                                        <div class="form-group mBot10 row flexMid flexNoWrap">
+                                          <label for="" class="mRight10  w120">동물실험 교육 :</label>
+                                          <input type="text" name="" maxlength="100" class="form-control w230" id="" placeholder="" />
+                                       </div>
+                                      <a class="btn btn-secondary w350 mBot15 text-center"><i class=""></i>입력취소</a>
+                                    </div>
+                                </td>
+                                  <td> <a class="btn btn-outline-danger">삭제</a></td>
+
+                                </tr>
+                                <tr>
+                                  <td><input type="radio" name="selected-radio" id="selected-radio" value=""></td>
+                                  <td>이종길</td>
+                                  <td>연구부서</td>
+                                  <td>연구원</td>
+                                  <td>연구전공</td>
+                                  <td>010-0200-0000</td>
+                                  <td>fdfdsfsdfds@naver.com</td>
+                                  <td> <a class="btn btn-outline-success w350 mBot15 text-center mTop10" ><i class=""></i>교육이수 정보 입력</a></td>
+                                  <td> <a class="btn btn-outline-danger">삭제</a></td>
+                                </tr>
+                              <!-- <tr>
                                 <td>
                                   <select class="form-control btn-outline-primary small_select" id="">
                                     <option selected="selected" disabled="disabled">구분 선택</option>
@@ -264,12 +309,12 @@
                                 <td>
                                   <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class="far fa-trash-alt mRight5"></i>삭제</a>
                                 </td>
-                              </tr>
-                              <tr class="add_row">
+                              </tr> -->
+                              <!-- <tr class="add_row">
                                 <td colspan="11">
                                   <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary" data-toggle="modal" data-target="#modal_staff"><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>
                                 </td>
-                              </tr>
+                              </tr> -->
                             </tbody>
                           </table>
                         </div>
