@@ -1,7 +1,11 @@
 function makeExptUserList() {
    var e = "general_expt",
-      t = g_AppItemParser.getItemData(e),
-      n = '<tbody id="general_expt">';
+      t = g_AppItemParser.getItemData(e);
+   savedData = t.dataObj.saved_data.data;
+   // if (savedData) {
+   //    console.log("savedData", savedData);
+   // }
+   n = '<tbody id="general_expt">';
    let r = g_AppItemParser.managedItems[e].member;
    $.each(r, function (e, t) {
       (t.info.tmp_phoneno = t.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")), (t.info.tmp_edu_date = t.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"));
@@ -24,12 +28,24 @@ function makeExptUserList() {
       $("#general_expt").replaceWith(n),
       $.each(r, function (e, t) {
          var n = `general_expt_${t.user_seq}_radio`;
-         t.animal_mng_flag > 0 && $("#" + n).prop("checked", !0), t.edu_course && mappingCourseList(t.user_seq, JSON.parse(t.edu_course));
+         // if (t) {
+         //    console.log("t", t);
+         //    console.log("e", e);
+         // }
+         t.animal_mng_flag > 0 && $("#" + n).prop("checked", !0), console.log("savedData[e]?.edu_course", typeof savedData);
+         savedData.length > 0 && savedData[e]?.edu_course && mappingCourseList(t.user_seq, JSON.parse(savedData[e]?.edu_course));
       }),
       $("input[name=exp_manager]").on("change", function () {
          var e = Number($(this).val());
          t.changeAttrForMember(e, "animal_mng_flag", 1);
       });
+}
+function mappingCourseList(e, t) {
+   let n = !1;
+   $.each(t, function (t, r) {
+      $(`input[id='${t}_${e}']`).val(r), r && (n = !0);
+   }),
+      n && $(`.course_${e}`).click();
 }
 function makeCourseList(e) {
    let t = $("#general_director").data("course-title")?.split(","),
@@ -43,6 +59,11 @@ function makeCourseList(e) {
 }
 function openModelOtherStaff() {
    makeOtherStaffList(), $("#modal_staff").modal("show");
+   var e = "general_expt";
+   let t = g_AppItemParser.managedItems[e].member;
+   $.each(t, function (t, n) {
+      g_AppItemParser.managedItems[e].member[t].edu_course = makeEduCourse(n.user_seq);
+   });
 }
 function onStaffSelect(e) {
    $.each(g_other_userlist, function (t, n) {
@@ -72,6 +93,7 @@ function makeOtherStaffList() {
             if (null == n.dataObj.saved_data) return;
             (n.dataObj.saved_data.data[0].animal_mng_flag = 0), n.initMembers();
             let a = n.dataObj.saved_data.data[0];
+
             if (a) {
                console.log("a", a);
             }
@@ -85,8 +107,10 @@ function makeOtherStaffList() {
                $("#general_director_edu_instition").text(a.info.edu_institution_str),
                $("#general_director_major_field").text(a.info.major_field_str),
                $("#general_director_edu_course_num").text(a.info.edu_course_num),
-               $("#general_director_phoneno").text(a.info.tmp_phoneno);
-            $("#director_course_info").append(makeCourseList(n.user_seq));
+               $("#general_director_phoneno").text(a.info.tmp_phoneno),
+               $("#director_course_info").append(makeCourseList(a.user_seq)),
+               // gán 생물안전 교육, LMO 생물안전 교육, 생물안전 3등급 교육,동물실험 교육 data từ api (연구 책임자)
+               a.edu_course && mappingCourseList(a.user_seq, JSON.parse(a.edu_course));
 
             var r = "general_director_select";
             (combo_html = makeComboList(r, "<option selected disabled>경력 선택</option>", n.dataObj.codes, "exp_year_code")),

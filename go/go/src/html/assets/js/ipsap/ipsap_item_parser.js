@@ -43,9 +43,9 @@ class ItemParser {
   }
 
   save(submitFlag, callbackFunc, userData) {
-
     var main_this = this;
     var sendingObj = this.getSendingObj();
+    console.log("sendingObj", sendingObj)
     var sendingJson = JSON.stringify(sendingObj);
     var queryParamStr = "";
 
@@ -238,6 +238,7 @@ class ItemParser {
   }
 
   getItemFromList(listObj, item_name, no_save) {
+    console.log("listObj, item_name, no_save", listObj, item_name, no_save)
     try {
       for (const [key, value] of Object.entries(listObj)) {
         if (key == item_name) return new ItemData(item_name, value, this, no_save);
@@ -673,6 +674,10 @@ class ItemParser {
       let dataObj = {};
 
       var old_item_data = this.getItemData(key);
+      console.log("item_type_str", old_item_data?.dataObj?.info?.item_type_str)
+            console.log("itemName", old_item_data?.itemName)
+            console.log("key", key)
+
       if (old_item_data == undefined) continue;
 
       if (old_item_data.dataObj.info.item_type_str == "animal") {
@@ -1044,9 +1049,11 @@ class ItemParser {
 
       if (key == 'general_director' || key == 'general_expt') {
         for (const memberObj of value.member) {
-          if ('edu_course' in memberObj) {
+          console.log("'edu_course' in memberObj", 'edu_course' in memberObj)
+          // if ('edu_course' in memberObj) {
+            console.log(" makeEduCourse(memberObj.user_seq) makeEduCourse(memberObj.user_seq)",  makeEduCourse(memberObj.user_seq))
             memberObj.edu_course = makeEduCourse(memberObj.user_seq);
-          }
+          // }
         }
       }
 
@@ -1209,6 +1216,7 @@ class ItemParser {
         if (ret[key] == undefined) ret[key] = dataObj;
       }
     }
+
     return ret;
   }
 
