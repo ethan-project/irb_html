@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="page_body_box flexCentral flexColumn hidden">
+                <div class="page-title-box">
+                  <div class="row">
+                    <div class="col text-center">
+                      <h4 class="page-title noBread">신청서 작성</h4>
+                      <div class="comment">심사 유형과 서식에 맞는 신청서를 선택해 주세요.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border_area flexTop">
+                  
+                  <div class="card cmte_type IACUC">
+                    <div class="card-header">
+                      <h4 class="card-title">IACUC</h4>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush border">
+                        <a href="javascript:void(0);" onclick="newApplication(IPSAP.JUDGE_TYPE.IACUC, IPSAP.APPLICATION_TYPE.NEW);" class="list-group-item"><i class="fas fa-plus-square mRight10"></i>신규 승인 신청</a>
+                        
+                        
+                        
+                        <a href="javascript:void(0);" onclick="getAppReapplyList(IPSAP.JUDGE_TYPE.IACUC)" class="list-group-item"><i class="fas fa-sync-alt mRight10"></i>재승인 신청</a>
+                        
+                        <a href="javascript:void(0);" onclick="getAppChangeList(IPSAP.JUDGE_TYPE.IACUC)" class="list-group-item"><i class="fas fa-edit mRight10"></i>변경 승인 신청</a>
+                        <a href="javascript:void(0);" onclick="getAppReqRetryList(IPSAP.JUDGE_TYPE.IACUC)" class="list-group-item"><i class="fas fa-sync-alt mRight10"></i>보완후 재심</a>
+                      </ul>
+                    </div>
+                  </div>
+
+                  
+                  <div class="card cmte_type IBC">
+                    <div class="card-header">
+                      <h4 class="card-title">IBC</h4>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush border">
+                        <a href="javascript:void(0);" onclick="newApplication(IPSAP.JUDGE_TYPE.IBC, IPSAP.APPLICATION_TYPE.NEW);" class="list-group-item"><i class="fas fa-plus-square mRight10"></i>신규 심의 신청</a>
+                        <a href="javascript:void(0);" onclick="getAppChangeList(IPSAP.JUDGE_TYPE.IBC)" class="list-group-item"><i class="fas fa-edit mRight10"></i>변경 심의 신청</a>
+                        <a href="javascript:void(0);" onclick="getAppReqRetryList(IPSAP.JUDGE_TYPE.IBC)" class="list-group-item"><i class="fas fa-sync-alt mRight10"></i>보완후 재심</a>
+                      </ul>
+                    </div>
+                  </div> 
+
+                  
+                  <div class="card cmte_type IRB">
+                    <div class="card-header">
+                      <h4 class="card-title">IRB</h4>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush border">
+                        <a href="javascript:void(0);" onclick="newApplication(IPSAP.JUDGE_TYPE.IRB, IPSAP.APPLICATION_TYPE.NEW);" class="list-group-item"><i class="fas fa-plus-square mRight10"></i>신규 승인 신청</a>
+                        <a href="javascript:void(0);" onclick="getAppChangeList(IPSAP.JUDGE_TYPE.IRB)" class="list-group-item"><i class="fas fa-edit mRight10"></i>변경 승인 신청</a> 
+                        <a href="javascript:void(0);" onclick="getAppReapplyList(IPSAP.JUDGE_TYPE.IRB)" class="list-group-item"><i class="fas fa-sync-alt mRight10"></i>지속심의/중간보고 신청</a>
+                      </ul>
+                    </div>
+                  </div> 
+
+                </div>
+                <div class="mTop20">
+                  <div class="row">
+                    <div class="col text-center">
+                      <div class="comment">※ <span class="blue_deep fw_bold">IACUC 반입 보고서, 종료 보고서</span>는<br>
+                        <span class="fw_bold">승인 후 관리</span> &gt; <span class="fw_bold blue_vivid">실험 수행 및 서류</span>에서 작성할 수 있습니다.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_spinner" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered flexCentral flexColumn">
+        <div class="spinner-border text-light" role="status"></div>
+        <div class="spinner_comment mTop15">저장중 입니다.</div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_available_reapply" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">실험 계획서 재승인 신청</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">재승인을 신청할 실험 계획서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  현재 재승인 신청이 가능한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 실험 계획서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                
+                <a href="#" onclick="viewHiddenApp(this);" class="list-group-item text-center"><i class="fas fa-angle-double-down text-secondary mr-2"></i>더보기</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">실험 계획서를 선택하면, 재승인 신청이 시작됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_available_change" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">실험계획서 변경승인 신청</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">변경 승인을 신청할 실험 계획서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  현재 변경 승인 신청이 가능한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 실험 계획서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                <a href="#" onclick="viewHiddenApp(this);" class="list-group-item text-center view_more"><i class="fas fa-angle-double-down text-secondary mr-2"></i>더보기</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">실험 계획서를 선택하면, 변경 승인 신청이 시작됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_request_retry" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">실험계획서 보완후 재심 신청</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">보완후 재심을 신청할 실험 계획서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  현재 보안후 재심 신청이 가능한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 실험 계획서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">실험 계획서를 선택하면, 보완후 재심 신청이 시작됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_available_IBC_change" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">IBC 변경심의 신청</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">변경 심의를 신청할 심의 신청서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  현재 변경 심의 신청이 가능한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 심의 신청서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 1</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 2</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 3</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 4</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 5</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 6</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 7</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 8</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 9</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 10</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">심의 신청서를 선택하면, 변경 심의 신청이 시작됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_available_IRB_change" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">IRB 변경심의 신청</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">변경 심의를 신청할 심의 신청서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  현재 변경 심의 신청이 가능한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 심의 신청서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 1</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 2</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 3</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 4</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 5</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 6</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 7</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 8</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 9</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 10</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">심의 신청서를 선택하면, 변경 심의 신청이 시작됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_available_IRB_renew" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">IRB 지속심의/중간보고 신청</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">지속심의/중간보고를 신청할 심의 신청서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  현재 지속심의/중간보고 신청이 가능한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 심의 신청서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 1</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 2</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 3</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 4</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 5</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 6</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 7</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 8</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 9</a>
+                <a href="/html/researcher/IBC/experiment_list-IBC_new_change.html" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>IBC 신규 심의 신청서 10</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">심의 신청서를 선택하면, 변경 심의 신청이 시작됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new.js"></script>
+
+  </body>
+
+</html>

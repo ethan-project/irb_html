@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/rating/themes/rating.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="chairman">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="app_anchor" id="top_anchor"></div>
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    
+                    <h4 class="page-title">보고서 - 최종 심의</h4>
+                    <div class="comment">동물실험 종료 보고서를 최종 심의합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    
+                    
+                    
+                    <div class="apptype_title">종료 보고</div>
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    
+                    <h4 class="card-title flexMid">동물실험 종료 보고서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <div class="step active">최종 심의</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  
+                  <div class="mTop20 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>실험 계획서 원안 (기본 정보)</h4>
+                    <div class="header_comment mLeft20">
+                      <button type="button" onclick="newWindowPopup('./_popup_application-info.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>실험 계획서 원안 보기</button>
+                    </div>
+                  </div>
+                  <div class="mTop10" id="coding_title_area">
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">국문 :</label>
+                      <span class="data" id="name_ko">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">영문 :</label>
+                      <span class="data" id="name_en">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">연구 기간 :</label>
+                      <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                    </div>
+                  </div>
+
+                  <div class="mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>동물실험 실행 요약</h4>
+                    <div class="comment_box red_box mTop10">
+                      <ul class="pLeft15 mBot0">
+                        <li><span class="underline">동물 실험이 종료되면</span> 동물 실험계획에 대한 <span class="underline">종료 보고서를 작성</span>하여 제출해야 합니다.</li>
+                        <li>동물 실험 계획 시 예측한 실험결과와 상관없이 종료 보고서를 작성해야 합니다.</li>
+                        <li><span class="red">연구기간 중에 실험을 종료하는 경우</span>에도 <span class="underline">종료 보고서를 제출</span>해야 합니다.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <table class="table list_table mTop10">
+                    <colgroup>
+                      <col width="20%">
+                      <col width="30%">
+                      <col width="50%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="text-center">구분</th>
+                        <th class="border_left indentCenter">승인 사항
+                          <span class="label trace_label mLeft10 hidden" data-toggle="modal" data-target="#modal_trace">변경 내역 보기</span>
+                        </th>
+                        <th>실제 사항</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">실험 기간</td>
+                        <td class="border_left indentCenter">-</td>
+                        <td class="data">-</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">동물종 (계통)</td>
+                        <td class="border_left indentCenter">-</td>
+                        <td class="data">-</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">미생물학적등급</td>
+                        <td class="border_left indentCenter">-</td>
+                        <td class="data">-</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">총사용 두수</td>
+                        <td class="border_left indentCenter"><span>-</span></td>
+                        <td class="data">-</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">고통등급</td>
+                        <td class="border_left indentCenter">-</td>
+                        <td class="data">-</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">안락사 방법</td>
+                        <td class="border_left indentCenter">-</td>
+                        <td class="data">-</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">기타사항</td>
+                        <td class="border_left indentCenter">-</td>
+                        <td class="data">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  
+                  <div class="sign_area reviewConfirm">
+                    <div class="checkbox checkbox-primary mTop20">
+                      <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                      <label class="custom-control-label blue_deep">위와 같이 종료 보고서를 제출합니다.</label>
+                    </div>
+                    <div class="mTop10 flexMid">
+                      <div class="agree_date">-년 -월 -일</div>
+                      <div class="agree_author mTop0 mLeft20">연구 책임자<span class="reviewer">-</span></div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="comment_box blue_box review_box mTop30">
+                    <div class="">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>최종 심의</h4>
+                      <div class="header_comment">동물 실험 종료 보고서 [<span class="red underline register_num2">-</span>]의 최종 심의 결과를 입력해주세요.</div>
+                    </div>
+                    <div class="mTop10" id="final_judge_result">
+                      <div class="custom-control custom-radio flexMid">
+                        <input type="radio" name="radio_100_group" value="0" class="custom-control-input" id="radio_101" data-custom-toggle="visible">
+                        <label class="custom-control-label w80" for="radio_101">승인</label>
+                      </div>
+                      <div class="custom-control custom-radio flexMid mTop10">
+                        <input type="radio" name="radio_100_group" value="0" class="custom-control-input" id="radio_104" data-custom-toggle="visible">
+                        <label class="custom-control-label w80" for="radio_104">반려</label>
+                        <input type="text" class="form-control form-control-sm hidden">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_confirm_review"><i class="fas fa-check mRight5"></i>최종 심의 완료</a>
+                  <a href="./reviewConfirm_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_confirm_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">최종 심의 완료 및 승인 결과 통보</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">동물실험 종료 보고서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-FF</span>]에 대한<br>IACUC의 최종 심의 결과를 통보하시겠습니까?
+                </h5>
+                <span class="bg-soft-secondary"><span class="blue_deep">심의 완료 시</span>, 최종 심의 결과가 저장되고,<br>연구 책임자에게 심의 결과가 발송됩니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="javascript:void(0);" onclick="onClickFinalFinishSubmit();" class="btn btn-primary">심의 완료 및 통보</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    
+    <div class="modal fade" id="modal_trace" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_staff_1">실험 계획 변경 내역</h5>
+          </div>
+          
+          <div class="modal-body">
+
+            
+            <div class="card-body pTop0" id="trace_changing">
+
+              
+              <div class="changing-list">
+                <div class="flexMid mBot10">
+                  <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>변경 내역 <span class="list-num">1</span></h4>
+                  <div class="header_comment mLeft25">변경 승인일:<span class="blue_deep mLeft10 list-date">2021-03-02</span></div>
+                </div>
+                
+                
+                  
+                  <ul class="regular_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="blue_deep mRight5">[정규]</span><span>동물 종 변경</span></label>
+                        <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_03-1');"><i class="fas fa-link mRight5"></i><span>실험 계획서: 3-1. 실험 동물의 종류</span></a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 내용:</label>
+                          <div class="data">
+                            <div>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data"><span>3</span><span class="unit mHside5">/</span><span>3</span></span>
+                              <i class="fas fa-arrow-right mHside10"></i>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data"><span>6</span><span class="unit mHside5">/</span><span>6</span></span>
+                            </div>
+                            <div>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data">3<span class="unit mHside5">/</span>3</span>
+                              <i class="fas fa-arrow-right mHside10"></i>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data">6<span class="unit mHside5">/</span>6</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">동물 1의 사료 수급 자료.hwp</a>
+                      </div>
+                    </li>
+                  </ul>
+                  
+                  <ul class="regular_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="blue_deep mRight5">[정규]</span> <span>생물학적 위해 물질 사용</span></label>
+                        <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_04-1');"><i class="fas fa-link mRight5"></i><span>실험 계획서: 4-1. 실험 물질 투여 유무</span></a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 내용:</label>
+                          <div class="data">실험 동물을 변경합니다.</div>
+                        </div>
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">-</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  
+                  
+                  <ul class="simple_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="green mRight5">[신속]</span><span>연구책임자 또는 실험수행자의 변경</span></label>
+                        <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_01-5');"><i class="fas fa-link mRight5"></i><span>실험 계획서: 1-5. 실험 수행자</span></a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <div class="data">
+                            <label class="flex_1">변경 내용:</label>
+                            <div class="flexMid">
+                              <table class="table text-center list_table mVside10">
+                                <colgroup>
+                                  <col width="50">   
+                                  <col width="50">   
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*" class="hidden">  
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th class="pHside0">연구<br>책임자</th>
+                                    <th class="pHside0">실험동물<br>관리담당</th>
+                                    <th>성명</th>
+                                    <th>부서</th>
+                                    <th>직책</th>
+                                    <th>전공<br>분야</th>
+                                    <th>휴대전화</th>
+                                    <th class="hidden">Email</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="white_bg_50">
+                                  <tr>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" value="1">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" value="1">
+                                      </div>
+                                    </td>
+                                    <td>홍길동</td>
+                                    <td>약학과</td>
+                                    <td>학부생</td>
+                                    <td>수의학</td>
+                                    <td>010-1234-5678</td>
+                                    <td class="hidden">manager@company.co.kr</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="task_director_old" value="2">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="exp_manager_old" value="2" checked="checked" readonly="readonly">
+                                      </div>
+                                    </td>
+                                    <td>홍길동2</td>
+                                    <td>약학과</td>
+                                    <td>학부생</td>
+                                    <td>수의학</td>
+                                    <td>010-1234-5678</td>
+                                    <td class="hidden">manager@company.co.kr</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="task_director_old" value="3" disabled="disabled">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="exp_manager_old" value="3" disabled="disabled">
+                                      </div>
+                                    </td>
+                                    <td>홍길동2</td>
+                                    <td>약학과</td>
+                                    <td>학부생</td>
+                                    <td>수의학</td>
+                                    <td>010-1234-5678</td>
+                                    <td class="hidden">manager@company.co.kr</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <i class="fas fa-arrow-right flexCenter_self fs_big mHside5"></i>
+                              <table class="table text-center list_table thick mVside10">
+                                <colgroup>
+                                  <col width="50">   
+                                  <col width="50">   
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*">    
+                                  <col width="*" class="hidden">  
+                                </colgroup>
+                                <thead class="dark">
+                                  <tr>
+                                    <th class="pHside0">연구<br>책임자</th>
+                                    <th class="pHside0">실험동물<br>관리담당</th>
+                                    <th>성명</th>
+                                    <th>부서</th>
+                                    <th>직책</th>
+                                    <th>전공<br>분야</th>
+                                    <th>휴대전화</th>
+                                    <th class="hidden">Email</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="white_bg">
+                                  <tr>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" value="1">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" value="1">
+                                      </div>
+                                    </td>
+                                    <td>홍길동</td>
+                                    <td>약학과</td>
+                                    <td>학부생</td>
+                                    <td>수의학</td>
+                                    <td>010-1234-5678</td>
+                                    <td class="hidden">manager@company.co.kr</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="task_director_new" value="2">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="exp_manager_new" value="2" checked="checked" readonly="readonly">
+                                      </div>
+                                    </td>
+                                    <td>홍길동2</td>
+                                    <td>약학과</td>
+                                    <td>학부생</td>
+                                    <td>수의학</td>
+                                    <td>010-1234-5678</td>
+                                    <td class="hidden">manager@company.co.kr</td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="task_director_new" value="3" disabled="disabled">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="custom-radio">
+                                        <input type="radio" name="exp_manager_new" value="3" disabled="disabled">
+                                      </div>
+                                    </td>
+                                    <td>홍길동2</td>
+                                    <td>약학과</td>
+                                    <td>학부생</td>
+                                    <td>수의학</td>
+                                    <td>010-1234-5678</td>
+                                    <td class="hidden">manager@company.co.kr</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">동물 1의 사료 수급 자료.hwp</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  
+                  <ul class="simple_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="green mRight5">[신속]</span>실험기간의 변경 또는 3개월 이내의 실험기간 연장</label>
+                        <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_01-2');"><i class="fas fa-link mRight5"></i>실험 계획서: 1-2. 연구기간 및 동물실험 횟수</a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 내용:</label>
+                          <div class="data">
+                            <div>
+                              <span class="data">2021년 3월 3일 ~ 2021년 12월 31일</span>
+                              <i class="fas fa-arrow-right mHside10"></i>
+                              <span class="data">2021년 3월 3일 ~ 2022년 3월 31일</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">유효한 비교값 측정을 위한 기간이 필요합니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">대조군의 유효한 실험결과.hwp</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+            </div>
+            
+          </div>
+          
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./reviewConfirm_list-review_end.js"></script>
+
+  </body>
+
+</html>

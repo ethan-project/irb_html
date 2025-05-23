@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content flexCentral">
+        <div class="container-fluid limited_width">
+
+          <div class="row">
+            <div class="col-lg-12">
+
+              
+              <div class="card thick mTop30 hidden" id="board_edit">
+                <div class="card-header bd_content">
+                  <div class="card-title flexCentral"><img src="/assets/images/common/IPSAP_logo_top_fitted.png" class="mRight20">자료실</div>
+                </div>
+                <div class="card-body bd_content">
+
+                  <div class="bd_content">
+
+                    <div class="flexMid">
+                      <label for="input_01" class="w80 mBot0">제목</label>
+                      <input type="text" maxlength="50" class="form-control flex_1" id="input_01" placeholder="50자 이내로 입력해 주세요." value="중요 자료 12">
+                    </div>
+                    <div class="bd_file flexMid mTop10">
+                      <label for="file_01" class="w80 mBot0">첨부 파일</label>
+                      <a href="#" class="data">IPSAP 서비스 매뉴얼.pdf.pdf</a>
+                      <a href="#" class="btn btn-outline-danger mLeft20" id="btn_old_file_delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                    </div>
+                    <div class="flexMid mTop10">
+                      <label class="w80 mBot0"></label>
+                      <div class="custom-file flex_1">
+                        <input type="file" name="ref_file_1" class="custom-file-input" id="file_01" value="IPSAP 서비스 소개.pdf">
+                        <label class="custom-file-label" for="file_01" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                      </div>
+                      <a href="#" class="btn btn-outline-danger mLeft5" id="btn_new_file_delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                    </div>
+                    <div class="mTop10 flexTop">
+                      <label for="input_02" class="w80 mBot0 mTop5">상세 내용</label>
+                      <textarea rows="10" class="flex_1 narrow_padding" id="input_02" placeholder="상세 내용을 입력해 주세요.">
+실험동물 보호와 심사절차의 표준화를 위한 통합 플랫폼 IPSAP의 웹사이트 사용 매뉴얼입니다.
+</textarea>
+                    </div>
+
+                  </div>
+
+                  <div class="bd_btn text-center">
+                    <a href="#" class="btn" id="btn_save">저장</a>
+                    <a href="#" class="btn btn-outline-danger mLeft10" data-toggle="modal" data-target="#modal_remove_content">삭제</a>
+                    <a href="javascript:window.history.back();" class="btn btn-outline-secondary mLeft50">취소</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_remove_content" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">자료 삭제</h5>
+          </div>
+
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">선택한 자료를 <span class="red">삭제</span> 하시겠습니까?</h5>
+                <h6 class="lh_vivid">삭제한 자료는 복구할 수 없습니다.</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+
+            <a href="#" class="btn btn-primary" data-dismiss="modal" id="btn_delete">삭제</a>
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_alert" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">입력사항 확인</h5>
+          </div>
+
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">자료를 <span class="red">등록할 수 없습니다.</span></h5>
+                <span class="bg-soft-secondary">제목과 첨부파일은 필수 입력사항입니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary" data-dismiss="modal">확인</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_confirm" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">자료실 저장 알림</h5>
+          </div>
+
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                <i class="typcn typcn-info-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">자료를 등록하시겠습니까?</h5>
+                <span class="bg-soft-secondary">확인을 누르시면 자료가 등록됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary" data-dismiss="modal" id="btn_confirm">확인</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/const.js"></script>
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+    
+    <script src="../../html/admin/common_admin.js"></script>
+
+    
+    <script src="/html/admin/board_02-edit.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<div class="card-header">
+  <div class="comment">※ <span class="underline">복수의 기관에 가입된 경우</span> <span class="blue_vivid">기관 정보를 반드시 확인하고 신청과 심사를 진행</span>하시기 바랍니다.</div>
+</div>
+<div class="card-body pVside20 pHside40">
+
+    <div class="row">
+      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 소속 정보</h4>
+      <div class="header_comment mLeft20">
+        <button type="button" class="btn btn-danger btn_xxs noMinWidth" data-toggle="modal" data-target="#modal_all_joining">
+          <i class="fas fa-user-tie mRight8"></i>나의 타기관 소속 정보
+        </button>
+      </div>
+    </div>
+    
+    <div class="row pHside10 mTop10">
+      <table class="table info_table info_table_content">
+        <colgroup>
+          <col width="200">
+          <col width="*">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="info_name">소속 기관명</td>
+            <td class="data"><span class="gray mRight5">(국문)</span><span>-</span><span class="mLeft20"></span><span class="gray mRight5">(영문)</span><span>-</span></td>
+          </tr>
+          <tr>
+            <td class="info_name">기관 코드</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">참여 권한</td>
+            <td class="data"><span class="label auth_label">-</span></td>
+          </tr>
+          <tr>
+            <td class="info_name">소속 부서</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">직책</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">전공 분야</td>
+            <td class="data">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row mTop15">
+      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 계정 정보</h4>
+      <div class="header_comment"></div>
+    </div>
+    
+    <div class="row pHside10 mTop10">
+      <table class="table info_table info_table_content">
+        <colgroup>
+          <col width="200">
+          <col width="*">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="info_name">성명</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">연락처</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">Email</td>
+            <td class="data">-</td>
+          </tr>
+          
+          <tr>
+            <td class="info_name">정보수신 동의</td>
+            <td>
+              <div class="flexMid">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" name="agree_form_03-1" class="custom-control-input" id="agree_to_receive-email" value="1" onclick="return false">
+                  <label class="custom-control-label" for="agree_to_receive-email">Email 수신 동의</label>
+                </div>
+                <div class="custom-control custom-checkbox mLeft20">
+                  <input type="checkbox" name="agree_form_03-2" class="custom-control-input" id="agree_to_receive-sms" value="1" onclick="return false">
+                  <label class="custom-control-label" for="agree_to_receive-sms">SMS 수신 동의</label>
+                </div>
+                <div class="custom-control custom-checkbox mLeft20">
+                  <input type="checkbox" name="agree_form_03-3" class="custom-control-input" id="agree_to_open-info" value="1" onclick="return false">
+                  <label class="custom-control-label" for="agree_to_open-info">이름, 연락처 등 정보 공개</label>
+                </div>
+              </div>
+              <div class="comment mTop10">
+                ※ 입력한 개인정보는 심사와 관련된 행정절차 및 정보안내 외에는 사용하지 않습니다.<br>
+                ※ 정보수신 동의를 해주셔야 심사절차와 관련된 안내가 가능합니다.
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row mTop15">
+      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 동물실험 교육 정보</h4>
+      <div class="header_comment"></div>
+    </div>
+    
+    <div class="row pHside10 mTop10">
+      <table class="table info_table info_table_content">
+        <colgroup>
+          <col width="200">
+          <col width="*">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td class="info_name">교육 일자</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">교육 기관명</td>
+            <td class="data">-</td>
+          </tr>
+          <tr>
+            <td class="info_name">교육 이수번호</td>
+            <td class="data">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <div class="app_anchor" id="bottom_anchor"></div>
+</div>
+
+
+
+<div class="card-footer flexCenter">
+  <a href="./info_me-edit.html" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-edit mRight5"></i>정보 수정</a>
+  <a href="./info_me-withdraw.html" class="btn btn-danger waves-effect waves-light mLeft10"><i class="fas fa-sign-out-alt mRight5"></i>기관 사용자 탈퇴</a>
+</div>
+
+
+
+
+<div class="modal fade" id="modal_change_pw" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title m-0 text-white" id="modalAddress_1">비밀번호 변경</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="la la-times"></i></span>
+        </button>
+      </div>
+
+      <div class="modal-body pHside30">
+        <form>
+          <label for="old_password" class="mBot3">현재의 비밀번호</label>
+          <input type="password" maxlength="20" class="form-control form-control-sm" name="old_pw" id="old_password" placeholder="나의 현재 비밀번호">
+          <label for="new_password" class="mBot3 mTop10">새로운 비밀번호</label>
+          <input type="password" maxlength="20" class="form-control form-control-sm" id="new_password" name="new_pw" placeholder="영문, 숫자, 특수문자 (최소8자리)">
+          <label for="renew_password" class="mBot3 mTop10">비밀번호 재입력</label>
+          <div>
+            <input type="password" maxlength="20" class="form-control form-control-sm" id="renew_password" placeholder="비밀번호 재입력">
+            
+            <div hidden class="blue_deep mTop5">비밀번호가 일치합니다.</div>
+            
+            <div hidden class="red mTop5">비밀번호가 일치하지 않습니다.</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="btn_change_pw" class="btn btn-primary btn-sm">비밀번호 변경</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">취소</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<script src="/assets/vendors/crypto-js/core.js"></script>
+<script src="/assets/vendors/crypto-js/enc-base64.js"></script>
+<script src="/assets/vendors/crypto-js/md5.js"></script>
+<script src="/assets/vendors/crypto-js/evpkdf.js"></script>
+<script src="/assets/vendors/crypto-js/cipher-core.js"></script>
+<script src="/assets/vendors/crypto-js/sha1.js"></script>
+<script src="/assets/vendors/crypto-js/hmac.js"></script>
+<script src="/assets/vendors/crypto-js/pbkdf2.js"></script>
+<script src="/assets/vendors/crypto-js/aes.js"></script>
+
+<script src="/html/common/inc_info_me/all_info_me.js"></script>

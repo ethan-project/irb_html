@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="en" class="mm-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+    
+    <title>test@test.com</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin &amp; Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  <body class="officer mm-show hidden_guide enlarge-menu enlarge-menu-all" data-fold-menu="1490">
+
+    <div id="leftsidenav" class="left-sidenav mm-active active"><div class="left-sidenav in mm-show" id="officer">
+  
+  <div class="brand active">
+    <a href="http://192.168.100.27:8210/html/officer/dashboard.html" class="logo active"><img height="60" src="../../sample_logo (2).png"></a>
+  </div>
+  
+
+  <div class="menu-content h-100 mm-active active" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px 0px -70px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;"><div class="simplebar-content" style="padding: 0px 0px 70px;">
+    <ul class="metismenu left-sidenav-menu in mm-show">
+      <li class="menu-label top_left_bar mt-0">나의 권한: <span class="label auth_label mLeft5">행정 간사</span></li>
+      <li class="active">
+        <a href="http://192.168.100.27:8210/html/officer/dashboard.html" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid align-self-center menu-icon"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg><span>Dashboard</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+      </li>
+      <li>
+        <a href="javascript: void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers align-self-center menu-icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg><span>신청서 관리</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+        <ul class="nav-second-level mm-collapse" aria-expanded="false">
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/application_list.html"><i class="ti-control-record"></i>전체 신청/보고서</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/reviewOffice_list.html"><i class="ti-control-record"></i>행정 검토</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/reviewClose_list.html"><i class="ti-control-record"></i>심사 진행</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/reviewConfirm_list.html"><i class="ti-control-record"></i>최종 심의</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript: void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive align-self-center menu-icon"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg><span>승인 후 관리</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+        <ul class="nav-second-level mm-collapse" aria-expanded="false">
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/experimenting_list.html"><i class="ti-control-record"></i>진행중인 실험</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/experiment_list.html"><i class="ti-control-record"></i>전체 실험</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="http://192.168.100.27:8210/html/officer/inspection_list.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3 align-self-center menu-icon"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg><span>승인 후 점검</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+      </li>
+
+      
+      <li class="menu-label top_left_bar mt-0 mTop25">기관 서비스 관리</li>
+      <li>
+        <a href="http://192.168.100.27:8210/html/officer/info_org.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-self-center menu-icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>기관 정보 관리</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+      </li>
+      <li>
+        <a href="http://192.168.100.27:8210/html/officer/staff_list.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-self-center menu-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>사용자 관리</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+      </li>
+      <li>
+        <a href="javascript: void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart align-self-center menu-icon"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span>결제 관리</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+        <ul class="nav-second-level mm-collapse" aria-expanded="false">
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/info_payment_new.html"><i class="ti-control-record"></i>멤버십 결제</a></li>
+          
+          <li class="nav-item" id="forPayTestLi"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/info_payment_new_test.html"><i class="ti-control-record"></i>멤버십 결제(테스트)</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://192.168.100.27:8210/html/officer/info_payment_list.html"><i class="ti-control-record"></i>결제 이력</a></li>
+        </ul>
+      </li>
+      
+      <li class="menu-label top_left_bar mt-0 mTop25">정보 관리</li>
+      <li>
+        <a href="http://192.168.100.27:8210/html/officer/info_me.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user align-self-center menu-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>나의 정보 관리</span><span class="menu-arrow"><i class="fas fa-angle-right"></i></span></a>
+      </li>
+    </ul>
+  </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></div>
+</div></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar">
+<div class="topbar">
+  
+  <nav class="navbar-custom flexMid">
+
+    <div class="top_left flexMid">
+      <ul class="list-unstyled topbar-nav mb-0" id="nav_btn">
+        <li>
+          <button class="nav-link button-menu-mobile">
+            <i class="fas fa-angle-double-left align-self-center topbar-icon"></i>
+          </button>
+        </li>
+      </ul>
+
+      <div class="auth_menu">
+        <div class="auth_title">나의 권한:</div>
+        <a class="btn_auth officer" href="http://192.168.100.27:8210/html/officer/dashboard.html"><i class="fas fa-check-circle onlyActive mRight5"></i>행정 간사</a>
+        
+        <a class="btn_auth researcher" href="http://192.168.100.27:8210/html/researcher/dashboard.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>연구원</a>
+        <a class="btn_auth committee" href="http://192.168.100.27:8210/html/committee/review_list.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>심사 위원</a>
+        <a class="btn_auth chairman" href="http://192.168.100.27:8210/html/chairman/dashboard.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>위원장</a>
+      </div>
+    </div>
+
+    
+    <ul class="list-unstyled flexMid" id="gnb_menu">
+      <li><a href="http://192.168.100.27:8210/html/member/board_01-list.html" class="">공지사항</a></li>
+      <li><a href="http://192.168.100.27:8210/html/member/board_02-list.html" class="">자료실</a></li>
+    </ul>
+
+    <ul class="list-unstyled topbar-nav mb-0">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="http://192.168.100.27:8210/html/officer/dashboard.html#">
+          <span class="user_info text-right mRight5"><div class="user_name">테스터</div><div class="user_depart">스프린텍 ()</div></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user user_icon icon-dual mRight10"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="http://192.168.100.27:8210/html/officer/info_me.html"><i class="fas fa-user-circle align-self-center mRight5"></i>나의 정보</a>
+          <a class="dropdown-item" id="inst_list" href="http://192.168.100.27:8210/html/officer/dashboard.html#" data-toggle="modal" data-target="#modal_all_joining"><i class="fas fa-user-circle align-self-center mRight5"></i>타기관 소속 정보</a>
+          <div class="dropdown-divider mb-0"></div>
+          <a class="dropdown-item" href="http://192.168.100.27:8210/index.html" id="ipsapLogout"><i class="fas fa-sign-out-alt align-self-center mRight5"></i>Logout</a>
+        </div>
+      </li>
+    </ul>
+    
+
+  </nav>
+  
+
+  
+  <div class="modal fade" id="modal_all_joining" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 타 기관 정보</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="la la-times"></i></span>
+          </button>
+        </div>
+
+        <div class="modal-body pHside30 inst_list">
+          <div class="text-center joining_comment">현재 접속한 기관 외에 내가 <span class="red">소속된 타기관이 없습니다.</span></div>
+
+          
+
+          
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+
+
+        <div class="toast_full_top">
+          <div id="msg_alert" class="toast hide" data-autohide="false" data-delay="10000">
+            <div class="toast-header">
+              <i class="fas fa-exclamation-triangle red mRight10"></i>
+              <span class="comment">
+                진행중인 실험의 <span class="red">승인 후 점검 위원</span>으로 지정되었습니다. "<span class="underline">승인 후 점검</span>" 메뉴에서 <span class="red">승인 후 점검표</span>를 작성해 주세요.
+              </span>
+              <button type="button" class="close fs_same mLeft10 mTop3" data-dismiss="toast"><i class="fas fa-times red"></i></button>
+              <a href="http://192.168.100.27:8210/html/officer/inspection_list.html" class="btn btn-danger btn_xxs mLeft30">승인 후 점검표 작성<i class="fas fa-arrow-right mLeft10"></i></a>
+            </div>
+          </div>
+        </div></div>
+
+
+
+  <script src="../../core.js.다운로드"></script>
+  <script src="../../enc-base64.js.다운로드"></script>
+  <script src="../../sha256.js.다운로드"></script>
+  <script src="../../md5.js.다운로드"></script>
+  <script src="../../evpkdf.js.다운로드"></script>
+  <script src="../../cipher-core.js.다운로드"></script>
+  <script src="../../sha1.js.다운로드"></script>
+  <script src="../../hmac.js.다운로드"></script>
+  <script src="../../pbkdf2.js.다운로드"></script>
+  <script src="../../aes.js.다운로드"></script>
+
+
+        <div class="toast_full_top">
+          <div id="msg_alert" class="toast hide" data-autohide="false" data-delay="10000">
+            <div class="toast-header">
+              <i class="fas fa-exclamation-triangle red mRight10"></i>
+              <span class="comment">
+                진행중인 실험의 <span class="red">승인 후 점검 위원</span>으로 지정되었습니다. "<span class="underline">승인 후 점검</span>" 메뉴에서 <span class="red">승인 후 점검표</span>를 작성해 주세요.
+              </span>
+              <button type="button" class="close fs_same mLeft10 mTop3" data-dismiss="toast"><i class="fas fa-times red"></i></button>
+              <a href="http://192.168.100.27:8210/html/officer/inspection_list.html" class="btn btn-danger btn_xxs mLeft30">승인 후 점검표 작성<i class="fas fa-arrow-right mLeft10"></i></a>
+            </div>
+          </div>
+        </div></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="dashboard_box flexCentral">
+                <div class="area_wrapper flexRow">
+                  <div class="page-title-box w100p">
+                    <div class="row">
+                      <div class="col text-center">
+                        <span class="page-title noBread">신청 및 실험 현황</span>
+                        <a href="http://192.168.100.27:8210/html/officer/dashboard.html#" class="list_filters mLeft20" data-filter="application"><i class="mdi mdi-file-outline"></i>신청서 보기</a>
+                        <a href="http://192.168.100.27:8210/html/officer/dashboard.html#" class="list_filters mLeft5" data-filter="report"><i class="mdi mdi-finance"></i>보고서 보기</a>
+                        <a href="http://192.168.100.27:8210/html/officer/dashboard.html#" class="btn btn_xxs committee_filters IACUC mLeft30" data-filter="only_IACUC">IACUC<span class="label_num IACUC_num">8</span></a>
+                        <a href="http://192.168.100.27:8210/html/officer/dashboard.html#" class="btn btn_xxs committee_filters IBC mLeft3" data-filter="only_IBC">IBC<span class="label_num IBC_num">0</span></a>
+                        <a href="http://192.168.100.27:8210/html/officer/dashboard.html#" class="btn btn_xxs committee_filters IRB mLeft3" data-filter="only_IRB" style="display: none;">IRB<span class="label_num IRB_num">0</span></a>
+                        <button type="button" class="btn btn-outline-secondary btn_xxs mLeft20" id="statistics_trigger" data-toggle="collapse" data-target="#statistics"><i class="fas fa-chart-bar mRight5"></i>승인 통계 보기</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="app_area">
+                    <div class="myApps supplement_apps stacked">
+                      <div class="myApp_title">
+                        <span>보완중</span><span class="myApp_cnt supplement_cnt">3</span><span class="divider">|</span><span class="title_desc">신청자가 보완중인 신청서</span>
+                      </div>
+                      <div class="myApp_body supplement_apps_body" data-comment="보완중인 신청서가">
+                        <div class="card round_10 committee_box_shadow IACUC report supplement">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-finance"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">반입 보고</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 1</div>
+                              <div class="rcv_num">TET-2021-IA0001-P1</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">32일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-outline-danger btn_xxs" onclick="onClickApplication(0 , 0)">보완중</a>
+                          </div>
+                        </div>
+                        <div class="card round_10 committee_box_shadow IACUC application supplement">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-file-upload-outline"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">변경 승인</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 1</div>
+                              <div class="rcv_num">TET-2021-IA0006-M1</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">28일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-outline-danger btn_xxs" onclick="onClickApplication(0 , 1)">보완중</a>
+                          </div>
+                        </div>
+                        <div class="card round_10 committee_box_shadow IACUC application supplement">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-file-upload-outline"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">신규 승인</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 3</div>
+                              <div class="rcv_num">TET-2021-IA0013-00</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">14일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-outline-danger btn_xxs" onclick="onClickApplication(0 , 2)">보완중</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="myApps checking_apps">
+                      <div class="myApp_title flexMid flexBetween">
+                        <span class="flexMid">행정 검토<span class="myApp_cnt checking_cnt">5</span></span><a href="http://192.168.100.27:8210/html/officer/reviewOffice_list.html" class="btn btn-outline-secondary btn_xxs">자세히 보기<i class="fas fa-arrow-right mLeft5"></i></a>
+                      </div>
+                      <div class="myApp_body checking_apps_body" data-comment="검토중인 신청서가">
+                        <div class="card round_10 committee_box_shadow IACUC report">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-finance"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">승인후 점검</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 1</div>
+                              <div class="rcv_num">TET-2021-IA0006-E1</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">12일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-primary btn_xxs" onclick="onClickApplication(1, 0)">행정 검토</a>
+                          </div>
+                        </div>
+                        <div class="card round_10 committee_box_shadow IACUC application">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-file-upload-outline"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">변경 승인</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 2</div>
+                              <div class="rcv_num">TET-2021-IA0017-M2</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">8일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-primary btn_xxs" onclick="onClickApplication(1, 1)">행정 검토</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="myApps judge_ing_apps">
+                      <div class="myApp_title flexMid flexBetween">
+                        <span class="flexMid">심사 진행<span class="myApp_cnt judge_ing_cnt">4</span></span><a href="http://192.168.100.27:8210/html/officer/reviewClose_list.html" class="btn btn-outline-secondary btn_xxs">자세히 보기<i class="fas fa-arrow-right mLeft5"></i></a>
+                      </div>
+                      <div class="myApp_body judge_ing_apps_body" data-comment="심사중인 신청서가">
+                        <div class="card round_10 committee_box_shadow IACUC application delayed">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-file-upload-outline"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">신규 승인</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 4</div>
+                              <div class="rcv_num">TET-2021-IA0002-00</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">32일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-danger btn_xxs" onclick="onClickApplication(2, 0)">심사 설정 변경</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="myApps final_apps stacked">
+                      <div class="myApp_title flexMid flexBetween">
+                        <span class="flexMid">최종 심의<span class="myApp_cnt final_cnt">6</span></span><a href="http://192.168.100.27:8210/html/officer/reviewConfirm_list.html" class="btn btn-outline-secondary btn_xxs">자세히 보기<i class="fas fa-arrow-right mLeft5"></i></a>
+                      </div>
+                      <div class="myApp_body final_apps_body" data-comment="심의중인 신청서가">
+                        <div class="card round_10 committee_box_shadow IACUC application">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-file-upload-outline"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">변경 승인</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 2</div>
+                              <div class="rcv_num">TET-2021-IA0009-M1</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">26일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-primary btn_xxs" onclick="onClickApplication(3, 2)">최종 심의</a>
+                          </div>
+                        </div><div class="card round_10 committee_box_shadow IACUC report">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-finance"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">반입 보고</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">동물실험 연구 2</div>
+                              <div class="rcv_num">TET-2021-IA0006-P1</div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">12일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn btn btn-primary btn_xxs" onclick="onClickApplication(3, 3)">최종 심의</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  
+                  <div id="statistics" class="collapse">
+                    <div class="table_box mBot10">
+                      <table class="table text-center list_table noMargin">
+                        <colgroup>
+                          <col width="16%">    
+                          <col width="16%">    
+                          <col width="17%">    
+                          <col width="17%">    
+                          <col width="17%">    
+                          <col width="17%">    
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th rowspan="2">심의 위원회</th>
+                            <th rowspan="2" class="border_left_thick">승인 총계</th>
+                            <th colspan="4" class="border_left_thick">승인 상세</th>
+                          </tr>
+                          <tr>
+                            <th class="border_left_thick">승인</th>
+                            <th class="border_left">조건부 승인</th>
+                            <th class="border_left">보완후 재심</th>
+                            <th class="border_left">반려</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="IACUC"><td class="committee_color">IACUC</td>
+      <td data-num="20" class="border_left_thick">20</td>
+      <td data-num="14" class="border_left_thick">14</td>
+      <td data-num="4" class="border_left">4</td>
+      <td data-num="2" class="border_left">2</td>
+      <td data-num="0" class="border_left">0</td></tr>
+                          <tr class="IBC"><td class="committee_color">IBC</td>
+      <td data-num="0" class="border_left_thick">0</td>
+      <td data-num="0" class="border_left_thick">0</td>
+      <td data-num="0" class="border_left">0</td>
+      <td data-num="0" class="border_left">0</td>
+      <td data-num="0" class="border_left">0</td></tr>
+                          <tr class="IRB" style="display: none;"><td class="committee_color">IRB</td>
+      <td data-num="0" class="border_left_thick">0</td>
+      <td data-num="0" class="border_left_thick">0</td>
+      <td data-num="0" class="border_left">0</td>
+      <td data-num="0" class="border_left">0</td>
+      <td data-num="0" class="border_left">0</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+
+                  
+
+                  <div class="exp_area">
+                    <div class="myExps">
+                      <a href="./experiment_list.html" class="card round_10 committee_box_shadow IACUC">
+                        <div class="card-header flexMid">
+                          <div class="card_icon committee_color_onHover"><i class="mdi mdi-flask-outline"></i></div>
+                          <div class="card_title">
+                            <div class="exp_info">
+                              <span class="flexMid">
+                                <span class="label committee_bg">IACUC</span>
+                                <div class="card-title">동물실험 연구 2</div>
+                                <div><span class="rcv_num">HUM-2021-IA0002</span><span class="title_date">(2020-05-01 ~ 2021-10-30)</span></div>
+                              </span>
+                              <span class="app_type committee_color_onHover end_date">2021-10-30<i class="mdi mdi-arrow-collapse-right mLeft5"></i></span>
+                            </div>
+                            <div class="exp_period">
+                              <div class="progress mTop5">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%">1차 년도</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 5%">재승인</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 8%">2차 년도</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./experiment_list.html" class="card round_10 committee_box_shadow IACUC">
+                        <div class="card-header flexMid">
+                          <div class="card_icon committee_color_onHover"><i class="mdi mdi-flask-outline"></i></div>
+                          <div class="card_title">
+                            <div class="exp_info">
+                              <span class="flexMid">
+                                <span class="label committee_bg">IACUC</span>
+                                <div class="card-title">동물실험 연구 1</div>
+                                <div><span class="rcv_num">HUM-2021-IA0001</span><span class="title_date">(2020-04-01 ~ 2021-09-30)</span></div>
+                              </span>
+                              <span class="app_type committee_color_onHover end_date">2021-07-31<i class="mdi mdi-arrow-collapse-right mLeft5"></i></span>
+                            </div>
+                            <div class="exp_period">
+                              <div class="progress mTop5">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">1차 년도</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 5%">재승인</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%">2차 년도</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"><div class="footer_contents">
+  <a href="http://192.168.100.27:8210/html/member/etc_02.html">서비스 이용약관</a>
+  <span class="divider">|</span><a href="http://192.168.100.27:8210/html/member/etc_03.html">개인정보 처리방침</a>
+  <span class="divider">|</span><a href="http://192.168.100.27:8210/index.html">IPSAP 서비스 소개</a>
+</div>
+<address>
+  <span class="footer_item">상호: (주)제이드애플스튜디오</span>
+  <span class="footer_item">사업자등록번호: 220-87-23044</span>
+  
+  <span class="footer_item">대표자명: 정 기 락</span>
+  
+  <br>
+  <span class="footer_item">주소: 서울시 강남구 테헤란로 311, 아남타워빌딩 1519호</span>
+  <span class="footer_item">대표전화: 02-545-4683</span>
+</address>
+<div class="copyright">Copyrights (C) IPSAP. All Rights Reserved.</div>
+</footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/malihu/jquery.mCustomScrollbar.min.js"></script>
+    <link href="../../plugins/malihu/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./dashboard.js"></script>
+
+
+
+</body>
+</head></html>

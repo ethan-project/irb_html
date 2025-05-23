@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">기관 정보 관리</h4>
+                    <div class="comment">연구 기관의 일반 정보와 결제 정보를 확인, 변경할 수 있습니다.</div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="comment">※ 기관 정보중 <span class="pink_vivid">결제 정보는 플랫폼 관리자의 승인</span> 후에 변경됩니다.</div>
+                </div>
+                <div class="card-body pVside20 pHside40">
+
+                  
+                  <div class="row">
+                    <h4 class="card-title w150 pRight10"><i class="fas fa-plus-square mRight10"></i>연구기관 일반 정보</h4>
+                    <div class="header_comment mLeft10">IACUC, IBC, IRB 등의 위원회가 설치된 기관의 정보를 입력해 주세요.</div>
+                  </div>
+                  <div class="row mTop10">
+                    <label class="w150 col-form-label text-right pRight10">기관 유형</label>
+                    <div class="col-sm-10 flexMid">
+                      <div class="form-check-inline">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="org_type_1" name="org_type" class="custom-control-input" value="1">
+                          <label class="custom-control-label" for="org_type_1">공공기관</label>
+                        </div>
+                      </div>
+                      <div class="form-check-inline">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="org_type_2" name="org_type" class="custom-control-input" value="2">
+                          <label class="custom-control-label" for="org_type_2">대학교/대학원</label>
+                        </div>
+                      </div>
+                      <div class="form-check-inline">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="org_type_3" name="org_type" class="custom-control-input" value="3">
+                          <label class="custom-control-label" for="org_type_3">병원</label>
+                        </div>
+                      </div>
+                      <div class="form-check-inline">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="org_type_4" name="org_type" class="custom-control-input" value="4">
+                          <label class="custom-control-label" for="org_type_4">일반 기업</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="org_name_kr" class="w150 col-form-label text-right pRight10">기관명 (국문)</label>
+                    <div class="col-sm-10 flexMid">
+                      <span class="data">-</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="org_name_en" class="w150 col-form-label text-right pRight10">기관명 (영문)</label>
+                    <div class="col-sm-10 flexMid">
+                      <span class="data">-</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="org_code" class="w150 col-form-label text-right pRight10">기관 코드</label>
+                    <div class="col-sm-10 flexMid">
+                      <span class="data">-</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="org_addr" class="w150 col-form-label text-right pRight10">소재지</label>
+                    <div class="col-sm-10 flexMid">
+                      <span class="data">-</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="org_url" class="w150 col-form-label text-right pRight10">홈페이지 URL</label>
+                    <div class="col-sm-10 flexMid">
+                      <span class="data">-</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label for="org_logo_file" class="w150 col-form-label text-right pRight10">연구기관 Logo</label>
+                    <div class="col-sm-10 flexMid">
+                      <span class="data"><a href="#">-</a></span>
+                    </div>
+                  </div>
+                  <div class="app_divider full mTop20"></div>
+
+                  
+                  <div class="row">
+                    <h4 class="card-title w150 pRight10"><i class="fas fa-plus-square mRight10"></i>심사 설정 정보</h4>
+                    <div class="header_comment mLeft10"></div>
+                  </div>
+                  <div class="row mTop10">
+                    <label class="w150 col-form-label text-right pRight10">심사 유형</label>
+                    <div class="col-sm-10">
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="evaluation_type" class="custom-control-input" id="use_IACUC" value="1">
+                          <label class="custom-control-label" for="use_IACUC">IACUC (동물실험윤리위원회)</label>
+                        </div>
+                      </div>
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="evaluation_type" class="custom-control-input" id="use_IBC" value="2">
+                          <label class="custom-control-label" for="use_IBC">IBC (기관생물안전위원회)</label>
+                        </div>
+                      </div>
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="evaluation_type" class="custom-control-input" id="use_IRB" value="3">
+                          <label class="custom-control-label" for="use_IRB">IRB (기관생명윤리위원회)</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mTop10">
+                    <label class="w150 col-form-label text-right pRight10">연구기관 자체규정</label>
+                    <div class="col-sm-10">
+                      
+                      <label class="mTop7 mBot5">IACUC 전문심사 평가방식:</label>
+                      <div class="flexMid mLeft20">
+                        <div class="custom-control custom-radio w200">
+                          <input type="radio" id="org_rule_1_1" name="org_rule_1" value="1" class="custom-control-input">
+                          <label class="custom-control-label" for="org_rule_1_1">항목별 점수 부여</label>
+                        </div>
+                        <div class="flexMid">
+                          <label for="IACUC_agree_point" class="mRight5 mBot0">승인 기준 점수</label>
+                          <span class="data">-</span>
+                          <span class="mLeft5">점 이상</span>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop5 mLeft20">
+                        <div class="custom-control custom-radio w200 mTop10">
+                          <input type="radio" id="org_rule_1_2" name="org_rule_1" value="2" class="custom-control-input">
+                          <label class="custom-control-label" for="org_rule_1_2">항목별 적합 여부만 판정</label>
+                        </div>
+                        <div class="flexMid">
+                          <label for="IACUC_agree_count" class="mRight5 mBot0">승인 기준 적합 항목</label>
+                          <span class="data">-</span>
+                          <span class="mLeft5">개 이상</span>
+                        </div>
+                      </div>
+
+                      
+                      <div class="flexMid mTop5 mLeft20">
+                        <div class="custom-control custom-radio w200 mTop0">
+                          <input type="radio" id="org_rule_1_3" name="org_rule_1" value="3" class="custom-control-input">
+                          <label class="custom-control-label" for="org_rule_1_3">해당사항 없음</label>
+                        </div>
+                        <div class="flexMid">
+                          <label class="mTop5">전문심사 평가서 작성하지 않음</label>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    
+                    <label class="w150 pRight10"></label>
+                    <div class="col-sm-10 mTop20">
+                      <label class="mBot10">최종 승인서 발부 책임자:</label>
+                      <div class="flexMid mLeft20">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="org_rule_2_1" name="org_rule_2" value="1" class="custom-control-input">
+                          <label class="custom-control-label" for="org_rule_2_1">위원장</label>
+                        </div>
+                        <div class="custom-control custom-radio mLeft20">
+                          <input type="radio" id="org_rule_2_2" name="org_rule_2" value="2" class="custom-control-input">
+                          <label class="custom-control-label" for="org_rule_2_2">위원장, 행정간사 모두 가능</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app_divider full mTop20"></div>
+
+                  
+                  <div class="row">
+                    <h4 class="card-title w150 pRight10"><i class="fas fa-plus-square mRight10"></i>결제 정보</h4>
+                    <div class="header_comment mLeft10"></div>
+                  </div>
+                  <div class="row mTop10">
+                    <label class="w150 col-form-label text-right pRight10">사업자 등록증</label>
+                    <div class="col-sm-10 flexMid">
+                      <label for="org_cert" class="mRight10 mBot0">사업자 등록번호:</label>
+                      <span class="data">-</span>
+                    </div>
+                    <label class="w150 pRight10"></label>
+                    <div class="col-sm-10 flexMid">
+                      <label for="org_cert_file" class="mRight10 mBot0">사업자 등록증 첨부:</label>
+                      <span class="data"><a href="#">-</a></span>
+                    </div>
+                  </div>
+                  <div class="row mTop10">
+                    <label class="w150 col-form-label text-right pRight10">서비스 이용료 결제방식</label>
+                    <div class="col-md-10">
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="payment_type" class="custom-control-input" id="payment_type_1" value="1">
+                          <label class="custom-control-label" for="payment_type_1">무통장 입금</label>
+                        </div>
+                      </div>
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="payment_type" class="custom-control-input" id="payment_type_2" value="2">
+                          <label class="custom-control-label" for="payment_type_2">계좌 출금</label>
+                        </div>
+                      </div>
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="payment_type" class="custom-control-input" id="payment_type_3" value="3">
+                          <label class="custom-control-label" for="payment_type_3">신용카드</label>
+                        </div>
+                      </div>
+                      <div class="checkbox mt-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="payment_type" class="custom-control-input" id="payment_type_4" value="4">
+                          <label class="custom-control-label" for="payment_type_4">연간 계약</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mTop10">
+                    <label class="w150 col-form-label text-right pRight10">세금계산서 발행 여부</label>
+                    <div class="col-sm-10 flexMid">
+                      <div class="form-check-inline">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="org_invoice_1" name="org_invoice" value="1" class="custom-control-input">
+                          <label class="custom-control-label" for="org_invoice_1">발행</label>
+                        </div>
+                        <div class="custom-control custom-radio mLeft20">
+                          <input type="radio" id="org_invoice_2" name="org_invoice" value="2" class="custom-control-input">
+                          <label class="custom-control-label" for="org_invoice_2">미발행</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="./info_org-edit.html" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-edit mRight5"></i>기관 정보 수정</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_close_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">회원 탈퇴</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">동물 실험 계획서<br>
+                  [<span class="red underline">-</span>]의 심사를 마치고,
+                  <div>최종 심의를 시작하시겠습니까?</div>
+                </h5>
+                <span class="bg-soft-secondary">연구 책임자에게 일반심사 종료 안내 메시지가 발송되며,<br>최종 심의 과정을 시작합니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="./application_list.html" class="btn btn-primary">심사 종료 및 최종 심의 시작</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./info_org.js"></script>
+
+  </body>
+
+</html>

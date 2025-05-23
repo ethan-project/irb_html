@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    
+                    <h4 class="page-title">보고서 - 상세보기</h4>
+                    <div class="comment">작성한 연구계획 위반/이탈 보고서의 내용을 확인합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IRB">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    
+                    
+                    
+                    <div class="apptype_title">위반이탈 보고</div>
+                    
+                    
+
+                    <div class="apptype_date">미승인</div>
+                    
+                    
+                    
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid">IRB 연구계획 위반/이탈 보고서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">위반/이탈 보고 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step active">행정 검토</div>
+                    <div class="step">전문 심사</div>
+                    <div class="step">일반 심사</div>
+                    <div class="step">최종 심의</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-12 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심의 신청서 원안 (기본 정보)</h4>
+                        <div class="header_comment mLeft20">
+                          <button type="button" onclick="newWindowPopup('./_popup_app-IRB_info_all.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>심의 신청서 원안 보기</button>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9 pLeft20">
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">국문 :</label>
+                            <span class="data" id="name_ko">-</span>
+                          </div>
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">영문 :</label>
+                            <span class="data" id="name_en">-</span>
+                          </div>
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">연구 기간 :</label>
+                            <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                          </div>
+                          <div class="mTop5" id="exp_category">
+                            <label class="mRight10 mBot0 sum_label">실험 분류:</label>
+                            <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">심의 대상</button>
+                            <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">인간대상 연구</button>
+                          </div>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      
+                      <div class="app_anchor" id="form_01"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>위반/이탈 내용</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="80%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td class="info_name text-center">보고 내용</td>
+                                <td class="border_left pHside20 pVside10">
+                                  <div class="flexMid" id="plan_violation_report_contents">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" name="form_01-1" value="1" class="custom-control-input" id="form_01-1_1" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-1_1">위반 (Violation)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mLeft20">
+                                      <input type="radio" name="form_01-1" value="1" class="custom-control-input" id="form_01-1_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-1_2">이탈 (Deviation)</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">발생 일자</td>
+                                <td class="border_left pHside20">
+                                  <span class="data" id="plan_violation_date">-</span>
+                                  
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">발생 내용</td>
+                                <td class="border_left pHside20">
+                                  <pre class="data" id="plan_violation_contents">-</pre>
+                                  
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>위반: 법령, 연구자 준수사항 등을 준수하지 않은 경우에 표기합니다.</li>
+                            <li>이탈: 연구기간, 연구대상자 수 등을 초과한 경우에 표기합니다.</li>
+                            <li style="margin-top:40px">심의신청서 및 연구계획서를 참조하여 위반 또는 이탈 내용을 상세히 기재합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      
+                      <div class="app_anchor" id="form_02"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>위반/이탈 사례의 영향</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="80%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td class="info_name">연구대상자의 권리, 안전, 복지에 부정적인 영향이 잇습니까?</td>
+                                <td class="border_left pSide20">
+                                  <div class="comment red mBot10">※ '예' 선택시 위의 &quot;<span class="underline">발생 내용</span>&quot;란에 부정적 영향을 구체적으로 기재합니다.</div>
+                                  <div id="plan_violation_effect_negative">
+                                    <div class="flexMid mTop5">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" name="form_02-1" value="1" class="custom-control-input" id="form_02-1_1" disabled="disabled">
+                                        <label class="custom-control-label" for="form_02-1_1">예</label>
+                                      </div>
+                                    </div>
+                                    <div class="custom-control custom-radio mTop10">
+                                      <input type="radio" name="form_02-1" value="2" class="custom-control-input" id="form_02-1_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_02-1_2">아니오</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">연구대상자가 본 연구에 계속 참여하는 데 변동 사항이 있습니까?</td>
+                                <td class="border_left pSide20">
+                                  <div class="comment red mBot10">※ '예' 선택시 위의 &quot;<span class="underline">발생 내용</span>&quot;란에 변동 사항을 구체적으로 기재합니다.</div>
+                                  <div id="plan_violation_effect_changes">
+                                    <div class="flexMid mTop5">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" name="form_02-2" value="1" class="custom-control-input" id="form_02-2_1" disabled="disabled">
+                                        <label class="custom-control-label" for="form_02-2_1">예</label>
+                                      </div>
+                                    </div>
+                                    <div class="custom-control custom-radio mTop10">
+                                      <input type="radio" name="form_02-2" value="2" class="custom-control-input" id="form_02-2_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_02-2_2">아니오</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      
+                      <div class="app_anchor" id="form_02"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>조치 사항</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="80%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td class="info_name">연구대상자에게 위반 또는 이탈 사실에 대해 설명하였습니까?</td>
+                                <td class="border_left pSide20">
+                                  <div id="plan_violation_measure_desc">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" name="form_03-1" value="1" class="custom-control-input" id="form_03-1_1" disabled="disabled">
+                                      <label class="custom-control-label" for="form_03-1_1">예</label>
+                                    </div>
+                                    <div class="flexMid mTop5">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" name="form_03-1" value="2" class="custom-control-input" id="form_03-1_2" data-custom-toggle="focus" data-target="#form_03-1_3" disabled="disabled">
+                                        <label class="custom-control-label" for="form_03-1_2">아니오</label>
+                                      </div>
+                                      <span class="data mLeft30" id="form_03-1_3">-</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">본 사례로 인하여 연구계획이나 동의서의 수정이 필요합니까?</td>
+                                <td class="border_left pSide20">
+                                  <div class="comment red mBot10">※ '예' 선택시 추후 계획서 및 동의서의 변경 심의를 신청하여야 합니다.</div>
+                                  <div id="plan_violation_measure_plan_edit_flag">
+                                    <div class="flexMid mTop5">
+                                      <div class="custom-control custom-radio">
+                                        <input type="radio" name="form_03-2" value="1" class="custom-control-input" id="form_03-2_1" disabled="disabled">
+                                        <label class="custom-control-label" for="form_03-2_1">예</label>
+                                      </div>
+                                    </div>
+                                    <div class="custom-control custom-radio mTop10">
+                                      <input type="radio" name="form_03-2" value="2" class="custom-control-input" id="form_03-2_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_03-2_2">아니오</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">조치사항에 대해 구체적으로 기술하십시오.</td>
+                                <td class="border_left pHside20">
+                                  <pre class="data" id="plan_violation_measure_detail">-</pre>
+                                  
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">재발 방지를 위한 계획을 구체적으로 기재 하십시오.</td>
+                                <td class="border_left pHside20">
+                                  <pre class="data" id="plan_violation_measure_prevent_detail">-</pre>
+                                  
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                        </div>
+                        
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9 sign_area">
+                          <div class="IRB_agree">
+                            <div class="checkbox checkbox-primary mTop10">
+                              <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                              <label class="custom-control-label blue_deep" for="check_01">위와 같이 연구계획 위반/이탈 사례 보고서를 제출합니다.</label>
+                            </div>
+                            <div class="agree_date today_str">-년 -월 -일</div>
+                            <div class="agree_author">연구 책임자<span class="reviewer">-</span></div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop80">
+                          <ul id="">
+                            <li>확인란에 표기하는 것으로 정식 서명을 대체합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+
+                    </div>
+                    
+                  </div>
+                  
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <a href="./experiment_list-IRB_review_violation.html" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-edit mRight5"></i>보고서 보완</a>
+                  
+                  <a href="javascript:void(0);" onclick="newWindowPopup('./_popup_review-IRB_info_violation.html');" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-check mRight5"></i>심사 결과 보기</a>
+
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="/html/researcher/experiment_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>실험 목록 보기</a>
+                  <a href="javascript: void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" data-move-to="#bottom_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="/html/researcher/IRB/experiment_list-IRB_info_violation.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/rating/themes/rating.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="committee">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+    
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">실험 계획서 전문 심사</h4>
+                    <div class="comment">전문 심사 평가 기준과 심사 내용입니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <div class="step active">전문 심사<div class="expiration"><div class="timer"></div></div></div>
+                    <div class="step">일반 심사</div>
+                    <div class="step">최종 심의</div>
+                    <div class="step">실험 수행</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  <div class="comment_box red_box hidden mTop10" id="pass_comment">
+                    ※ <button class="btn btn-danger btn_xxs mRight5">전문심사 건너뛰기</button>행정간사가 전문심사 건너뛰기를 실행하려는 경우, 화면 하단의 <span class="underline">전문심사 건너뛰기</span>를 실행하면 <span class="red underline">전문심사가 자동으로 마무리</span>됩니다.<br>
+                    <span class="mLeft20">자동으로 작성된 <span class="underline">심사 총평, 심사 결과</span>(화면 하단에 위치)를 확인 또는 수정하고, <span class="underline">심사결과 제출동의를 체크</span>하면 <span class="red underline">일반 심사가 바로 진행</span>됩니다.</span><br>
+                    ※ 전문심사 건너뛰기 기능은 <span class="underline">행정간사일 경우에 활성화</span>되므로, 행정간사가 <span class="red underline">실제 전문심사를 진행하는 중에 실행하지 않도록 주의</span>하시기 바랍니다.
+                  </div>
+
+                  <div class="flexMid mTop20">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>항목별 전문심사 결과 및 평가</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+                  <table class="table list_table mTop20 mBot10" id="expertReview_table">
+                    <colgroup>
+                      <col width="*">    
+                      <col width="*">    
+                      <col width="*">    
+                      <col class="evaluation_score" width="200">  
+                      <col class="evaluation_yn" width="200">  
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>평가 항목</th>
+                        <th>세부 평가 기준</th>
+                        <th>항목별 평가 의견</th>
+                        <th class="text-center evaluation_score">전문심사 점수 평가</th>
+                        <th class="text-center evaluation_yn">전문심사 적부 판정</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1. 일반정보</td>
+                        <td>
+                          <ul>
+                            <li>동물실험 수행자의 교육·훈련·경험의 적정성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="evaluation_score">
+                          <select class="rating_point" name="review_point_1" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td class="evaluation_yn">
+                          <select class="rating_pass" name="review_pass_1" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2. 동물실험 정보</td>
+                        <td>
+                          <ul>
+                            <li>과학적인 근거에 따라 동물실험 목적의 타당성</li>
+                            <li>동물실험 목적에 따른 3Rs 대안방법 정보검색의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_2" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_2" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3. 실험동물 정보</td>
+                        <td>
+                          <ul>
+                            <li>실험동물 공급처의 적절성</li>
+                            <li>실험동물의 종/계통과 마리수 산정 기준의 적절성</li>
+                            <li>실험동물의 사육시설 및 사육조건의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음
+                          
+                        </td>
+                        <td>
+                          <select class="rating_point" name="review_point_3" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_3" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4. 실험물질 정보</td>
+                        <td>
+                          <ul>
+                            <li>관련 법률 및 주무관청 보고사항에 따른 실험물질 정보의 확인</li>
+                            <li>생물학적 위해 또는 재해유발물질 관련 해당 위원회의 승인여부 확인</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_4" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_4" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5. 동물실험 방법</td>
+                        <td>
+                          <ul>
+                            <li>동물실험 일정과 절차 방법에 대한 과학적 타당성</li>
+                            <li>동물실험의 전과정에 대한 상세내용 이해</li>
+                            <li>동물실험 절차의 윤리적인 고려 및 관리방안의 적절성</li>
+                            <li>수술 등 전문기술이 포함된 경우 전문성 및 숙련도의 적절성</li>
+                            <li>물질의 투여용량, 투여방법에 따른 동물에게 미치는 부작용에 대한 고려</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음
+                          
+                        </td>
+                        <td>
+                          <select class="rating_point" name="review_point_5" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_5" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6. 고통등급</td>
+                        <td>
+                          <ul>
+                            <li>동물에게 영향을 주는 고통 및 스트레스 등급 평가의 적절성</li>
+                            <li>고통경감 조치에 대한 관리방안의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_6" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_6" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7. 고통경감 방안</td>
+                        <td>
+                          <ul>
+                            <li>종별 특성에 따라 고통과 스트레스를 평가하기 위한 관찰빈도 및 계획의 적절성</li>
+                            <li>수의학적 관리방안에 대한 계획의 적절성</li>
+                            <li>인도적인 종료시점 기준적용의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_7" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_7" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8. 사육관리</td>
+                        <td>
+                          <ul>
+                            <li>실험동물 종별 특성에 적합한 사육환경의 적절성</li>
+                            <li>실험동물 복지를 고려한 환경 풍부화 도구의 사용</li>
+                            <li>급이, 급수, 행동 등의 제한이 있는 경우 사유의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_8" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_8" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>9. 안락사</td>
+                        <td>
+                          <ul>
+                            <li>실험동물 종에 따른 안락사 방법의 적절성</li>
+                            <li>실험목적에 따른 안락사 방법의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_9" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_9" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10. 연구자 준수사항</td>
+                        <td>
+                          <ul>
+                            <li>실험수행자를 위한 안전대책의 마련 여부</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td>
+                          <select class="rating_point" name="review_point_10" autocomplete="off" style="display: none;">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="rating_pass" name="review_pass_10" autocomplete="off" style="display: none;">
+                            <option value="0" selected="selected">부적합</option>
+                            <option value="1">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass" data-value="1">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="0">부적합</a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">총점</td>
+                        <td class="text-center evaluation_score" id="total_sum"></td>
+                        <td class="text-center evaluation_yn" id="total_account"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+
+                  <div class="comment_box red_box text-right">
+                    
+                    <span id="organization">본 기관</span>의 <span class="underline">승인 또는 조건부 승인의 기준</span>은 <span id="pass_criteria"><span class="red underline">총점 <span class="pass_point">80</span>점 이상</span><span class="red underline">적합 <span class="pass_count">8</span>개 항목 이상</span></span>인 것을 감안하여, 전문위원의 심사의견이 정확히 반영될 수 있도록 평가점수 및 적합 여부를 판정합니다.
+                  </div>
+
+                  <div class="comment_box blue_box review_box">
+                    <div class="">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 총평</h4>
+                      <div class="header_comment">본 동물 실험 계획에 대한 전문심사 총평을 작성해 주세요.</div>
+                      <textarea class="form-control mTop10" rows="3" id="expert_review_total_review"></textarea>
+                    </div>
+
+                    <div class="mTop30">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 결과</h4>
+                      <div class="header_comment">본 동물 실험 계획에 대한 전문심사 최종 결과를 입력해 주세요.</div>
+                      <div class="mTop15" id="expert_review_result">
+                        <div class="custom-control custom-radio flexMid mTop15">
+                          <input type="radio" name="radio_01_group" value="1" class="custom-control-input" id="radio_01" data-custom-toggle="visible" checked="checked">
+                          <label class="custom-control-label w80" for="radio_01">승인</label>
+                        </div>
+                        <div class="custom-control custom-radio flexMid mTop10">
+                          <input type="radio" name="radio_01_group" value="2" class="custom-control-input" id="radio_02" data-custom-toggle="visible">
+                          <label class="custom-control-label w80" for="radio_02">조건부 승인</label>
+                          <input type="text" class="form-control form-control-sm hidden">
+                        </div>
+                        <div class="custom-control custom-radio flexMid mTop10">
+                          <input type="radio" name="radio_01_group" value="3" class="custom-control-input" id="radio_03" data-custom-toggle="visible">
+                          <label class="custom-control-label w80" for="radio_03">보완후 승인</label>
+                          <input type="text" class="form-control form-control-sm hidden">
+                        </div>
+                        <div class="custom-control custom-radio flexMid mTop10">
+                          <input type="radio" name="radio_01_group" value="4" class="custom-control-input" id="radio_04" data-custom-toggle="visible">
+                          <label class="custom-control-label w80" for="radio_04">반려</label>
+                          <input type="text" class="form-control form-control-sm hidden">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="sign_area">
+                      <div class="checkbox checkbox-primary mTop20">
+                        <input type="checkbox" id="check_01">
+                        <label class="custom-control-label blue_deep" for="check_01">위와 같이 전문심사 결과를 제출합니다.</label>
+                      </div>
+                      <div class="mTop10 flexMid pRight10">
+                        <div class="agree_date">-년 -월 -일</div>
+                        <div class="agree_author mTop0 mLeft20">전문 위원<span class="reviewer">-</span></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <div class="expiration mRight10">전문 심사 종료 <span class="timer">2일 9시간 12분 전</span></div>
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_finish_review"><i class="fas fa-check mRight5"></i>전문 심사 완료</a>
+                  <button type="button" class="btn btn-danger waves-effect waves-light mLeft0 hidden" id="btnPass" onclick="onClickExpertPass();"><i class="fas fa-reply hFlip mRight5"></i>전문심사 건너뛰기</button>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-effect waves-light mLeft20" data-toggle="modal" data-target="#modal_redo_review"><i class="fas fa-check mRight5"></i>항목별 전문 심사 재실행</a>
+                  <a href="./review_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_finish_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">전문 심사 완료</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">동물 실험 계획서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의<br>전문 심사를 마치겠습니까?
+                </h5>
+                <span class="bg-soft-secondary">전문 심사 결과가 저장되고, 일반 심사가 진행됩니다.<br>전문 심사를 마친 실험계획서는 <span class="red underline">심사기록</span>메뉴에서 확인할 수 있습니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="javascript:void(0);" onclick="onClickExpertReviewFinishSubmit();" class="btn btn-primary">전문 심사 완료</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_redo_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">항목별 전문심사 재실행</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">동물 실험 계획서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의<br>항목별 전문 심사를 다시 진행하시겠습니까?
+                </h5>
+                <span class="bg-soft-secondary">현재까지 진행한 전문심사 결과 및 평가는 초기화 되고,<br>항목별 전문 심사 단계로 이동합니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="./review_list-review_IACUC_expert_1.html" class="btn btn-primary">항목별 전문심사 심사 재실행</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./review_list-review_IACUC_expert_2.js"></script>
+    <script src="../../plugins/rating/jquery.barrating.min.js"></script>
+    <script src="../../assets/js/common/rating.init.js"></script>
+
+  </body>
+
+</html>

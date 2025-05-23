@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            
+            <div class="card thick IBC hidden">
+              <div class="card-header flexBetween">
+                <div class="title_area">
+                  <h4 class="card-title flexMid">IBC 신규 승인 - 연구 계획서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                  <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IB0001-00</span></p>
+                </div>
+                <div class="progress_area">
+                  
+                </div>
+                <div class="desc_area">
+                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                </div>
+              </div>
+              <div class="card-body pHside40">
+                <div class="row noMargin app_frame">
+                  <div class="col-sm-12 app_col app_contents">
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-1. 연구과제 기본 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 과제명</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label for="general_title_name_ko" class="mRight10 mBot0">국문 :</label>
+                          <div class="data" id="general_title_name_ko">-</div>
+                          
+                        </div>
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label for="general_title_name_en" class="mRight10 mBot0">영문 :</label>
+                          <div class="data" id="general_title_name_en">-</div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_title_guide">
+                          <li class="red">면제 실험인 경우에는 연구계획서는 작성하지 않습니다.</li>
+                          <li>국가/기관 승인 또는 기관신고 실험인 경우에만 연구계획서를 작성합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 책임자</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="15%">
+                            <col width="30%">
+                            <col width="15%">
+                            <col width="40%">
+                          </colgroup>
+                          <tbody id="general_director">
+                            <tr>
+                              <td class="info_name">성명</td>
+                              <td class="data" id="general_director_name">-</td>
+                              <td class="info_name">Email</td>
+                              <td class="data" id="general_director_email">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">소속 부서</td>
+                              <td class="data" id="general_director_dept">-</td>
+                              <td class="info_name">교육 일자</td>
+                              <td class="data" id="general_director_edu_date">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">직책</td>
+                              <td class="data" id="general_director_position">-</td>
+                              <td class="info_name">교육 기관명</td>
+                              <td class="data" id="general_director_edu_instition">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">전공 분야</td>
+                              <td class="data" id="general_director_major_field">-</td>
+                              <td class="info_name">교육 이수 번호</td>
+                              <td class="data" id="general_director_edu_course_num">000-0000-0000</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">휴대 전화</td>
+                              <td class="data" id="general_director_phoneno">-</td>
+                              <td class="info_name">교육 이수 정보</td>
+                              <td class="data" id="general_director_edu_course">-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_director_guide">
+                          <li>연구책임자의 교육이수 정보가 최신의 정보인지 확인하고 실험 경력년수를 입력합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>실험 분류</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <div class="data" id="classification">국가 승인실험</div>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-2. 실험 구분</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    <div class="row app_content">
+                      <div class="col-sm-9" id="ibc_plan_classification">
+                        
+                        <div class="checkbox checkbox-primary">
+                          <input type="checkbox" id="check_02-2_1" value="1" disabled="disabled">
+                          <label for="check_02-2_1">LMO 이용</label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                          <input type="checkbox" id="check_02-2_2" value="2" disabled="disabled">
+                          <label for="check_02-2_2">LMO 개발</label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                          <input type="checkbox" id="check_02-2_3" value="3" disabled="disabled">
+                          <label for="check_02-2_3">일반 생물체 이용</label>
+                        </div>
+                        <div class="checkbox checkbox-primary flexMid pLeft3">
+                          <input type="checkbox" id="check_02-2_4" value="new" data-custom-toggle="visible" checked="checked" readonly="readonly">
+                          <label class="w50" for="check_02-2_4">기타 :</label>
+                          
+                          <span class="data">-</span>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_title_guide">
+                          <li>해당 항목이 없는 경우 기타에 표기하고 상세내용을 입력해 주십시오.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-3. 연구목적 및 예상 성과</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        
+                        <span class="data" id="ibc_plan_purpose_perf_text">-</span>
+                        <li class="content_comment mTop20">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                        <div id="ibc_plan_purpose_perf_file">
+                          <label for="file_02-3" class="mRight10 mBot0 w80">관련 자료 :</label>
+                          <span class="data">첨부파일 없음</span>
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul>
+                          <li>연구를 통해 얻고자 하는 목적 및 실험이 수행되어야 하는 타당성에 대해 기술해 주십시오.</li>
+                          <li>복잡한 연구계획의 설명을 위해 필요한 경우 관련 자료를 첨부할 수 있습니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-4. 연구내용 및 범위</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        
+                        <span class="data" id="ibc_plan_content_range_text">-</span>
+                        <li class="content_comment mTop20">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                        <div id="ibc_plan_content_range_file">
+                          <label for="file_02-4" class="mRight10 mBot0 w80">관련 자료 :</label>
+                          <span class="data">첨부파일 없음</span>
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide"></div>
+                      <div class="app_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-5. 연구방법</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <span class="data" id="ibc_plan_method_text">-</span>
+                        
+                        <li class="content_comment mTop20">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                        <div id="ibc_plan_method_file">
+                          <label for="file_02-5" class="mRight10 mBot0 w80">관련 자료 :</label>
+                          <span class="data">첨부파일 없음</span>
+                          
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul>
+                          
+                          <li>IBC 대상 물질이 투여되는 숙주 및 구체적인 실험 방법, 기전에 대해 상세히 기술합니다.</li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div id="bottom_anchor"></div>
+              
+
+              
+              <div id="footer_anchor"></div>
+              <div class="card-footer flexCenter side_type">
+                <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+              </div>
+
+            </div>
+            
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="./_popup_app-IBC_info_2.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    <!-- App css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div><!--//row-->
+              </div>
+
+              <!--
+                위원회 class: .IBC
+                1-3. 실험 분류 의 선택에 따라 추가 class 변경
+                (체크된 항목 중 가장 등급이 높은 Class 선택)
+                기본      : .IBC_initial => 1-3. 선택 전의 기본 상태
+                국가 승인 : .IBC_nat_approval
+                기관 승인 : .IBC_ins_approval
+                기관 신고 : .IBC_ins_report
+                면제      : .IBC_exemption
+              -->
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    <!-- <div class="apptype_title">변경 심의</div> -->
+                    <div class="apptype_date">미승인</div>
+                    <!-- <div class="apptype_date">승인: 2021-01-31</div> -->
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        <!--
+                          Process 활성화     : .active
+                          Sub Process 수     : .sub_숫자
+                          Sub Process 활성화 : .active_sub_숫자
+
+                          * 신청서 작성 상태일 경우
+                          작성중   : .pending   (작성한 항목과 미완료 항목이 같이 존재하는 경우)
+                          작성완료 : .completed (모든 항목의 작성이 완료된 경우)
+                          보완중   : .supplement(행정 검토에 의해 보완이 필요한 경우).completed (모든 항목의 작성이 완료된 경우)
+
+                          * 신청서가 제출된 이후의 상태(행정검토 ~ 최종심의)일 경우
+                          검토중   : .pending   (검토한 항목과 미완료 항목이 같이 존재하는 경우)
+                          검토완료 : .completed (모든 항목의 검토가 완료된 경우)
+                         -->
+                        <a href="./application_new-IBC_01_1.html" class="row process_content active sub_4 active_sub_3" data-process-num="1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_02_1.html" class="row process_content" data-process-num="2">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_03_1.html" class="row process_content" data-process-num="3">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_04_1.html" class="row process_content" data-process-num="4">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      <!-- 항목 01-3 -->
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-3. 실험 분류</h4>
+                        <div class="header_comment red">※ 본 항목은 제출후 변경이 불가능합니다. 주의하시기 바랍니다.</div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <!-- <h6 class="content_title"><i class="fas fa-square mRight10"></i></h6> -->
+                          <!-- 제출된 이후에는 해당항목 주석처리 -->
+                          <li class="content_comment">해당하는 항목에 모두 체크해 주세요.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <table class="table list_table mBot0">
+                            <colgroup>
+                              <col width="150">  <!-- 1. 구분 -->
+                              <col width="*">    <!-- 2. 심사 요청 사항 -->
+                              <col width="150">  <!-- 3. 제출 서류 -->
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th class="text-center">구분</th>
+                                <th>심사 요청 사항</th>
+                                <th>제출 서류</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="text-center">국가 승인실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-1" data-exp-type="IBC_nat_approval" value="1">
+                                    <label for="check_01-3-1" class="mBot0">종명이 명시되어 있지 않고 인체병원성 여부가 밝혀지지 않은 미생물을 사용하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-2" data-exp-type="IBC_nat_approval" value="2">
+                                    <label for="check_01-3-2" class="mBot0">독소 독성 LD50<100ng/kg을 사용하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-3" data-exp-type="IBC_nat_approval" value="3">
+                                    <label for="check_01-3-3" class="mBot0">자연적으로 발생하지 않는 방식으로 약제내성 유전자를 의도적으로 도입하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-4" data-exp-type="IBC_nat_approval" value="4">
+                                    <label for="check_01-3-4" class="mBot0">고위험 병원체를 이용하는 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서<br>연구계획서<br>위해성평가서<br><span class="red">*기관승인후 개별 안내</span></td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">기관 승인실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-5" data-exp-type="IBC_ins_approval" value="1">
+                                    <label for="check_01-3-5" class="mBot0">제2위험군 이상의 생물체를 숙주-벡터계 또는 DNA 공여체로 이용하는 실험 (고위험병원체 제외)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-6" data-exp-type="IBC_ins_approval" value="2">
+                                    <label for="check_01-3-6" class="mBot0">대량배양을 포함하는 실험 (10ℓ이상)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-7" data-exp-type="IBC_ins_approval" value="3">
+                                    <label for="check_01-3-7" class="mBot0">독소 독성 0.1㎍/kg≤LD50≤100㎍/kg을 사용하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-8" data-exp-type="IBC_ins_approval" value="4">
+                                    <label for="check_01-3-8" class="mBot0">약제내성 유전자를 의도적으로 도입하는 실험 중 승인 대상 유전자를 사용</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-9" data-exp-type="IBC_ins_approval" value="5">
+                                    <label for="check_01-3-9" class="mBot0">기타 기관생물안전위원회에서 승인대상으로 정한 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서<br>연구계획서<br>위해성평가서</td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">기관 신고실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_ins_report" id="check_01-3-10" data-exp-type="IBC_ins_report" value="1">
+                                    <label for="check_01-3-10" class="mBot0">제1위험군 생물체를 숙주-벡터계 및 DNA 공여체로 이용하는 실험<br>(기관승인실험 및 면제실험에 해당하지 않는 실험에 한함)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_report" id="check_01-3-11" data-exp-type="IBC_ins_report" value="2">
+                                    <label for="check_01-3-11" class="mBot0">기타 기관생물안전위원회에서 신고대상으로 정한 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서<br>연구계획서</td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">면제실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_exemption" id="check_01-3-12" data-exp-type="IBC_exemption" value="1">
+                                    <label for="check_01-3-12" class="mBot0">지정된 숙주-벡터계와 제1위험군의 생물체만을 사용하여 승인이나 신고없이 수행 가능한 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_exemption" id="check_01-3-13" data-exp-type="IBC_exemption" value="2">
+                                    <label for="check_01-3-13" class="mBot0">자연적으로 DNA 교환이 일어나는 것으로 알려진 범위 내에서 이루어지는 지정 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="comment red mTop10">※ 여러 항목에 표기된 경우, 가장 위해성이 높은 실험에 준하여 심의가 진행됩니다.</div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul>
+                            <li>심의대상 분류기준표</li>
+                            <li><span class="red">국가승인 제외대상 약제내성 유전자:</span><br><a href="/html/ipsap/experiment_02.html#law-11" target="_blank">「유전자변형생물체의 국가간 이동 등에 관한 통합고시」 [별표2-2]</a></li>
+                            <li><span class="red">고위험 병원체:</span><br><a href="/html/ipsap/experiment_02.html#law-12" target="_blank">「감염병의 예방 및 관리에 관한 법률 시행규칙」 [별표1]</a></li>
+                            <li><a href="/html/ipsap/experiment_02.html#law-13" target="_blank">승인 대상 유전자 목록</a></li>
+                            <li>기관생물안전위원회 승인 대상 실험</li>
+                            <li>기관 생물안전위원회 신고대상 실험</li>
+                            <li class="mTop120"><span class="red">승인, 신고없이 사용 가능한 숙주-벡터계<br>- Eschrica Coli K12 숙주-벡터계<br>- Saccharomyces 숙주-벡터계<br>- Bacillus subtiles(또는 Iicheniformics) 숙주-벡터계</span></li>
+                            <li><a href="/html/ipsap/experiment_02.html#law-14" target="_blank">면제실험 가능한 지정 실험</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <!--//card-body-->
+
+                <!-- Card Footer -->
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="javascript:void(0);" onclick="appNaviPrePage();"
+                    id="app_page_navi_pre_btn"
+                    class="btn btn-outline-warning waves-effect waves-light tippy-btn"
+                    title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="javascript:void(0);" onclick="validCheckAfterClickNextPage();"
+                    id="app_page_navi_next_btn"
+                    class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10"
+                    title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" onclick="validCheckAfterClickTempSave();"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
+                  <a href="../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+              </div>
+              <!--//card -->
+
+            </div><!--//col-->
+          </div><!--//row-->
+          <!--//page title end breadcrumb -->
+
+
+        </div><!-- container -->
+
+        <footer id="footer" class="footer text-center"></footer>
+
+      </div>
+      <!--//page content -->
+    </div>
+    <!--//page-wrapper -->
+
+    <!-- Modal: 임시저장 확인 -->
+    <div class="modal fade" id="modal_tempSave" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <!-- <i class="typcn typcn-warning-outline symbol"></i> -->
+                <!-- v -->
+                <i class="typcn typcn-input-checked symbol"></i>
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
+                <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+               <!--  <span class="badge bg-soft-secondary">Disable Services</span>
+                <small class="text-muted ml-2">07 Oct 2020</small>
+                <ul class="mt-3 mb-0">
+                  <li>Lorem Ipsum is dummy text.</li>
+                  <li>It is a long established reader.</li>
+                  <li>Contrary to popular belief, Lorem simply.</li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+            <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+
+    <!-- jQuery  -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    <!-- common -->
+    <script src="/assets/js/common/common.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- custom js for this page -->
+    <!-- <script src="/html/researcher/IBC/common_application_new-IBC.js"></script> -->
+    <script src="/html/researcher/IBC/application_new-IBC_01_3.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title noBread">IPSAP 멤버십 결제 상세</h4>
+                    <div class="comment">
+                      IPSAP 멤버십의 상세 결제 내용입니다.
+                    </div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                
+
+                <div class="card-body pVside20 pHside40">
+                  
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>멤버십 정보</h4>
+                  </div>
+                  <div class="row pLeft25 mTop10">
+                    <div class="w70">멤버십 명</div>
+                    <div class="data fs_semi fw_bold" id="membership_name">IPSAP 2020 베이직 멤버십</div>
+                  </div>
+                  <div class="row pLeft25 mTop10">
+                    <div class="w70">멤버십 설명</div>
+                    <div class="data fs_semi fw_bold" id="membership_desc">IPSAP 서비스를 매월 최대 10회까지 이용할 수 있는 멤버십입니다. (2020년도용)</div>
+                  </div>
+                  
+                  <div class="row mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>결제 정보</h4>
+                  </div>
+                  <div class="row pHside10 mTop10">
+                    <table class="table info_table mBot5">
+                      <colgroup>
+                        <col width="200">
+                        <col class="auto_width_4columns">
+                        <col width="200">
+                        <col class="auto_width_4columns">
+                      </colgroup>
+                      <tbody id="membership_info">
+                        
+                        
+                        <tr>
+                          <td class="info_name fw_bold">결제 금액</td>
+                          <td class="data fw_bold"><span class="approved underline">99,000</span><span class="subInfo mLeft5">원</span></td>
+                          <td class="info_name">결제 구분</td>
+                          
+                          <td class="data">신용카드 - <span class="approved fw_bold">승인</span></td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">결제 일시</td>
+                          <td class="data">2021-05-15 12:25:31</td>
+                          <td class="info_name">결제 번호</td>
+                          <td class="data">20210515001</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        <tr>
+                          <td class="info_name fw_bold">취소 금액</td>
+                          <td class="data fw_bold"><span class="canceled underline">600,000</span><span class="subInfo mLeft5">원</span></td>
+                          <td class="info_name">결제 구분</td>
+                          <td class="data">신용카드 - <span class="canceled fw_bold">부분 취소</span></td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">취소 일시</td>
+                          <td class="data">2021-05-15 13:11:45</td>
+                          <td class="info_name">결제 번호</td>
+                          <td class="data">20210515111</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        <tr>
+                          <td class="info_name">최종 결제 금액</td>
+                          <td colspan="3" class="data"><span class="underline red fw_bold">1,200,000</span><span class="subInfo mLeft5">원</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript:void(0);" class="btn btn-primary waves-effect waves-light" id="btn_issue"><i class="far fa-file-alt mRight5"></i>증빙 서류 발급</a>
+                  
+                  
+                  
+                  <a href="./info_payment_new.html" class="btn btn-outline-secondary waves-effect waves-light mLeft20"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_break_1" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 해지 및 환불 신청</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9">
+                <h5 class="mBot5">IPSAP 멤버십을 해지하고 환불을 신청합니다.</h5>
+                <h6 class="lh_vivid">
+                  현재 이용중인 멤버십을 해지하고,<br>
+                  가입시 납부한 <span class="pink_vivid">가입비</span>와 미리 결제한 <span class="pink_vivid">월정액</span>에서<br>
+                  <span class="pink_vivid">잔여 일자에 해당하는 금액을 환불</span> 합니다.<br>
+                </h6>
+                <h6 class="lh_vivid">
+                  ※ 단, <span class="pink_vivid">가입비는 가입 후 1년 이내의 경우만 환불</span>을 해드립니다.
+                </h6>
+              </div>
+            </div>
+            <div class="pHside40">
+              <h6 class="mBot3 red">※ IPSAP 멤버십을 해지하면,</h6>
+              <ol class="mTop3 pLeft20">
+                <li>가입 시 결제한 <span class="red">가입비</span>중<br>
+                  <span class="red">유효 기간(가입 후 12개월) 내의 미이용 기간에 해당하는 금액이 환불</span>됩니다.</li>
+                <li>최근 결제한 <span class="red">멤버십 Plan 월이용료</span>중<br>
+                  <span class="red">미이용 기간에 해당하는 금액이 환불</span>됩니다.</li>
+                <li>멤버십 재 이용시 <span class="red">가입비를 환불 받은 이력이 존재하는 경우</span><br>
+                  <span class="pink_vivid">가입비를 재납부하셔야 멤버십 가입이 가능합니다.</span></li>
+                <li class="noBullet pTop5">※ 환불관련 상세한 사항은 이용약관의 &quot;<span class="pink_vivid">환불 규정</span>&quot;을 확인하시기 바랍니다.</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_break_2">멤버십 해지 및 환불 신청</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="modal_break_2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 해지 실행</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">이용중인 IPSAP 멤버십을 해지 하시겠습니까?</h5>
+                <h6 class="lh_vivid">
+                  멤버십 해지를 실행하면 <span class="pink_vivid">해지를 취소할 수 없으며</span>,<br>
+                  현재 이용중인 <span class="pink_vivid">멤버십 서비스가 중지</span>되고<br>
+                  <span class="pink_vivid">멤버십 결제 후 미사용 기간에 대한 환불</span>을 진행하게 됩니다.
+                </h6>
+                <h6 class="lh_vivid">
+                  아래의 금액이 <span class="red">멤버십 해지 후 환불될 예정</span>입니다.<br>
+                  단, 환불 금액은 <span class="pink_vivid">환불을 실행하는 시점을 기준으로 산정</span>하므로,<br>
+                  아래의 예정금액과 다소 차이가 있을 수 있음을 알려드립니다.
+                </h6>
+                <div>
+                  <span class="fs_semi">환불 예정 금액</span>
+                  <span class="fs_large fw_bold red mLeft10">150,000</span>
+                  <span class="fs_semi mLeft5">원</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center red mTop10">※ 실행 후 환불 금액 확인을 위해 잠시만 기다려주시기 바랍니다.</div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            
+            <button type="button" class="btn btn-danger" id="excute_break" data-toggle="modal" data-target="#result_modal">이용 중지 실행</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="result_modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 해지 및 환불 안내</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">IPSAP 멤버십이 해지 되었습니다.</h5>
+                <h6 class="lh_vivid">
+                  아래의 멤버십 미이용 요금이 환불될 예정입니다.
+                </h6>
+                <div>
+                  <span class="fs_semi">환불 확정 금액</span>
+                  <span class="fs_large fw_bold red mLeft10">150,000</span>
+                  <span class="fs_semi mLeft5">원</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center red">
+              ※ 금액 환불은 영업일 기준 3-5일 정도 소요될 수 있으며,<br>
+              자세한 사항은 카드사를 통해 확인할 수 있습니다.
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="/html/officer/info_payment_common.js"></script>
+    <script src="/html/officer/info_payment_new-info.js"></script>
+
+  </body>
+
+</html>

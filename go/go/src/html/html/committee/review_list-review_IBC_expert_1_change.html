@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="committee">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+    
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">심의 신청서 - 상세 내용</h4>
+                    <div class="comment">내가 심사할 심의 신청서의 내용을 확인합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IBC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    <div class="apptype_title">변경 심의</div>
+
+                    <div class="apptype_date">미승인</div>
+                    
+                    
+                    
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid">IBC 변경 심의 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">변경 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    
+                    <div class="step active">심의 진행</div>
+                    
+                    <div class="step">실험 수행</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  
+                  <div class="mTop20 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>생물안전위원회 심의 신청서 원안 (기본 정보)</h4>
+                    <div class="header_comment mLeft20">
+                      <button type="button" onclick="newWindowPopup('/html/committee/IBC/_popup_app-IBC_info_all.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>심의 신청서 원안 보기</button>
+                    </div>
+                  </div>
+                  <div class="mTop10">
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">국문 :</label>
+                      <span class="data" id="name_ko">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">영문 :</label>
+                      <span class="data" id="name_en">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">연구 기간 :</label>
+                      <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                    </div>
+                  </div>
+
+                  <div class="mTop30 flexMid mBot10">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>변경 심의 신청 내역</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+
+                  <span id="change_application" class="">
+                    
+                    <ul class="list-group mTop2">
+                      <li class="list-group-item onlyHover_data noPointer">
+                        <div>
+                          <label class="fw_bold">연구 시설의 변경</label>
+                          <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_app-IBC_info_all.html#form_01-2');"><i class="fas fa-link mRight5"></i>심의 신청서: 1-2. 연구원 및 연구시설 정보</a>
+                        </div>
+                        <div class="flexTop mTop10 pHside10">
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 내용:</label>
+                            <div class="data">연구 시설을 변경합니다.</div>
+                          </div>
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 사유:</label>
+                            <div class="data">연구 시설이 예상보다 노후하여 연구 시설을 변경하는 되었습니다.</div>
+                          </div>
+                        </div>
+                        <div class="flexMid mTop10 pLeft20">
+                          <label class="mRight10 mBot0">관련 자료:</label>
+                          <a href="#" class="data">-</a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group mTop2">
+                      <li class="list-group-item onlyHover_data noPointer">
+                        <div>
+                          <label class="fw_bold"><span>실험수행자의 변경</span></label>
+                          <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_app-IBC_info_all.html#form_01-2');"><i class="fas fa-link mRight5"></i>심의 신청서: 1-2. 연구원 및 연구시설 정보</a>
+                        </div>
+                        <div class="flexTop mTop10 pHside10">
+                          <div class="desc_box">
+                            <div class="data">
+                              <label class="flex_1">변경 내용:</label>
+                              <div class="flexMid">
+                                <table class="table text-center list_table mVside10">
+                                  <colgroup>
+                                    <col width="50">   
+                                    <col width="50">   
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*">    
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th class="pHside0">연구<br>책임</th>
+                                      <th class="pHside0">실험<br>담당</th>
+                                      <th>성명</th>
+                                      <th>부서</th>
+                                      <th>교육이수 정보</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="white_bg_50">
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_old" value="1" checked="checked">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_old" value="1">
+                                        </div>
+                                      </td>
+                                      <td>홍길동</td>
+                                      <td>약학과</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_old" value="2" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_old" value="2" checked="checked" readonly="readonly">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td>010-1234-5678</td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_old" value="3" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_old" value="3" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td>010-1234-5678</td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <i class="fas fa-arrow-right flexCenter_self fs_big mHside5"></i>
+                                <table class="table text-center list_table thick mVside10">
+                                  <colgroup>
+                                    <col width="50">   
+                                    <col width="50">   
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*">    
+                                  </colgroup>
+                                  <thead class="dark">
+                                    <tr>
+                                      <th class="pHside0">연구<br>책임</th>
+                                      <th class="pHside0">실험<br>담당</th>
+                                      <th>성명</th>
+                                      <th>부서</th>
+                                      <th>교육이수정보</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="white_bg">
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_new" value="1" checked="checked" readonly="readonly">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_new" value="1">
+                                        </div>
+                                      </td>
+                                      <td>홍길동</td>
+                                      <td>약학과</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_new" value="2" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_new" value="2" checked="checked" readonly="readonly">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td>010-1234-5678</td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_new" value="3" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_new" value="3" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td>010-1234-5678</td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mTop10 pHside10">
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 사유:</label>
+                            <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                          </div>
+                        </div>
+                        <div class="flexMid mTop10 pLeft20">
+                          <label class="mRight10 mBot0">관련 자료:</label>
+                          <a href="#" class="data">동물 1의 사료 수급 자료.hwp</a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group mTop2">
+                      <li class="list-group-item onlyHover_data noPointer">
+                        <div>
+                          <label class="fw_bold"><span>승인 기간의 변경</span></label>
+                          <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_app-IBC_info_all.html#form_01-2');"><i class="fas fa-link mRight5"></i>심의 신청서: 1-2. 연구원 및 연구시설 정보</a>
+                        </div>
+                        <div class="flexTop mTop10 pHside10">
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 내용:</label>
+                            <div class="data">
+                              <div>
+                                <span class="data">2021년 3월 3일 ~ 2021년 12월 31일</span>
+                                <i class="fas fa-arrow-right mHside10"></i>
+                                <span class="data">2021년 3월 3일 ~ 2022년 3월 31일</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 사유:</label>
+                            <div class="data">유효한 비교값 측정을 위한 기간이 필요합니다.</div>
+                          </div>
+                        </div>
+                        <div class="flexMid mTop10 pLeft20">
+                          <label class="mRight10 mBot0">관련 자료:</label>
+                          <a href="#" class="data">대조군의 유효한 실험결과.hwp</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </span>
+
+                  
+                  <div class="sign_area">
+                    <div class="checkbox checkbox-primary mTop20">
+                      <input type="checkbox" checked="checked" readonly="readonly">
+                      <label class="custom-control-label blue_deep">위와 같이 변경 승인 신청서를 제출합니다.</label>
+                    </div>
+                    <div class="mTop10 flexMid">
+                      <div class="agree_date">-년 -월 -일</div>
+                      <div class="agree_author mTop0 mLeft20">연구 책임자<span class="reviewer">-</span></div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="comment_box blue_box review_box">
+
+                    <div class="mTop10">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 총평</h4>
+                      <div class="header_comment">본 심의 신청서에 대한 전문심사 총평을 작성해 주세요.</div>
+                      <textarea class="form-control mTop10" rows="3" id="expert_review_total_review"></textarea>
+
+                      <h4 class="card-title mTop30"><i class="fas fa-plus-square mRight10"></i>전문심사 결과</h4>
+                      <div class="header_comment">본 심의 신청서에 대한 전문심사 최종 결과를 입력해 주세요.</div>
+                      <div class="mTop15" id="expert_review_result">
+                        <div class="custom-control custom-radio flexMid mTop15">
+                          <input type="radio" name="radio_01_group" value="1" class="custom-control-input" id="radio_01" data-custom-toggle="visible" checked="checked">
+                          <label class="custom-control-label w80" for="radio_01">승인</label>
+                        </div>
+                        <div class="custom-control custom-radio flexMid mTop10">
+                          <input type="radio" name="radio_01_group" value="2" class="custom-control-input" id="radio_02" data-custom-toggle="visible">
+                          <label class="custom-control-label w80" for="radio_02">조건부 승인</label>
+                          <input type="text" class="form-control form-control-sm hidden">
+                        </div>
+                        <div class="custom-control custom-radio flexMid mTop10">
+                          <input type="radio" name="radio_01_group" value="3" class="custom-control-input" id="radio_03" data-custom-toggle="visible">
+                          <label class="custom-control-label w80" for="radio_03">보완후 승인</label>
+                          <input type="text" class="form-control form-control-sm hidden">
+                        </div>
+                        <div class="custom-control custom-radio flexMid mTop10">
+                          <input type="radio" name="radio_01_group" value="4" class="custom-control-input" id="radio_04" data-custom-toggle="visible">
+                          <label class="custom-control-label w80" for="radio_04">반려</label>
+                          <input type="text" class="form-control form-control-sm hidden">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="sign_area">
+                      <div class="checkbox checkbox-primary mTop20">
+                        <input type="checkbox" id="check_01">
+                        <label class="custom-control-label blue_deep" for="check_01">위와 같이 전문심사 결과를 제출합니다.</label>
+                      </div>
+                      <div class="mTop10 flexMid pRight10">
+                        <div class="agree_date">-년 -월 -일</div>
+                        <div class="agree_author mTop0 mLeft20">전문 위원<span class="reviewer">-</span></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <div class="expiration mRight10">전문 심사 종료 <span class="timer">2일 9시간 12분 전</span></div>
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_review_confirm"><i class="fas fa-check mRight5"></i>전문 심사 완료</a>
+                  <a href="./review_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_review_confirm">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">전문 심사 완료</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">검토한 변경 심의 신청서<br>
+                  [<span class="red underline register_num2">-</span>]의<br>전문 심사를 마치겠습니까?
+                </h5>
+                <span class="bg-soft-secondary">전문 심사 결과가 저장되고, 일반 심사가 진행됩니다.<br>전문 심사를 마친 심의 신청서는 <span class="red underline">심사기록</span>메뉴에서 확인할 수 있습니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="javascript:void(0);" onclick="onClickExpertReviewFinishSubmit();" class="btn btn-primary">전문 심사 완료</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_input_alert">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">심사의견 입력 및 체크 안내</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5"><span class="underline">심사의견 있음을 선택한 경우</span>
+                  <div>해당 항목을 <span class="red">반드시 체크 및 심사 의견을 입력</span>해야 합니다.</div>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./review_list-review_IBC_expert_1_change.js"></script>
+
+  </body>
+
+</html>

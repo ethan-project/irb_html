@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title noBread">결제 상세</h4>
+                    <a href="javascript:newWindowPopup('https://npg.nicepay.co.kr/', 1500)" class="btn btn-primary btn-xs mTop-10 mLeft20">
+                      <i class="far fa-credit-card mRight10"></i>PG 관리자 바로가기
+                    </a>
+                    <div class="comment">IPSAP 서비스 등록기관이 결제한 상세내역 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                
+
+                <div class="card-body pVside20 pHside40">
+                  
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>결제 기관 정보</h4>
+                  </div>
+                  <div class="row pHside10 mTop10">
+                    <table class="table info_table">
+                      <colgroup>
+                        <col width="200">
+                        <col width="*" class="auto_width_4columns">
+                        <col width="200">
+                        <col width="*" class="auto_width_4columns">
+                      </colgroup>
+                      <tbody id="inst_info">
+                        <tr>
+                          <td class="info_name">기관명</td>
+                          
+                          <td class="data">-</td>
+                          <td class="info_name">사업자 등록번호</td>
+                          <td class="data">-</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">행정 간사</td>
+                          <td class="data">-</td>
+                          <td class="info_name">연락처</td>
+                          <td class="data">Tel: 010-0000-0000<br>Email: -@-</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">세금계산서 발행 여부</td>
+                          <td colspan="3" class="data">-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  
+                  <div class="row mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>결제 정보</h4>
+                  </div>
+                  <div class="row pHside10 mTop10">
+                    <table class="table info_table mBot5">
+                      <colgroup>
+                        <col width="200">
+                        <col class="auto_width_4columns">
+                        <col width="200">
+                        <col class="auto_width_4columns">
+                      </colgroup>
+                      <tbody id="payment_info">
+                        <tr>
+                          <td class="info_name">결제 내용</td>
+                          <td class="data">IPSAP 2021 베이직 멤버십</td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="PG사 승인 번호 (한 번호에 승인, 취소가 모두 묶임)"></i>승인 번호</td>
+                          <td class="data">30009937</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        <tr>
+                          <td class="info_name">결제 구분</td>
+                          
+                          <td class="data">신용카드 - <span class="approved fw_bold">승인</span></td>
+                          <td class="info_name fw_bold">결제 금액</td>
+                          <td>
+                            <span class="data approved fw_bold underline mRight5">99,000</span>원
+                            <br>
+                            <span class="black">
+                              월정액:<span class="blue_deep mHside3">99,000</span>원<span class="mLeft5 mRight2">/</span>
+                              할인액:<span class="blue_deep mHside3">0</span>원 (0%)
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="IPSAP에서 PG 모듈에 결제를 요청한 시간"></i>결제 일시</td>
+                          <td class="data">2021-05-15 12:25:31</td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="PG사 모듈에서 승인이 완료된 시간"></i>승인 일시</td>
+                          <td class="data">2021-05-15 12:25:38</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="IPSAP 거래 번호 (행정간사가 확인 가능, 매번 새로 발행)"></i>결제 번호</td>
+                          <td class="data">20210515001</td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="PG사 거래 번호 (매번 새로 발행)"></i>거래 ID (TID)</td>
+                          <td class="data">nictest00m01012105061515382790</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        
+                        <tr>
+                          <td class="info_name">최종 결제 금액</td>
+                          <td class="data"><span class="underline red fw_bold">99,000</span><span class="subInfo mLeft5">원</span></td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="해당 이용권으로 서비스를 이용하는 기간"></i>이용 기간</td>
+                          <td class="data">2021-06-01 ~ 2021-06-21</td>
+                        </tr>
+                        
+                        <tr>
+                          <td class="info_name">최종 결제 금액</td>
+                          <td class="data"><span class="underline red fw_bold">99,000</span><span class="subInfo mLeft5">원</span></td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="해당 이용권으로 서비스를 이용하는 기간"></i>이용 기간</td>
+                          <td class="data">
+                            이용전
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript:void(0);" class="btn btn-primary waves-effect waves-light" id="btn_certificate"><i class="far fa-file-alt mRight5"></i>증빙 서류 보기</a>
+                  <button type="button" class="btn btn-danger waves-effect waves-light btn_cancel" data-toggle="modal" data-target="#modal_cancel"><i class="fas fa-times mRight5"></i>직접 결제 취소</button>
+                  
+                  <span class="tippy-btn btn_cancel" data-tippy-placement="top-start" title="결제를 취소할 수 없습니다."><button type="button" class="btn btn-danger waves-effect waves-light" disabled="disabled"><i class="fas fa-times mRight5"></i>직접 결제 취소</button></span>
+                  <a href="./payment_list.html" class="btn btn-outline-secondary waves-effect waves-light mLeft20"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_cancel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">직접 결제 취소</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">승인된 결제를 취소하시겠습니까?</h5>
+                <h6 class="lh_vivid mBot0">
+                  결제 취소는 결제건의 결제를 관리자가 직접 취소하는 행위로<br>
+                  결제건에 따라 <span class="pink_vivid">전체 취소(승인 취소)</span> 또는<br>
+                  <span class="pink_vivid">부분 취소(일부 결제 금액 취소)</span>가 가능하며<br>
+                  취소 완료 후 해당 기관의 상태에 이를 반영할 수 있습니다.
+              </h6></div>
+            </div>
+            <div class="pHside40">
+              <h6 class="mBot3">※ 결제 취소는 다음과 같은 조건으로 진행됩니다.</h6>
+              <ol class="mTop3 pLeft20 indent5">
+                <li>멤버십 Plan을 <span class="red">이용전</span>인 경우 - <span class="red">전체</span> 결제 취소</li>
+                <li>멤버십 Plan을 <span class="red">이용중</span>인 경우 - <span class="red">부분</span> 결제 취소</li>
+                <li>멤버십 Plan의 <span class="red">이용이 완료</span>된 경우 - <span class="red">결제 취소 불가</span></li>
+                <li>멤버십 Plan 결제 <span class="red">승인일로부터 12개월까지</span> 결제 취소 가능</li>
+              </ol>
+              <h6 class="mBot3">※ 결제 취소 금액의 입력 방법은 다음과 같습니다.</h6>
+              <ol class="mTop3 pLeft20 indent5">
+                <li>전체 결제 취소: 자동 입력 (결제 금액 전체)</li>
+                <li>부분 결제 취소: 관리자 수기 입력</li>
+              </ol>
+            </div>
+
+            <form name="cancel_info" class="pHside40 pVside20 border_top">
+              <div class="flexMid mTop10">
+                <label class="text-right w80 fw_bold mRight20">결제 내용</label>
+                <span class="fs_semi fw_bold" id="payment_name">IPSAP 2021 베이직 멤버십</span>
+              </div>
+              <div class="flexMid">
+                <label class="text-right w80 fw_bold mRight20 mBot3">취소 구분</label>
+                
+                <div class="form-check-inline">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" name="cancel_type" id="cancel_all" value="0" class="custom-control-input" checked="checked">
+                    <label class="custom-control-label" for="cancel_all">전체 취소</label>
+                  </div>
+                </div>
+                <div class="form-check-inline">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" name="cancel_type" id="cancel_part" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="cancel_part">부분 취소</label>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="flexMid mTop10">
+                <label for="cancel_amount" class="text-right w80 fw_bold mRight20 mBot3">취소 금액</label>
+                <input type="number" min="0" class="form-control form-control-sm w120" id="cancel_amount">
+                <span class="mLeft10 mBot3">원</span>
+              </div>
+            </form>
+            <div class="red text-center" id="cancel_period_comment">※ 전체/부분 취소 여부는 해당 결제건에 따라 달라집니다.</div>
+            
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            
+            <button type="button" class="btn btn-danger" id="btn_cancel_done">결제 취소 실행</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_cancel_org" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">직접 결제 취소</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">승인된 결제를 취소하시겠습니까?</h5>
+                <h6 class="lh_vivid mBot0">
+                  결제 취소는 <span class="pink_vivid">전체 취소, 부분 취소</span>가 가능하며,<br>
+                  <span class="pink_vivid">부분 취소</span>의 경우 결제 취소일 익일부터의<br>
+                  <span class="pink_vivid">멤버십 Plan 잔여일에 해당하는 금액을 환불</span>하게 됩니다.</h6>
+              </div>
+            </div>
+            <div class="pHside40">
+              <h6 class="mBot3">※ 결제 취소는 다음과 같은 조건으로 진행됩니다.</h6>
+              <ol class="mTop3 pLeft20 indent5">
+                <li>멤버십 Plan을 <span class="red">이용전</span>인 경우 - <span class="red">전체</span> 결제 취소</li>
+                <li>멤버십 Plan을 <span class="red">이용중</span>인 경우 - <span class="red">부분</span> 결제 취소</li>
+                <li>멤버십 Plan의 <span class="red">이용이 완료</span>된 경우 - <span class="red">결제 취소 불가</span></li>
+                <li>멤버십 Plan 결제 <span class="red">승인일로부터 12개월까지</span> 결제 취소 가능</li>
+              </ol>
+              <h6 class="mBot3">※ 결제 취소 후 환불 금액은 다음과 같습니다.</h6>
+              <ol class="mTop3 pLeft20 indent5">
+                <li>전체 결제 취소: Plan 결제 금액 전체</li>
+                <li>부분 결제 취소: Plan 결제 금액 - Plan 이용 금액(이용일수로 환산)</li>
+                <li><span class="fw_bold">공통</span>: <span class="red">가입비 - 가입비 이용 금액(이용일수로 환산)</span></li>
+                <li class="noBullet pTop5">
+                  ※ 가입비는 <span class="underline">멤버십 총 기간중 잔여 기간에 해당하는 금액</span>을 환불합니다.
+                </li>
+              </ol>
+            </div>
+
+            <form name="cancel_info" class="pHside40 pVside20 border_top">
+              <div class="flexMid mTop10">
+                <label class="text-right w80 fw_bold mRight20">결제 내용</label>
+                <span class="fs_semi fw_bold">IPSAP 2021 베이직 멤버십</span>
+              </div>
+              <div class="flexMid">
+                <label class="text-right w80 fw_bold mRight20 mBot3">취소 구분</label>
+                
+                <div class="form-check-inline">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" name="cancel_type" value="0" class="custom-control-input" checked="checked">
+                    <label class="custom-control-label" for="cancel_all">전체 취소</label>
+                  </div>
+                </div>
+                <div class="form-check-inline">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" name="cancel_type" value="1" class="custom-control-input">
+                    <label class="custom-control-label" for="cancel_part">부분 취소</label>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="flexMid mTop10">
+                <label for="cancel_amount" class="text-right w80 fw_bold mRight20 mBot3">환불 금액</label>
+                <input type="number" min="0" class="form-control form-control-sm w120" id="">
+                <span class="mLeft10 mBot3">원</span>
+                <span class="mLeft10 mBot3">(수수료: 결제 금액의 10%)</span>
+              </div>
+              <div class="red mLeft100 mTop5" id="">※ 부분 취소 금액은 최종 결제 금액을 초과할 수 없습니다.</div>
+            </form>
+            
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            <button type="button" class="btn btn-danger">결제 취소 실행</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="modal_result">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">결제 취소 결과 안내</h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot20">
+                <h5 class="mBot0">결제가 정상적으로 취소되었습니다.</h5>
+                <div class="mTop5">취소 금액:<span class="fs_large fw_bold red mLeft10" id="cancel_amount_confirm">150,000</span><span class="mLeft5">원</span></div>
+                <div class="red mTop10">※ 결제 관련 자세한 사항은 카드사를 통해 확인할 수 있습니다.</div>
+              </div>
+            </div>
+            <div class="text-center border_top pTop20">
+              <h5 class="flexMid flexCenter mTop0">기관 서비스 상태
+                <div class="checkbox mLeft20">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="payment_type" class="custom-control-input" id="is_change" value="true" data-toggle="collapse" data-target="#org_status">
+                    <label class="custom-control-label" for="is_change">변경합니다.</label>
+                  </div>
+                </div>
+              </h5>
+              <div id="org_status" class="collapse">
+                <div class="comment">결제를 취소한 경우, 기관의 서비스 상태를 적합하게 변경해야합니다.</div>
+                <div class="form-check-inline mVside15">
+                  <div class="custom-control custom-radio mLeft30">
+                    <input type="radio" id="org_status_1" name="org_status" class="custom-control-input" value="1" checked="checked">
+                    <label class="custom-control-label" for="org_status_1">이용중</label>
+                  </div>
+                  <div class="custom-control custom-radio red mLeft20">
+                    <input type="radio" id="org_status_2" name="org_status" class="custom-control-input" value="2">
+                    <label class="custom-control-label" for="org_status_2">이용 정지</label>
+                  </div>
+                </div>
+                <div class="comment red mLeft30">※ 기관의 서비스 상태가 변경됩니다. 정확히 확인 후 변경해주세요.</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btn_confirm_change">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="modal_fail">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">결제 취소 실패 안내</h5>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot0">서비스 이용권의 결제 취소 및 환불이 불가합니다.</h5>
+                <div class="">결제 취소 및 환불 과정에서 예기치 못한 오류가 발생했습니다.</div>
+                <div class="red mTop10">※ 확인을 누르시면 결제 관리 화면으로 이동합니다.</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="payment_list.html" class="btn btn-primary">확인</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/admin/common_admin.js"></script>
+    <script src="./payment_list-info.js"></script>
+
+  </body>
+
+</html>

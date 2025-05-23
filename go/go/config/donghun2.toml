@@ -1,0 +1,46 @@
+# config.go > struct 과 항상 일치해야 한다. !!!
+
+server-type = "dev"
+
+[database]
+driver-name = "mysql"
+url = "192.168.0.60:3306"
+database = "ipsap"
+username = "root"
+password = "tmvmfls!00"
+init-version = "1.0.0"
+
+[server]
+swag-hostname = "192.168.0.65"
+# port = 7376
+port = 7377
+log-path = "" #로그 패스가 있을경우, 해당 위치에 로그를 남긴다.
+max-backups = 0
+working-path = "/root/go/working/"      # 작업 폴더 지정
+file-upload-path = "/root/go/upload/"
+protocol = "http"
+api-path = "/api/v1.0"
+cert = "/app/ipsap_cert/www.ipsap.co.kr_pem.pem"
+key = "/app/ipsap_cert/www.ipsap.co.kr_pem.key"
+
+[email]
+template-path = "/root/go/template/email/"
+logo-file = "/root/go/template/email/IPSAP_logo_top_fitted.png"
+
+[program]
+init-password = "test1234"
+encryption-key = "343b684bf08f4e13868680b4b56a88d7" # length : 32
+
+[s3]
+bucket_real = "ipsapupload"
+bucket_test = "sprintectest"
+
+[payment]
+general-mid = "nicepay00m"  # 알반결제용 MID
+general-merchant-key = "EYzu8jGGMfqaDEp76gSckuvnaHHu+bC4opsSN6lHv3b2lurNYkVXrZ7Z1AoqQnXI3eLuaUFyoRNC6FkrzVjceg==" # 일반결제용 MKEY
+regular-mid = "nictest04m"  # 정기결제용 MID
+regular-merchant-key = "b+zhZ4yOZ7FsH8pm5lhDfHZEb79tIwnjsdA0FBXh86yLc6BJeFVrZFXhAoJ3gEWgrWwN+lJMV0W4hvDdbe4Sjw==" # 정기결제용 MKEY
+
+[test]
+is-test-mode = true
+is-query-debug = false

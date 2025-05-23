@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title noBread">결제 상세</h4>
+                    <a href="javascript:newWindowPopup('https://npg.nicepay.co.kr/', 1500)" class="btn btn-primary btn-xs mTop-10 mLeft20">
+                      <i class="far fa-credit-card mRight10"></i>PG 관리자 바로가기
+                    </a>
+                    <div class="comment">IPSAP 서비스 등록기관이 결제한 상세내역 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                
+
+                <div class="card-body pVside20 pHside40">
+                  
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>결제 기관 정보</h4>
+                  </div>
+                  <div class="row pHside10 mTop10">
+                    <table class="table info_table">
+                      <colgroup>
+                        <col width="200">
+                        <col width="*" class="auto_width_4columns">
+                        <col width="200">
+                        <col width="*" class="auto_width_4columns">
+                      </colgroup>
+                      <tbody id="inst_info">
+                        <tr>
+                          <td class="info_name">기관명</td>
+                          
+                          <td class="data">-</td>
+                          <td class="info_name">사업자 등록번호</td>
+                          <td class="data">-</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">행정 간사</td>
+                          <td class="data">-</td>
+                          <td class="info_name">연락처</td>
+                          <td class="data">Tel: 010-0000-0000<br>Email: -@-</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">세금계산서 발행 여부</td>
+                          <td colspan="3" class="data">-</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  
+                  <div class="row mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>결제 정보</h4>
+                  </div>
+                  <div class="row pHside10 mTop10">
+                    <table class="table info_table mBot5">
+                      <colgroup>
+                        <col width="200">
+                        <col class="auto_width_4columns">
+                        <col width="200">
+                        <col class="auto_width_4columns">
+                      </colgroup>
+                      <tbody id="payment_info">
+                        <tr>
+                          <td class="info_name">결제 내용</td>
+                          <td class="data">IPSAP 2021 베이직 멤버십</td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="PG사 승인 번호 (한 번호에 승인, 취소가 모두 묶임)"></i>승인 번호</td>
+                          <td class="data">30009937</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        <tr>
+                          <td class="info_name">결제 구분</td>
+                          
+                          <td class="data">신용카드 - <span class="approved fw_bold">승인</span></td>
+                          <td class="info_name fw_bold">결제 금액</td>
+                          <td>
+                            <span class="data approved fw_bold underline mRight5">99,000</span>원
+                            <br>
+                            <span class="black">
+                              월정액:<span class="blue_deep mHside3">99,000</span>원<span class="mLeft5 mRight2">/</span>
+                              할인액:<span class="blue_deep mHside3">0</span>원 (0%)
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="IPSAP에서 PG 모듈에 결제를 요청한 시간"></i>결제 일시</td>
+                          <td class="data">2021-05-15 12:25:31</td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="PG사 모듈에서 승인이 완료된 시간"></i>승인 일시</td>
+                          <td class="data">2021-05-15 12:25:38</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="IPSAP 거래 번호 (행정간사가 확인 가능, 매번 새로 발행)"></i>결제 번호</td>
+                          <td class="data">20210515001</td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="PG사 거래 번호 (매번 새로 발행)"></i>거래 ID (TID)</td>
+                          <td class="data">nictest00m01012105061515382790</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        <tr>
+                          <td class="info_name">결제 구분</td>
+                          <td class="data">신용카드 - <span class="canceled fw_bold">전체 취소</span></td>
+                          <td class="info_name fw_bold">취소 금액</td>
+                          <td class="data fw_bold"><span class="canceled underline">99,000</span><span class="subInfo mLeft5">원</span></td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">결제 일시</td>
+                          <td class="data">2021-05-15 13:01:13</td>
+                          <td class="info_name">승인 취소 일시</td>
+                          <td class="data">2021-05-15 13:01:45</td>
+                        </tr>
+                        <tr>
+                          <td class="info_name">결제 번호</td>
+                          <td class="data">승인 결제와 동일</td>
+                          <td class="info_name">거래 ID (TID)</td>
+                          <td class="data">승인 결제와 동일</td>
+                        </tr>
+
+                        
+                        <tr class="blank_row"><td colspan="4"></td></tr>
+                        
+                        
+                        
+                        <tr>
+                          <td class="info_name">최종 결제 금액</td>
+                          <td class="data"><span class="underline red fw_bold">0</span><span class="subInfo mLeft5">원</span></td>
+                          <td class="info_name">
+                            <i class="fas fa-question-circle red tippy-btn mRight5" data-tippy-placement="top-start" title="해당 이용권으로 서비스를 이용하는 기간"></i>이용 기간</td>
+                          <td class="data">
+                            이용전
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript:void(0);" class="btn btn-primary waves-effect waves-light"><i class="far fa-file-alt mRight5"></i>증빙 서류 보기</a>
+                  
+                  
+                  <span class="tippy-btn" data-tippy-placement="top-start" title="결제를 취소할 수 없습니다."><button type="button" class="btn btn-danger waves-effect waves-light" disabled="disabled"><i class="fas fa-times mRight5"></i>직접 결제 취소</button></span>
+                  <a href="./payment_list.html" class="btn btn-outline-secondary waves-effect waves-light mLeft20"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_cancel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <h4 class="white text-center w100p">payment_list-info.html 참조</h4>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/admin/common_admin.js"></script>
+    <script src="./payment_list-info2.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,2932 @@
+basePath: /api/v1.0
+definitions:
+  model.Board:
+    properties:
+      board_type:
+        example: 1
+        type: integer
+      file_delete:
+        example: true
+        type: boolean
+      institution_seq:
+        example: 1
+        type: integer
+      text:
+        example: 내용
+        type: string
+      title:
+        example: 제목
+        type: string
+      view_order:
+        example: 1
+        type: integer
+    type: object
+  model.EmailloginModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      pw:
+        example: test
+        type: string
+      tmp_key:
+        example: "12345678901234561234567890123456"
+        type: string
+      user_seq:
+        type: integer
+    type: object
+  model.Institution:
+    properties:
+      addr1:
+        example: 메인주소
+        type: string
+      addr2:
+        example: 상세주소
+        type: string
+      business_num:
+        example: tester
+        type: string
+      homepage_url:
+        example: http://www.sprintec.co.kr
+        type: string
+      ia_base_item:
+        example: 50
+        type: integer
+      ia_base_score:
+        example: 50
+        type: integer
+      ia_evaluation_method:
+        example: 2
+        type: integer
+      ia_final_director:
+        example: 2
+        type: integer
+      institution_code:
+        example: TET
+        type: string
+      institution_type:
+        example: 1
+        type: integer
+      invoice_flag:
+        example: 1
+        type: integer
+      judge_type:
+        example: 1,2
+        type: string
+      name_en:
+        example: sprintec
+        type: string
+      name_ko:
+        example: 스프린텍
+        type: string
+      payment_method:
+        example: 1,2,3
+        type: string
+      service_status:
+        type: integer
+      zipcode:
+        example: 우편번호
+        type: string
+    type: object
+  model.InstitutionServiceChangeModel:
+    properties:
+      institution_seq:
+        type: integer
+      service_status:
+        example: 1
+        type: integer
+    type: object
+  model.Plan:
+    properties:
+      desc_text:
+        example: 설명
+        type: string
+      membership_category:
+        example: membership
+        type: string
+      membership_discount_amount:
+        example: 100
+        type: integer
+      membership_discount_rate:
+        example: 0.1
+        type: number
+      membership_discount_type:
+        example: R
+        type: string
+      membership_discounted_amount:
+        example: 100000
+        type: integer
+      membership_pid:
+        example: "1"
+        type: string
+      membership_price:
+        example: 1000000
+        type: integer
+      membership_product_seq:
+        example: 1
+        type: integer
+      name:
+        example: 2개월권
+        type: string
+      plan_available:
+        example: 1
+        type: integer
+      plan_category:
+        example: plan
+        type: string
+      plan_discount_amount:
+        example: 100
+        type: integer
+      plan_discount_rate:
+        example: 0.1
+        type: number
+      plan_discount_type:
+        example: R
+        type: string
+      plan_discounted_amount:
+        example: 100000
+        type: integer
+      plan_pid:
+        example: "1"
+        type: string
+      plan_price:
+        example: 1000000
+        type: integer
+      plan_product_seq:
+        description: "Planid \t\t\t\t\t\t\t\t\t\t\t\tstring\t`json:\"planid\" example:\"1\"`"
+        example: 1
+        type: integer
+      usage_limit:
+        example: 30
+        type: integer
+    type: object
+  model.User:
+    properties:
+      agree_email:
+        example: 0
+        type: integer
+      agree_pri_open:
+        example: 0
+        type: integer
+      agree_sms:
+        example: 0
+        type: integer
+      agree_terms_privacy:
+        type: integer
+      agree_terms_service:
+        type: integer
+      dept:
+        example: 소속부서
+        type: string
+      edu_course_num:
+        example: "0"
+        type: string
+      edu_date:
+        example: "20210101"
+        type: string
+      edu_institution:
+        example: 건국대학교
+        type: string
+      email:
+        example: test@test.com
+        type: string
+      major_field:
+        example: 수의학
+        type: string
+      name:
+        example: 홍길동
+        type: string
+      name_en:
+        example: Hong
+        type: string
+      phoneno:
+        example: "01012341234"
+        type: string
+      position:
+        example: 직급
+        type: string
+      pwd:
+        example: tmvmfls!00
+        type: string
+      telno:
+        example: "021231234"
+        type: string
+      user_type:
+        example: "1"
+        type: string
+    type: object
+  model.adminPatchUserInfoModel:
+    properties:
+      agree_email:
+        example: 1
+        type: integer
+      agree_pri_open:
+        example: 1
+        type: integer
+      agree_sms:
+        example: 1
+        type: integer
+      dept:
+        example: 소속부서
+        type: string
+      edu_course_num:
+        example: "0"
+        type: string
+      edu_date:
+        example: "20210101"
+        type: string
+      edu_institution:
+        example: 건국대학교
+        type: string
+      major_field:
+        example: 수의학
+        type: string
+      name:
+        example: 홍길동
+        type: string
+      phoneno:
+        example: "021231234"
+        type: string
+      position:
+        example: 직급
+        type: string
+      user_seq:
+        example: 1
+        type: integer
+      user_type:
+        example: "1"
+        type: string
+    type: object
+  model.approvedCommentModel:
+    properties:
+      approved_comment:
+        example: 승인함
+        type: string
+    type: object
+  model.freeMembershipRegisterModel:
+    properties:
+      free_period:
+        example: "1"
+        type: string
+      institution_seqs:
+        items:
+          type: integer
+        type: array
+      reason:
+        example: 가입 기념 무료 지급
+        type: string
+      usage_limit:
+        example: 1
+        type: integer
+    type: object
+  model.iacucCopyForIbc:
+    properties:
+      application_seq:
+        example: 1
+        type: integer
+    type: object
+  model.institutionPatchModel:
+    properties:
+      addr1:
+        example: 메인주소
+        type: string
+      addr2:
+        example: 상세주소
+        type: string
+      homepage_url:
+        example: http://www.sprintec.co.kr
+        type: string
+      ia_base_item:
+        example: 50
+        type: integer
+      ia_base_score:
+        example: 50
+        type: integer
+      ia_evaluation_method:
+        example: 2
+        type: integer
+      ia_final_director:
+        example: 2
+        type: integer
+      institution_code:
+        example: TET
+        type: string
+      institution_type:
+        example: 1
+        type: integer
+      judge_type:
+        example: 1,2
+        type: string
+      name_en:
+        example: sprintec
+        type: string
+      name_ko:
+        example: 스프린텍
+        type: string
+      zipcode:
+        example: 우편번호
+        type: string
+    type: object
+  model.institutionPaymentPatchModel:
+    properties:
+      business_num:
+        example: 사업자등록번호:111-231-12
+        type: string
+      invoice_flag:
+        example: 1
+        type: integer
+      payment_method:
+        example: 1,2,3
+        type: string
+    type: object
+  model.loginChangePwModel:
+    properties:
+      new_pw:
+        example: test
+        type: string
+      old_pw:
+        example: tester
+        type: string
+    type: object
+  model.loginModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      pw:
+        example: test
+        type: string
+      tmp_key:
+        example: "12345678901234561234567890123456"
+        type: string
+    type: object
+  model.moveInstitutionModel:
+    properties:
+      tmp_key:
+        example: "12345678901234561234567890123456"
+        type: string
+      user_seq:
+        example: 1
+        type: integer
+    type: object
+  model.myInstitutionModel:
+    properties:
+      tmp_key:
+        example: "12345678901234561234567890123456"
+        type: string
+    type: object
+  model.orderAssginModel:
+    properties:
+      amt:
+        example: 1000000
+        type: integer
+      edi_date:
+        example: YYYYMMDDHHMMSS
+        type: string
+      goods_name:
+        example: 정기 1개월권
+        type: string
+      product_seq:
+        example: 1
+        type: integer
+    type: object
+  model.orderCancelModel:
+    properties:
+      cancel_amt:
+        example: "1000"
+        type: string
+      partial_cancel_code:
+        example: "1"
+        type: string
+    type: object
+  model.platformAdminUserPatchModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      name:
+        example: 홍길동
+        type: string
+      telno:
+        example: "0212341234"
+        type: string
+      user_seq:
+        example: 1
+        type: integer
+    type: object
+  model.platformPatchUserInfoModel:
+    properties:
+      agree_email:
+        example: 1
+        type: integer
+      agree_pri_open:
+        example: 1
+        type: integer
+      agree_sms:
+        example: 1
+        type: integer
+      dept:
+        type: string
+      edu_course_num:
+        example: "0"
+        type: string
+      edu_date:
+        example: "20210101"
+        type: string
+      edu_institution:
+        example: 건국대학교
+        type: string
+      institution_seq:
+        type: integer
+      major_field:
+        example: 수의학
+        type: string
+      phoneno:
+        example: "021231234"
+        type: string
+      position:
+        example: 직급
+        type: string
+      user_seq:
+        type: integer
+      user_status:
+        type: integer
+      user_type:
+        type: string
+    type: object
+  model.platformUserRegisterBatchModel:
+    properties:
+      userArr:
+        items:
+          $ref: '#/definitions/model.platformUserRegisterModel'
+        type: array
+    type: object
+  model.platformUserRegisterModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      institution_seq:
+        example: 1
+        type: integer
+      phoneno:
+        example: "01012341234"
+        type: string
+      user_type:
+        example: 1,2
+        type: string
+    type: object
+  model.requestServiceModel:
+    properties:
+      institution:
+        $ref: '#/definitions/model.Institution'
+        type: object
+      user:
+        $ref: '#/definitions/model.User'
+        type: object
+    type: object
+  model.tokenModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      institution_name_ko:
+        example: 기관명
+        type: string
+      pw:
+        example: test
+        type: string
+    type: object
+  model.userBasicModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      phoneno:
+        example: "01012341234"
+        type: string
+      user_type:
+        example: "1"
+        type: string
+    type: object
+  model.userBatchModel:
+    properties:
+      userArr:
+        items:
+          $ref: '#/definitions/model.userBasicModel'
+        type: array
+    type: object
+  model.userIdFindModel:
+    properties:
+      name:
+        example: 홍길동
+        type: string
+      phoneno:
+        example: "01012341234"
+        type: string
+    type: object
+  model.userMyInfoPatchModel:
+    properties:
+      agree_email:
+        example: 1
+        type: integer
+      agree_pri_open:
+        example: 1
+        type: integer
+      agree_sms:
+        example: 1
+        type: integer
+      dept:
+        example: 소속부서
+        type: string
+      edu_course_num:
+        example: "0"
+        type: string
+      edu_date:
+        example: "20210101"
+        type: string
+      edu_institution:
+        example: 건국대학교
+        type: string
+      major_field:
+        example: 수의학
+        type: string
+      phoneno:
+        example: "021231234"
+        type: string
+      position:
+        example: 직급
+        type: string
+    type: object
+  model.userPasswordFindModel:
+    properties:
+      email:
+        example: test@test.com
+        type: string
+      name:
+        example: 홍길동
+        type: string
+      phoneno:
+        example: "01012341234"
+        type: string
+    type: object
+  model.userRegisterModel:
+    properties:
+      agree_email:
+        example: 1
+        type: integer
+      agree_pri_open:
+        example: 1
+        type: integer
+      agree_sms:
+        example: 1
+        type: integer
+      dept:
+        example: 소속부서
+        type: string
+      edu_course_num:
+        example: "0"
+        type: string
+      edu_date:
+        example: "20210101"
+        type: string
+      edu_institution:
+        example: 건국대학교
+        type: string
+      institution_seq:
+        example: 1
+        type: integer
+      major_field:
+        example: 수의학
+        type: string
+      name:
+        example: 홍길동
+        type: string
+      phoneno:
+        example: "01012341234"
+        type: string
+      position:
+        example: 직급
+        type: string
+      pwd:
+        example: tmvmfls!00
+        type: string
+      tmp_key:
+        example: "12345678901234561234567890123456"
+        type: string
+    type: object
+info:
+  contact: {}
+  license: {}
+  title: IPSAP Service APIs
+  version: "1.0"
+paths:
+  /admin/user:
+    get:
+      consumes:
+      - application/json
+      description: 사용자 관리 목록
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 사용자 관리 목록
+      tags:
+      - Admin(행정간사)
+    patch:
+      consumes:
+      - application/json
+      description: 행정간사가 사용자 정보 수정
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.adminPatchUserInfoModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 행정간사가 사용자 정보 수정
+      tags:
+      - Admin(행정간사)
+    post:
+      consumes:
+      - application/json
+      description: 사용자 관리 User 등록
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.userBasicModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 사용자 관리 User 등록
+      tags:
+      - Admin(행정간사)
+  /admin/user-batch:
+    post:
+      consumes:
+      - application/json
+      description: 사용자 관리 User 일괄 등록
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.userBatchModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 사용자 관리 User 일괄 등록
+      tags:
+      - Admin(행정간사)
+  /admin/user/{user_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: 등록 대기중인 사용자 삭제
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록 대기중인 사용자 삭제
+      tags:
+      - Admin(행정간사)
+  /admin/user/{user_seq}/resend-msg:
+    patch:
+      consumes:
+      - application/json
+      description: 사용자 관리 등록 대기 상태인 유저 가입 메세지 재발송
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 사용자 관리 등록 대기 상태인 유저 가입 메세지 재발송
+      tags:
+      - Admin(행정간사)
+  /admin/user/{user_seq}/reset-password:
+    patch:
+      consumes:
+      - application/json
+      description: 사용자 관리 비밀번호 초기화
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 사용자 관리 비밀번호 초기화
+      tags:
+      - Admin(행정간사)
+  /admin/user/{user_seq}/withdraw:
+    patch:
+      consumes:
+      - application/json
+      description: 회원 강제 탈퇴(실제 삭제 X 상태만 변경)
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 회원 강제 탈퇴
+      tags:
+      - Admin(행정간사)
+  /app/{application_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: |-
+        Application 삭제 (상태값만 변경)
+        22-03월 유지보수 사항
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 삭제 (상태값만 변경)
+      tags:
+      - Application
+  /application:
+    get:
+      consumes:
+      - application/json
+      description: |-
+        Application 신청서 목록 조회/ 실험 계획서 권환별 화면
+        app_view_type(없으면 전체 리스트 출력)
+        1 행정(간사, 담당자) 전체 계획서 및 보고서 (권한 체크함 !)
+        2 행정(간사, 담당자) 행정 검토
+        3 행정(간사, 담당자) 심사 종료 설정
+        4 행정간사 최종 심의
+        5 연구원 실험계획서
+        6 위원장 심사진행
+        7 심사위원 심사진행
+        8 위원장 심사기록
+        9 심사위원 심사기록
+        10 나의 승인후 점검 기록
+        11 내가 점걸할 실험
+        12 IBC에서 IACUC 참조 가능한 리스트
+        13 IACUC에서 IBC 참조 가능한 리스트
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.app_view_type
+        type: string
+      - description: page start index
+        in: query
+        name: filter.start_index
+        type: string
+      - description: row count
+        in: query
+        name: filter.row_cnt
+        type: string
+      - description: Search Words
+        in: query
+        name: search_words
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 신청서 목록 조회
+      tags:
+      - Application
+  /application-approved:
+    get:
+      consumes:
+      - application/json
+      description: |-
+        Application 승인후 신청서 목록 조회
+        app_view_type(없으면 전체 리스트 출력)
+        1 행정(간사, 담당자) 승인후 관리 > 전체 실험
+        2 행정(간사, 담당자) 승인후 관리 > 진행중인 실험
+        3 연구원 승인 후 관리 > 실험 수행 및 서류
+        4 위원장 진행중인 실험
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.app_view_type
+        type: string
+      - description: page start index
+        in: query
+        name: filter.start_index
+        type: string
+      - description: row count
+        in: query
+        name: filter.row_cnt
+        type: string
+      - description: Search Words
+        in: query
+        name: search_words
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 승인후 신청서 목록 조회
+      tags:
+      - Application
+  /application-possible:
+    get:
+      consumes:
+      - application/json
+      description: |-
+        Application (재승인, 변경 승인) 가능한 신청서 목록 조회
+        app_view_type(없으면 전체 리스트 출력)
+        1 연구원 승인 신청서 관리  > IACUC 재승인 가능한 신청서 리스트
+        2 연구원 승인 신청서 관리  > IACUC 변경 승인 가능한 신청서 리스트
+        3 연구원 승인 신청서 관리  > IBC 변경 심의 가능한 신청서 리스트
+        4 연구원 승인 신청서 관리  > IRB 변경 심의 가능한 신청서 리스트
+        5 연구원 승인 신청서 관리  > IRB 지속심의(중간보고) 가능한 신청서 리스트
+        6 연구원 승인 신청서 관리  > IACUC 보완후 재심 리스트
+        7 연구원 승인 신청서 관리  > IBC 보완후 재심 리스트
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.app_view_type
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application (재승인, 변경 승인) 가능한 신청서 목록 조회
+      tags:
+      - Application
+  /application/{application_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: |-
+        Application 삭제
+        임시저장된 상태만 삭제 가능함!
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 삭제
+      tags:
+      - Application
+    get:
+      consumes:
+      - application/json
+      description: Application 신청서 페이지 정보 조회
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      - description: item_name,item_name
+        in: query
+        name: filter.query_items
+        required: true
+        type: string
+      - description: item_name,item_name
+        in: query
+        name: filter.guide_items
+        type: string
+      - description: item_name,item_name
+        in: query
+        name: filter.parent_items
+        type: string
+      - description: "2"
+        in: query
+        name: filter.child_app_seq
+        type: string
+      - description: item_name,item_name
+        in: query
+        name: filter.child_items
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 신청서 페이지 정보 조회
+      tags:
+      - Application
+    patch:
+      consumes:
+      - multipart/form-data
+      description: Application 신청서 페이지 정보 수정 및 임시저장
+      parameters:
+      - description: 1.6 관련자료첨부
+        in: formData
+        name: general_ref
+        type: file
+      - description: 3.2 종/계통 선택한 합리적인 이유
+        in: formData
+        name: animal_species_reason
+        type: file
+      - description: 3.3 동물수에 대한 합리적인 근거
+        in: formData
+        name: animal_cnt_reason
+        type: file
+      - description: 5.1 동물실험의 개요 및 일정
+        in: formData
+        name: animal_exp_summary
+        type: file
+      - description: 5.5 처치방법
+        in: formData
+        name: animal_exp_surgical_method
+        type: file
+      - description: 7.3 사용허가증 첨부
+        in: formData
+        name: pain_relief_psych_m_license
+        type: file
+      - description: 7.4 처방전 첨부
+        in: formData
+        name: pain_relief_animal_m_license
+        type: file
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      - description: json format
+        in: formData
+        name: param
+        required: true
+        type: string
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 신청서 페이지 정보 수정 및 임시저장
+      tags:
+      - Application
+    post:
+      consumes:
+      - multipart/form-data
+      description: |-
+        Application 신청서 제출
+        filter.submit_type(없으면 신청서 제출)
+        1 보완 요청(행정간사, 행정담당만 가능)
+        2 행정 검토 1단계 완료(행정간사, 행정담당만 가능)
+        3 행정 검토 2단계 완료(행정간사, 행정담당만 가능)
+        4 전문심사 1단계 완료 (심사위원만 가능)
+        5 전문심사 2단계 완료 (심사위원만 가능)
+        6 일반심사 (심사위원만 가능)
+        7 심사종료설정 완료 (행정간사,담당만 가능)
+        8 최종심의 승인(행정간사 또는 위원장 가능)
+        9 최종심의 조건부 승인(행정간사 또는 위원장 가능)
+        10 최종심의 반려 (행정간사 또는 위원장 가능)
+        11 최종심의 보완후 재심 (행정간사 또는 위원장 가능)
+        12 과제수행 실험 종료(연구원)
+        13 과제수행 과제 종료(행정간사 또는 위원장 가능)
+        신청서 제출 -> 행정검토 -> 전문심사 -> 일반심사 -> 심사종료설정 -> 최종심의 -> 과제수행
+        이전상태가 안 맞으면 에러
+      parameters:
+      - description: 1.6 관련자료첨부
+        in: formData
+        name: general_ref
+        type: file
+      - description: 3.2 종/계통 선택한 합리적인 이유
+        in: formData
+        name: animal_species_reason
+        type: file
+      - description: 3.3 동물수에 대한 합리적인 근거
+        in: formData
+        name: animal_cnt_reason
+        type: file
+      - description: 5.1 동물실험의 개요 및 일정
+        in: formData
+        name: animal_exp_summary
+        type: file
+      - description: 5.5 처치방법
+        in: formData
+        name: animal_exp_surgical_method
+        type: file
+      - description: 7.3 사용허가증 첨부
+        in: formData
+        name: pain_relief_psych_m_license
+        type: file
+      - description: 7.4 처방전 첨부
+        in: formData
+        name: pain_relief_animal_m_license
+        type: file
+      - description: "1"
+        in: query
+        name: filter.submit_type
+        type: string
+      - description: "1"
+        in: query
+        name: filter.iacuc_seq
+        type: string
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      - description: json format
+        in: formData
+        name: param
+        required: true
+        type: string
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 신청서 제출
+      tags:
+      - Application
+  /application/{application_seq}/change:
+    get:
+      consumes:
+      - application/json
+      description: Application 변경 내역
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 변경 내역
+      tags:
+      - Application Change
+  /application/{application_seq}/change/animal:
+    get:
+      consumes:
+      - application/json
+      description: Application 변경 내역 동물
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 변경 내역 동물
+      tags:
+      - Application Change
+  /application/{application_seq}/change/end-date:
+    get:
+      consumes:
+      - application/json
+      description: Application 연구 종료일
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 변경 승인 신청 내역
+      tags:
+      - Application Change
+  /application/{application_seq}/change/member:
+    get:
+      consumes:
+      - application/json
+      description: Application 연구 책임자 또는 실험 수행자 변경 내역
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 변경 승인 신청 내역
+      tags:
+      - Application Change
+  /application/{application_seq}/copy:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        Application 복제
+        임시저장된 상태로 복제를 해준다!
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 복제
+      tags:
+      - Application
+  /application/{application_seq}/iacuc-copy:
+    post:
+      consumes:
+      - application/json
+      description: "Application\tIACUC신청서에서 선택하기\nbody에 복사할 iacuc app seq를 담아서 보낸다."
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.iacucCopyForIbc'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: "Application\tIBC -> IACUC신청서에서 선택하기"
+      tags:
+      - Application
+  /application/{application_seq}/info:
+    get:
+      consumes:
+      - application/json
+      description: Application 신청서 정보
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 신청서 정보
+      tags:
+      - Application
+  /application/{application_seq}/inspector:
+    get:
+      consumes:
+      - application/json
+      description: Application 승인후 점검위원 리스트
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 승인후 점검위원 리스트
+      tags:
+      - Application
+  /application/{application_seq}/inspector/{user_seq}:
+    patch:
+      consumes:
+      - application/json
+      description: Application 승인후 점검위원 지정
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      - description: "1"
+        in: path
+        name: user_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 승인후 점검위원 지정
+      tags:
+      - Application
+  /application/{application_seq}/retrial-copy:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        Application 보완후 재심 신청서 선택시 복제
+        새로운 app_no 가 발급됨
+      parameters:
+      - description: "1"
+        in: path
+        name: application_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Application 보완후 재심 신청
+      tags:
+      - Application
+  /auth/email/cancel-withdraw:
+    post:
+      consumes:
+      - application/json
+      description: 탈퇴 신청일로 부터 7일이 지나면 탈퇴 철회 불가
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.loginModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 탈퇴 철회
+      tags:
+      - Auth
+  /auth/email/login:
+    post:
+      consumes:
+      - application/json
+      description: 이메일을 통해서 들어왔을때 로그인
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.EmailloginModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 이메일을 통해서 들어왔을때 로그인
+      tags:
+      - Auth
+  /auth/find-id:
+    post:
+      consumes:
+      - application/json
+      description: Id 찾기
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.userIdFindModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: Id 찾기
+      tags:
+      - Auth
+  /auth/find-pwd:
+    post:
+      consumes:
+      - application/json
+      description: Password 찾기 새로운 비밀번호 email 전송
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.userPasswordFindModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: Password 찾기
+      tags:
+      - Auth
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: 로그인
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.loginModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 로그인
+      tags:
+      - Auth
+  /auth/token:
+    post:
+      consumes:
+      - application/json
+      description: Token 발급
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.tokenModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: Token 발급
+      tags:
+      - Token
+  /billing-key:
+    post:
+      consumes:
+      - application/json
+      description: 빌링키 발급
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 빌링키 발급
+      tags:
+      - Billing
+  /billing-key/assign:
+    get:
+      consumes:
+      - application/json
+      description: 빌링키 창 요청
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 빌링키 창 요청
+      tags:
+      - Billing
+  /board:
+    get:
+      consumes:
+      - application/json
+      description: |-
+        board_type = 1 공지사항
+        board_type = 2 자료실
+        board_type = 3 FAQ
+        qurey param board_type 이 없으면 전체
+        qurey param institution_seq가 없으면 공통게시판
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.board_type
+        type: string
+      - description: "1"
+        in: query
+        name: filter.institution_seq
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 게시판 리스트
+      tags:
+      - Board
+    post:
+      consumes:
+      - multipart/form-data
+      description: |-
+        게시판 등록
+        institution_seq = 0 인거는 공통!
+        board_type = 1 공지사항
+        board_type = 2 자료실
+        board_type = 3 FAQ
+        view_order 값은 FAQ 등록시 필요함
+      parameters:
+      - description: 관련자료첨부
+        in: formData
+        name: board_file
+        type: file
+      - description: json format
+        in: formData
+        name: param
+        required: true
+        type: string
+      - description: test용 Json Data 실제사용 X
+        in: body
+        name: test
+        schema:
+          $ref: '#/definitions/model.Board'
+          type: object
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 게시판 등록
+      tags:
+      - Board
+  /board/{board_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: 게시판 삭제
+      parameters:
+      - description: board_seq
+        in: path
+        name: board_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 게시판 삭제
+      tags:
+      - Board
+    get:
+      consumes:
+      - application/json
+      description: 게시판 상세 정보
+      parameters:
+      - description: board_seq
+        in: path
+        name: board_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 게시판 상세 정보
+      tags:
+      - Board
+    patch:
+      consumes:
+      - multipart/form-data
+      description: |-
+        게시판 수정
+        institution_seq = 0 인거는 공통!
+        board_type = 1 공지사항
+        board_type = 2 자료실
+        board_type = 3 FAQ
+        file_delete 삭제시 true 아니면 flase
+      parameters:
+      - description: board_seq
+        in: path
+        name: board_seq
+        required: true
+        type: integer
+      - description: 관련자료첨부
+        in: formData
+        name: board_file
+        type: file
+      - description: json format
+        in: formData
+        name: param
+        required: true
+        type: string
+      - description: test용 Json Data 실제사용 X
+        in: body
+        name: test
+        schema:
+          $ref: '#/definitions/model.Board'
+          type: object
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 게시판 수정
+      tags:
+      - Board
+  /common/dup-check/email:
+    get:
+      consumes:
+      - application/json
+      description: Email 중복 체크 (기관내에서만 중복 확인)
+      parameters:
+      - description: test@test.com
+        in: query
+        name: email
+        required: true
+        type: string
+      - description: "1"
+        in: query
+        name: institution_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Email 중복 체크 (기관내에서만 중복 확인)
+      tags:
+      - Common
+  /common/dup-check/institution-code:
+    get:
+      consumes:
+      - application/json
+      description: 기관코드 중복 체크
+      parameters:
+      - description: KUN01
+        in: query
+        name: institution_code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관코드 중복 체크
+      tags:
+      - Common
+  /dashboard:
+    get:
+      consumes:
+      - application/json
+      description: "DashBoard List\ndash_view_type 1 = 행정간사\tdashboard(기관 전체)\ndash_view_type
+        2 = 연구원\t dashboard(자신이 참여한 실험만)\ndash_view_type 3 = 위원장\t dashboard(기관 전체)"
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.dashboard_type
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: DashBoard List
+      tags:
+      - DashBoard
+  /file-animal:
+    get:
+      consumes:
+      - application/json
+      description: 실험 동물 데이터 엑셀 다운로드
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.institution_seq
+        required: true
+        type: string
+      - description: "1"
+        in: query
+        name: filter.reg_user_seq
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 실험 동물 데이터 엑셀 다운로드
+      tags:
+      - File
+  /file/{filepath_enc}:
+    get:
+      consumes:
+      - application/json
+      description: 파일 다운로드
+      parameters:
+      - description: encrypt filepath
+        in: path
+        name: filepath_enc
+        required: true
+        type: string
+      - description: token
+        in: query
+        name: token
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 파일 다운로드
+      tags:
+      - File
+  /institution:
+    get:
+      consumes:
+      - application/json
+      description: 기관 리스트
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관 리스트
+      tags:
+      - Institution
+  /institution-board:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록 기관 공지사항 리스트
+      tags:
+      - Board
+  /institution/{institution_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: IPSAP 기관 탈퇴
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: IPSAP 기관 탈퇴
+      tags:
+      - Institution
+    get:
+      consumes:
+      - application/json
+      description: 기관 상세 정보
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관 상세 정보
+      tags:
+      - Institution
+    patch:
+      consumes:
+      - multipart/form-data
+      description: 기관정보 수정
+      parameters:
+      - description: 기관 로고 파일
+        in: formData
+        name: logo_file
+        type: file
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      - description: 기관정보 수정(Json String 형태)
+        in: formData
+        name: param
+        required: true
+        type: string
+      - description: test용 Json Data 실제사용 X
+        in: body
+        name: test
+        schema:
+          $ref: '#/definitions/model.institutionPatchModel'
+          type: object
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관정보 수정
+      tags:
+      - Institution
+  /institution/{institution_seq}/admin-count:
+    get:
+      consumes:
+      - application/json
+      description: 기관 행정간사 인원수
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관 행정간사 인원수
+      tags:
+      - Institution
+  /institution/{institution_seq}/payment:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 기관 결제정보 수정 요청
+      parameters:
+      - description: 사업자 등록증 파일
+        in: formData
+        name: business_file
+        type: file
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      - description: 기관 결제정보 수정(Json String 형태)
+        in: formData
+        name: param
+        required: true
+        type: string
+      - description: test용 Json Data 실제사용 X
+        in: body
+        name: test
+        schema:
+          $ref: '#/definitions/model.institutionPaymentPatchModel'
+          type: object
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관 결제정보 수정 요청
+      tags:
+      - Institution
+  /institution/{institution_seq}/payment-setting:
+    patch:
+      consumes:
+      - application/json
+      description: |-
+        수동 -> 자동, 자동 -> 수동 변경
+        bill key를 발급 받은적이 없으면 bill key를 새로 받아야함
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 멤버쉽 결제 방법 변경(수동, 자동)
+      tags:
+      - Membership
+  /institution/{institution_seq}/product/{product_seq}:
+    patch:
+      consumes:
+      - application/json
+      description: 멤버쉽 변경
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      - description: product_seq
+        in: path
+        name: product_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 멤버쉽 변경
+      tags:
+      - Membership
+  /institution/{institution_seq}/user:
+    get:
+      consumes:
+      - application/json
+      description: 기관에 등록된 회원 리스트
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      - description: "1"
+        in: query
+        name: filter.user_type
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 기관에 등록된 회원 리스트
+      tags:
+      - Institution
+  /institution/{institution_seq}/using-membership/purchased:
+    get:
+      consumes:
+      - application/json
+      description: 기관에서 현재 이용중인 멤버십의 결제 이력
+      parameters:
+      - description: institution_seq
+        in: path
+        name: institution_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 기관에서 현재 이용중인 멤버십의 결제 이력
+      tags:
+      - Institution
+  /membership:
+    delete:
+      consumes:
+      - application/json
+      description: 멤버십 해지 및 환불(기관 행정간사)
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 멤버십 해지 및 환불
+      tags:
+      - Membership Cancel
+    get:
+      consumes:
+      - application/json
+      description: 이용중인 멤버십 정보 및 결제 정보
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 이용중인 멤버십 정보 및 결제 정보
+      tags:
+      - Membership
+  /membership-free/institution:
+    get:
+      consumes:
+      - application/json
+      description: 무료 멤버십 지급 가능한 리스트(가입비를 지불한 상태여야됨)
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 무료 멤버십 지급 가능한 리스트
+      tags:
+      - Membership
+  /membership/cancel:
+    get:
+      consumes:
+      - application/json
+      description: 멤버십 해지 및 환불(기관 행정간사)
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 멤버십 해지 및 환불 정보 요청
+      tags:
+      - Membership Cancel
+  /membership/free:
+    get:
+      consumes:
+      - application/json
+      description: 무료 멤버쉽 지급 목록
+      parameters:
+      - description: page start index
+        in: query
+        name: filter.start_index
+        type: string
+      - description: row count
+        in: query
+        name: filter.row_cnt
+        type: string
+      - description: '이용여부 (0: 미이용, 1: 이용완료)'
+        in: query
+        name: filter.use_status
+        type: string
+      - description: 검색어
+        in: query
+        name: filter.search_word
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 무료 멤버쉽 지급 목록
+      tags:
+      - Membership Free
+    post:
+      consumes:
+      - application/json
+      description: 무료 멤버쉽 지급
+      parameters:
+      - description: free membership
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.freeMembershipRegisterModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "201": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 무료 멤버쉽 지급
+      tags:
+      - Membership Free
+  /membership/free/{free_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: 무료 멤버십 지급 회수
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 무료 멤버십 지급 회수
+      tags:
+      - Membership Free
+  /membership/plan:
+    get:
+      consumes:
+      - application/json
+      description: Membership Plan  리스트
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Membership Plan 리스트
+      tags:
+      - Membership Plan
+    post:
+      consumes:
+      - application/json
+      description: Membership Plan 등록
+      parameters:
+      - description: plan
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.Plan'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "201": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Membership Plan 등록
+      tags:
+      - Membership Plan
+  /membership/plan/{plan_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: Membership Plan 삭제
+      parameters:
+      - description: "1"
+        in: path
+        name: plan_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Membership Plan 삭제
+      tags:
+      - Membership Plan
+    get:
+      consumes:
+      - application/json
+      description: Membership Plan 정보
+      parameters:
+      - description: "1"
+        in: path
+        name: plan_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Membership Plan 정보
+      tags:
+      - Membership Plan
+    patch:
+      consumes:
+      - application/json
+      description: Membership Plan 수정
+      parameters:
+      - description: "1"
+        in: path
+        name: plan_seq
+        required: true
+        type: integer
+      - description: Membership plan
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.Plan'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Membership Plan 수정
+      tags:
+      - Membership Plan
+  /move-institution:
+    post:
+      consumes:
+      - application/json
+      description: 소속기관으로 이동하기
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.moveInstitutionModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 소속기관으로 이동하기
+      tags:
+      - Institution
+  /my/institution:
+    post:
+      consumes:
+      - application/json
+      description: 내가 소속된 기관 리스트
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.myInstitutionModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 내가 소속된 기관 리스트
+      tags:
+      - Institution
+  /my/other-institution:
+    get:
+      consumes:
+      - application/json
+      description: 내가 소속된 타 기관 리스트
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 내가 소속된 타 기관 리스트
+      tags:
+      - Institution
+  /orders:
+    get:
+      consumes:
+      - application/json
+      description: 결제 이력
+      parameters:
+      - description: 기관 seq
+        in: query
+        name: filter.institution_seq
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 결제 이력
+      tags:
+      - Orders
+    post:
+      consumes:
+      - application/json
+      description: 상품 결제
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 상품 결제
+      tags:
+      - Orders
+  /orders/{order_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: |-
+        결제 취소 (플랫폼 관리자) 기관에 상태 변경 적용 안됨
+        partial_cancel_code 0:전체 취소, 1:부분 취소
+      parameters:
+      - description: order cancel
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.orderCancelModel'
+          type: object
+      - description: "1"
+        in: path
+        name: order_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 결제 취소 (플랫폼 관리자)
+      tags:
+      - Orders
+    get:
+      consumes:
+      - application/json
+      description: 결제 상세
+      parameters:
+      - description: "1"
+        in: path
+        name: order_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 결제 상세
+      tags:
+      - Orders
+  /orders/assign:
+    post:
+      consumes:
+      - application/json
+      description: 상품 결제창 요청
+      parameters:
+      - description: order assign
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.orderAssginModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 상품 결제창 요청
+      tags:
+      - Orders
+  /platform/admin-user:
+    get:
+      consumes:
+      - application/json
+      description: |-
+        관리자 정보
+        우선 관리자 연락처 관리 정보에서 서비스 관리자로만 호출하면됨!
+        filter.user_auth = 9  플랫폼 관리자
+        filter.user_auth = 10 서비스 관리자
+        filter.user_auth = 11 시스템 관리자
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.user_auth
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 관리자 정보
+      tags:
+      - Platform
+    patch:
+      consumes:
+      - application/json
+      description: |-
+        관리자 정보 수정
+        user_seq 포함해서 데이터 만들어야됨! (연락처, 이메일은 필수 값이 아님!)
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.platformAdminUserPatchModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 관리자 정보 수정
+      tags:
+      - Platform
+  /platform/institution:
+    patch:
+      consumes:
+      - multipart/form-data
+      description: |-
+        Platform관리자가 기관정보 수정
+        user_seq institution_seq를 추가로 param을 만들어 줘야함!
+        userArr에 행정간사데이터를 담아서 보내준다!
+      parameters:
+      - description: 기관 로고 파일
+        in: formData
+        name: logo_file
+        type: file
+      - description: 사업자 등록증 파일
+        in: formData
+        name: business_file
+        type: file
+      - description: 기관정보 수정(Json String 형태)
+        in: formData
+        name: param
+        required: true
+        type: string
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Platform관리자가 기관정보 수정
+      tags:
+      - Platform
+  /platform/other-institution/{user_seq}:
+    get:
+      consumes:
+      - application/json
+      description: 타 기관 유저 리스트
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 타 기관 유저 리스트
+      tags:
+      - Platform
+  /platform/payment/cancel/institution:
+    patch:
+      consumes:
+      - application/json
+      description: 관리자가 결제 취소 후 기관 서비스 이용 상태 변경
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.InstitutionServiceChangeModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 관리자가 결제 취소 후 기관 서비스 이용 상태 변경
+      tags:
+      - Platform
+  /platform/user:
+    get:
+      consumes:
+      - application/json
+      description: 등록 회원 관리 리스트
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록 회원 관리 리스트
+      tags:
+      - Platform
+    patch:
+      consumes:
+      - application/json
+      description: Platform관리자가 사용자 정보 수정
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.platformPatchUserInfoModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: Platform관리자가 사용자 정보 수정
+      tags:
+      - Platform
+    post:
+      consumes:
+      - application/json
+      description: 회원 등록
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.platformUserRegisterModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 회원 등록
+      tags:
+      - Platform
+  /platform/user-batch:
+    post:
+      consumes:
+      - application/json
+      description: 회원 일괄 등록
+      parameters:
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.platformUserRegisterBatchModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 회원 일괄 등록
+      tags:
+      - Platform
+  /platform/user/{user_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: 등록 대기중인 사용자 삭제
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록 대기중인 사용자 삭제
+      tags:
+      - Platform
+    get:
+      consumes:
+      - application/json
+      description: 등록 회원 관리 정보
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록 회원 관리 정보
+      tags:
+      - Platform
+  /platform/user/{user_seq}/resend-msg:
+    patch:
+      consumes:
+      - application/json
+      description: 등록 대기 상태인 유저 가입 메세지 재발송
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록 대기 상태인 유저 가입 메세지 재발송
+      tags:
+      - Platform
+  /platform/user/{user_seq}/reset-password:
+    patch:
+      consumes:
+      - application/json
+      description: 등록회원 관리 비밀번호 초기화
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 등록회원 관리 비밀번호 초기화
+      tags:
+      - Platform
+  /platform/user/{user_seq}/withdraw:
+    patch:
+      consumes:
+      - application/json
+      description: |-
+        회원 강제 탈퇴(실제 삭제 X 상태만 변경)
+        전체 기관에서 탈퇴함
+        각 기관의 행정간사에게 메일을 보내야함
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 회원 강제 탈퇴
+      tags:
+      - Platform
+  /request/service:
+    get:
+      consumes:
+      - application/json
+      description: 신청서 관리 목록
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 신청서 관리 목록
+      tags:
+      - RequsetService
+    post:
+      consumes:
+      - multipart/form-data
+      description: 온라인 심의 시스템 서비스 신청서 등록
+      parameters:
+      - description: 기관 로고 파일
+        in: formData
+        name: logo_file
+        type: file
+      - description: 사업자 등록증 파일
+        in: formData
+        name: business_file
+        type: file
+      - description: 서비스 신청(Json String 형태)
+        in: formData
+        name: request_service
+        required: true
+        type: string
+      - description: test용 Json Data 실제사용 X
+        in: body
+        name: test
+        schema:
+          $ref: '#/definitions/model.requestServiceModel'
+          type: object
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      summary: 온라인 심의 시스템 서비스 신청서 등록
+      tags:
+      - RequsetService
+  /request/service/{reqsvc_seq}:
+    get:
+      consumes:
+      - application/json
+      description: 신청서 상세 정보
+      parameters:
+      - description: "1"
+        in: path
+        name: reqsvc_seq
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 신청서 상세 정보
+      tags:
+      - RequsetService
+    patch:
+      consumes:
+      - multipart/form-data
+      description: |-
+        신청서 수정(플랫폼 관리자만 수정 가능하다)
+        request_type이 1 인경우 (서비스 등록) 결제정보 내용 뺴고 수정 가능하다
+        request_type이 2 인경우 (결제정보 변경) 결제정보 만 수정 가능하다
+      parameters:
+      - description: 기관 로고 파일
+        in: formData
+        name: logo_file
+        type: file
+      - description: 사업자 등록증 파일
+        in: formData
+        name: business_file
+        type: file
+      - description: "1"
+        in: path
+        name: reqsvc_seq
+        required: true
+        type: integer
+      - description: 기관정보 수정(Json String 형태)
+        in: formData
+        name: param
+        required: true
+        type: string
+      - description: test용 Json Data 실제사용 X 서비스 등록 내용 수정시 Sample
+        in: body
+        name: test1
+        schema:
+          $ref: '#/definitions/model.requestServiceModel'
+          type: object
+      - description: test용 Json Data 실제사용 X 결제 내용 변경시 Sample
+        in: body
+        name: test2
+        schema:
+          $ref: '#/definitions/model.institutionPaymentPatchModel'
+          type: object
+      produces:
+      - multipart/form-data
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 신청서 수정
+      tags:
+      - RequsetService
+  /request/service/{reqsvc_seq}/handle:
+    patch:
+      consumes:
+      - application/json
+      description: |-
+        신청서 승인, 보류, 안내 재발송
+        승인 handle_type 1
+        보류 handle_type 2
+        재발송 handle_type 3
+      parameters:
+      - description: "1"
+        in: query
+        name: filter.handle_type
+        required: true
+        type: string
+      - description: "1"
+        in: path
+        name: reqsvc_seq
+        required: true
+        type: integer
+      - description: 승인 및 보류시 comment가 있을때
+        in: body
+        name: param
+        schema:
+          $ref: '#/definitions/model.approvedCommentModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 신청서 처리
+      tags:
+      - RequsetService
+  /user/{user_seq}:
+    delete:
+      consumes:
+      - application/json
+      description: User 탈퇴(현재 로그인한 기관내에서만 탈퇴!)
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: User 탈퇴 (현재 로그인한 기관내에서만 탈퇴!)
+      tags:
+      - User
+    get:
+      consumes:
+      - application/json
+      description: User 정보
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: User 정보
+      tags:
+      - User
+    patch:
+      consumes:
+      - application/json
+      description: 나의 정보 수정
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.userMyInfoPatchModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: 나의 정보 수정
+      tags:
+      - User
+  /user/{user_seq}/change-password:
+    patch:
+      consumes:
+      - application/json
+      description: User 비밀번호변경
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.loginChangePwModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: User 비밀번호변경
+      tags:
+      - User
+  /user/{user_seq}/institution:
+    delete:
+      consumes:
+      - application/json
+      description: User 탈퇴(소속된 기관 전체에서 탈퇴!)
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      security:
+      - ApiKeyAuth: []
+      summary: User 탈퇴 (소속된 기관 전체에서 탈퇴!)
+      tags:
+      - User
+  /user/{user_seq}/register:
+    patch:
+      consumes:
+      - application/json
+      description: 나의 정보 등록(User가 직접입력)
+      parameters:
+      - description: user_seq
+        in: path
+        name: user_seq
+        required: true
+        type: string
+      - description: param
+        in: body
+        name: param
+        required: true
+        schema:
+          $ref: '#/definitions/model.userRegisterModel'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200": {}
+      summary: 나의 정보 등록
+      tags:
+      - User
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: token
+    type: apiKey
+swagger: "2.0"

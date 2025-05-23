@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">멤버십 결제 관리</h4>
+                    <div class="comment">
+                      현재 <span class="red">이용중인 IPSAP 멤버십</span> 정보를 확인하고, <span class="red">멤버십 갱신</span>을 진행할 수 있습니다.
+                    </div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card">
+                <div class="card-header">
+
+                
+                <div class="card-body pHside40 pVside20" id="cart">
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>IPSAP 멤버십 가입, 갱신</h4>
+                  </div>
+                  <div class="mTop10">
+                    <table class="table list_table membership_list nowrap fs_large">
+                      <colgroup>
+                        <col width="100">
+                        <col width="160">
+                        <col width="160">
+                        <col width="160">
+                        <col width="*">
+                      </colgroup>
+                      <tbody>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 베이직 멤버십<span class="badge badge-pill badge-danger mLeft10">이용중</span>
+                            
+                            <div class="description">IPSAP 서비스를 매월 최대 10회까지 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">99,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 최대 이용건수</label>
+                            <div class="price">최대 10<span class="fs_12p mLeft5">회</span></div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 결제하기</button>
+                          </td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 프리미엄 멤버십
+                            
+                            <div class="description">IPSAP 서비스를 매월 무제한 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">33,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 최대 이용건수</label>
+                            <div class="price">무제한</div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs billing_item">멤버십 정기 결제하기</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <form name="payForm" accept-charset="euc-kr">
+                        <input type="hidden" name="GoodsName">
+                        <input type="hidden" name="Amt">
+                        <input type="hidden" name="MID">
+                        <input type="hidden" name="EdiDate">
+                        <input type="hidden" name="Moid">
+                        <input type="hidden" name="SignData">
+                        <input type="hidden" name="ReqReserved">
+                        <input type="hidden" name="CharSet" value="utf-8">
+                        <input type="hidden" name="PayMethod" value="CARD,BANK">
+                        <input type="hidden" name="BuyerName">
+                        <input type="hidden" name="BuyerTel">
+                        <input type="hidden" name="BuyerEmail">
+                      </form>
+                    </table>
+                  </div>
+                </div>
+                <div id="cart2">
+                <form name="tranMgr">
+                  <input type="hidden" name="MID">
+                  <input type="hidden" name="GoodsName">
+                  <input type="hidden" name="BuyerName">
+                  <input type="hidden" name="BuyerTel">
+                  <input type="hidden" name="BuyerEmail">
+                  <input type="hidden" name="ReturnUrl">
+                  <input type="hidden" name="PayMethod">
+                  <input type="hidden" name="SecureKeypadYN">
+                  <input type="hidden" name="CharSet">
+                </form>
+                </div>
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    
+    <script src="https://web.nicepay.co.kr/v3/webstd/js/nicepay-3.0.js"></script>
+    <script src="/html/officer/info_payment_common.js"></script>
+    <script src="/html/officer/info_payment_new_test.js"></script>
+    
+    
+    
+    <script src="../../assets/vendors/crypto-js/core.js"></script>
+    <script src="../../assets/vendors/crypto-js/sha256.js"></script>
+    
+    
+  </div></div></body>
+
+</html>

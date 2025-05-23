@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title noBread">IPSAP 결제 관리</h4>
+                    <a href="javascript:newWindowPopup('https://npg.nicepay.co.kr/', 1500)" class="btn btn-primary btn-xs mTop-10 mLeft20">
+                      <i class="far fa-credit-card mRight10"></i>PG 관리자 바로가기
+                    </a>
+                    <div class="comment">IPSAP 서비스 등록기관이 결제한 목록 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden">
+                <div class="card-header">
+                  <h4 class="card-title">IPSAP 결제 목록</h4>
+                  <div class="flexMid">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap">
+                    <colgroup>
+                      <col width="80">   
+                      <col width="80">   
+                      <col width="110">  
+                      <col width="200">  
+                      <col width="100">  
+                      <col width="100">  
+                      <col width="100">  
+                      <col width="*" class="hidden">  
+                      <col width="*" class="hidden">  
+                      <col width="*">    
+                      <col width="*">    
+                      <col width="*">    
+                      <col width="100">  
+                    </colgroup>
+                    <thead data-init-order="0" data-order-direction="desc">
+                      <tr>
+                        <th>결제일</th>
+                        <th>결제 시간</th>
+                        <th>결제 번호</th>
+                        <th>결제 내용</th>
+                        <th class="text-right">결제 금액(원)</th>
+                        <th class="text-center">결제 수단</th>
+                        <th>결제 구분</th>
+                        <th class="appNo hidden">승인 번호</th>
+                        <th class="TID hidden">거래 ID</th>
+                        <th>기관명(코드)</th>
+                        <th>행정 간사명 </th>
+                        <th>연락처</th>
+                        <th class="no-order text-center">증빙 서류</th>
+                      </tr>
+                    </thead>
+                    <tbody id="payment_list">
+                      
+                      <tr data-url="./payment_list-info.html" class="approved">
+                        <td>2021-05-15</td>
+                        <td>10:53:03</td>
+                        <td class="ipsapNo">20210115001</td>
+                        <td>IPSAP 2021 베이직 멤버십</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">승인</td>
+                        <td class="appNo">60286691</td>
+                        <td class="TID">nictest00m01102105061306696347</td>
+                        <td>미국대학교 (USM)</td>
+                        <td>나간사</td>
+                        <td>010-1234-5680</td>
+                        <td class="text-center">
+                          <a href="#" class="btn btn-primary btn_xxs">증빙 서류<i class="far fa-file mLeft10"></i></a>
+                        </td>
+                      </tr>
+                      
+                      <tr data-url="./payment_list-info3.html" class="canceled">
+                        <td>2021-05-11</td>
+                        <td>11:25:30</td>
+                        <td class="ipsapNo">20210111002</td>
+                        <td>IPSAP 2021 베이직 멤버십 (부분 취소 샘플)</td>
+                        <td class="text-right pRight10">-71,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">부분 취소</td>
+                        <td class="appNo">56286562</td>
+                        <td class="TID">nictest00m01102105061306444983</td>
+                        <td>한국대학교 (HUM)</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td class="text-center">
+                          <a href="#" class="btn btn-primary btn_xxs">증빙 서류<i class="far fa-file mLeft10"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./payment_list-info.html" class="approved">
+                        <td>2021-05-11</td>
+                        <td>11:03:11</td>
+                        <td class="ipsapNo">20210111001</td>
+                        <td>IPSAP 2021 베이직 멤버십</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">승인</td>
+                        <td class="appNo">56286562</td>
+                        <td class="TID">nictest00m01102105061306444752</td>
+                        <td>한국대학교 (HUM)</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td class="text-center">
+                          <a href="#" class="btn btn-primary btn_xxs">증빙 서류<i class="far fa-file mLeft10"></i></a>
+                        </td>
+                      </tr>
+                      
+                      <tr data-url="./payment_list-info2.html" class="canceled">
+                        <td>2021-05-10</td>
+                        <td>09:33:54</td>
+                        <td class="ipsapNo">20210111001</td>
+                        <td>IPSAP 2021 베이직 멤버십 (전체 취소 샘플)</td>
+                        <td class="text-right pRight10">-99,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">전체 취소</td>
+                        <td class="appNo">55286331</td>
+                        <td class="TID">nictest00m01102105061306444111</td>
+                        <td>한국대학교 (HUM)</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td class="text-center">
+                          <a href="#" class="btn btn-primary btn_xxs">증빙 서류<i class="far fa-file mLeft10"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/admin/common_admin.js"></script>
+    <script src="./payment_list.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,181 @@
+<div class="table_box mBot20" id="animal_1">
+  <table class="table text-center list_table noMargin">
+    <colgroup><col width="120">
+    <col width="*">
+    <col width="*">
+    <col width="*">
+    <col width="*">
+    <col width="*">
+    <col width="*">
+    <thead>
+      <tr>
+        <th>동물 종류</th>
+        <th>성별 및 수량</th>
+        <th>미생물학적 등급</th>
+        <th>사육 희망장소</th>
+        <th>계통</th>
+        <th>주령/월령</th>
+        <th>체중, 크기</th>
+      </tr>
+    </thead>
+    <tbody class="align_top">
+      <tr>
+        <td>
+          <select class="form-control btn-outline-primary small_select animal-select" id="animal_select_1">
+            <option selected="selected" disabled="disabled">종류 선택</option>
+            <optgroup label="—">
+              <option>마우스</option>
+              <option>랫드</option>
+              <option>개</option>
+              <option>토끼</option>
+              <option>원숭이</option>
+            </optgroup>
+            <optgroup label="—">
+              <option value="new" data-custom-toggle="visible">직접입력</option>
+            </optgroup>
+          </select>
+          <input class="form-control form-control-sm hidden mTop5" type="text">
+        </td>
+        <td>
+          <div class="form-group flexMid mBot5">
+            <label class="w50">M</label>
+            <input type="number" size="4" maxlength="4" min="0" class="form-control form-control-sm w70" id="male_cnt_1">
+          </div>
+          <div class="form-group flexMid mBot5">
+            <label class="w50">F</label>
+            <input type="number" size="4" maxlength="4" min="0" class="form-control form-control-sm w70" id="female_cnt_1">
+          </div>
+          <div class="form-group flexMid mBot5">
+            <label class="w50">합계</label>
+            <input type="number" size="4" maxlength="4" class="form-control form-control-sm w70" id="cnt_sum_1" readonly="readonly">
+          </div>
+        </td>
+        <td>
+          <select class="form-control btn-outline-primary small_select" id="mb_grade_select_1">
+            <option selected="selected" disabled="disabled">등급 선택</option>
+            <optgroup label="—">
+              <option>SPF</option>
+              <option>준SPF(clean)</option>
+              <option>일반(conv.)</option>
+            </optgroup>
+            <optgroup label="—">
+              <option value="new" data-custom-toggle="visible">직접입력</option>
+            </optgroup>
+          </select>
+          <input class="form-control form-control-sm hidden mTop5" type="text">
+        </td>
+        <td>
+          <select class="form-control btn-outline-primary small_select" id="breeding_place_select_1">
+            <option selected="selected" disabled="disabled">장소 선택</option>
+            <optgroup label="—">
+              <option>Barrier 구역</option>
+              <option>Semi-barrier 구역</option>
+              <option>일반 구역</option>
+            </optgroup>
+            <optgroup label="—">
+              <option value="new" data-custom-toggle="visible">외부기관(직접입력)</option>
+            </optgroup>
+          </select>
+          <input class="form-control form-control-sm hidden mTop5" type="text">
+        </td>
+        <td>
+          <div class="form-group flexMid">
+            <input type="text" size="10" maxlength="10" class="form-control form-control-sm" id="strain_1">
+          </div>
+        </td>
+        <td>
+          <div class="form-group flexMid">
+            <input type="number" min="0" size="4" maxlength="4" class="form-control form-control-sm w60" id="week_age_1">
+            
+            <select class="form-control btn-outline-primary small_select w80 mLeft3 pLeft10" id="age_unit_1">
+              <option selected="selected">주령</option>
+              <option>월령</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <div class="form-group flexMid mBot5">
+            <input type="number" min="0" size="4" maxlength="4" class="form-control form-control-sm w60" id="weight_gram_1">
+            
+            <select class="form-control btn-outline-primary small_select w70 mLeft3 pLeft10" id="weight_unit_1">
+              <option>g</option>
+              <option selected="selected">kg</option>
+            </select>
+          </div>
+          <div class="form-group flexMid">
+            <input type="number" size="4" maxlength="4" class="form-control form-control-sm w60" id="size_1">
+            <select class="form-control btn-outline-primary small_select w70 mLeft3 pLeft10" id="size_unit_1">
+              <option>mm</option>
+              <option selected="selected">cm</option>
+              <option>m</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </colgroup></table>
+
+  <table class="table text-center list_table noMargin fitted">
+    <thead>
+      <tr>
+        <th rowspan="2" class="border_right">실험 동물 공급처</th>
+        <th colspan="3">
+          <div class="form-group flexMid flexCenter mBot0">
+            <div>LMO 관련정보</div>
+            <div class="checkbox checkbox-primary mLeft20 mBot0">
+              <input type="checkbox" id="lmo_flag_1" value="1">
+              <label for="lmo_flag_1" class="mBot0">해당사항 없음</label>
+            </div>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th>IBC 승인번호</th>
+        <th>유전자형</th>
+        <th>LMO 시설구분</th>
+      </tr>
+    </thead>
+    <tbody class="align_top">
+      <tr>
+        <td>
+          <div class="form-group flexMid">
+            <select class="form-control btn-outline-primary small_select" id="supplier_type_select_1">
+              <option selected="selected" disabled="disabled">공급처 선택</option>
+              <option>마우스</option>
+              <option>랫드</option>
+              <option>개</option>
+              <option>토끼</option>
+              <option>원숭이</option>
+            </select>
+            <input class="form-control form-control-sm mLeft5" type="text" id="supplier_name_1">
+          </div>
+        </td>
+        <td>
+          <div class="form-group flexMid">
+            <input type="text" size="15" maxlength="15" class="form-control form-control-sm" id="ibc_num_1">
+            <button type="button" class="mLeft5 btn-sm btn-outline-primary ibc_num_button" id="ibc_num_button_1">불러오기</button>
+          </div>
+        </td>
+        <td>
+          <div class="form-group flexMid">
+            <input type="text" size="5" maxlength="30" class="form-control form-control-sm" id="genetic_type_1" value="wild type">
+          </div>
+        </td>
+        <td>
+          <select class="form-control btn-outline-primary small_select" id="lmo_type_select_1">
+            <option selected="selected" disabled="disabled">시설 선택</option>
+            <option>ABSL1</option>
+            <option>ABSL2</option>
+            <option>ABSL3</option>
+            <option>ABSL4</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row flexCenter mVside10 remove_buttons">
+    <a href="javascript: void(0)" class="btn btn-outline-danger btn-sm btn-table-del"><i class="fas fa-minus-square mRight5"></i>실험 동물 삭제</a>
+  </div>
+
+</div>

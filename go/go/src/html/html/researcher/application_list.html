@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">전체 신청서 / 보고서</h4>
+                    <div class="comment">내가 작성중이거나 제출한 <span class="underline">신청서</span> 및 <span class="underline">보고서</span> 목록 입니다. <span class="underline">실험 수행중에 제출하는 신청서 및 보고서</span>는 "<span class="fw_bold blue_vivid">승인 후 관리</span>" 메뉴를 이용해주세요.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                <div class="card-header">
+                  <h4 class="card-title">신청서 및 보고서 목록</h4>
+                  <div class="flexMid">
+                    <div class="filters"></div>
+                    <div class="search_info"></div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap" data-buttons-text="실험 계획서 작성" data-buttons-icon="fas fa-edit" data-buttons-url="./application_new.html">
+                    <colgroup>
+                      <col width="150">   
+                      <col width="100">   
+                      <col width="*">     
+                      <col width="80">    
+                      <col width="80">    
+                      <col width="80">    
+                      <col width="120">   
+                      <col width="80">    
+                      <col width="*">     
+                      <col width="*">     
+                    </colgroup>
+                    <thead data-init-order="2,1" data-order-direction="desc,desc" data-block-size="100">
+                      <tr>
+                        <th>접수 번호</th>
+                        <th>접수 일자</th>
+                        <th class="title">과제명 (영문)</th>
+                        <th class="thick">심의 유형</th>
+                        <th>서식 유형</th>
+                        <th>진행 단계</th>
+                        <th>진행 상태</th>
+                        <th>작성자</th>
+                        <th>소속 기관</th>
+                        <th>소속 부서</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr data-url="./application_list-info4_sample.html" data-id="1" class="IACUC completed">
+                        <td>HUM-2020-IA0000</td>
+                        <td>2020-01-03</td>
+                        <td class="title">동물실험 연구 10 (실험 종료 - 심사결과 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>과제 수행</td>
+                        <td class="status">실험 종료</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-info3_sample.html" data-id="1" class="IACUC closed">
+                        <td>HUM-2020-IA0002</td>
+                        <td>2020-01-03</td>
+                        <td class="title">동물실험 연구 9 (실험 종료 - 심사결과 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>과제 수행</td>
+                        <td class="status">실험 종료</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      
+                      <tr data-url="./application_list-info2_sample.html" data-id="1" class="IACUC inProgress">
+                        <td>HUM-2020-IA0002-00</td>
+                        <td>2020-01-03</td>
+                        <td class="title">동물실험 연구 8 (실험 수행중 - 심사결과 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>과제 수행</td>
+                        <td class="status">실험중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IRB">
+                        <td>HUM-2020-IA0005-00</td>
+                        <td>2020-01-06</td>
+                        <td class="title">동물실험 연구 7</td>
+                        <td class="committee_color thick">IRB</td>
+                        <td>신규 승인</td>
+                        <td>신청서 작성</td>
+                        <td class="status">임시 저장</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./IBC/application_list-IBC_info.html" data-id="1" class="IBC">
+                        <td>HUM-2020-IA0004-M1</td>
+                        <td>2020-01-05</td>
+                        <td class="title">동물실험 연구 6</td>
+                        <td class="committee_color thick">IBC</td>
+                        <td>변경 승인</td>
+                        <td>심사</td>
+                        <td>심사중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-info4_sample.html" data-id="1" class="IACUC denied">
+                        <td>HUM-2020-IA0003-00</td>
+                        <td>2020-01-04</td>
+                        <td class="title">동물실험 연구 5 (반려된 신청 - 심사결과 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>최종 심의</td>
+                        <td class="status">반려</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2020-IA0002-P1</td>
+                        <td>2020-01-03</td>
+                        <td class="title">동물실험 연구 4</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>반입 보고</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2020-IA0001-E1</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 3</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>승인 후 점검</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2020-IA0001-00</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 2</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>종료 보고</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./experiment_list-review_renew.html" data-id="1" class="IACUC supplement">
+                        <td>HUM-2020-IA0001-R1</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 1-2 (재승인 신청서 보완중 - 보완중인 신청서 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>재승인</td>
+                        <td>신청서 작성</td>
+                        <td class="status">보완중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./experiment_list-review_change.html" data-id="1" class="IACUC supplement">
+                        <td>HUM-2020-IA0001-M1</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 1-1 (변경 신청서 보완중 - 보완중인 신청서 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>변경 승인</td>
+                        <td>신청서 작성</td>
+                        <td class="status">보완중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                      <tr data-url="./application_list-review.html" data-id="1" class="IACUC supplement">
+                        <td>HUM-2020-IA0001-00</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 1 (신청서 보완중 - 보완중인 신청서 확인 가능)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>신청서 작성</td>
+                        <td class="status">보완중</td>
+                        <td>홍길동</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_list.js"></script>
+
+  </body>
+
+</html>

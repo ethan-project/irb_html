@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher" data-fold-menu="1800" data-fold-guide="1450">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">새로운 동물 실험 계획서</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IA0001-01</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-01_1.html" class="row process_content" data-process-num="1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-02_1.html" class="row process_content" data-process-num="2">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-03_1.html" class="row process_content active sub_2 active_sub_1" data-process-num="3">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-04_1.html" class="row process_content" data-process-num="4">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-05_1.html" class="row process_content" data-process-num="5">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-06_1.html" class="row process_content" data-process-num="6">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-07_1.html" class="row process_content" data-process-num="7">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-08_1.html" class="row process_content" data-process-num="8">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-09_1.html" class="row process_content" data-process-num="9">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-10_1.html" class="row process_content" data-process-num="10">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-11_1.html" class="row process_content" data-process-num="11">
+                          <span>자가 점검</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>3-1. 실험 동물의 종류</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <li class="content_comment">실험동물의 종류가 복수인 경우 하단의 '<span class="underline red">실험 동물 추가</span>’ 버튼 누르면 추가 입력할 수 있습니다.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <div id="animal_type">
+                            <div class="table_box mBot20">
+                              <table class="table text-center list_table noMargin">
+                                <colgroup>
+                                  <col width="120">
+                                  <col width="*">
+                                  <col width="*">
+                                  <col width="*">
+                                  <col width="*">
+                                  <col width="*">
+                                  <col width="*">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>동물 종류</th>
+                                    <th>성별 및 수량</th>
+                                    <th>미생물학적 등급</th>
+                                    <th>사육 희망장소</th>
+                                    <th>계통</th>
+                                    <th>주령/월령</th>
+                                    <th>체중, 크기</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="align_top">
+                                  <tr>
+                                    <td>
+                                      <select class="form-control btn-outline-primary small_select animal-select">
+                                        <option selected="selected" disabled="disabled">종류 선택</option>
+                                        <optgroup label="—">
+                                          <option>마우스</option>
+                                          <option>랫드</option>
+                                          <option>개</option>
+                                          <option>토끼</option>
+                                          <option>원숭이</option>
+                                        </optgroup>
+                                        <optgroup label="—">
+                                          <option value="new" data-custom-toggle="visible">직접입력</option>
+                                        </optgroup>
+                                      </select>
+                                      <input class="form-control form-control-sm hidden mTop5" type="text">
+                                    </td>
+                                    <td>
+                                      <div class="form-group flexMid mBot5">
+                                        <label class="w50">M</label>
+                                        <input type="number" size="4" maxlength="4" class="form-control form-control-sm w60">
+                                      </div>
+                                      <div class="form-group flexMid mBot5">
+                                        <label class="w50">F</label>
+                                        <input type="number" size="4" maxlength="4" class="form-control form-control-sm w60">
+                                      </div>
+                                      <div class="form-group flexMid mBot5">
+                                        <label class="w50">합계</label>
+                                        <input type="number" size="4" maxlength="4" class="form-control form-control-sm w60" readonly="readonly">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <select class="form-control btn-outline-primary small_select">
+                                        <option selected="selected" disabled="disabled">등급 선택</option>
+                                        <optgroup label="—">
+                                          <option>SPF</option>
+                                          <option>준SPF(clean)</option>
+                                          <option>일반(conv.)</option>
+                                        </optgroup>
+                                        <optgroup label="—">
+                                          <option value="new" data-custom-toggle="visible">직접입력</option>
+                                        </optgroup>
+                                      </select>
+                                      <input class="form-control form-control-sm hidden mTop5" type="text">
+                                    </td>
+                                    <td>
+                                      <select class="form-control btn-outline-primary small_select">
+                                        <option selected="selected" disabled="disabled">장소 선택</option>
+                                        <optgroup label="—">
+                                          <option>Barrier 구역</option>
+                                          <option>Semi-barrier 구역</option>
+                                          <option>일반 구역</option>
+                                        </optgroup>
+                                        <optgroup label="—">
+                                          <option value="new" data-custom-toggle="visible">외부기관(직접입력)</option>
+                                        </optgroup>
+                                      </select>
+                                      <input class="form-control form-control-sm hidden mTop5" type="text">
+                                    </td>
+                                    <td>
+                                      <div class="form-group flexMid">
+                                        <input type="text" size="10" maxlength="10" class="form-control form-control-sm">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-group flexMid">
+                                        <input type="number" size="4" maxlength="4" class="form-control form-control-sm w70">
+                                        
+                                        <select class="form-control btn-outline-primary small_select w80 mLeft3 pLeft10">
+                                          <option selected="selected">주령</option>
+                                          <option>월령</option>
+                                        </select>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-group flexMid mBot5">
+                                        <input type="number" size="4" maxlength="4" class="form-control form-control-sm w60">
+                                        
+                                        <select class="form-control btn-outline-primary small_select w70 mLeft3 pLeft10">
+                                          <option>g</option>
+                                          <option selected="selected">kg</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group flexMid">
+                                        <input type="number" size="4" maxlength="4" class="form-control form-control-sm w60">
+                                        
+                                        <select class="form-control btn-outline-primary small_select w70 mLeft3 pLeft10">
+                                          <option>mm</option>
+                                          <option selected="selected">cm</option>
+                                          <option>m</option>
+                                        </select>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table class="table text-center list_table noMargin fitted">
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2" class="border_right">실험 동물 공급처</th>
+                                    <th colspan="3">
+                                      <div class="form-group flexMid flexCenter mBot0">
+                                        <div>LMO 관련정보</div>
+                                        <div class="checkbox checkbox-primary mLeft20 mBot0">
+                                          <input type="checkbox" id="input_2-1" value="1">
+                                          <label for="input_2-1" class="mBot0">해당사항 없음</label>
+                                        </div>
+                                      </div>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th>IBC 승인번호</th>
+                                    <th>유전자형</th>
+                                    <th>LMO 시설구분</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="align_top">
+                                  <tr>
+                                    <td>
+                                      <div class="form-group flexMid">
+                                        <select class="form-control btn-outline-primary small_select">
+                                          <option selected="selected" disabled="disabled">공급처 선택</option>
+                                          <option>마우스</option>
+                                          <option>랫드</option>
+                                          <option>개</option>
+                                          <option>토끼</option>
+                                          <option>원숭이</option>
+                                        </select>
+                                        <input class="form-control form-control-sm mLeft5" type="text">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-group flexMid">
+                                        <input type="text" size="15" maxlength="15" class="form-control form-control-sm">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-group flexMid">
+                                        <input type="text" size="15" maxlength="30" class="form-control form-control-sm">
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <select class="form-control btn-outline-primary small_select">
+                                        <option selected="selected" disabled="disabled">시설 선택</option>
+                                        <option>ABSL1</option>
+                                        <option>ABSL2</option>
+                                        <option>ABSL3</option>
+                                        <option>ABSL4</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              
+
+                            </div>
+                          </div>
+                          <div class="flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-primary btn-table-add"><i class="fas fa-plus-square mRight5"></i>실험 동물 추가</a>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="animal_type_guide">
+                          
+                          
+                            <li>동물의 종, 계통의 국제 학명, 유전적 변형상태, 체중, 주령 등의 관련 정보를 입력합니다.</li>
+                            <li>유전자변형동물(LMO)을 이용할 경우에는 IBC 승인번호가 필요합니다.</li>
+                            <li>「실험동물에 관한 법률 시행령 제8조(우선사용 대상 실험동물)」</li>
+                            <li>「동물보호법 제3조(동물보호의 기본원칙)」</li>
+                            <li>「실험동물에 관한 법률 시행령 제9조(실험동물의 사용 등)」</li>
+                            <li>「실험동물에 관한 법률 시행규칙 제7조(수입동물의 사용기준)」</li>
+                            <li>「동물보호법 제24조(동물실험의 금지 등)</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="./application_new-02_3.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="./application_new-03_2.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="#" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" data-toggle="modal" data-target="#modal_tempSave"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_allApp_list" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">승인된 모든 IBC 신청서</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">승인번호를 입력할 IBC 신청서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  승인된 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 IBC 신규 승인 신청서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 1</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 2</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 3</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 4</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 5</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 6</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 7</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 8</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 9</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 10</a>
+                <a href="#" onclick="viewHiddenApp(this);" class="list-group-item text-center view_more"><i class="fas fa-angle-double-down text-secondary mr-2"></i>더보기</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">신청서를 선택하면, 승인번호가 자동으로 입력됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../assets/js/di4js.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new-03_1.js"></script>
+
+  </body>
+
+</html>

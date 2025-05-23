@@ -1,0 +1,1 @@
+$(function(){$("#modal_404").modal("show"),$(document).on({keydown:function(e){if(27==e.keyCode)return $("#modal_404").modal("show"),!1}})});

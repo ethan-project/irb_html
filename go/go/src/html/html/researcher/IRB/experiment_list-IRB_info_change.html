@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    
+                    <h4 class="page-title">신청서 - 상세보기</h4>
+                    <div class="comment">작성한 변경 심의 신청서의 내용을 확인합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IRB hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    <div class="apptype_title">변경 심의</div>
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="apptype_date">승인: -</div>
+                    
+                    
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid">IRB 변경 심의 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">변경 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <div class="step">전문 심사</div>
+                    <div class="step">일반 심사</div>
+                    <div class="step active">최종 심의</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  
+                  <div class="mTop20 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심의 신청서 원안 (기본 정보)</h4>
+                    <div class="header_comment mLeft20">
+                      <button type="button" onclick="newWindowPopup('./_popup_app-IRB_info_all.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>심의 신청서 원안 보기</button>
+                    </div>
+                  </div>
+                  <div class="mTop10">
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">국문 :</label>
+                      <span class="data" id="name_ko">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">영문 :</label>
+                      <span class="data" id="name_en">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">연구 기간 :</label>
+                      <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                    </div>
+                    <div class="flexMid mTop5" id="exp_category">
+                      <label class="mRight10 mBot0">실험 분류 :</label>
+                      <span class="data">
+                        <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">심의 대상</button>
+                        <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">인간대상 연구</button>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="mTop30 flexMid mBot10">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>변경 심의 신청 내역</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+
+                  <span id="change_application" class="">
+
+                    
+                    <ul class="list-group mTop2">
+                      <li class="list-group-item onlyHover_data noPointer">
+                        <div>
+                          <label class="fw_bold">연구 대상의 변경</label>
+                          <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_app-IRB_info_all.html#form_01-3');"><i class="fas fa-link mRight5"></i>심의 신청서: 1-3. 연구유형 및 심의분류</a>
+                        </div>
+                        <div class="flexTop mTop10 pHside10">
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 내용:</label>
+                            <div class="data">-</div>
+                          </div>
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 사유:</label>
+                            <div class="data">-</div>
+                          </div>
+                        </div>
+                        <div class="flexMid mTop10 pLeft20">
+                          <label class="mRight10 mBot0">관련 자료:</label>
+                          <a href="#" class="data">-</a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group mTop2">
+                      <li class="list-group-item onlyHover_data noPointer">
+                        <div>
+                          <label class="fw_bold"><span>연구원의 변경</span></label>
+                          <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_app-IRB_info_all.html#form_01-2');"><i class="fas fa-link mRight5"></i>심의 신청서: 1-2. 연구원 정보</a>
+                        </div>
+                        <div class="flexTop mTop10 pHside10">
+                          <div class="desc_box">
+                            <div class="data">
+                              <label class="flex_1">변경 내용:</label>
+                              <div class="flexTop">
+                                <table class="table text-center list_table mVside10">
+                                  <colgroup>
+                                    <col width="*">   
+                                    
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*" class="hidden">  
+                                    <col width="100">               
+                                    <col width="*" class="hidden">  
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th class="pHside0">연구원 구분</th>
+                                      
+                                      
+                                      <th>성명</th>
+                                      <th>부서</th>
+                                      <th>직책</th>
+                                      <th>전공<br>분야</th>
+                                      <th>동물실험<br>경력년수</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="white_bg_50 memberTbody">
+                                    <tr>
+                                      <td></td>
+                                      <td>홍길동</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td>1 ~ 3년</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_old" value="2" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_old" value="2" checked="checked" readonly="readonly">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td class="hidden">010-1234-5678</td>
+                                      <td>1 ~ 3년</td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_old" value="3" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_old" value="3" disabled="disabled">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td class="hidden">010-1234-5678</td>
+                                      <td>1 ~ 3년</td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+                                <i class="fas fa-arrow-right flexCenter_self fs_big mHside5"></i>
+
+                                <table class="table text-center list_table thick mTop10">
+                                  <colgroup>
+                                    <col width="*">   
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="*">    
+                                    <col width="100">               
+                                  </colgroup>
+                                  <thead class="dark">
+                                    <tr>
+                                      <th class="pHside0">연구원 구분</th>
+                                      
+                                      <th>성명</th>
+                                      <th>부서</th>
+                                      <th>직책</th>
+                                      <th>전공<br>분야</th>
+                                      <th class="hidden">휴대전화</th>
+                                      <th>동물실험<br>경력년수</th>
+                                      <th class="hidden">Email</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="white_bg" id="changeUserTbody">
+                                    <tr>
+                                      <td>홍길동</td>
+                                      <td>홍길동</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_new" value="2">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_new" value="2" checked="checked">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td class="hidden">010-1234-5678</td>
+                                      <td>
+                                        <div class="btn-group">
+                                          <select class="form-control btn-outline-primary small_select narrow_padding">
+                                            <option selected="selected" disabled="disabled">경력 선택</option>
+                                            <option value="1">1년 미만</option>
+                                            <option value="2">1년 ~ 3년</option>
+                                            <option value="3">3년 이상</option>
+                                          </select>
+                                        </div></td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                      <td>
+                                        <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="task_director_new" value="2">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="custom-radio">
+                                          <input type="radio" name="exp_manager_new" value="2">
+                                        </div>
+                                      </td>
+                                      <td>홍길동2</td>
+                                      <td>약학과</td>
+                                      <td>학부생</td>
+                                      <td>수의학</td>
+                                      <td class="hidden">010-1234-5678</td>
+                                      <td>
+                                        <div class="btn-group">
+                                          <select class="form-control btn-outline-primary small_select narrow_padding">
+                                            <option selected="selected" disabled="disabled">경력 선택</option>
+                                            <option value="1">1년 미만</option>
+                                            <option value="2">1년 ~ 3년</option>
+                                            <option value="3">3년 이상</option>
+                                          </select>
+                                        </div></td>
+                                      <td class="hidden">manager@company.co.kr</td>
+                                      <td>
+                                        <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mTop10 pHside10">
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 사유:</label>
+                            <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                          </div>
+                        </div>
+                        <div class="flexMid mTop10 pLeft20">
+                          <label class="mRight10 mBot0">관련 자료:</label>
+                          <a href="#" class="data">동물 1의 사료 수급 자료.hwp</a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group mTop2">
+                      <li class="list-group-item onlyHover_data noPointer">
+                        <div>
+                          <label class="fw_bold"><span>연구 기간의 변경</span></label>
+                          <a href="javascript:void(0);" class="data mLeft20" onclick="newWindowPopup('./_popup_app-IRB_info_all.html#form_01-1');"><i class="fas fa-link mRight5"></i>심의 신청서: 1-1. 연구과제 기본 정보</a>
+                        </div>
+                        <div class="flexTop mTop10 pHside10">
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 내용:</label>
+                            <div class="data">
+                              <div>
+                                <span class="data">2021년 3월 3일 ~ 2021년 12월 31일</span>
+                                <i class="fas fa-arrow-right mHside10"></i>
+                                <span class="data">2021년 3월 3일 ~ 2022년 3월 31일</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="desc_box">
+                            <label class="desc_label mBot5">변경 사유:</label>
+                            <div class="data">유효한 비교값 측정을 위한 기간이 필요합니다.</div>
+                          </div>
+                        </div>
+                        <div class="flexMid mTop10 pLeft20">
+                          <label class="mRight10 mBot0">관련 자료:</label>
+                          <a href="#" class="data">대조군의 유효한 실험결과.hwp</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </span>
+
+                  
+                  <div class="sign_area">
+                    <div class="IRB_agree">
+                      <div class="checkbox checkbox-primary mTop10">
+                        <input type="checkbox" checked="checked" readonly="readonly">
+                        <label class="custom-control-label blue_deep">위와 같이 변경 승인 신청서를 제출합니다.</label>
+                      </div>
+                      <div class="agree_date">-년 -월 -일</div>
+                      <div class="agree_author">연구 책임자<span class="reviewer">-</span></div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <a href="./experiment_list-IRB_review_change.html" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-edit mRight5"></i>신청서 보완</a>
+                  
+                  <a href="javascript:void(0);" onclick="newWindowPopup('./_popup_review-IRB_info_change.html');" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-check mRight5"></i>심사 결과 보기</a>
+
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="/html/researcher/experiment_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>실험 목록 보기</a>
+                  <a href="javascript:void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript:void(0);" data-move-to="#bottom_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="/html/researcher/IRB/experiment_list-IRB_info_change.js"></script>
+
+  </body>
+
+</html>

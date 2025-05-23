@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            
+            <div class="card thick IACUC">
+              <div class="card-header flexBetween">
+                <div class="title_area">
+                  <h4 class="card-title flexMid">실험 계획 변경 승인 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                  <p class="text-muted mb-0">변경 승인 접수 번호 :<span class="register_num">-</span></p>
+                </div>
+                <div class="progress_area">
+                  
+                </div>
+                <div class="desc_area">
+                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                </div>
+              </div>
+              <div class="card-body pHside40">
+
+                
+                <div class="mTop20 flexMid">
+                  <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>실험 계획서 원안 (기본 정보)</h4>
+                  <div class="header_comment mLeft20 noPrint">
+                    
+                  </div>
+                </div>
+                <div class="mTop10">
+                  <div class="flexMid">
+                    <label class="mRight10 mBot0">국문 :</label>
+                    <span class="data" id="name_ko">-</span>
+                  </div>
+                  <div class="flexMid">
+                    <label class="mRight10 mBot0">영문 :</label>
+                    <span class="data" id="name_en">-</span>
+                  </div>
+                  <div class="flexMid">
+                    <label class="mRight10 mBot0">연구 기간 :</label>
+                    <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                  </div>
+                </div>
+
+                <div class="mTop30 flexMid mBot10">
+                  <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>변경 승인 신청 내역</h4>
+                  <div class="header_comment mLeft20"></div>
+                </div>
+
+                
+                <span id="change_application">
+                  <ul class="regular_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="blue_deep mRight5">[정규]</span>동물 종 변경</label>
+                        <a href="#" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_03-1');"><i class="fas fa-link mRight5"></i>실험 계획서: 3-1. 실험 동물의 종류</a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 내용:</label>
+                          <div class="data">실험 동물을 변경합니다.
+                            <div>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data"><span>3</span><span class="unit mHside5">/</span><span>3</span></span>
+                              <i class="fas fa-arrow-right unit mHside10"></i>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data"><span>6</span><span class="unit mHside5">/</span><span>6</span></span>
+                            </div>
+                            <div>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data">3<span class="unit mHside5">/</span>3</span>
+                              <i class="fas fa-arrow-right unit mHside10"></i>
+                              <span class="data">마우스</span>
+                              <span class="unit mRight5">(M/F)</span><span class="data">6<span class="unit mHside5">/</span>6</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">동물 1의 사료 수급 자료.hwp</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="regular_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="blue_deep mRight5">[정규]</span>생물학적 위해 물질 사용</label>
+                        <a href="#" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_04-1');"><i class="fas fa-link mRight5"></i>실험 계획서: 4-1. 실험 물질 투여 유무</a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 내용:</label>
+                          <div class="data">실험 동물을 변경합니다.</div>
+                        </div>
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">실험 동물의 사육용 먹이 확보의 어려움으로 실험 동물을 변경하는 되었습니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">-</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  
+                  <ul class="simple_review list-group mTop2">
+                    <li class="list-group-item onlyHover_data noPointer">
+                      <div>
+                        <label class="fw_bold"><span class="green mRight5">[신속]</span>연구책임자 또는 실험수행자의 변경</label>
+                        <a href="#" class="data mLeft20" onclick="newWindowPopup('./_popup_application-info.html#form_01-5');"><i class="fas fa-link mRight5"></i>실험 계획서: 1-5. 실험 수행자</a>
+                      </div>
+                      <div class="flexTop mTop10 pHside10">
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 내용:</label>
+                          <div class="data">실험 수행자를 홍길동에서 김삿갓으로 변경합니다.</div>
+                        </div>
+                        <div class="desc_box">
+                          <label class="desc_label mBot5">변경 사유:</label>
+                          <div class="data">일부 실험 수행자의 장기 출장으로 실험 수행자를 변경합니다.</div>
+                        </div>
+                      </div>
+                      <div class="flexMid mTop10 pLeft20">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <a href="#" class="data">실험 수행자 연구 경력서.hwp</a>
+                      </div>
+                    </li>
+                  </ul>
+                </span>
+                <div class="app_anchor" id="bottom_anchor"></div>
+
+              </div>
+              
+
+              
+              <div id="footer_anchor"></div>
+              <div class="card-footer flexCenter side_type">
+                <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+              </div>
+
+            </div>
+            
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="./_popup_change-info.js"></script>
+
+  </body>
+
+</html>

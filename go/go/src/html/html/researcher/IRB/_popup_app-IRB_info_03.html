@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            
+            <div class="card thick IRB hidden">
+              <div class="card-header flexBetween">
+                <div class="title_area">
+                  <h4 class="card-title flexMid task_title_ko">IRB 신규 심의 - 심의 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                  <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                </div>
+                <div class="progress_area">
+                  
+                </div>
+                <div class="desc_area">
+                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                </div>
+              </div>
+              <div class="card-body pHside40">
+                <div class="row noMargin app_frame">
+                  <div class="col-sm-12 app_col app_contents">
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>3-1. 동의취득 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label for="irb_general_title_name_ko" class="mBot0 w120">동의취득 방법 :</label>
+                          <div id="consent_method">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="form_03_1-1" value="1" class="custom-control-input" id="form_03_1-1_1">
+                              <label class="custom-control-label" for="form_03_1-1_1">해당사항 없음</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" name="form_03_1-1" value="2" class="custom-control-input" id="form_03_1-1_2">
+                              <label class="custom-control-label" for="form_03_1-1_2">서면 동의</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" name="form_03_1-1" value="2" class="custom-control-input" id="form_03_1-1_3">
+                              <label class="custom-control-label" for="form_03_1-1_3">서면 동의 면제</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <div class="form-group row flexTop flexNoWrap">
+                          <label for="form_03_1-2_1" class="mRight10 mBot0 w120">서면동의<br>면제 사유 :</label>
+                          <pre class="data" id="consent_exmpt">-</pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row app_content">
+
+                      <div class="col-sm-9">
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label class="mBot0 w120">연구대상자<br>접촉 여부 :</label>
+                          <div id="consent_contact_flag">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="form_03_1-3" value="1" class="custom-control-input" id="form_03_1-3_1" checked="checked">
+                              <label class="custom-control-label" for="form_03_1-3_1">예</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" name="form_03_1-3" value="2" class="custom-control-input" id="form_03_1-3_2">
+                              <label class="custom-control-label" for="form_03_1-3_2">아니오</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label class="mBot0 w120">개인 식별번호<br>포함 여부 :</label>
+                          <div id="consent_pin_flag">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="form_03_1-4" value="1" class="custom-control-input" id="form_03_1-4_1" checked="checked">
+                              <label class="custom-control-label" for="form_03_1-4_1">예</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" name="form_03_1-4" value="2" class="custom-control-input" id="form_03_1-4_2">
+                              <label class="custom-control-label" for="form_03_1-4_2">아니오</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row flexMid flexNoWrap mBot10">
+                          <label class="mBot0 w120">동의권자 :</label>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" name="form_03_1-5_1" id="consent_authority_check-main_check" value="1">
+                            <label class="mBot0">연구대상자 본인</label>
+                          </div>
+                        </div>
+                        <div class="row flexMid flexNoWrap mBot10">
+                          <label class="w120"></label>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" name="form_03_1-5_2" id="consent_authority_attorney_check-main_check" value="1" data-toggle="collapse" data-target="#form_03_1-5_3_group">
+                            <label class="mBot0">법정 대리인</label>
+                          </div>
+                          <div class="collapse flexMid flex_1" id="form_03_1-5_3_group">
+                            <label for="form_03_1-5_3" class="mBot0 mLeft20">연구대상자와의 관계: </label>
+                            <span class="data mLeft20 mBot0" id="consent_authority_attorney_input">-</span>
+                          </div>
+                        </div>
+                        <div class="row flexMid flexNoWrap mBot20">
+                          <label class="w120"></label>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" name="purpose_2_basic_0" id="consent_authority_etc_check-main_check" value="1" data-toggle="collapse" data-target="#form_03_1-5_5_group">
+                            <label class="mBot0">기타</label>
+                          </div>
+                          <div class="collapse flexMid flex_1" id="form_03_1-5_5_group">
+                            <span class="data mLeft20 mBot0" id="consent_authority_etc_input">-</span>
+                          </div>
+                        </div>
+                        <div class="row flexMid flexNoWrap mBot10">
+                          <label class="mBot0 w120">공동취득 담당자 :</label>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" name="form_03_1-6_1" id="consent_manager_check-main_check" value="1">
+                            <label class="mBot0">연구 책임자</label>
+                          </div>
+                        </div>
+                        <div class="row flexMid flexNoWrap mBot10">
+                          <label class="w120"></label>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" name="form_03_1-6_2" id="consent_manager_collaborator_check-main_check" value="1" data-toggle="collapse" data-target="#form_03_1-6_3_group">
+                            <label class="w100 mBot0">공동 연구자</label>
+                          </div>
+                          <div class="collapse flexMid flex_1" id="form_03_1-6_3_group">
+                            <label for="form_03_1-6_3" class="mBot0">성명 :</label>
+                            <span class="data mLeft20 mBot0" id="consent_manager_collaborator_input">-</span>
+                          </div>  
+                         </div>
+                        <div class="row flexMid flexNoWrap mBot20">
+                          <label class="w120"></label>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" name="purpose_2_basic_0" id="consent_manager_etc_check-main_check" value="1" data-toggle="collapse" data-target="#form_03_1-6_5_group">
+                            <label class="w100 mBot0">기타</label>
+                          </div>
+                          <div class="collapse flexMid flex_1" id="form_03_1-6_5_group">
+                            <label for="form_03_1-6_3" class="mBot0">성명 :</label>
+                            <span class="data mLeft20 mBot0" id="consent_manager_etc_input">-</span>
+                          </div>
+                        </div>
+
+                        <div class="row flexMid flexNoWrap mBot10">
+                          <label class="mBot0 w120">동의취득 시기 :</label>
+                          <div class="custom-control custom-radio flexMid">
+                            <input type="radio" id="form_03_1-7_1" name="consent_date_radio" value="1" class="custom-control-input" data-custom-toggle="visible" readonly="readonly">
+                            <label class="custom-control-label">연구 참여에 대한 설명 이후</label>
+                            <span class="data mLeft20 mRight5 hidden" id="consent_date_input">-</span>
+                            <label class="mBot0 hidden">일 이내</label>
+                          </div>
+                        </div>
+                        <div class="row flexMid flexNoWrap mBot10">
+                          <label class="mBot0 w120"></label>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" name="consent_date_radio" value="2" class="custom-control-input" id="form_03_1-7_3" data-custom-toggle="visible" readonly="readonly">
+                            <label class="custom-control-label">기타</label>
+                          </div>
+                        </div>
+                        <div class="row flexMid flexNoWrap">
+                          <label class="mBot0 w120">동의취득 장소 :</label>
+                          <span class="data mBot0" id="consent_place">-</span>
+                        </div>
+                      </div>
+
+                      
+                      <div class="col-sm-3 app_guide" style="margin-top:-100px">
+                        <ul id="general_title_guide">
+                          <li>서면동의 면제가 가능한 경우</li>
+                          <li class="sub_list">「아동복지법」 제3조(정의)에 따른 아동이 포함되지 않은 연구</li>
+                          <li class="sub_list">연구대상자의 동의를 받는 것이 연구진행과정에서 현실적으로 불가능하고 연구대상자의 동의 거부를 추정할 만한 사유가 없으며, 동의를 면제하여도 연구대상자에게 미치는 위험이 극히 낮은 경우</li>
+                          <li class="sub_list">연구대상자의 동의를 받는 것이 연구결과의 타당성에 심각한 영향을 미치고 연구대상자의 동의 거부를 추정할 만한 사유가 없으며, 동의를 면제하여도 연구대상자에게 미치는 위험이 극히 낮은 경우</li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+
+
+
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div id="bottom_anchor"></div>
+              
+
+              
+              <div id="footer_anchor"></div>
+              <div class="card-footer flexCenter side_type">
+                <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+              </div>
+
+            </div>
+            
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="./_popup_app-IRB_info_03.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+  </body>
+
+</html>

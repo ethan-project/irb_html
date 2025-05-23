@@ -1,0 +1,30 @@
+# config.go > struct 과 항상 일치해야 한다. !!!
+# config.go > struct 과 항상 일치해야 한다. !!!
+
+server-type = "dev"
+
+[database]
+driver-name = "mysql"
+# url = "127.0.0.1:3306"
+url = "10.10.30.10:3306"
+database = "ipsap"
+username = "root"
+# password = "elice"
+password = "tmvmfls!00"
+init-version = "1.0.0"
+ 
+[server]
+swag-hostname = "127.0.0.1"
+port = 7375
+log-path = "" #로그 패스가 있을경우, 해당 위치에 로그를 남긴다.
+max-backups = 0
+working-path = "C:\\ipsap\\go\\go\\working\\"      # 작업 폴더 지정
+remote-working-type = "SSH"            # SSH, ANSIBLE, AGENT
+file-upload-path = "C:\\ipsap\\go\\go\\upload\\"
+protocol = "http"
+api-path = "/api/v1.0" 
+
+[test]
+use-power-cli = true
+is-test-mode = true
+is-query-debug = true

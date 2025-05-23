@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">등록 기관</h4>
+                    <div class="comment">IPSAP 서비스에 등록된 기관목록 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                <div class="card-header">
+                  <h4 class="card-title">등록 기관 목록</h4>
+                  <div class="flexMid">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap">
+                    <colgroup>
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>등록일</th> 
+                        <th>멤버십</th>
+                        <th>기관명</th>
+                        <th>기관 코드</th>
+                        <th>행정 간사명</th>
+                        <th>연락처</th>
+                        <th>사업자 등록번호</th>
+                        <th>결제 방법</th>
+                        <th>최근 결제일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr class="inUse" data-url="./org_list-info.html" data-id="5">
+                        <td>2021-01-11</td>
+                        <td class="org_status">이용중</td>
+                        <td class="org_name">한국대학교5</td>
+                        <td>HUM</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>123-45-67890</td>
+                        <td>신용카드</td>
+                        <td class="payment_date">2021-03-30</td>
+                      </tr>
+                      <tr class="inUse" data-url="./org_list-info.html" data-id="4">
+                        <td>2021-01-10</td>
+                        <td class="org_status">이용중</td>
+                        <td class="org_name">한국대학교4</td>
+                        <td>HUM</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>123-45-67890</td>
+                        <td>신용카드</td>
+                        <td class="payment_date">2021-03-30</td>
+                      </tr>
+                      <tr class="inUse" data-url="./org_list-info.html" data-id="3">
+                        <td>2021-01-09</td>
+                        <td class="org_status">이용중</td>
+                        <td class="org_name">한국대학교3</td>
+                        <td>HUM</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>123-45-67890</td>
+                        <td>신용카드</td>
+                        <td class="payment_date">2021-03-30</td>
+                      </tr>
+                      <tr class="inUse" data-url="./org_list-info.html" data-id="2">
+                        <td>2021-01-08</td>
+                        <td class="org_status">이용중</td>
+                        <td class="org_name">한국대학교2</td>
+                        <td>HUM</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>123-45-67890</td>
+                        <td>신용카드</td>
+                        <td class="payment_date">2021-03-30</td>
+                      </tr>
+                      <tr class="stopped" data-url="./org_list-info.html" data-id="0">
+                        <td>2021-01-07</td>
+                        <td class="org_status">정지</td>
+                        <td class="org_name">한국대학교1(서비스 정지)</td>
+                        <td>HUM</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>123-45-67890</td>
+                        <td>신용카드</td>
+                        <td class="payment_date">2020-12-30</td>
+                      </tr>
+                      <tr class="withdrawn" data-url="./org_list-info.html" data-id="1">
+                        <td>2021-01-07</td>
+                        <td class="org_status">탈퇴</td>
+                        <td class="org_name">한국대학교0(탈퇴함)</td>
+                        <td>HUM</td>
+                        <td>홍길동</td>
+                        <td>010-1234-5678</td>
+                        <td>123-45-67890</td>
+                        <td>신용카드</td>
+                        <td class="payment_date">2021-03-30</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/admin/common_admin.js"></script>
+    <script src="./org_list.js"></script>
+
+  </body>
+
+</html>

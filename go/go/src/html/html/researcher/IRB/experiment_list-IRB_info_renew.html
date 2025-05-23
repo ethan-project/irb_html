@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    
+                    <h4 class="page-title">신청서 - 상세보기</h4>
+                    <div class="comment">작성한 실험 지속심의(중간보고) 신청서 내용을 확인합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IRB">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    
+                    <div class="apptype_title">지속 심의</div>
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="apptype_date">승인: -</div>
+                    
+                    
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid">IRB 실험 지속심의(중간보고) 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">지속 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step active">행정 검토</div>
+                    <div class="step">전문 심사</div>
+                    <div class="step">일반 심사</div>
+                    <div class="step">최종 심의</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-12 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심의 신청서 원안 (기본 정보)</h4>
+                        <div class="header_comment mLeft20">
+                          <button type="button" onclick="newWindowPopup('./_popup_app-IRB_info_all.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>심의 신청서 원안 보기</button>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9 pLeft20">
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">국문 :</label>
+                            <span class="data" id="name_ko">-</span>
+                          </div>
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">영문 :</label>
+                            <span class="data" id="name_en">-</span>
+                          </div>
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">연구 기간 :</label>
+                            <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                          </div>
+                          <div class="mTop5">
+                            <label class="mRight10 mBot0 sum_label">실험 분류:</label>
+                            <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">심의 대상</button>
+                            <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">인간대상 연구</button>
+                          </div>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      
+                      <div class="app_anchor" id="form_01"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>연구 진행 현황</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="15%">
+                              <col width="65%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td rowspan="2" class="info_name text-center">연구 수행 기간</td>
+                                <td class="border_left text-center">연구 예정 기간</td>
+                                <td class="border_left data">2021-01-01 ~ 2022-12-13</td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">연구 승인 기간</td>
+                                <td class="border_left data">2021-01-01 ~ 2022-12-13
+                                  <span class="red mLeft20">* 지속심의(중간보고) 신청 마감일: 2021-10-31</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구 진행 상태</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01-1" value="1" class="custom-control-input" id="form_01-1_1" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-1_1">연구대상자 모집 중이지만 아직 등록 전이다.</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="form_01-1" value="2" class="custom-control-input" id="form_01-1_2" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-1_2">연구대상자 등록 중이며 새로운 데이터를 계속 수집 중이다.</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="form_01-1" value="3" class="custom-control-input" id="form_01-1_3" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-1_3">연구대상자 등록을 완료하고 연구가 진행 중이다.</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="form_01-1" value="4" class="custom-control-input" id="form_01-1_4" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-1_4">연구대상자 등록과 연구가 완료된 후 현재 추적 조사중이다.</label>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="custom-control custom-radio w80">
+                                      <input type="radio" name="form_01-1" value="5" class="custom-control-input" id="form_01-1_5" data-custom-toggle="focus" data-target="#form_01-1_6" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-1_5" class="mBot0">기타</label>
+                                    </div>
+                                    <div class="data">-</div>
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구관련 보관서류 목록<br>(보관 중인 서류 모두 기재)</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="form_01-2" id="form_01-2_1" value="1" disabled="disabled">
+                                    <label for="form_01-2_1" class="mBot0">연구 계획서</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop10">
+                                    <input type="checkbox" name="form_01-2" id="form_01-2_2" value="2" disabled="disabled">
+                                    <label for="form_01-2_2" class="mBot0">동의서</label>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_01-2" id="form_01-2_3" value="3" data-custom-toggle="focus" data-target="#form_01-2_4" disabled="disabled">
+                                      <label for="form_01-2_3" class="mBot0">기타 보관 서류</label>
+                                    </div>
+                                    <div class="data">-</div>
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구계획서 변경</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01-3" value="1" class="custom-control-input" id="form_01-3_1" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-3_1">없음</label>
+                                  </div>
+                                  <div class="flexMid">
+                                    <div class="custom-control custom-radio mTop10">
+                                      <input type="radio" name="form_01-3" value="2" class="custom-control-input" id="form_01-3_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-3_2">있음</label>
+                                    </div>
+                                    <div class="comment red mLeft10 mTop6">※ 최종 승인된 변경심의 신청서를 아래 &quot;<span class="underline">첨부 서류</span>&quot;에 File 첨부해주세요.</div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">이해상충 변경</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01-4" value="1" class="custom-control-input" id="form_01-4_1" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-4_1">없음</label>
+                                  </div>
+                                  <div class="flexMid">
+                                    <div class="custom-control custom-radio mTop10">
+                                      <input type="radio" name="form_01-4" value="2" class="custom-control-input" id="form_01-4_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-4_2">있음</label>
+                                    </div>
+                                    <div class="comment red mLeft10 mTop6">※ 이해상충 공개서를 아래 &quot;<span class="underline">첨부 서류</span>&quot;에 File 첨부해주세요.</div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">공동 연구기관의 변경</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01-5" value="1" class="custom-control-input" id="form_01-5_1" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-5_1">없음</label>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="custom-control custom-radio w80">
+                                      <input type="radio" name="form_01-5" value="2" class="custom-control-input" id="form_01-5_2" data-custom-toggle="focus" data-target="#form_01-5_3" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-5_2">추가</label>
+                                    </div>
+                                    <div class="data">-</div>
+                                    
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="custom-control custom-radio w80">
+                                      <input type="radio" name="form_01-5" value="2" class="custom-control-input" id="form_01-5_4" data-custom-toggle="focus" data-target="#form_01-5_5" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-5_4">탈퇴</label>
+                                    </div>
+                                    <div class="data">-</div>
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">공동 연구자의 변경</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01-6" value="1" class="custom-control-input" id="form_01-6_1" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-6_1">없음</label>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="custom-control custom-radio w80">
+                                      <input type="radio" name="form_01-6" value="2" class="custom-control-input" id="form_01-6_2" data-custom-toggle="focus" data-target="#form_01-6_3" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-6_2">추가</label>
+                                    </div>
+                                    <div class="data">-</div>
+                                    
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="custom-control custom-radio w80">
+                                      <input type="radio" name="form_01-6" value="2" class="custom-control-input" id="form_01-6_4" data-custom-toggle="focus" data-target="#form_01-6_5" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-6_4">탈퇴</label>
+                                    </div>
+                                    <div class="data">-</div>
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구윤리 교육 이수</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="flexMid">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" name="form_01-7" value="1" class="custom-control-input" id="form_01-7_1" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-7_1">없음</label>
+                                    </div>
+                                    <div class="comment red mLeft10">※ 교육 이수증을 아래 &quot;<span class="underline">첨부 서류</span>&quot;에 File 첨부해주세요.</div>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="form_01-7" value="2" class="custom-control-input" id="form_01-7_2" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-7_2">있음</label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">동의취득 방법 또는<br>동의서 내용 변경</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01-8" value="1" class="custom-control-input" id="form_01-8_1" disabled="disabled">
+                                    <label class="custom-control-label" for="form_01-8_1">없음</label>
+                                  </div>
+                                  <div class="flexMid">
+                                    <div class="custom-control custom-radio mTop10">
+                                      <input type="radio" name="form_01-8" value="2" class="custom-control-input" id="form_01-8_2" disabled="disabled">
+                                      <label class="custom-control-label" for="form_01-8_2">있음</label>
+                                    </div>
+                                    <div class="comment red mLeft10 mTop6">※ 최종 변경 승인된 동의서를 아래 &quot;<span class="underline">첨부 서류</span>&quot;에 File 첨부해주세요.</div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">위원회 보고사례 발생 여부<br>(해당사항 모두 선택)</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="form_01-9" id="form_01-9_1" value="1" disabled="disabled">
+                                    <label for="form_01-9_1" class="mBot0">없음</label>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01-9" id="form_01-9_2" value="2" disabled="disabled">
+                                      <label for="form_01-9_2" class="mBot0">이상반응 발생 보고</label>
+                                    </div>
+                                    <div class="comment red mLeft20">※ 중대한 이상반응 보고 심의를 신청해 주세요.</div>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01-9" id="form_01-9_3" value="3" disabled="disabled">
+                                      <label for="form_01-9_3" class="mBot0">위반/이탈사례 보고</label>
+                                    </div>
+                                    <div class="comment red mLeft20">※ 위반/미준수 사례보고 심의를 신청해 주세요.</div>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01-9" id="form_01-9_4" value="4" disabled="disabled">
+                                      <label for="form_01-9_4" class="mBot0">예상치못한 문제발생 보고</label>
+                                    </div>
+                                    <div class="comment red mLeft20">※ 예상치못한 문제발생 심의를 신청해 주세요.</div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>IRB 위원회의 승인유효기간은 1년으로, 1년이 경과하기 2개월 전까지 지속심의(중간보고) 신청서를 작성하여 제출합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      
+                      <div class="app_anchor" id="form_02"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>연구 대상자 등록 현황</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="15%">
+                              <col width="65%">
+                            </colgroup>
+                            <tbody>
+                              
+                              <tr>
+                                <td class="info_name text-center">연구 대상자</td>
+                                <td class="border_left text-center data">
+                                  <button type="button" class="btn btn-outline-primary btn-round btn_tag mBot0">인간대상 연구</button>
+                                </td>
+                                <td class="border_left data">전체: - 명<span class="mHside10">/</span>한국대학교: - 명</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="info_name text-center">지속심의 의뢰시점<br>등록현황</td>
+                                <td class="border_left text-center data">
+                                  <button type="button" class="btn btn-outline-primary btn-round btn_tag mBot0">인간대상 연구</button>
+                                </td>
+                                <td class="border_left data">
+                                  <div class="flexMid">
+                                    <label for="form_02-1_1" class="mRight10 mBot0 mRight10">전체 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">/</span>
+                                    <label for="form_02-1_2" class="mRight10 mBot0 mRight10">- :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="4" class="info_name text-center">연구 대상자<br>세부현황</td>
+                                <td class="border_left text-center">선별검사 현황</td>
+                                <td class="border_left data">
+                                  <div class="flexMid">
+                                    <label for="form_02-2_1" class="mRight10 mBot0 mRight10">선별검사 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">+</span>
+                                    <label for="form_02-2_2" class="mRight10 mBot0 mRight10">섬별검사 탈락 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">=</span>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">선별검사 탈락사유</td>
+                                <td class="border_left data">
+                                  <div class="flexMid">
+                                    <label for="form_02-3_1" class="mRight10 mBot0 mRight10">선정기준 미달 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">/</span>
+                                    <label for="form_02-3_2" class="mRight10 mBot0 mRight10">기타 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">등록현황</td>
+                                <td class="border_left data">
+                                  <div class="flexMid">
+                                    <label for="form_02-4_1" class="mRight10 mBot0 mRight10">중도탈락 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">+</span>
+                                    <label for="form_02-4_2" class="mRight10 mBot0 mRight10">진행중 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">+</span>
+                                    <label for="form_02-4_3" class="mRight10 mBot0 mRight10">완료 :</label>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                    <span class="mHside10">=</span>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">중도탈락 사유<br>(해당항목 모두 표기)</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_02-5" id="form_02-5_1" value="3" data-custom-toggle="focus" data-target="#form_02-5_2" disabled="disabled">
+                                      <label for="form_02-5_1" class="mBot0">동의 철회</label>
+                                    </div>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                  <div class="flexMid mTop5">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_02-5" id="form_02-5_3" value="3" data-custom-toggle="focus" data-target="#form_02-5_4" disabled="disabled">
+                                      <label for="form_02-5_3" class="mBot0">이상반응발생</label>
+                                    </div>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                  <div class="flexMid mTop5">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_02-5" id="form_02-5_5" value="3" data-custom-toggle="focus" data-target="#form_02-5_6" disabled="disabled">
+                                      <label for="form_02-5_5" class="mBot0">기타</label>
+                                    </div>
+                                    <span class="data mRight5">-</span>명
+                                    
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>IRB 위원회의 승인유효기간은 1년으로, 1년이 경과하기 2개월 전까지 지속심의(중간보고) 신청서를 작성하여 제출합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      
+                      
+                      <div class="app_anchor" id="form_04"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>첨부 서류</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="300">
+                              <col width="*">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>서류명</th>
+                                <th class="border_left">파일 첨부</th>
+                              </tr>
+                            </thead>
+                            <tbody id="">
+                              <tr>
+                                <td>
+                                  <div class="data">-</div>
+                                  
+                                </td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <div class="custom-file uploaded_file_box">
+                                      <a href="#" class="data">files.zip</a>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>위에서 선택한 항목에 해당하는 서류를 모두 첨부합니다.</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9 sign_area">
+                          <div class="IRB_agree">
+                            <div class="checkbox checkbox-primary mTop10">
+                              <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                              <label class="custom-control-label blue_deep" for="check_01">위와 같이 종료 보고서를 제출합니다.</label>
+                            </div>
+                            <div class="agree_date today_str">-년 -월 -일</div>
+                            <div class="agree_author">연구 책임자<span class="reviewer">-</span></div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop80">
+                          <ul id="">
+                            <li>확인란에 표기하는 것으로 정식 서명을 대체합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+
+                    </div>
+                    
+                  </div>
+                  
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <a href="./experiment_list-IRB_review_renew.html" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-edit mRight5"></i>보고서 보완</a>
+                  
+                  <a href="javascript:void(0);" onclick="newWindowPopup('./_popup_review-IRB_info_renew.html');" class="btn btn-primary waves-effect waves-light mLeft0"><i class="fas fa-check mRight5"></i>심사 결과 보기</a>
+
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="/html/researcher/experiment_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>실험 목록 보기</a>
+                  <a href="javascript:void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript:void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title noBread">멤버십 Plan 상세</h4>
+                    <div class="comment">IPSAP 멤버십 Plan 상세내역 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                
+                <div class="card-body pVside20 pHside40">
+                  
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>멤버십 Plan 정보</h4>
+                  </div>
+                  <div class="row pHside10 mTop10 flex_1">
+                    <form name="plan_form">
+                      <table class="table info_table">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*" class="auto_width_4columns">
+                          <col width="200">
+                          <col width="*" class="auto_width_4columns">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name">멤버십 Plan 명</td>
+                            <td class="data">IPSAP 무료 멤버십</td>
+                            <td class="info_name">사용 여부</td>
+                            <td><span class="red">※ 무료 멤버십 Plan은 관리자만 확인할 수 있습니다.</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">가입비</td>
+                            <td class="data">0<span class="mLeft5">원</span></td>
+                            <td class="info_name">월정액</td>
+                            <td class="data">0<span class="mLeft5">원</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">할인률</td>
+                            <td class="data">0<span class="mLeft5">%</span></td>
+                            <td class="info_name">할인률</td>
+                            <td class="data">0<span class="mLeft5">%</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">실 가입비</td>
+                            <td class="data">0<span class="mLeft5">원</span></td>
+                            <td class="info_name">실 월정액</td>
+                            <td class="data">0<span class="mLeft5">원</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">이용 제한 건수</td>
+                            <td class="red">※ 무료 Plan 지급시 설정합니다.</td>
+                            <td class="info_name">이용 개월 수</td>
+                            <td class="red">※ 무료 Plan 지급시 설정합니다.</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">멤버십 Plan 설명</td>
+                            <td colspan="3" class="data">이용요금이 무료로 고정된 멤버십 Plan 입니다.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </form>
+                  </div>
+
+                  
+                  <div class="row mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>무료 멤버십 Plan 지급 목록</h4>
+                  </div>
+
+                  
+                  <div class="flexMid mTop10 mBot10">
+                    <div class="search_info_manual"><span class="mLeft5">( </span><span class="mHside5">전체: <span id="list_total">20</span></span> )</div>
+                    <div class="search_form_manual flexMid mLeft30">
+                      <select class="form-control btn-outline-primary small_select w120" id="use_status">
+                        <option selected="selected" disabled="disabled">Plan 이용 여부</option>
+                        <option selected="selected" value="">모두</option>
+                        <option value="0">미이용</option>
+                        <option value="1">이용 완료</option>
+                      </select>
+                      <input type="search" class="form-control form-control-sm w300 mLeft10" placeholder="기관명, Plan명, 지급사유로 검색합니다." id="searchKeyword">
+                      <a href="javascript:void(0);" class="btn btn-sm btn-primary mLeft5" id="btn_search"><i class="fas fa-search mRight5"></i>검색하기</a>
+                    </div>
+                  </div>
+                  <table class="table list_table noSide nowrap" id="list_table">
+                    <colgroup>
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="100">   
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>지급 일시</th>
+                        <th>기관 명</th>
+                        <th>무료 멤버십 Plan 명</th>
+                        <th>무료 기간</th>
+                        <th>이용 여부</th>
+                        <th>이용 시작 일시</th>
+                        <th>지급 사유</th>
+                        <th class="text-center">지급 취소</th>
+                      </tr>
+                    </thead>
+                    <tbody id="free_list">
+                      
+                      <tr class="unused">
+                        <td>2021-05-13 13:52:16</td>
+                        <td>2021-05-13 13:52:16</td>
+                        <td>한국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>2 개월</td>
+                        <td class="plan_status">미이용</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-xs btn-outline-danger button_new" data-plan-id="2" data-toggle="modal" data-target="#modal_cancel">
+                            <i class="fas fa-times mRight5"></i>지급 취소
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="unused">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">미이용</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">
+                          <button type="button" class="btn btn-xs btn-outline-danger button_new" data-plan-id="1" data-toggle="modal" data-target="#modal_cancel">
+                            <i class="fas fa-times mRight5"></i>지급 취소
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="used">
+                        <td>2021-05-12 10:13:19</td>
+                        <td>2021-05-12 10:13:19</td>
+                        <td>영국 대학교</td>
+                        <td>IPSAP 무료 멤버십</td>
+                        <td>1 개월</td>
+                        <td class="plan_status">이용 완료</td>
+                        <td>가입 기념 무료 지급</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="dataTables_paginate paging_simple_numbers" id="paging">
+                    <ul class="pagination">
+                      <li class="paginate_button page-item previous disabled"><a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">이전</a></li>
+                      <li class="paginate_button page-item active"><a href="#" class="page-link">1</a></li>
+                      <li class="paginate_button page-item"><a href="#" class="page-link">2</a></li>
+                      <li class="paginate_button page-item next"><a href="#" aria-controls="datatable" data-dt-idx="2" tabindex="0" class="page-link">다음</a></li>
+                      <div class="buttons">
+                        <a href="javascript:assignPlan();" class="btn btn-sm btn-primary button_new"><i class="far fa-credit-card mRight5"></i>무료 멤버십 Plan 지급</a>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+                
+
+                
+                
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_assign_plan" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_staff_1">무료 멤버십 Plan 지급 기관 선택</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="card-header flexMid pVside10 pHside40">
+              <div class="flexMid">
+                <label class="mBot0" for="free_period">무료 멤버십 기간:</label>
+                <select class="form-control btn-outline-primary small_select w150 mLeft10" id="free_period">
+                  <option selected="selected" disabled="disabled">기간 선택</option>
+                  <option value="1" selected="selected">1 개월</option>
+                  <option value="2">2 개월</option>
+                  <option value="3">3 개월</option>
+                  <option value="4">4 개월</option>
+                  <option value="5">5 개월</option>
+                  <option value="6">6 개월</option>
+                  <option value="7">7 개월</option>
+                  <option value="8">8 개월</option>
+                  <option value="9">9 개월</option>
+                  <option value="10">10 개월</option>
+                  <option value="11">11 개월</option>
+                  <option value="12">12 개월</option>
+                </select>
+              </div>
+              <div class="flexMid mLeft40">
+                <label class="mBot0" for="app_limit">이용 제한 건수:</label>
+                <select class="form-control btn-outline-primary small_select w150 mLeft10" id="app_limit">
+                  <option selected="selected" disabled="disabled">제한 건수 선택</option>
+                  <option value="10" selected="selected">10 건 이하</option>
+                  <option value="20">20 건 이하</option>
+                  <option value="9999">무제한</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body">
+
+              <div class="flexMid mBot10">
+                <div class="search_info">검색 결과</div>
+                <div class="search_form"></div>
+              </div>
+              <table id="datatable" class="table list_table pad_left" data-page-length="10">
+                <thead>
+                  <tr>
+                    <th>기관명</th>
+                    <th>기관 코드</th>
+                    <th>행정 간사명</th>
+                    <th>연락처</th>
+                    <th>사업자 등록번호</th>
+                    <th>등록일</th>
+                    <th>멤버십 가입일</th>
+                    <th>결제 예정일</th>
+                    <th class="text-center">선택</th>
+                  </tr>
+                </thead>
+                <tbody id="modal_inst_list">
+                  <tr>
+                    <td>한국대학교3</td>
+                    <td>HUM2</td>
+                    <td>홍길동3</td>
+                    <td>010-1234-5678</td>
+                    <td>123-45-67890</td>
+                    <td>2021-01-11</td>
+                    <td>2021-03-21</td>
+                    <td>2021-03-31</td>
+                    <td class="text-center">
+                      <div class="checkbox checkbox-primary">
+                        <input type="checkbox" name="selOrg" id="selOrg3" value="HUM3" checked="checked">
+                        <label for="selOrg3"></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>한국대학교2</td>
+                    <td>HUM</td>
+                    <td>홍길동2</td>
+                    <td>010-1234-5678</td>
+                    <td>123-45-67890</td>
+                    <td>2021-01-11</td>
+                    <td class="text-center">
+                      <div class="checkbox checkbox-primary">
+                        <input type="checkbox" name="selOrg" id="selOrg2" value="HUM2">
+                        <label for="selOrg2"></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>한국대학교</td>
+                    <td>HUM</td>
+                    <td>홍길동1</td>
+                    <td>010-1234-5678</td>
+                    <td>123-45-67890</td>
+                    <td>2021-01-11</td>
+                    <td class="text-center">
+                      <div class="checkbox checkbox-primary">
+                        <input type="checkbox" name="selOrg" id="selOrg1" value="HUM">
+                        <label for="selOrg1"></label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_confirm">지급하기</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+          </div>
+          
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="modal_confirm">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">무료 멤버십 Plan 지급 확인</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">선택한 기관에 <span class="red">무료 멤버십 Plan을 지급</span>하시겠습니까?</h5>
+                <h6 class="lh_vivid mTop3 mBot0">
+                  <span class="underline">무료 멤버십 Plan은</span> 지급 후<br><span class="pink_vivid">이용이 시작되면, 취소가 불가능</span>하니 주의하시기 바랍니다.</h6>
+              </div>
+              <form name="cancel_info" class="w100p pHside40 pBot10">
+                
+                <textarea class="form-control" id="reason" rows="3" placeholder="지급을 원하는 경우, 사유를 입력해 주세요."></textarea>
+              </form>
+            </div>
+            <div class="pHside40">
+              <h6 class="mBot3">※ 무료 멤버십 Plan은 아래의 조건에의해 자동으로 사용됩니다.</h6>
+              <ol class="mTop3 pLeft20 indent5">
+                <li>이용중인 Plan이 <span class="red">없는 경우</span> - <span class="red">지급 즉시</span> 이용</li>
+                <li>이용중인 Plan이 <span class="red">있는 경우</span> - <span class="red">이용중인 Plan의 월사용 종료 후</span> 바로 이용</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary waves-effect waves-light" onclick="applyFreeMembership();"><i class="fas fa-check mRight5"></i>확인</button>
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="modal_cancel">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">무료 멤버십 Plan 지급 취소</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">선택한 무료 Plan의 지급을 <span class="red">취소</span>하시겠습니까?</h5>
+                <h6 class="lh_vivid mTop3 mBot0">
+                  이미 지급된 무료 멤버십 Plan 이어도<br><span class="pink_vivid">이용전인 경우에는 취소가 가능</span>합니다.</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            <button type="button" class="btn btn-danger waves-effect waves-light" onclick="cancelFreeMembership();"><i class="fas fa-check mRight5"></i>지급 취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/admin/common_admin.js"></script>
+    <script src="./plan_list-info_free.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,137 @@
+01-1 js
+if (checked) {
+        $('#input_01-3_group').addClass('collapse').removeClass('show');
+      }
+
+01-2js
+if (item_data.dataObj.saved_data == undefined) {
+        return;
+      }
+
+
+new 02-1js
+document.write("<script src='/assets/js/common/api.js'></script>");
+document.write("<script src='/assets/js/common/const.js'></script>");
+document.write("<script src='/assets/js/ipsap/ipsap_item_module.js'></script>");
+
+////////////////////////////////////////////////////
+//  wowdolf
+var application_seq = 1;      //  값 지정 필요함.
+////////////////////////////////////////////////////
+
+$(function() {
+
+  var contents = $('.page-content');
+
+  function loadAppItemData(contents, options){
+    let param = {
+      'filter.query_items' : "purpose_1,purpose_2,purpose_2_basic,purpose_2_applied,purpose_2_test,purpose_2_nature,purpose_2_species,purpose_2_training,purpose_2_forensic,purpose_2_gene,purpose_2_etc",
+      'filter.guide_items' : "purpose_1,purpose_2_basic,purpose_2_applied,purpose_2_species,purpose_2_gene,purpose_2_etc"
+    };
+
+    //  미리 정의된 전역 객체에 할당
+    g_AppItemParser = new ItemParser(application_seq);
+    g_AppItemParser.load(param, dataMappingFunc);
+  }
+
+  function dataMappingFunc(itemParser)  {
+    {   //  2-1. 동물실험 목적에 따른 분류 1
+      var search_item_name = "purpose_1";
+      var item_data = itemParser.getItemData(search_item_name);
+      item_data.makeHtmlCheckList(IPSAP.COL.ODD);
+      item_data.makeHtmlCheckList(IPSAP.COL.EVEN);
+    }
+    {   //  2-2 동물실험 목적에 따른 분류 2
+      { //  (1) 기초 연구
+        var search_item_name = "purpose_2_basic";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_basic-main_check");
+        item_data.makeHtmlCheckList(IPSAP.COL.ODD);
+        item_data.makeHtmlCheckList(IPSAP.COL.EVEN);
+        if (checked) {
+          $('#input_1_group').addClass('show');
+        }
+      }
+      { //  (2) 중개 및 응용 연구
+        var search_item_name = "purpose_2_applied";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_applied-main_check");
+        item_data.makeHtmlCheckList(IPSAP.COL.ODD);
+        item_data.makeHtmlCheckList(IPSAP.COL.EVEN);
+        if (checked) {
+          $('#input_2_group').addClass('show');
+        }
+      }
+      { //  (3) 법적인 요구사항을 만족하기 위한 규제시험(Regulatory Test)
+        var search_item_name = "purpose_2_test";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_test-main_check");
+        item_data.makeHtmlCheckList();
+        if (checked) {
+          $('#input_3_group').addClass('show');
+        }
+      }
+      { //  (4) 사람이나 동물의 건강이나 복지를 위한 자연환경 연구
+        var search_item_name = "purpose_2_nature";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_nature-main_check");
+      }
+      { //  (5) 종 보존을 위한 연구
+        var search_item_name = "purpose_2_species";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_species-main_check");
+        if (checked) {
+          $('#input_5_group').addClass('show');
+        }
+      }
+      { //  (6) 교육이나 훈련
+        var search_item_name = "purpose_2_training";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_training-main_check");
+        item_data.makeHtmlCheckList();
+        if (checked) {
+          $('#input_6_group').addClass('show');
+        }
+        if ($('#purpose_2_training_4').is(':checked')){
+          $('#purpose_2_training_4_input_1').css('display', 'block');
+        }
+      }
+      { //  (7)
+        var search_item_name = "purpose_2_forensic";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_forensic-main_check");
+      }
+      { //  (8) 유전자 변형 형질 동물 생물
+        var search_item_name = "purpose_2_gene";
+        var item_data = itemParser.getItemData(search_item_name);
+        var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_gene-main_check");
+        if (checked) {
+          $('#input_8_group').addClass('show');
+        }
+      }
+      { //  (9) 기타
+        { //  Check
+          var search_item_name = "purpose_2_etc_check";
+          var item_data = itemParser.getItemData(search_item_name);
+          var checked = item_data.applyMainCheckValueInCheckBox("purpose_2_etc_check-main_check");
+          if (checked) {
+            $('#input_9_group').addClass('show');
+            $('#purpose_2_etc_input').css('display', 'block');
+          }
+        }
+        { //  Input
+          var search_item_name = "purpose_2_etc_input";
+          var item_data = itemParser.getItemData(search_item_name);
+          item_data.applyTextValue();
+        }
+      }
+    }
+  }
+
+  function setApp(contents) {
+    loadAppItemData(contents);
+  }
+
+  setApp(contents);
+
+});

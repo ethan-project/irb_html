@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            
+            <div class="card thick IRB hidden">
+              <div class="card-header flexBetween">
+                <div class="title_area">
+                  <h4 class="card-title flexMid task_title_ko">IRB 신규 심의 - 심의 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                  <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                </div>
+                <div class="progress_area">
+                  
+                </div>
+                <div class="desc_area">
+                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                </div>
+              </div>
+              <div class="card-body pHside40">
+                <div class="row noMargin app_frame">
+                  <div class="col-sm-12 app_col app_contents">
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>4-1. 필수 제출 서류</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="300">
+                            <col width="*">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>서류명</th>
+                              <th class="border_left">파일 첨부</th>
+                            </tr>
+                          </thead>
+                          <tbody id="">
+                            <tr>
+                              <td>연구 계획서</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_required_expt_form">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="">
+                          <li>면제대상인 경우 연구계획서만 첨부하여 제출합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+
+                    
+                    <div class="row app_header mTop20">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>4-2. 추가 제출 서류</h4>
+                      <div class="header_comment">해당되는 항목의 서류를 첨부하여 제출합니다.</div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="300">
+                            <col width="*">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>서류명</th>
+                              <th class="border_left">파일 첨부</th>
+                            </tr>
+                          </thead>
+                          <tbody id="">
+                            <tr>
+                              <td>연구대상자 설명문 및 동의서</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_desc_agree">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구대상자에게 제공되는 서류(일지 등)</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_provide">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구대상로부터 획득한 정보의 목록<br>(설문지, 연구노트, 증례기록서 등)</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_obtained_info">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구대상자 모집 문건</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_recruitment">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구자 이해상충 서약서</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_conflict_pledge">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구자 생명윤리 교육 이수증</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_edu_cert">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구책임자 이력서</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_director_resume">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>물질양도각서(MTA)</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_substance_transfer">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>제조(수입)물품 허가증 사본</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_license">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>주관기관승인서</td>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_additional_permission">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="">
+                          <li>심의대상인 경우 해당되는 항목의 서류를 모두 첨부하여 제출합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>4-3. 기타 제출 서류</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="*">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th class="border_left">파일 첨부</th>
+                            </tr>
+                          </thead>
+                          <tbody id="">
+                            <tr>
+                              <td class="border_left">
+                                <div class="flexMid" id="doc_etc">
+                                  <div class="custom-file flex_1 uploaded_file_box">
+                                    <a href="#" class="data">files.zip</a>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary mLeft5" title="첨부 File 다운로드"><i class="fas fa-download"></i></a>
+                                </div>
+                              </td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+
+                      
+                      <div class="col-sm-3 app_guide mTop0">
+                        <ul id="">
+                          <li>기타 심의에 필요한 서류를 첨부하여 제출합니다.</li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+
+
+
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div id="bottom_anchor"></div>
+              
+
+              
+              <div id="footer_anchor"></div>
+              <div class="card-footer flexCenter side_type">
+                <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+              </div>
+
+            </div>
+            
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="./_popup_app-IRB_info_04.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+  </body>
+
+</html>

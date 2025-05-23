@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">새로운 동물 실험 계획서</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IA0001-01</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-01_1.html" class="row process_content" data-process-num="1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-02_1.html" class="row process_content" data-process-num="2">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-03_1.html" class="row process_content" data-process-num="3">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-04_1.html" class="row process_content" data-process-num="4">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-05_1.html" class="row process_content" data-process-num="5">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-06_1.html" class="row process_content" data-process-num="6">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-07_1.html" class="row process_content active sub_2 active_sub_1" data-process-num="7">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-08_1.html" class="row process_content" data-process-num="8">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-09_1.html" class="row process_content" data-process-num="9">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-10_1.html" class="row process_content" data-process-num="10">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-11_1.html" class="row process_content" data-process-num="11">
+                          <span>자가 점검</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>7-1. 고통 및 스트레스에 대한 평가 방법</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <li class="content_comment">해당하는 항목에 모두 체크하고 목록에 없는 경우, '<span class="underline">기타</span>'를 선택하고 직접 입력해 주세요.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="row">
+                            <div class="w60"><div>평가 항목</div></div>
+                            <div class="col" id="pain_relief_eval_item">
+                            
+                            
+                              <div class="checkbox checkbox-primary flexMid pLeft3">
+                                
+                                <input type="checkbox" id="check_07-1_1-1" data-custom-toggle="visible">
+                                <label class="w80" for="check_07-1_1-1">체중변화</label>
+                                <input type="number" maxlength="4" class="form-control form-control-sm w100 hidden">
+                                <span class="mLeft20 mRight5 hidden">% 이상 증감</span>
+                              </div>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_07-1_1-2">
+                                <label for="check_07-1_1-2">측정 가능한 임상 증상(체온, 심박수, 호흡수 등)</label>
+                              </div>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_07-1_1-3">
+                                <label for="check_07-1_1-3">비정상적인 외관(피모, 자세, 분비물 상태)</label>
+                              </div>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_07-1_1-4">
+                                <label for="check_07-1_1-4">비정상적인 행동변화</label>
+                              </div>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_07-1_1-5">
+                                <label for="check_07-1_1-5">섭식곤란(식이 변화)</label>
+                              </div>
+                              <div class="checkbox checkbox-primary flexMid pLeft3">
+                                <input type="checkbox" id="check_07-1_1-6" value="new" data-custom-toggle="visible">
+                                <label class="w50" for="check_07-1_1-6">기타</label>
+                                <input type="text" class="form-control form-control-sm hidden" placeholder="구체적인 평가 항목을 입력해 주세요.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="pain_relief_eval_item_guide">
+                          
+                          
+                            <li>
+                              인도적인 실험종료 적용기준<br>
+                              - 체중변화: 통증으로 인한 사료섭취량 감소나 정상 체중의 20% 이상의 체중감소가 나타나는 경우, 발암시험의 경우 정상체중의 10%를 초과하는 종양이 발생하는 경우<br>
+                              - 측정가능한 임상증상: 체온 2℃ 이상 변화, 심박수와 호흡수 50% 이상 변화<br>
+                              - 비정상적인 외관: 털 손질 감소, 거친 털, 눈/코 분비물, 비정상적인 자세, 동공 커짐 등<br>
+                              - 비정상적인 행동변화: 움직임의 감소, 민첩함의 감소, 자가 상해, 쉬지않고 움직이거나 움직임이 없는 상태, 외부자극에 대한 반응
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <div class="row app_content mTop10">
+                        <div class="col-sm-9">
+                          <div class="row flexMid">
+                            <div class="w60"><div>관찰 주기</div></div>
+                            <div class="col">
+                              <div class="flexMid">
+                                <label class="w60 mBot0" for="pain_relief_eval_cycle1">정상 동물 :</label>
+                                <span class="mLeft20 mRight5">1일</span>
+                                <input type="number" maxlength="3" class="form-control form-control-sm w80" min="0" value="0" oninput="maxLengthCheck(this)" id="pain_relief_eval_cycle1">
+                                <span class="mLeft5">회</span>
+                                
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row flexMid mTop5">
+                            <div class="w60"></div>
+                            <div class="col">
+                              <div class="flexMid">
+                                <label class="w60 mBot0" for="pain_relief_eval_cycle2">처치 동물 :</label>
+                                <span class="mLeft20 mRight5">1일</span>
+                                <input type="number" maxlength="3" oninput="maxLengthCheck(this)" class="form-control form-control-sm w80" min="0" value="0" id="pain_relief_eval_cycle2">
+                                <span class="mLeft5">회 이상</span>
+                                <span class="mLeft10 mRight10">/</span>
+                                <span class="mRight5">관찰 기간</span>
+                                <input type="number" maxlength="3" class="form-control form-control-sm w80" min="0" value="0" oninput="maxLengthCheck(this)" id="pain_relief_eval_cycle3">
+                                <span class="mLeft5">일</span>
+                                
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_relief_eval_cycle_guide">
+                          
+                          
+                            <li>정상동물의 경우 하루 1회 이상 관찰이 권장됩니다.</li>
+                            <li>처치 후 동물의 경우 고통의 정도에 따라 관찰빈도를 증가시켜야 하며, 실험 이후의 관찰기간과 1일 관찰횟수를 기재합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>7-2. 인도적인 종료시점</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div id="pain_relief_end_check" class="mTop5 mLeft5">
+                        <div class="custom-control custom-radio d-block">
+                          <input type="radio" name="pain_check" value="1" class="custom-control-input" id="input_07-2_1" checked="checked">
+                          <label class="custom-control-label" for="input_07-2_1">적용</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="input_07-2_2" name="pain_check" value="2" class="custom-control-input">
+                          <label class="custom-control-label" for="input_07-2_2">미적용</label>
+                        </div>
+                      </div>
+                      <div class="row app_content mTop20">
+                        <div class="col-sm-9">
+                          <li class="content_comment">인도적인 종료 시점에 대해 기재합니다.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <textarea id="pain_relief_end_reason_1" class="form-control" rows="3" placeholder="구체적인 사유를 입력해 주세요."></textarea>
+                          
+                          
+                        </div>
+                        <div class="col-sm-9 mTop10">
+                          <li class="content_comment">인도적인 종료 시점을 적용할 수 없는 경우 구체적인 사유를 기재합니다.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <textarea id="pain_relief_end_reason_2" class="form-control" rows="3" placeholder="구체적인 사유를 입력해 주세요."></textarea>
+                          
+                          
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="pain_relief_end_reason_2_guide">
+                          
+                          
+                            <li>인도적 안락사 기준이 없는 경우 그 사유를 기재해야 합니다.</li>
+                            <li>인도적 종료시점 관련 정보<br>http://www.humane-endpoints.info/en</li>
+                            <li>「동물보호법 제23조(동물실험의 원칙)」</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="./application_new-06_1.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="./application_new-07_2.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="#" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" data-toggle="modal" data-target="#modal_tempSave"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../assets/js/di4js.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new-07_1.js"></script>
+
+  </body>
+
+</html>

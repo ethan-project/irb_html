@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher" data-fold-menu="1490">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="dashboard_box flexCentral hidden">
+                <div class="area_wrapper flexRow">
+                  <div class="page-title-box w100p">
+                    <div class="row">
+                      <div class="col text-center">
+                        <span class="page-title noBread">나의 업무 Dashboard</span>
+                        <a href="#" class="list_filters mLeft20" data-filter="application"><i class="mdi mdi-file-outline"></i>신청서 보기</a>
+                        <a href="#" class="list_filters mLeft5" data-filter="report"><i class="mdi mdi-finance"></i>보고서 보기</a>
+                        <a href="./application_new.html" class="btn btn_xxs IACUC mLeft30"><i class="fas fa-plus-square mRight5"></i>IACUC 신청서 작성</a>
+                        
+                        <a href="#" class="btn btn-outline-info btn_xxs mLeft20" id="btn_download"><i class="fas fa-arrow-down mRight5"></i>실험동물 Data 받기</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="app_area">
+                    <div class="myApps writing_apps">
+                      <div class="myApp_title">
+                        <span>작성중</span><span class="myApp_cnt writing_cnt">0</span><span class="divider">|</span><span class="title_desc">작성(보완)중인 신청서</span>
+                      </div>
+                      <div class="myApp_body writing_apps_body" data-comment="작성중인 신청서가">
+                        
+
+                        <div class="card round_10 committee_box_shadow">
+                          <div class="card-header flexMid">
+                            <div class="card_icon committee_color_onHover"><i class="mdi mdi-file-upload-outline"></i></div>
+                            <div class="card_title">
+                              <div class="committee_label_bg">
+                                <span class="label committee_bg">-</span><span class="committee_color">IACUC</span>
+                              </div>
+                              <div class="card-title">-</div>
+                              <div class="rcv_num">-<span class="title_date">(-)</span></div>
+                            </div>
+                          </div>
+                          <div class="card-body flexBetween">
+                            <span class="app_type committee_color_onHover bullet">- 일 경과</span>
+                            <a href="javascript:void(0);" class="link_btn">-</a>
+                          </div>
+                        </div>
+
+                        
+                      </div>
+                    </div>
+
+                    <div class="myApps checking_apps">
+                      <div class="myApp_title">
+                        <span>행정 검토</span><span class="myApp_cnt checking_cnt">0</span><span class="divider">|</span><span class="title_desc">행정 검토중인 신청서</span>
+                      </div>
+                      <div class="myApp_body checking_apps_body" data-comment="검토중인 신청서가">
+                        
+                      </div>
+                    </div>
+
+                    <div class="myApps judge_ing_apps">
+                      <div class="myApp_title">
+                        <span>심사</span><span class="myApp_cnt judge_ing_cnt">0</span><span class="divider">|</span><span class="title_desc">전문, 일반 심사중인 신청서</span>
+                      </div>
+                      <div class="myApp_body judge_ing_apps_body" data-comment="심사중인 신청서가">
+                        
+                      </div>
+                    </div>
+
+                    <div class="myApps final_apps">
+                      <div class="myApp_title">
+                        <span>최종 심의</span><span class="myApp_cnt final_cnt">0</span><span class="divider">|</span><span class="title_desc">심사 후 최종 심의중인 신청서</span>
+                      </div>
+                      <div class="myApp_body final_apps_body" data-comment="심의중인 신청서가">
+                        
+
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="exp_area">
+                    <div class="myExps">
+                      <a href="./experiment_list.html" class="card round_10 committee_box_shadow">
+                        <div class="card-header flexMid">
+                          <div class="card_icon committee_color_onHover"><i class="mdi mdi-flask-outline"></i></div>
+                          <div class="card_title">
+                            <div class="exp_info">
+                              <span class="flexMid">
+                                <span class="label committee_bg">IACUC</span>
+                                <div class="card-title">동물실험 운영 관련 실험 1</div>
+                                <div class="card_info"><span class="rcv_num">HUM-2020-IA0005</span><span class="title_date">(2021-01-01 ~ 2021-12-31)</span></div>
+                              </span>
+                              <span class="app_type committee_color_onHover end_date">2022-12-24<i class="mdi mdi-arrow-collapse-right mLeft5"></i></span>
+                            </div>
+                            <div class="exp_period">
+                              <div class="progress mTop5">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">1차 년도</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 3%">재승인</div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 8%">2차 년도</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+    <script src="../../plugins/malihu/jquery.mCustomScrollbar.min.js"></script>
+    <link href="../../plugins/malihu/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./dashboard.js"></script>
+
+  </body>
+
+</html>

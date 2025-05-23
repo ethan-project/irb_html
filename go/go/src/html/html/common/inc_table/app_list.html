@@ -1,0 +1,194 @@
+<div class="card hidden">
+  <div class="card-header">
+    <div class="flexMid">
+      <h4 class="card-title">-</h4>
+      <div class="mLeft20" id="type_changer">
+        <div class="radio radio-primary form-check-inline">
+          <input type="radio" id="type1" value="card_type" name="list_type" class="mRight5" checked="checked">
+          <label for="type1" class="mBot0">Card 형</label>
+        </div>
+        <div class="radio radio-primary form-check-inline">
+          <input type="radio" id="type2" value="list_type" name="list_type" class="mRight5">
+          <label for="type2" class="mBot0">List 형</label>
+        </div>
+      </div>
+    </div>
+    <div class="flexMid app_view_set1">
+      <div class="search_info"></div>
+      <div class="flexMid check_filters hidden">
+        <div class="committee_filters check_filter flexMid" data-column="4"></div>
+        <div class="appType_filters check_filter flexMid" data-column="5"></div>
+        <div class="progress_filters check_filter flexMid" data-column="6"></div>
+        <div class="status_filters check_filter flexMid" data-column="7"></div>
+      </div>
+      <div class="search_form mLeft30"></div>
+    </div>
+    <div class="flexMid app_view_set2">
+      <div class="search_info"></div>
+      <div class="flexMid check_filters hidden">
+        <div class="committee_filters check_filter flexMid" data-column="4"></div>
+        <div class="myReview_filters check_filter flexMid" data-column="5"></div>
+        <div class="appType_filters check_filter flexMid" data-column="6"></div>
+        <div class="progress_filters check_filter flexMid" data-column="7"></div>
+        <div class="status_filters check_filter flexMid" data-column="8"></div>
+      </div>
+      <div class="search_form mLeft30"></div>
+    </div>
+    <div class="flexMid app_view_set3">
+      <div class="search_info"></div>
+      <div class="flexMid check_filters hidden">
+        <div class="committee_filters check_filter flexMid" data-column="4"></div>
+        <div class="appType_filters check_filter flexMid" data-column="5"></div>
+        <div class="progress_filters check_filter flexMid" data-column="6"></div>
+        <div class="status_filters check_filter flexMid" data-column="7"></div>
+      </div>
+      <div class="search_form mLeft30"></div>
+    </div>
+  </div>
+  <div class="card-body">
+    <table id="datatable" class="table list_table noSide nowrap w100p card_type" data-page-length="15">
+      <colgroup class="app_view_set1">
+        <col width="*" class="hidden">   
+        <col width="135">    
+        <col width="80" class="max_w80"> 
+        <col width="*">      
+        <col width="80">     
+        <col width="80">     
+        <col width="80">     
+        <col width="120">    
+        <col width="80">     
+        <col width="100" class="max_w200"> 
+        <col width="*">      
+        <col width="120" class="proc_exec_field">  
+      </colgroup>
+      <thead class="app_view_set1" data-rowgroup="0" data-rowgroup-start="0" data-init-order="2" data-order-direction="desc" data-page-length="15" data-rowgroup-folded="true">
+        <tr>
+          <th class="hidden noExport">신규승인 접수 번호</th>
+          <th>접수 번호</th>
+          <th>접수 일자</th>
+          <th class="title max_w250">과제명 - 국문(영문)</th>
+          <th class="thick">심의 유형</th>
+          <th>서식 유형</th>
+          <th>진행 단계</th>
+          <th>진행 상태</th>
+          <th>작성자</th>
+          <th>소속 기관</th>
+          <th>소속 부서</th>
+          <th class="text-center no-order proc_exec_field noCard_type">행정 처리 실행</th>
+        </tr>
+      </thead>
+      <colgroup class="app_view_set2">
+        <col width="*" class="hidden">   
+        <col width="150">   
+        <col width="80">    
+        <col width="*">     
+        <col width="80">    
+        <col width="100">   
+        <col width="80">    
+        <col width="80">    
+        <col width="120">   
+        <col width="80">    
+        <col width="*">     
+        <col width="*">     
+      </colgroup>
+      <thead class="app_view_set2" data-rowgroup="0" data-rowgroup-start="0" data-init-order="2" data-order-direction="desc" data-page-length="15" data-rowgroup-folded="true">
+        <tr>
+          <th class="hidden noExport">신규승인 접수 번호</th>
+          <th>접수 번호</th>
+          <th>심사 일자</th>
+          <th class="title max_w250">과제명 - 국문(영문)</th>
+          <th class="thick">심의 유형</th>
+          <th>나의 심사 참여</th>
+          <th>서식 유형</th>
+          <th>진행 단계</th>
+          <th>진행 상태</th>
+          <th>작성자</th>
+          <th>소속 기관</th>
+          <th>소속 부서</th>
+        </tr>
+      </thead>
+      <colgroup class="app_view_set3">
+        <col width="*" class="hidden">   
+        <col width="135">    
+        <col width="80" class="max_w80"> 
+        <col width="*" class="max_w250"> 
+        <col width="80">     
+        <col width="80">     
+        <col width="80">     
+        <col width="120">    
+        <col width="80">     
+        <col width="80">     
+        <col width="*">      
+        <col width="*">      
+        <col width="120" class="proc_exec_field">  
+        <col width="*">  
+      </colgroup>
+      <thead class="app_view_set3" data-rowgroup="0" data-rowgroup-start="0" data-init-order="2" data-order-direction="desc" data-page-length="15" data-rowgroup-folded="true">
+        <tr>
+          <th class="hidden noExport">신규승인 접수 번호</th>
+          <th>접수 번호</th>
+          <th>접수 일자</th>
+          <th class="title max_w250">과제명 - 국문(영문)</th>
+          <th class="thick">심의 유형</th>
+          <th>서식 유형</th>
+          <th>진행 단계</th>
+          <th>진행 상태</th>
+          <th>전문 위원</th>
+          <th>작성자</th>
+          <th>소속 기관</th>
+          <th>소속 부서</th>
+          <th class="text-center no-order proc_exec_field noCard_type">행정 처리 실행</th>
+          <th class="text-center no-order noCard_type"></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        <tr data-url="./application_list-info.html" class="card_templete IACUC">
+          <td></td>
+          <td data-title="접수 번호:" class="order_1">HUM-2020-IA0080</td>
+          <td data-title="접수 일자:">2020-01-08</td>
+          <td data-title="과제명:" class="short_col title_col title max_w250">동물실험 연구 8 (임시 저장)</td>
+          <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+          <td data-title="서식 유형:" class="fw_bold committee_color">신규 승인</td>
+          <td data-title="진행 단계:" class="line_top short_col">신청서 작성</td>
+          <td data-title="진행 상태:" class="line_bottom status">임시 저장</td>
+          <td data-title="작성자:">홍길동</td>
+          <td data-title="소속 기관:">한국 대학교</td>
+          <td data-title="소속 부서:">실험 동물실</td>
+          <td class="text-center action_buttons proc_exec_field">
+            <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+            <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+            <a href="./reviewClose_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 종료</a>
+            <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+          </td>
+        </tr>
+        
+        <tr data-url="./application_list-info.html" class="list_templete IACUC">
+          <td></td>
+          <td>HUM-2020-IA0071</td>
+          <td>2020-01-07</td>
+          <td class="title max_w250">동물실험 연구 7-1 (행정 검토 - 심사 설정)</td>
+          <td class="committee_color thick">IACUC</td>
+          <td class="app_view_set2"></td>
+          <td class="fw_bold committee_color">신규 승인</td>
+          <td>행정 검토</td>
+          <td class="status">검토중</td>
+          <td class="app_view_set3">전문위원</td>
+          <td>홍길동</td>
+          <td>한국 대학교</td>
+          <td>실험 동물실</td>
+          <td class="text-center action_buttons proc_exec_field">
+            <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+            <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+            <a href="./reviewClose_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 종료</a>
+            <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+          </td>
+          <td class="text-center app_view_set3"><a href="javascript: void(0);" class="btn btn-primary btn-xs application-delete">신청서 삭제</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="/html/common/inc_table/app_list.js"></script>

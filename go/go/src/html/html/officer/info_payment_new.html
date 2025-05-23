@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">멤버십 결제 관리</h4>
+                    <div class="comment">
+                      현재 <span class="red">이용중인 IPSAP 멤버십</span> 정보를 확인하고, <span class="red">멤버십 갱신</span>을 진행할 수 있습니다.
+                    </div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden">
+                <div class="card-header">
+
+                  
+                  <div class="row comment_box blue_box mHside20 mVside10" id="using_box">
+                    <div class="col-sm-5">
+                      <div class="flexMid">
+                        <h4 class="card-title"><i class="far fa-id-card mRight10"></i><span class="blue_deep">이용중</span>인 멤버십 정보</h4>
+                      </div>
+                      <div class="mTop10">
+                        <ul class="mBot5">
+                          <li class="mTop10">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">멤버십 명:</label>
+                              <div class="blue_deep" id="name_using">IPSAP 2020 베이직 멤버십</div>
+                              
+                              <button type="button" class="btn btn-primary btn_xxs mLeft20" id="btn_cart_change" data-toggle="collapse" data-target="#cart_change">
+                                <i class="fas fa-exchange-alt mRight5"></i>멤버십 변경</button>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">이용 기간:</label>
+                              <div class="blue_deep"><span id="start_using">2020-04-11</span> ~ <span class="red" id="end_using">2021-06-30</span><span class="red mLeft10" id="until_using">( 만료 26일전 )</span></div>
+                              
+                              <button type="button" class="btn btn-danger btn_xxs mLeft20" id="btn_cart" data-toggle="collapse" data-target="#cart">
+                                <i class="fas fa-exclamation-triangle mRight5"></i>멤버십 갱신</button>
+                              
+                              
+                            </div>
+                          </li>
+                          <li class="mTop5" id="free_using_default_li">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">기본 무료 이용 기간:</label>
+                              <div class="blue_deep"><span id="free_start_using_default">2020-04-11</span> ~ <span id="free_end_using_default">2020-04-30</span></div>
+                            </div>
+                          </li>
+                          <li class="mTop5" id="free_using_extra_li">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0"><spa class="red">추가 무료</spa> 이용 기간:</label>
+                              <div class="blue_deep"><span id="free_start_using_extra">2020-05-01</span> ~ <span id="free_end_using_extra">2020-05-31</span></div>
+                            </div>
+                          </li>
+                          <li class="mTop15">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">이번달 서비스 이용 건수:</label>
+                              <div class="blue_deep" id="limit_using">총 <span id="count_using">6</span> 건 /<span class="gray mLeft8" id="total_using">10</span> 건</div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 border_left_thick pLeft30">
+                      <div class="flexMid">
+                        <h4 class="card-title"><i class="far fa-credit-card mRight10"></i><span class="blue_deep">멤버십 결제</span> 정보</h4>
+                      </div>
+                      <div class="mTop10">
+                        <ul class="mBot5">
+                          <li class="mTop10">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">최근 결제 금액:</label>
+                              <div class="blue_deep" id="amount_using">99,000 원</div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">최근 결제 일시:</label>
+                              <div class="blue_deep" id="pay_date_using">2021-06-01 00:00:30</div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">최근 결제 방법:</label>
+                              <div class="blue_deep" id="method_using">신용카드<span class="red mLeft5" id="auto_flag_using">( 자동 결제 )</span></div>
+                              <button type="button" class="btn btn-primary btn_xxs mLeft20 btn_pay_change" data-toggle="collapse" data-target="#pay_method">결제 방법 변경</button>
+                            </div>
+                          </li>
+                          
+                          <li class="mTop15" id="normal_li">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">다음 결제 예정:</label>
+                              <div class="blue_deep"><span id="due_date">2021-07-01</span><span class="mHside10 gray">-</span><span class="red" id="current_plan">IPSAP 2020 베이직 멤버십</span></div>
+                              
+                              <button type="button" class="btn btn-danger btn_xxs tippy-btn mLeft20" id="btn_direct_pay" title="현재 직접 결제가 가능합니다." data-tippy-arrow="true" data-tippy-offset="50,0" data-toggle="collapse" data-target="#cart_inuse"><i class="far fa-credit-card mRight10"></i>멤버십 직접 결제</button>
+                            </div>
+                          </li>
+                          
+                          <li class="mTop15" id="expired_li">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">다음 결제 예정:</label>
+                              <div class="red">멤버십의 갱신이 필요합니다.</div>
+                            </div>
+                          </li>
+                          
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="row comment_box blue_box mHside20 mVside10" id="used_box">
+                    <div class="col-sm-5">
+                      <div class="flexMid">
+                        <h4 class="card-title"><i class="far fa-id-card mRight10"></i><span class="blue_deep">이용중</span>인 멤버십 정보</h4>
+                      </div>
+                      <div class="mTop10">
+                        <ul class="mBot5">
+                          <li class="mTop10">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">멤버십 명:</label>
+                              <div class="blue_deep">-</div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">이용 기간:</label>
+                              <div class="blue_deep">-</div>
+                              
+                              
+                                
+                              
+                              
+                                
+                              
+                              <button type="button" class="btn btn-danger btn_xxs mLeft20" id="btn_register" data-toggle="collapse" data-target="#cart">
+                                <i class="fas fa-exclamation-triangle mRight5"></i>멤버십 (재)가입</button>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">무료 이용 기간:</label>
+                              
+                              <div class="blue_deep">-</div>
+                            </div>
+                          </li>
+                          <li class="mTop15">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">이번달 서비스 이용 건수:</label>
+                              <div class="blue_deep">-</div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 border_left_thick pLeft30">
+                      <div class="flexMid">
+                        <h4 class="card-title"><i class="far fa-credit-card mRight10"></i><span class="blue_deep">멤버십 결제</span> 정보</h4>
+                      </div>
+                      <div class="mTop10">
+                        <ul class="mBot5">
+                          <li class="mTop10">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">최근 결제 금액:</label>
+                              <div class="blue_deep" id="amount_used">99,000 원</div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">최근 결제 일시:</label>
+                              <div class="blue_deep" id="pay_date_used">2021-06-01 00:00:30</div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">최근 결제 방법:</label>
+                              <div><span class="blue_deep" id="method_used">신용카드</span><span class="red mLeft5" id="auto_flag_used">( 자동 결제 )</span></div>
+                              <button type="button" class="btn btn-primary btn_xxs mLeft20 btn_pay_change" data-toggle="collapse" data-target="#pay_method">결제 방법 변경</button>
+                            </div>
+                          </li>
+                          
+                          
+                          
+                          
+                          
+                          <li class="mTop15">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">다음 결제 예정:</label>
+                              <div class="red">멤버십의 (재)가입이 필요합니다.</div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                
+                <div class="card-body pHside40 pVside20 collapse" id="cart_change">
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>IPSAP 멤버십 변경</h4>
+                    <button type="button" class="btn btn-secondary btn_xxs showDetail_trigger mLeft20" data-target=".membership_list">간략하게 보기</button>
+                    <button type="button" class="btn btn-outline-secondary btn_xxs mLeft5" data-toggle="collapse" data-target="#cart_change">다음에 변경하기</button>
+                  </div>
+                  <div class="mTop10">
+                    <table class="table list_table membership_list nowrap fs_large showDetail">
+                      <colgroup>
+                        <col width="100">
+                        <col width="160" class="only_showDetail">
+                        <col width="160">
+                        <col width="160" class="only_showDetail">
+                        <col width="*">
+                      </colgroup>
+                      <tbody>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 프리미엄 멤버십
+                            
+                            <div class="description">IPSAP 서비스를 매월 무제한 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">무제한</div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 변경하기</button>
+                          </td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 프로페셔널 멤버십
+                            
+                            <div class="description">IPSAP 서비스를 매월 최대 20회까지 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">165,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">최대 20<span class="fs_12p mLeft5">회</span></div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 변경하기</button>
+                          </td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 베이직 멤버십<span class="badge badge-pill badge-danger mLeft10">이용중</span>
+                            
+                            <div class="description">IPSAP 서비스를 매월 최대 10회까지 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">99,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">최대 10<span class="fs_12p mLeft5">회</span></div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 변경하기</button>
+                            
+                            <button type="button" class="btn btn-outline-danger btn_xxs mLeft10" data-toggle="modal" data-target="#modal_break_1">멤버십 해지하기</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                
+                <div class="card-body pHside40 pVside20 collapse" id="cart">
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>IPSAP 멤버십 가입, 갱신</h4>
+                    <button type="button" class="btn btn-secondary btn_xxs showDetail_trigger mLeft20" data-target=".membership_list">간략하게 보기</button>
+                    <button type="button" class="btn btn-outline-secondary btn_xxs mLeft5" data-toggle="collapse" data-target="#cart">다음에 가입, 갱신하기</button>
+                  </div>
+                  <div class="mTop10">
+                    <table class="table list_table membership_list nowrap fs_large showDetail">
+                      <colgroup>
+                        <col width="100">
+                        <col width="160" class="only_showDetail">
+                        <col width="160">
+                        <col width="160" class="only_showDetail">
+                        <col width="*">
+                      </colgroup>
+                      <tbody>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 프리미엄 멤버십
+                            
+                            <div class="description">IPSAP 서비스를 매월 무제한 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">무제한</div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 결제하기</button>
+                          </td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 프로페셔널 멤버십
+                            
+                            <div class="description">IPSAP 서비스를 매월 최대 20회까지 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">165,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">최대 20<span class="fs_12p mLeft5">회</span></div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 결제하기</button>
+                          </td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 베이직 멤버십<span class="badge badge-pill badge-danger mLeft10">이용중</span>
+                            
+                            <div class="description">IPSAP 서비스를 매월 최대 10회까지 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">99,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">최대 10<span class="fs_12p mLeft5">회</span></div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-primary btn_xxs purchase_item">멤버십 결제하기</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                
+                <div class="card-body pHside40 pVside20 collapse" id="cart_inuse">
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>IPSAP 멤버십 직접 결제</h4>
+                    <button type="button" class="btn btn-secondary btn_xxs showDetail_trigger mLeft20" data-target=".membership_list">간략하게 보기</button>
+                    <button type="button" class="btn btn-outline-secondary btn_xxs mLeft5" data-toggle="collapse" data-target="#cart_inuse">다음에 결제하기</button>
+                  </div>
+                  <div class="mTop10">
+                    <table class="table list_table membership_list nowrap fs_large showDetail">
+                      <colgroup>
+                        <col width="100">
+                        <col width="160" class="only_showDetail">
+                        <col width="160">
+                        <col width="160" class="only_showDetail">
+                        <col width="*">
+                      </colgroup>
+                      <tbody>
+                        <tr data-url="#" class="">
+                          <td class="membership_desc">
+                            
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 2021 베이직 멤버십<span class="badge badge-pill badge-danger mLeft10">이용중</span>
+                            
+                            <div class="description">IPSAP 서비스를 매월 최대 10회까지 이용할 수 있는 멤버십입니다. (2021년도용)</div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">가입비</label>
+                            <div class="price">330,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="text-right pRight10">
+                            <label class="mBot0">월 요금</label>
+                            <div class="price">99,000<span class="fs_12p mLeft5">원</span></div>
+                          </td>
+                          <td class="only_showDetail text-right pRight10">
+                            <label class="only_showDetail mBot0">월 최대 이용건수</label>
+                            <div class="price">최대 10<span class="fs_12p mLeft5">회</span></div>
+                          </td>
+                          <td class="pLeft30">
+                            <button type="button" class="btn btn-danger btn_xxs purchase_item">멤버십 직접 결제하기</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                
+                <div class="card-body pHside40 pVside20 collapse" id="pay_method">
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>IPSAP 멤버십 결제 방법 변경</h4>
+                    <button type="button" class="btn btn-primary btn_xxs mLeft20" id="btn_change">결제 방법 변경</button>
+                    <button type="button" class="btn btn-outline-secondary btn_xxs mLeft10" data-toggle="collapse" data-target="#pay_method">변경 취소</button>
+                  </div>
+                  <div class="flexMid">
+                    
+                    <div class="pHside25 pVside20">
+                      <span class="current_pay"><span class="blue_deep">현재</span> 결제 방법:</span>
+                      <div class="fs_large fw_bold auto_div" id="auto_div">
+                        신용카드 <span class="blue_deep">자동 결제</span>
+                        <span class="mLeft5">(매월 1일)</span><br>
+                        <button type="button" class="btn btn-primary btn_xxs mTop5" id="btn_changeBillKey"><i class="fas fa-credit-card mRight5"></i>자동 결제 설정 변경</button>
+                      </div>
+                    </div>
+                    <i class="fas fa-arrow-right fs_big mHside20"></i>
+                    <div class="pHside25 pVside20">
+                      <span class="changing_pay"><span class="blue_deep">변경할</span> 결제 방법:</span>
+                      <div class="fs_large fw_bold manual_div" id="manual_div">
+                        신용카드 <span class="red">직접 결제</span><br>
+                        <span class="fs_same">(매월 말일 7일 전부터 ~ 말일)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body pHside30">
+                  <div class="flexMid mBot10">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                  <table id="datatable" class="table list_table noSide nowrap">
+                    <colgroup>
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                    </colgroup>
+                    <thead data-page-length="12">
+                      <tr>
+                        <th>결제 일시</th>
+                        <th>결제 번호</th>
+                        <th>결제 내용</th>
+                        <th class="text-right">최종 결제 금액(원)</th>
+                        <th class="text-center">결제 수단</th>
+                        <th class="text-center">결제 구분</th>
+                        <th class="text-center no-order">증명서 발급</th>
+                      </tr>
+                    </thead>
+                    <tbody id="current_membership_pay_list">
+                      
+                      <tr data-url="./info_payment_new-info.html" class="inuse">
+                        <td>2021-05-01 00:00:15</td>
+                        <td class="ipsapNo">20210501001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2021년 5월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2021-04-01 00:00:15</td>
+                        <td class="ipsapNo">20210401001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2021년 4월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2021-03-01 00:00:15</td>
+                        <td class="ipsapNo">20210301001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2021년 3월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2021-02-01 00:00:15</td>
+                        <td class="ipsapNo">20210201001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2021년 2월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2021-01-01 00:00:15</td>
+                        <td class="ipsapNo">20210101001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2021년 1월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-12-01 00:00:15</td>
+                        <td class="ipsapNo">20201201001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 12월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-11-01 00:00:15</td>
+                        <td class="ipsapNo">20201101001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 11월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-10-01 00:00:15</td>
+                        <td class="ipsapNo">20201001001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 10월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-09-01 00:00:15</td>
+                        <td class="ipsapNo">20200901001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 9월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-08-01 00:00:15</td>
+                        <td class="ipsapNo">20200801001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 8월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-07-01 00:00:15</td>
+                        <td class="ipsapNo">20200701001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 7월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="used">
+                        <td>2020-06-01 00:00:15</td>
+                        <td class="ipsapNo">20200601001</td>
+                        <td>IPSAP 2020 베이직 멤버십 (2020년 6월)</td>
+                        <td class="text-right pRight10">99,000</td>
+                        <td class="text-center">신용카드 - 자동 결제</td>
+                        <td class="text-center">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" data-keyboard="false" id="change_membership_modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 변경</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop5">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">멤버십을 변경하시겠습니까?</h5>
+                <h6 class="lh_vivid">
+                  하단의 <span class="blue_vivid">멤버십 변경</span>을 실행하면<br>
+                  사용중인 멤버십이 아래와 같이 변경 되고,<br>
+                  현재의 최대 실험 이용 건수가<br>
+                  <span class="pink_vivid">새로운 멤버십의 이용 건수</span>로 <span class="pink_vivid">즉시 적용</span> 됩니다.
+                </h6>
+              </div>
+              <div class="col-lg-12 text-center mTop10">
+                <div class="border_top pVside25">
+                <div class="current_membership">
+                  <span><span class="blue_deep fw_bold">현재 사용 중</span> 인 멤버십:</span>
+                  <div class="fs_16p fw_bold">
+                    <i class="far fa-credit-card mRight10"></i><span class="membership_name">이름</span>
+					          <div class="fs_13p gray description">설명</div>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-down fs_big mVside15"></i>
+                <div class="changing_membership">
+                  <span><span class="blue_deep fw_bold">변경할</span> 멤버십:</span>
+                  <div class="fs_16p fw_bold">
+                    <i class="far fa-credit-card blue_deep mRight10"></i><span class="membership_name blue_deep">이름</span>
+					          <div class="fs_13p gray description">설명</div><br>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" onclick="changeMembership();">멤버십 변경</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-keyboard="false" id="modal_prepare" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 결제</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="fas fa-cart-arrow-down symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="lh_vivid mBot10">아래의 정보로 결제를 진행하고자 하는 경우,<br><span class="pink_vivid">결제하기</span> 버튼을 눌러 주세요.</h5>
+              </div>
+            </div>
+
+            <form name="plan_info" class="pHside40 pVside20 border_top">
+              <h5><i class="fas fa-plus-square mRight10"></i>멤버십 정보</h5>
+              <input type="hidden" class="planseq">
+              <div class="flexMid mTop20">
+                <label class="text-right w80 fw_bold mRight20">멤버십 명</label>
+                <span class="fs_semi fw_bold modal_payment_title">IPSAP 2021 베이직 멤버십</span>
+              </div>
+              <div class="flexMid" id="price_div">
+                
+                <label class="text-right w80 fw_bold mRight20">가입비</label>
+                <span class="fs_semi fw_bold"><span class="red fs_large modal_membership_price">-</span> 원</span>
+                
+                <label class="text-right w80 fw_bold mRight20">월정액</label>
+                <span class="fs_semi fw_bold"><span class="red fs_large modal_payment_price">-</span> 원</span>
+              </div>
+              <div class="flexMid border_top mTop10 pTop10">
+                <h5><i class="fas fa-plus-square mRight10"></i>결제자 정보</h5>
+                <div class="checkbox mLeft20">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="payment_type" class="custom-control-input" id="is_sameUser" value="true" checked="checked">
+                    <label class="custom-control-label" for="is_sameUser">사용자와 동일합니다.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flexMid mTop10">
+                <label for="buyer_name" class="text-right w80 fw_bold mRight20 mBot3">이름</label>
+                <input type="text" maxlength="20" class="form-control form-control-sm fs_semi w150" id="buyer_name" value="홍길동" readonly="readonly">
+              </div>
+              <div class="flexMid mTop5">
+                <label for="buyer_phone" class="text-right w80 fw_bold mRight20 mBot3">연락처</label>
+                <input type="text" maxlength="20" class="form-control form-control-sm fs_semi w150" id="buyer_phone" value="010-1234-5678" readonly="readonly">
+              </div>
+              <div class="flexMid mTop5">
+                <label for="buyer_email" class="text-right w80 fw_bold mRight20 mBot3">Email 주소</label>
+                <input type="text" maxlength="40" class="form-control form-control-sm fs_semi flex_1" id="buyer_email" value="gdhong@company.ac.kr" readonly="readonly">
+              </div>
+            </form>
+            <form name="payForm" accept-charset="euc-kr">
+              <input type="hidden" name="GoodsName">
+              <input type="hidden" name="Amt">
+              <input type="hidden" name="MID">
+              <input type="hidden" name="EdiDate">
+              <input type="hidden" name="Moid">
+              <input type="hidden" name="SignData">
+              <input type="hidden" name="ReqReserved">
+              <input type="hidden" name="CharSet" value="utf-8">
+              <input type="hidden" name="PayMethod" value="CARD,BANK">
+              
+              <input type="hidden" name="BuyerName">
+              <input type="hidden" name="BuyerTel">
+              <input type="hidden" name="BuyerEmail">
+            </form>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" id="excute_break" onclick="orderAssign();">결제하기</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-keyboard="false" id="modal_billing" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 정기 자동 결제 설정</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="far fa-credit-card symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9">
+                <h5 class="lh_vivid">
+                  아래의 정보로 <span class="blue_deep">정기 자동 결제 정보</span>를 등록합니다.<br>
+                  정기 결제에 사용할 결제 정보를 입력하고<br>
+                  하단의 <span class="blue_vivid">등록하기</span> 버튼을 눌러 주세요.</h5>
+              </div>
+            </div>
+            <div class="pHside40 pVside20">
+              <div class="flexMid border_top pTop20">
+                <h5><i class="fas fa-plus-square mRight10"></i>결제자 정보</h5>
+                <div class="checkbox mLeft20">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="payment_type" class="custom-control-input" id="is_sameUser_billing" value="true" checked="checked">
+                    <label class="custom-control-label" for="is_sameUser_billing">사용자와 동일합니다.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flexMid mTop10">
+                <label for="buyer_name_billing" class="text-right w80 fw_bold mRight20 mBot3">이름</label>
+                <input type="text" maxlength="20" class="form-control form-control-sm fs_semi w150" id="buyer_name_billing" readonly="readonly">
+              </div>
+              <div class="flexMid mTop5">
+                <label for="buyer_phone_billing" class="text-right w80 fw_bold mRight20 mBot3">연락처</label>
+                <input type="text" maxlength="20" class="form-control form-control-sm fs_semi w150" id="buyer_phone_billing" readonly="readonly">
+              </div>
+              <div class="flexMid mTop5">
+                <label for="buyer_email_billing" class="text-right w80 fw_bold mRight20 mBot3">Email 주소</label>
+                <input type="text" maxlength="40" class="form-control form-control-sm fs_semi flex_1" id="buyer_email_billing" readonly="readonly">
+              </div>
+            </div>
+            <form name="tranMgr">
+              <input type="hidden" name="MID">
+              <input type="hidden" name="GoodsName">
+              <input type="hidden" name="BuyerName">
+              <input type="hidden" name="BuyerTel">
+              <input type="hidden" name="BuyerEmail">
+              <input type="hidden" name="ReturnUrl">
+              <input type="hidden" name="MallReserved">
+              <input type="hidden" name="PayMethod">
+              <input type="hidden" name="SecureKeypadYN">
+              <input type="hidden" name="CharSet">
+            </form>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" id="excute_break_billing" onclick="billingAssign();">결제정보 등록하기</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_break_1" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 해지 및 환불 신청</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9">
+                <h5 class="mBot5">IPSAP 멤버십을 해지하고 환불을 신청합니다.</h5>
+                <h6 class="lh_vivid">
+                  현재 이용중인 멤버십을 해지하고,<br>
+                  가입시 납부한 <span class="pink_vivid">가입비</span>와, 미리 결제한 <span class="pink_vivid">월정액</span>에서<br>
+                  <span class="pink_vivid">잔여 일자에 해당하는 금액을 환불</span> 합니다.<br>
+                </h6>
+                <h6 class="lh_vivid">
+                  ※ 단, <span class="pink_vivid">가입비는 가입 후 1년 이내의 경우만 환불</span>을 해드립니다.
+                </h6>
+              </div>
+            </div>
+            <div class="pHside40">
+              <h6 class="mBot3 red">※ IPSAP 멤버십을 해지하면,</h6>
+              <ol class="mTop3 pLeft20">
+                <li>가입 시 결제한 <span class="red">가입비</span>중<br>
+                  <span class="red">유효 기간(가입 후 12개월) 내의 미이용 기간에 해당하는 금액이 환불</span>됩니다.</li>
+                <li>최근 결제한 <span class="red">멤버십 Plan 월이용료</span>중<br>
+                  <span class="red">미이용 기간에 해당하는 금액이 환불</span>됩니다.</li>
+                <li>멤버십 재 이용시 <span class="red">가입비를 환불 받은 이력이 존재하는 경우</span><br>
+                  <span class="pink_vivid">가입비를 재납부하셔야 멤버십 가입이 가능합니다.</span></li>
+                <li class="noBullet pTop5">※ 환불관련 상세한 사항은 이용약관의 &quot;<span class="pink_vivid">환불 규정</span>&quot;을 확인하시기 바랍니다.</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            <button type="button" class="btn btn-danger" id="btn_req_refund">멤버십 해지 및 환불 신청</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="modal_break_2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 해지 실행</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">이용중인 IPSAP 멤버십을 해지 하시겠습니까?</h5>
+                <h6 class="lh_vivid">
+                  멤버십 해지를 실행하면 <span class="pink_vivid">해지를 취소할 수 없으며</span>,<br>
+                  현재 이용중인 <span class="pink_vivid">멤버십 서비스가 중지</span>되고<br>
+                  <span class="pink_vivid">멤버십 결제 후 미사용 기간에 대한 환불</span>을 진행하게 됩니다.
+                </h6>
+                <h6 class="lh_vivid">
+                  아래의 금액이 <span class="red">멤버십 해지 후 환불될 예정</span>입니다.<br>
+                  단, 환불 금액은 <span class="pink_vivid">환불을 실행하는 시점을 기준으로 산정</span>하므로,<br>
+                  아래의 예정금액과 다소 차이가 있을 수 있음을 알려드립니다.
+                </h6>
+                <div>
+                  <span class="fs_semi">환불 예정 금액</span>
+                  <span class="fs_large fw_bold red mLeft10 refund_amt">150,000</span>
+                  <span class="fs_semi mLeft5">원</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center red mTop10">※ 실행 후 환불 금액 확인을 위해 잠시만 기다려주시기 바랍니다.</div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+            
+            <button type="button" class="btn btn-danger" id="comfirm_break">이용 중지 실행</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="result_modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 멤버십 해지 및 환불 안내</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">IPSAP 멤버십이 해지 되었습니다.</h5>
+                <h6 class="lh_vivid">
+                  아래의 멤버십 미이용 요금이 환불될 예정입니다.
+                </h6>
+                <div>
+                  <span class="fs_semi">환불 확정 금액</span>
+                  <span class="fs_large fw_bold red mLeft10 refund_amt">150,000</span>
+                  <span class="fs_semi mLeft5">원</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center red">
+              ※ 금액 환불은 영업일 기준 3-5일 정도 소요될 수 있으며,<br>
+              자세한 사항은 카드사를 통해 확인할 수 있습니다.
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" onclick="location.reload();">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="change_payment_modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">멤버십 결제 방법 변경</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop5">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">결제 방법을 변경하시겠습니까?</h5>
+                <h6 class="lh_vivid">
+                  변경 버튼을 누르시면 결제 방법이 아래와 같이 변경 됩니다.
+                </h6>
+              </div>
+              <div class="col-lg-12 text-center mTop10">
+                <div class="border_top pVside25">
+                <div class="">
+                  <span class="current_pay"><span class="blue_deep">현재</span> 결제 방법:</span>
+                  <div class="fs_large fw_bold auto_div">
+                    신용카드 <span class="blue_deep">자동 결제</span>
+                    <span class="mLeft5">(매월 1일)</span><br>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-down fs_big mVside15"></i>
+                <div class="">
+                  <span class="changing_pay"><span class="blue_deep">변경할</span> 결제 방법:</span>
+                  <div class="fs_large fw_bold manual_div">
+                    신용카드 <span class="red">직접 결제</span><br>
+                    <span class="fs_same">(매월 말일 7일 전부터 ~ 말일)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" onclick="changeMethod();">결제 방법 변경</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="https://web.nicepay.co.kr/v3/webstd/js/nicepay-3.0.js"></script>
+    <script src="/html/officer/info_payment_common.js"></script>
+    <script src="/html/officer/info_payment_new.js"></script>
+
+  </div></body>
+
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">새로운 동물 실험 계획서</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IA0001-01</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-01_1.html" class="row process_content" data-process-num="1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-02_1.html" class="row process_content active sub_3 active_sub_1" data-process-num="2">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes">
+                            <div class="sub_process p1"></div>
+                            <div class="sub_process p2"></div>
+                            <div class="sub_process p3"></div>
+                            <div class="sub_process p4"></div>
+                            <div class="sub_process p5"></div>
+                          </div>
+                        </a>
+                        <a href="./application_new-03_1.html" class="row process_content" data-process-num="3">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-04_1.html" class="row process_content" data-process-num="4">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-05_1.html" class="row process_content" data-process-num="5">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-06_1.html" class="row process_content" data-process-num="6">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-07_1.html" class="row process_content" data-process-num="7">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-08_1.html" class="row process_content" data-process-num="8">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-09_1.html" class="row process_content" data-process-num="9">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-10_1.html" class="row process_content" data-process-num="10">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-11_1.html" class="row process_content" data-process-num="11">
+                          <span>자가 점검</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-1. 동물실험 목적에 따른 분류 Ⅰ</h4>
+                        <div class="header_comment red">※ 식품의약품안전처 보고사항</div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <li class="content_comment">비중이 큰 항목 하나에만 표기합니다.</li>
+                        </div>
+                        <div class="col-sm-4" id="purpose_1_odd">
+                        
+                        
+                        </div>
+                        <div class="col-sm-5" id="purpose_1_even">
+                        
+                        
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="purpose_1_guide">
+                          
+                          
+                            <li>동물실험시설은 실험동물 사용현황에 대해 식품의약품안전처에 보고할 의무가 있으며 목적(용도)별로 사용된 실험동물의 종류 및 수를 구분하여 연간 사용량을 보고합니다.</li>
+                            <li>「실험동물에 관한 법률」 제3조와 관련없는 교육, 개인학술연구 등에 해당할 경우에는 ‘실적보고사항 아님’에 표기합니다.</li>
+                            <li>「실험동물에 관한 법률 제22조(동물실험실태보고)」</li>
+                            <li>「실험동물에 관한 법률 제3조(적용대상)」</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header" id="purpose_2_basic">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-2. 동물실험 목적에 따른 분류 Ⅱ</h4>
+                        <div class="header_comment red">※ 농림축산검역본부 보고사항</div>
+                        <div class="col-sm-9"></div>  
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_basic-main_check" value="1" data-toggle="collapse" data-target="#input_1_group">
+                            <label for="purpose_2_basic-main_check">(1) 기초 연구</label>
+                            
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row app_content pLeft40 collapse" id="input_1_group">
+                        <div class="col-sm-9">
+                          <li class="content_comment">비중이 큰 항목 하나에만 표기합니다.</li>
+                        </div>
+                        <div class="col-sm-4" id="purpose_2_basic_odd">
+                        
+                        
+                        </div>
+                        <div class="col-sm-5" id="purpose_2_basic_even">
+                        
+                        
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="purpose_2_basic_guide">
+                          
+                          
+                            <li>동물실험수행 기관은 동물실험 목적에 따른 년간 실험 수행내역을 농림축산검역본부에 보고할 의무가 있습니다.</li>
+                            <li>연구자는 각 항목에 대해 중복으로 기재해서는 안되며, 실험이 여러 항목에 포함된다면 비중이 더 큰 분야에 표기합니다.</li>
+                            <li>「동물보호법 시행령 12조(윤리위원회의 운영)」</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_applied-main_check" value="1" data-toggle="collapse" data-target="#input_2_group">
+                            <label for="purpose_2_applied-main_check">(2) 중개 및 응용 연구</label>
+                            
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row app_content pLeft40 collapse" id="input_2_group">
+                        <div class="col-sm-9">
+                          <li class="content_comment">비중이 큰 항목 하나에만 표기합니다.</li>
+                        </div>
+                        <div class="col-sm-4" id="purpose_2_applied_odd">
+                        
+                        
+                        </div>
+                        <div class="col-sm-5" id="purpose_2_applied_even">
+                        
+                        
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="purpose_2_applied_guide">
+                          
+                          
+                            <li>가이드 내용</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" value="1" data-toggle="collapse" data-target="#input_3_group" id="purpose_2_test-main_check">
+                            <label for="purpose_2_test-main_check">(3) 법적인 요구사항을 만족하기 위한 규제시험(Regulatory Test)</label>
+                            
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row app_content pLeft40 collapse" id="input_3_group">
+                        <div class="col-sm-9">
+                          
+                          <li class="content_comment">비중이 큰 항목 하나에만 표기합니다.</li>
+                        </div>
+                        <div class="col-sm-9" id="purpose_2_test"></div>
+                        
+                        <div class="col-sm-9 collapse" id="input_3-1_group">
+                          <div class="row pLeft20">
+                            <div class="col-sm-6" id="purpose_2_test2_odd"></div>
+                            <div class="col-sm-6" id="purpose_2_test2_even"></div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_nature-main_check" value="1" data-toggle="collapse" data-target="#input_4_group">
+                            <label for="purpose_2_nature-main_check">(4) 사람이나 동물의 건강이나 복지를 위한 자연환경 연구</label>
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0 collapse" id="input_4_group">
+                          <ul>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_4_group"></div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_species-main_check" value="1" data-toggle="collapse" data-target="#input_5_group">
+                            <label for="purpose_2_species-main_check">(5) 종 보존을 위한 연구</label>
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0 collapse" id="input_5_group">
+                          <ul id="purpose_2_species_guide">
+                          
+                          
+                            <li>종 보존을 위한 연구<br>야생동물멸종과 관련된 연구에 해당되며, LMO 동물을 번식하는 경우에는 ‘유전자변형형질 동물생산”에 속합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_5_group"></div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_training-main_check" value="1" data-toggle="collapse" data-target="#input_6_group">
+                            <label for="purpose_2_training-main_check">(6) 교육이나 훈련</label>
+                            
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row app_content pLeft40 collapse" id="input_6_group">
+                        <div class="col-sm-9">
+                          <li class="content_comment">해당사항에 모두 체크하고 목록에 없는 경우, '<span class="underline">기타</span>'를 선택하고 직접 입력해 주세요.</li>
+                        </div>
+                        <div class="col-sm-9" id="purpose_2_training">
+                        
+                        
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_02-2_61" value="5">
+                            <label for="check_02-2_61">수의대</label>
+                          </div>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_02-2_62" value="6">
+                            <label for="check_02-2_62">의대</label>
+                          </div>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_02-2_63" value="7">
+                            <label for="check_02-2_63">자연 과학대</label>
+                          </div>
+                          <div class="checkbox checkbox-primary flexMid pLeft3">
+                            <input type="checkbox" id="check_02-2_64" value="new" data-custom-toggle="visible">
+                            <label class="w50" for="check_02-2_64">기타</label>
+                            <input type="text" class="form-control form-control-sm hidden" placeholder="기타 내용을 입력해 주세요.">
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_forensic-main_check" value="1" data-toggle="collapse" data-target="#input_7_group">
+                            <label for="purpose_2_forensic-main_check">(7) 법의학 관련 연구</label>
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide collapse" id="input_7_group">
+                          <ul>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_7_group"></div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="purpose_2_gene-main_check" value="1" data-toggle="collapse" data-target="#input_8_group">
+                            <label for="purpose_2_gene-main_check">(8) 유전자 변형 형질 동물 생산</label>
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0 collapse" id="input_8_group">
+                          <ul id="purpose_2_gene_guide">
+                          
+                          
+                            <li>가이드 내용</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_8_group"></div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary flexMid pLeft3">
+                            <input type="checkbox" id="purpose_2_etc_check-main_check" value="new" data-custom-toggle="visible">
+                            <label class="w100" for="purpose_2_etc_check-main_check" data-toggle="collapse" data-target="#input_9_group">(9) 기타</label>
+                            <input type="text" id="purpose_2_etc_input" class="form-control form-control-sm hidden" placeholder="기타 내용을 입력해 주세요.">
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0 collapse" id="input_9_group">
+                          <ul id="purpose_2_etc_guide">
+                          
+                          
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_9_group"></div>
+                      <div class="row app_content">
+                        <div class="app_divider"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="./application_new-01_2.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="./application_new-02_2.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="#" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" data-toggle="modal" data-target="#modal_tempSave"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../assets/js/di4js.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new-02_1.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="enlarge-menu register noScroll">
+
+    <div class="page-wrapper">
+
+      <div class="topbar">
+
+        
+        <nav class="navbar-custom flexCenter">
+          
+          <div class="flexMid">
+            <img src="/assets/images/common/IPSAP_logo_top_fitted.png">
+            <h3 class="page-title fw_black mLeft20">온라인 심사 시스템 서비스 - 사용자 정보 등록</h3>
+          </div>
+          
+        </nav>
+        
+
+      </div>
+
+      
+      <div class="page-content flexCentral">
+        <div class="container-fluid limited_width">
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">나의 정보 등록</h4>
+                    <div class="comment">온라인 심사 시스템을 이용하기 위한 나의 기본 정보를 등록합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card hidden">
+                <div class="card-header">
+                  <div class="comment">※ 모든 <span class="red">필수 입력 정보(* 표시)를 입력</span>해야 온라인 심사 시스템을 이용할 수 있습니다.</div>
+                </div>
+                <div class="card-body pVside20 pHside40">
+
+                    <div class="row">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 소속 정보</h4>
+                    </div>
+                    
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table info_table_content">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name">소속 기관명</td>
+                            <td class="data"><span class="gray mRight5">(국문)</span><span>-</span><span class="mLeft20"></span><span class="gray mRight5">(영문)</span><span>-</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">기관 코드</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">참여 권한</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">소속 부서</td>
+                            <td>
+                              <input type="text" maxlength="20" class="form-control form-control-sm w250" placeholder="소속 부서를 입력해 주세요.">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">직책</td>
+                            <td>
+                              <input type="text" maxlength="10" class="form-control form-control-sm w250" placeholder="직책를 입력해 주세요.">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">전공 분야</td>
+                            <td>
+                              <input type="text" maxlength="30" class="form-control form-control-sm w250" placeholder="전공 분야를 입력해 주세요.">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="row mTop15">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 계정 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table info_table_content">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name required">성명</td>
+                            <td class="data">
+                              <div class="flexMid">
+                                <input type="text" maxlength="30" class="form-control form-control-sm w250" placeholder="예) 홍길동 or Hong Gil Dong">
+                                <span class="mLeft10 fs_same">* If you are foreigner, please enter your name as English.</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name required">연락처</td>
+                            <td class="data">
+                              <input type="text" maxlength="13" class="form-control form-control-sm w250" placeholder="예) 010-1234-5678">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name required">Email</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name required">비밀번호</td>
+                            <td>
+                              <div>새로운 비밀번호</div>
+                              <input type="password" minlength="8" maxlength="24" class="form-control form-control-sm w250" id="new_password" placeholder="영문, 숫자, 특수문자 (최소8자리)">
+                              <div class="mTop10">비밀번호 재입력</div>
+                              <div class="flexMid">
+                                <input type="password" minlength="8" maxlength="24" class="form-control form-control-sm w250" id="renew_password" placeholder="위의 비밀번호 재입력">
+                                
+                                <span class="blue_deep mLeft20" hidden>비밀번호가 일치합니다.</span>
+                                
+                                <span class="red pwd_red mLeft20" hidden>비밀번호가 일치하지 않습니다.</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name required">정보수신 동의</td>
+                            <td>
+                              <div class="flexMid">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" name="agree_form_03-1" class="custom-control-input" id="agree_to_receive-email" value="1" checked="checked">
+                                  <label class="custom-control-label" for="agree_to_receive-email">Email 수신 동의</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mLeft20">
+                                  <input type="checkbox" name="agree_form_03-2" class="custom-control-input" id="agree_to_receive-sms" value="1" checked="checked">
+                                  <label class="custom-control-label" for="agree_to_receive-sms">SMS 수신 동의</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mLeft20">
+                                  <input type="checkbox" name="agree_form_03-3" class="custom-control-input" id="agree_to_open-info" value="1" checked="checked">
+                                  <label class="custom-control-label" for="agree_to_open-info">이름, 연락처 등 정보 공개</label>
+                                </div>
+                              </div>
+                              <div class="comment mTop10">
+                                ※ 입력한 개인정보는 심사와 관련된 행정절차 및 정보안내 외에는 사용하지 않습니다.<br>
+                                ※ <span class="pink_vivid">정보수신 동의를 해주셔야 심사절차와 관련된 안내가 가능</span>합니다.
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="row mTop15">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 동물실험 교육 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table info_table_content">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name">교육 일자</td>
+                            <td>
+                              <input class="form-control wCalendar" type="date" id="training_date">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">교육 기관명</td>
+                            <td class="data">
+                              <input type="text" maxlength="30" class="form-control form-control-sm w250" placeholder="교육 기관명을 입력해 주세요.">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">교육 이수번호</td>
+                            <td class="data">
+                              <input type="text" maxlength="30" class="form-control form-control-sm w250" placeholder="예) 000-000-0000">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexColumn flexMid">
+                  <div class="comment">※ 모든 <span class="red">필수 입력 정보(* 표시)를 입력</span>해야 온라인 심사 시스템을 이용할 수 있습니다.</div>
+                  <div class="mTop10">
+                    <a href="#" class="btn btn-primary waves-effect waves-light mLeft0" id="btn_info_regi" data-toggle="modal" data-target="#modal_regi_check"><i class="fas fa-check mRight5"></i>나의 정보 등록</a>
+                    <a href="./register-agreement.html" class="btn btn-outline-secondary waves-effect waves-light mLeft10"><i class="fas fa-times mRight5"></i>등록 취소</a>
+                  </div>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="modal_regi_check">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">사용자 정보 등록 확인</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">수정된 정보를 등록하시겠습니까?</h5>
+                <div class=""><span class="red">필수 입력 정보 (*표시)</span>를 모두 입력해야 <br>온라인 시스템을 이용할 수 있습니다.</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary" id="btn_register">정보 등록</a>
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    
+
+    
+    <script src="/assets/vendors/crypto-js/core.js"></script>
+    <script src="/assets/vendors/crypto-js/enc-base64.js"></script>
+    <script src="/assets/vendors/crypto-js/md5.js"></script>
+    <script src="/assets/vendors/crypto-js/evpkdf.js"></script>
+    <script src="/assets/vendors/crypto-js/cipher-core.js"></script>
+    <script src="/assets/vendors/crypto-js/sha1.js"></script>
+    <script src="/assets/vendors/crypto-js/hmac.js"></script>
+    <script src="/assets/vendors/crypto-js/pbkdf2.js"></script>
+    <script src="/assets/vendors/crypto-js/aes.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    
+
+    
+    <script src="./register-info.js"></script>
+
+  </body>
+
+</html>

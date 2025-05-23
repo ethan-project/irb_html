@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    <!-- App css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">생물안전위원회 심의 신청서 - 원안</h4>
+                    <div class="comment">변경 심의를 신청할 IBC 심의 신청서 원안의 내용입니다.</div>
+                  </div>
+                </div><!--//row-->
+              </div>
+
+              <!--
+                위원회 class: .IBC
+              -->
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    <!-- <div class="apptype_title">변경 심의</div> -->
+
+                    <div class="apptype_date">미승인</div>
+                    <!-- <div class="apptype_date">승인: 2021-01-31</div> -->
+                    <!-- <div class="apptype_date">조건부 승인: 2021-01-31</div> -->
+                    <!-- <div class="apptype_date">보완후 재심</div> -->
+                    <!-- <div class="apptype_date">반려</div> -->
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step active">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <!-- 전문, 일반, 최종 심의 모두 "심의 진행" -->
+                    <div class="step">심의 진행</div>
+                    <!-- 실험 수행은 신규 심의만 해당 -->
+                    <!-- <div class="step active">실험 수행</div> -->
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="">
+                        <!--
+                          Process 비활성화 : .inactive
+
+                          * 신청서 작성 상태일 경우
+                          작성중   : .pending   (작성한 항목과 미완료 항목이 같이 존재하는 경우)
+                          작성완료 : .completed (모든 항목의 작성이 완료된 경우)
+                          보완중   : .supplement(행정 검토에 의해 보완이 필요한 경우)
+
+                          * 신청서가 제출된 이후의 상태(행정검토 ~ 최종심의)일 경우
+                          검토중   : .pending   (검토한 항목과 미완료 항목이 같이 존재하는 경우)
+                          검토완료 : .completed (모든 항목의 검토가 완료된 경우)
+                         -->
+                        <div class="app_summary">
+                          <span class="review_type committee_color IBC">IBC</span>
+                          <div class="card-title task_title_ko">-</div>
+                          <div class="title_desc task_director_all">(연구 책임자 : -)</div>
+                          <div class="text-muted mb-0"><span class="register_num">-</span></div>
+                        </div>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="1" data-move-to="#form_01-1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="2" data-move-to="#form_02-1">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="3" data-move-to="#form_03-1">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="4" data-move-to="#form_04-1">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-10 app_col app_contents" id="all_app_r"></div>
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                <!--//card-body-->
+
+                <!-- Card Footer -->
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <!-- 임시저장 : "신청서 계속 작성" 버튼 출력 -->
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_confirm"><i class="fas fa-edit mRight5"></i>변경 심의 신청서 제출</a>
+
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="/html/researcher/experiment_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>실험 목록 보기</a>
+                  <a href="javascript: void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" data-move-to="#bottom_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              <!--//card -->
+
+            </div><!--//col-->
+          </div><!--//row-->
+          <!--//page title end breadcrumb -->
+
+        </div>
+        <!--//container-fluid -->
+
+        <footer id="footer" class="footer text-center"></footer>
+        <!--//footer-->
+      </div>
+      <!--//page content -->
+    </div>
+    <!--//page-wrapper -->
+
+
+    <!-- Modal: 변경 신청서  -->
+    <div class="modal draggable fade in IBC" data-backdrop="false" data-keyboard="false" id="modal_changeApp">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class='modal_hint'>
+          <div class="hint_header">이 부분을 드래그하여 움직일 수 있습니다.</div>
+          <!-- <div class="hint_title">이 부분을 클릭하면 신청서의 해당항목으로 이동합니다.</div> -->
+        </div>
+        <div class="modal-content">
+          <div class="modal-header bg-primary flexMid">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">변경 심의 신청서 [ <span class="register_num_children">HUM-2020-IB0001-M1</span> ]</h5>
+            <div class="btn_shrink flexCentral"><i class="fas fa-arrow-down"></i></div>
+            <!--
+              심사중: div.expiration 태그 추가
+              심사 지연: div.expiration.timiout 추가
+              심사 종료: 태그 삭제
+            -->
+            <!-- <div class="expiration">전문 심사 종료 <span class="timer">2일 9시간 12분 전</span></div> -->
+          </div>
+          <!--//modal-header-->
+          <div class="modal-body">
+            <div class="card-body noPadding pLeft15">
+              <h5 class="mTop0 mBot2 task_title_ko">국문 연구 과제명</h5>
+              <p class="text-muted mBot10 task_title_en">영문 연구 과제명</p>
+              <ul class="card_sum noBullet">
+                <li><span class="sum_label">연구 책임자:</span><span class="sum_content task_director">-</span></li>
+                <li><span class="sum_label">소속 부서:</span><span class="sum_content task_ditrect_dept">-</span></li>
+                <li><span class="sum_label">연락처:</span><span class="sum_content task_director_contact">- / -@-</span></li>
+                <li><span class="sum_label">심의 유형:</span><span class="sum_content committee_color judge_type_str">IBC</span></li>
+                <li><span class="sum_label">연구 기간:</span><span class="sum_content"><span class='task_approved_date'>-</span> ~ <span class='task_period'>-</span> (총 <span class='task_days'>-</span>일)</span></li>
+              </ul>
+
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-primary waves-effect waves-light btn-sm" onclick="newWindowPopup('./_popup_app-IBC_info_all.html');"><i class="fas fa-download mRight5"></i>심의 신청 서류 다운로드</button>
+              </div>
+              <div class="comment_box red_box red mTop10">
+                <ul class="pLeft15 mBot0">
+                  <li>심의신청서 및 연구계획서의 원안과 다르게 실험을 시행해야 하는 경우<br>반드시 변경심의신청서를 제출하여 승인 받은 후에 실험을 개시합니다.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body pTop20">
+
+              <div class="form-group">
+
+                <div class="app_anchor mTop-20" id="review_top"></div>
+
+                <div class="comment pHside20">
+                  <ul class="pLeft15 mBot0">
+                    <li>변경 신청의 심의는 신청 대상이 되는 <span class="red">실험의 심사 절차와 동일한 절차</span>로 진행됩니다.</li>
+                    <li class="noBullet">※ 심사 절차는 심의 신청서 <a href="javascript:void(0);" class="blue_deep underline move-to-selected" data-move-to-target="#form_01-3">1-3. 실험 분류</a>에 따라 <span class="red">승인대상 심사</span>와 <span class="red">신고/면제대상 심사</span>로 나뉩니다.</li>
+                  </ul>
+                </div>
+
+                <form id="ibc_ca">
+                  <!-- change_01 -->
+                  <ul class="list-group mTop30">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_01" data-toggle="collapse" data-target="#change_01_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_01">실험수행자의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_01-2"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_01_desc">
+                      <label class="flex_1">변경 전:</label>
+                      <table class="table text-center list_table mTop10">
+                        <colgroup>
+                          <col width="50">   <!-- 1. 책임 연구자 -->
+                          <col width="50">   <!-- 2. 실험동물 관리담당 -->
+                          <col width="*">    <!-- 3. 성명 -->
+                          <col width="*">    <!-- 4. 부서 -->
+                          <col width="*">    <!-- 5. 교육이수 정보 -->
+                          <col width="*" class="hidden">  <!-- 6. Email -->
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="pHside0">연구<br>책임</th>
+                            <th class="pHside0">실험<br>담당</th>
+                            <th>성명</th>
+                            <th>부서</th>
+                            <th>교육이수 정보</th>
+                            <th class="hidden">Email</th>
+                          </tr>
+                        </thead>
+                        <tbody class="white_bg_50 memberTbody">
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_old" value="1">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_old" value="1">
+                              </div>
+                            </td>
+                            <td>홍길동</td>
+                            <td>약학과</td>
+                            <td class="left">
+                              <!-- <div class="flexMid">
+                                <span class="w120 mRight5">생물안전 교육</span>
+                                <div>123-4567-8901</div>
+                              </div>
+                              <div class="flexMid">
+                                <span class="w120 mRight5">LMO 생물안전 교육</span>
+                                <div>123-4567-8901</div>
+                              </div>
+                              <div class="flexMid">
+                                <span class="w120 mRight5">생물안전 3등급 교육</span>
+                                <div>123-4567-8901</div>
+                              </div>
+                              <div class="flexMid">
+                                <span class="w120 mRight5">동물실험 교육</span>
+                                <div>123-4567-8901</div>
+                              </div> -->
+                            </td>
+                            <td class="hidden">manager@company.co.kr</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_old" value="2">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_old" value="2">
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td class="hidden">010-1234-5678</td>
+                            <td>1 ~ 3년</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_old" value="3" disabled>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_old" value="3" disabled>
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td class="hidden">010-1234-5678</td>
+                            <td>1 ~ 3년</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <label class="flex_1">변경 후:</label>
+                      <button type="button" class="btn btn-primary btn-xs mLeft10" onclick="openModalStaffChange();"  data-toggle="modal" data-target="#modal_staff">참여자 변경</button>
+                      <!-- 초기 값: 변경 전 참여자 목록 -->
+                      <table class="table text-center list_table thick mTop10">
+                        <colgroup>
+                          <col width="40">   <!-- 1. 책임 연구자 -->
+                          <col width="40">   <!-- 2. 실험동물 관리담당 -->
+                          <col width="*">    <!-- 3. 성명 -->
+                          <col width="*">    <!-- 4. 부서 -->
+                          <col width="260">  <!-- 5. 교육이수 정보 -->
+                          <!-- <col width="*" class="hidden">  6. Email -->
+                          <col width="60">   <!-- 7. 삭제 -->
+                        </colgroup>
+                        <thead class="dark">
+                          <tr>
+                            <th class="pHside0">연구<br>책임</th>
+                            <!-- <th class="pHside0">실험동물<br>관리담당</th> -->
+                            <th class="pHside0">실험<br>담당</th>
+                            <th>성명</th>
+                            <th>부서</th>
+                            <th>교육이수 정보</th>
+                            <!-- <th class="hidden">Email</th> -->
+                            <th>삭제</th>
+                          </tr>
+                        </thead>
+                        <tbody class="white_bg" id="changeUserTbody">
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_new" value="1" checked>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_new" value="1">
+                              </div>
+                            </td>
+                            <td>홍길동</td>
+                            <td>약학과</td>
+                            <td class="left">
+                              <!-- <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary course_1 w100p collapse show" data-toggle="collapse" data-target=".course_1">교육이수 정보 입력</a>
+                              <div class="course_1 collapse">
+                                <div class="flexMid text-left">
+                                  <span class="w110 mRight5">생물안전 교육</span>
+                                  <input type="text" name="course_1-0" class="form-control form-control-sm w130">
+                                </div>
+                                <div class="flexMid text-left">
+                                  <span class="w110 mRight5">LMO 생물안전 교육</span>
+                                  <input type="text" name="course_1-1" class="form-control form-control-sm w130">
+                                </div>
+                                <div class="flexMid text-left">
+                                  <span class="w110 mRight5">생물안전 3등급 교육</span>
+                                  <input type="text" name="course_1-2" class="form-control form-control-sm w130">
+                                </div>
+                                <div class="flexMid text-left">
+                                  <span class="w110 mRight5">동물실험 교육</span>
+                                  <input type="text" name="course_1-3" class="form-control form-control-sm w130">
+                                </div>
+                                <a href="javascript:void(0);" class="btn btn-xs btn-outline-secondary w100p mTop5" data-toggle="collapse" data-target=".course_1">입력 취소</a>
+                              </div> -->
+                            </td>
+                            <!-- <td class="hidden">manager@company.co.kr</td> -->
+                            <td>
+                              <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_new" value="2">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_new" value="2" checked>
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td class="hidden">010-1234-5678</td>
+                            <td>
+                              <div class="btn-group">
+                                <select class="form-control btn-outline-primary small_select narrow_padding">
+                                  <option selected disabled>경력 선택</option>
+                                  <option value="1">1년 미만</option>
+                                  <option value="2">1년 ~ 3년</option>
+                                  <option value="3">3년 이상</option>
+                                </select>
+                              </div></td>
+                            <td class="hidden">manager@company.co.kr</td>
+                            <td>
+                              <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_new" value="2">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_new" value="2">
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td class="hidden">010-1234-5678</td>
+                            <td>
+                              <div class="btn-group">
+                                <select class="form-control btn-outline-primary small_select narrow_padding">
+                                  <option selected disabled>경력 선택</option>
+                                  <option value="1">1년 미만</option>
+                                  <option value="2">1년 ~ 3년</option>
+                                  <option value="3">3년 이상</option>
+                                </select>
+                              </div></td>
+                            <td class="hidden">manager@company.co.kr</td>
+                            <td>
+                              <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <label class="flex_1" for="change_01-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_01-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_01" class="custom-file-input" id="simFile_01">
+                          <label class="custom-file-label" for="regFile_01" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1 uploaded_file_box">
+                          <a href="#" class="data">이미 첨부된 자료 File.zip</a>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_02 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_02" data-toggle="collapse" data-target="#change_02_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_02">연구시설의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_01-2"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_02_desc">
+                      <label class="flex_1" for="change_02-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_02-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_02-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_02-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_01" class="custom-file-input" id="simFile_01">
+                          <label class="custom-file-label" for="regFile_01" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1 uploaded_file_box">
+                          <a href="#" class="data">이미 첨부된 자료 File.zip</a>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_03 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_03" data-toggle="collapse" data-target="#change_03_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_03">승인 기간의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_01-1"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_03_desc">
+                      <label class="flex_1">변경 전:</label>
+                      <div class="bullet mTop5">2021년 3월 3일 ~ 2021년 12월 31일</div>
+                      <label class="flex_1 mTop20">변경 후:</label>
+                      <div class="form-group flexMid">
+                        <label for="general_end_date" class="bullet mRight10 mBot0">2021년 3월 3일 ~ </label>
+                        <input class="form-control wCalendar" type="date" value="2021-12-31" id="general_end_date"> <!-- 초기 값: 변경 전 종료일 -->
+                      </div>
+                      <label class="flex_1" for="change_03-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_03-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_01" class="custom-file-input" id="simFile_01">
+                          <label class="custom-file-label" for="regFile_01" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1 uploaded_file_box">
+                          <a href="#" class="data">이미 첨부된 자료 File.zip</a>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_04 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_04" data-toggle="collapse" data-target="#change_04_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_04">연구 목적, 내용, 방법의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_02-3"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_04_desc">
+                      <label class="flex_1" for="change_04-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_04-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_04-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_04-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_04" class="custom-file-input" id="regFile_04">
+                          <label class="custom-file-label" for="regFile_04" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_05 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_05" data-toggle="collapse" data-target="#change_05_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_05">취급 생물체의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-1"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_05_desc">
+                      <label class="flex_1" for="change_05-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_05-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_05-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_05-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_05" class="custom-file-input" id="regFile_05">
+                          <label class="custom-file-label" for="regFile_05" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_06 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_06" data-toggle="collapse" data-target="#change_06_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_06">생물안전정보의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-2"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_06_desc">
+                      <label class="flex_1" for="change_06-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_06-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_06-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_06-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_06" class="custom-file-input" id="regFile_06">
+                          <label class="custom-file-label" for="regFile_06" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_07 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_07" data-toggle="collapse" data-target="#change_07_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_07">신고사항의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <!-- <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-2"></select> -->
+                          <select class="form-control btn-outline-primary small_select move-to-selected"></select>
+                          <!-- 초기 선택 값이 없는 경우 "기본 선택 되돌리기" 불필요 -->
+                          <!-- <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a> -->
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_07_desc">
+                      <label class="flex_1" for="change_07-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_07-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_07-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_07-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_07" class="custom-file-input" id="regFile_07">
+                          <label class="custom-file-label" for="regFile_07" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_08 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_08" data-toggle="collapse" data-target="#change_08_desc" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_08">기타</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <!-- <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-2"></select> -->
+                          <select class="form-control btn-outline-primary small_select move-to-selected"></select>
+                          <!-- 초기 선택 값이 없는 경우 "기본 선택 되돌리기" 불필요 -->
+                          <!-- <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a> -->
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item collapse" id="change_08_desc">
+                      <label class="flex_1" for="change_08-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_08-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_08-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_08-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_08" class="custom-file-input" id="regFile_08">
+                          <label class="custom-file-label" for="regFile_08" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+
+                <!-- 제출 확인 -->
+                <div class="sign_area pBot0">
+                  <div class="IBC_agree">
+                    <div class="checkbox checkbox-primary flexRight mTop20">
+                      <input type="checkbox" id="check_01">
+                      <label class="custom-control-label blue_deep" for="check_01">위와 같이 변경 심의 신청서를 제출합니다.</label>
+                    </div>
+                    <!-- 오늘 날짜로 변경 -->
+                    <div class="agree_date today_str">-년 -월 -일</div>
+                    <div class="agree_author">연구 책임자<span class="reviewer">-</span></div>
+                  </div>
+                </div>
+                <!--//제출 확인 -->
+
+              </div>
+            </div>
+            <!--//card-body-->
+
+            <div class="card-footer pSide20 border_red supplement_comment">
+              <div class="checkbox checkbox-danger">
+                <input type="checkbox" id="" value="1" checked readonly>
+                <label>신청서 보완 요청</label>
+              </div>
+              <div class="data">
+                변경 요청한 실험동물의 종과 수량을 다시 확인하고 제출해주세요.
+              </div>
+            </div>
+
+            <div class="comment mTop10">※ 하단의 <span class="blue_vivid">변경항목 수정</span>을 클릭하여 항목을 수정할 수 있습니다.</div>
+          </div>
+          <!--//modal-body-->
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary waves-effect waves-light btn-sm" id="review_summary"><i class="fas fa-download mRight5"></i>변경항목만 보기</button>
+            <button type="button" class="btn btn-primary btn-sm pHside15" data-toggle="modal" data-target="#modal_confirm"><i class="fas fa-check mRight5"></i>IBC 변경 심의 신청서 제출</button>
+            <a href="#review_top" class="btn btn-outline-secondary btn-sm waves-light" id="move_top" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>첫 항목으로</a>
+          </div>
+          <!--//modal-footer-->
+
+        </div>
+      </div>
+    </div>
+    <!--//Modal -->
+
+    <!-- Modal: 신청서 제출 확인 -->
+    <div class="modal fade" id="modal_confirm">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">변경 승인 신청서 제출</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <!-- <i class="typcn typcn-warning-outline symbol"></i> -->
+                <!-- v -->
+                <i class="typcn typcn-input-checked symbol"></i>
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성한 동물 실험계획 변경 승인 신청서<br>
+                  [<span class="red underline register_num2">HUM-2020-IA0001-M1</span>]을<br>
+                  제출하여 심의절차를 진행하시겠습니까?
+                </h5>
+                <!-- <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span> -->
+               <!--  <span class="badge bg-soft-secondary">Disable Services</span>
+                <small class="text-muted ml-2">07 Oct 2020</small>
+                <ul class="mt-3 mb-0">
+                  <li>Lorem Ipsum is dummy text.</li>
+                  <li>It is a long established reader.</li>
+                  <li>Contrary to popular belief, Lorem simply.</li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <button type="button" onclick="onClickSubmit();" class="btn btn-primary" data-dismiss="modal">제출</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+    <!-- Modal: 실험 참여자 추가 -->
+    <div class="modal fade" id="modal_staff" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_staff_1">실험 참여자 추가</h5>
+            <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+          <!--//modal-header-->
+          <div class="modal-body">
+            <div class="card-body">
+
+              <table class="table list_table">
+                <thead>
+                  <tr>
+                    <th class="text-center">성명</th>
+                    <th>부서</th>
+                    <th>직책</th>
+                    <th>전공분야</th>
+                    <th>휴대전화</th>
+                    <th>Email</th>
+                    <th>교육이수 번호</th>
+                  </tr>
+                </thead>
+                <tbody id="other-staff">
+                  <tr data-url="" class="staff-row">
+                    <td class="text-center">홍길동</td>
+                    <td>약학과</td>
+                    <td>학부생</td>
+                    <td>수의학</td>
+                    <td>010-1234-5678</td>
+                    <td>manager@company.co.kr</td>
+                    <td>000-0000-0000</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="text-center text-muted">
+                <span class="red">추가할 실험 참여자를 선택하면 신청서에 추가됩니다.</span>
+              </div>
+            </div>
+            <!--//card-body-->
+          </div>
+          <!--//modal-body-->
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+          </div>
+          <!--//modal-footer-->
+
+        </div>
+        <!--//modal-content-->
+      </div>
+    </div>
+    <!--//modal-->
+
+    <!-- jQuery  -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    <!-- common -->
+    <script src="/assets/js/common/common.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- custom js for this page -->
+    <script src="/html/researcher/IBC/common_application_new-IBC.js"></script>
+    <script src="/html/researcher/IBC/experiment_list-IBC_review_change.js"></script>
+
+  </body>
+
+</html>

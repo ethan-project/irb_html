@@ -1,0 +1,41 @@
+# config.go > struct 과 항상 일치해야 한다. !!!
+
+server-type = "dev"
+
+[database]
+driver-name = "mysql"
+url = "localhost:3306"
+database = "ipsap"
+username = "root"
+password = "tmvmfls!00"
+init-version = "1.0.0"
+
+[server]
+swag-hostname = "192.168.0.60"
+port = 7375
+log-path = "" #로그 패스가 있을경우, 해당 위치에 로그를 남긴다.
+max-backups = 0
+working-path = "/root/go/working/"      # 작업 폴더 지정
+remote-working-type = "SSH"            # SSH, ANSIBLE, AGENT
+file-upload-path = "/root/go/upload/"
+protocol = "http"
+api-path = "/api/v1.0"
+
+[program]
+init-password = "test1234"
+encryption-key = "343b684bf08f4e13868680b4b56a88d7" # length : 32
+host-min-overcommit-cpu = 0
+host-max-overcommit-cpu = 200
+host-min-overcommit-memory = 0
+host-max-overcommit-memory = 200
+datastore-min-overcommit = 0
+datastore-max-overcommit = 200
+
+[test]
+use-power-cli = true
+is-test-mode = false
+is-query-debug = false
+
+[ansible]
+ssh-keygen-password = ""     #  값 지정시에는 5자 이상 필수!
+multi-patch-max-cnt = 10

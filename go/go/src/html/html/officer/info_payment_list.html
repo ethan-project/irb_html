@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">멤버십 결제 이력</h4>
+                    <div class="comment">
+                      <span class="red">이용이 완료된 IPSAP 멤버십</span> 결제 이력입니다.
+                    </div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                <div class="card-header">
+                  <h4 class="card-title">IPSAP 멤버십 결제 이력</h4>
+                  <div class="flexMid">
+                    <div class="search_info">검색 결과</div>
+                    <div class="flexMid check_filters hidden">
+                      <div class="payment_filters check_filter flexMid" data-column="5"></div>
+                    </div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap">
+                    <colgroup>
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>결제 일시</th>
+                        <th>결제 번호</th>
+                        <th>결제 내용</th>
+                        <th class="text-right">결제 금액(원)</th>
+                        <th class="text-center">결제 수단</th>
+                        <th>결제 구분</th>
+                        <th class="text-center no-order">증명서 발급</th>
+                      </tr>
+                    </thead>
+                    <tbody id="payment_list">
+                      <tr data-url="./info_payment_list-info.html" class="approved">
+                        <td>2021-02-15 12:22</td>
+                        <td class="ipsapNo">20210215001</td>
+                        <td>IPSAP 베이직 멤버십</td>
+                        <td class="text-right pRight10">300,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_list-info.html" class="approved">
+                        <td>2021-02-01 14:25</td>
+                        <td class="ipsapNo">20210201001</td>
+                        <td>IPSAP 베이직 멤버십</td>
+                        <td class="text-right pRight10">300,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_list-info.html" class="approved">
+                        <td>2021-01-02 14:25</td>
+                        <td class="ipsapNo">20210102001</td>
+                        <td>IPSAP 베이직 멤버십</td>
+                        <td class="text-right pRight10">300,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">승인</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_list-info.html" class="canceled">
+                        <td>2021-01-02 14:25</td>
+                        <td class="ipsapNo">20210102001</td>
+                        <td>IPSAP 베이직 멤버십</td>
+                        <td class="text-right pRight10">300,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="status">전체 취소</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="/html/officer/info_payment_common.js"></script>
+    <script src="/html/officer/info_payment_list.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            <div class="modal-content">
+              <div class="modal-header bg-primary">
+                <h5 class="modal-title m-0 text-white" id="modalAddress_1">동물 실험 계획서 승인신청서 자가점검표</h5>
+              </div>
+              
+              <div class="modal-body">
+                <div class="card-body pTop20">
+                  <form name="form_inspection">
+                    <div class="form-group">
+
+                      <div class="app_anchor mTop-20" id="inspection_top"></div>
+                      <div id="inspection_list">
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_01">
+                          <li class="list-group-item list_group_title" data-move-to="#form_01">1. 일반 정보<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_01-1" class="custom-control-input" id="ins_check_01-1" value="1">
+                              <label class="custom-control-label" for="ins_check_01-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_01-1">참여 연구자의 정보(소속 및 직책) 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_01-2" class="custom-control-input" id="ins_check_01-2" value="1">
+                              <label class="custom-control-label" for="ins_check_01-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_01-2">교육이수정보 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_01-3" class="custom-control-input" id="ins_check_01-3" value="1" disabled="disabled">
+                              <label class="custom-control-label" for="ins_check_01-3"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_01-3">
+                              <span>(해당하는 경우) 관련자료 첨부 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_01" data-custom-toggle="disabled" data-target="#ins_check_01-3" checked="checked">
+                                <label class="custom-control-label" for="ins_toggle_01">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_02">
+                          <li class="list-group-item list_group_title" data-move-to="#form_02">2. 동물실험 목적<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_02-1" class="custom-control-input" id="ins_check_02-1" value="1">
+                              <label class="custom-control-label" for="ins_check_02-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_02-1">주무관청 보고항목 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_02-2" class="custom-control-input" id="ins_check_02-2" value="1">
+                              <label class="custom-control-label" for="ins_check_02-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_02-2">중복시험 및 3Rs 대안방법 정보검색 작성 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_02-3" class="custom-control-input" id="ins_check_02-3" value="1">
+                              <label class="custom-control-label" for="ins_check_02-3"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_02-3">동물실험의 목적 및 필요성 작성 확인</label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_03">
+                          <li class="list-group-item list_group_title" data-move-to="#form_03">3. 실험동물 정보<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_03-1" class="custom-control-input" id="ins_check_03-1" value="1">
+                              <label class="custom-control-label" for="ins_check_03-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_03-1">실험동물 정보(동물 및 시설) 작성 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_03-2" class="custom-control-input" id="ins_check_03-2" value="1">
+                              <label class="custom-control-label" for="ins_check_03-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_03-2">실험동물 공급처 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_03-3" class="custom-control-input" id="ins_check_03-3" value="1" disabled="disabled">
+                              <label class="custom-control-label" for="ins_check_03-3"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_03-3">
+                              <span>(해당되는 경우) IBC 승인서, IRB 승인서 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_03" data-custom-toggle="disabled" data-target="#ins_check_03-3" checked="checked">
+                                <label class="custom-control-label" for="ins_toggle_03">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_04">
+                          <li class="list-group-item list_group_title" data-move-to="#form_04">4. 실험물질 정보<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_04-1" class="custom-control-input" id="ins_check_04-1" value="1">
+                              <label class="custom-control-label" for="ins_check_04-1"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_04-1">
+                              <span>실험물질의 정보 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_04-1" data-custom-toggle="disabled" data-target="#ins_check_04-1">
+                                <label class="custom-control-label w80" for="ins_toggle_04-1">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_04-2" class="custom-control-input" id="ins_check_04-2" value="1">
+                              <label class="custom-control-label" for="ins_check_04-2"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_04-2">
+                              <span>생물학적 위해 또는 재해유발물질 관련 정보 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_04-2" data-custom-toggle="disabled" data-target="#ins_check_04-2">
+                                <label class="custom-control-label w80" for="ins_toggle_04-2">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_04-3" class="custom-control-input" id="ins_check_04-3" value="1" disabled="disabled">
+                              <label class="custom-control-label" for="ins_check_04-3"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_04-3">
+                              <span>(해당되는 경우) IBC 승인서, IRB 승인서 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_04-3" data-custom-toggle="disabled" data-target="#ins_check_04-3" checked="checked">
+                                <label class="custom-control-label w80" for="ins_toggle_04-3">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_05">
+                          <li class="list-group-item list_group_title" data-move-to="#form_05">5. 동물실험 방법<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_05-1" class="custom-control-input" id="ins_check_05-1" value="1">
+                              <label class="custom-control-label" for="ins_check_05-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_05-1">동물실험 일정과 절차 작성 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_05-2" class="custom-control-input" id="ins_check_05-2" value="1">
+                              <label class="custom-control-label" for="ins_check_05-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_05-2">동물실험 방법 작성 확인</label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_06">
+                          <li class="list-group-item list_group_title" data-move-to="#form_06">6. 고통등급<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_06-1" class="custom-control-input" id="ins_check_06-1" value="1">
+                              <label class="custom-control-label" for="ins_check_06-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_06-1">고통등급 작성 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_06-2" class="custom-control-input" id="ins_check_06-2" value="1">
+                              <label class="custom-control-label" for="ins_check_06-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_06-2">고통경감 조치에 대한 작성 확인</label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_07">
+                          <li class="list-group-item list_group_title" data-move-to="#form_07">7. 고통경감 방안<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_07-1" class="custom-control-input" id="ins_check_07-1" value="1">
+                              <label class="custom-control-label" for="ins_check_07-1"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_07-1">
+                              <span>고통과 스트레스 평가항목 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_07-1" data-custom-toggle="disabled" data-target="#ins_check_07-1">
+                                <label class="custom-control-label w80" for="ins_toggle_07-1">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_07-2" class="custom-control-input" id="ins_check_07-2" value="1">
+                              <label class="custom-control-label" for="ins_check_07-2"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_07-2">
+                              <span>수의학적 관리방안 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_07-2" data-custom-toggle="disabled" data-target="#ins_check_07-2">
+                                <label class="custom-control-label w80" for="ins_toggle_07-2">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_07-3" class="custom-control-input" id="ins_check_07-3" value="1">
+                              <label class="custom-control-label" for="ins_check_07-3"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_07-3">
+                              <span>인도적인 종료시점 기준 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_07-3" data-custom-toggle="disabled" data-target="#ins_check_07-3">
+                                <label class="custom-control-label w80" for="ins_toggle_07-3">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_07-4" class="custom-control-input" id="ins_check_07-4" value="1" disabled="disabled">
+                              <label class="custom-control-label" for="ins_check_07-4"></label>
+                            </div>
+                            <label class="flex_1 flexMid" for="ins_check_07-4">
+                              <span>(해당되는 경우) IBC 승인서, IRB 승인서 작성 확인</span>
+                              <div class="custom-control custom-switch switch-primary mHside10">
+                                <input type="checkbox" class="custom-control-input" id="ins_toggle_07-4" data-custom-toggle="disabled" data-target="#ins_check_07-4" checked="checked">
+                                <label class="custom-control-label w80" for="ins_toggle_07-4">해당사항 없음</label>
+                              </div>
+                            </label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_08">
+                          <li class="list-group-item list_group_title" data-move-to="#form_08">8. 사육관리<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_08-1" class="custom-control-input" id="ins_check_08-1" value="1">
+                              <label class="custom-control-label" for="ins_check_08-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_08-1">사육관리 작성 확인</label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_09">
+                          <li class="list-group-item list_group_title" data-move-to="#form_09">9. 안락사<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_09-1" class="custom-control-input" id="ins_check_09-1" value="1">
+                              <label class="custom-control-label" for="ins_check_09-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_09-1">안락사 정보 작성 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_09-2" class="custom-control-input" id="ins_check_09-2" value="1">
+                              <label class="custom-control-label" for="ins_check_09-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_09-2">사체처리 및 기타 방법 작성 확인</label>
+                          </li>
+                        </ul>
+
+                        
+                        <ul class="list-group focus_area" data-focus-to="#form_10">
+                          <li class="list-group-item list_group_title" data-move-to="#form_10">10. 연구자 준수사항<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_10-1" class="custom-control-input" id="ins_check_10-1" value="1">
+                              <label class="custom-control-label" for="ins_check_10-1"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_10-1">안전대책 동의 확인</label>
+                          </li>
+                          <li class="list-group-item flexMid">
+                            <div class="custom-control custom-checkbox w30">
+                              <input type="checkbox" name="ins_check_10-2" class="custom-control-input" id="ins_check_10-2" value="1">
+                              <label class="custom-control-label" for="ins_check_10-2"></label>
+                            </div>
+                            <label class="flex_1" for="ins_check_10-2">준수사항 동의 확인</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                  <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                  <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+                </div>
+                
+
+              </div>
+              
+
+            </div>
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_spinner" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered flexCentral flexColumn">
+        <div class="spinner-border text-light" role="status"></div>
+        <div class="spinner_comment mTop15">저장중 입니다.</div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./_popup_inspection-info.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+  </body>
+
+</html>

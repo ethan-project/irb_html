@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+        location.replace("/info_browser.html")
+      }
+    </script>
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="enlarge-menu index">
+
+
+    <div class="page-wrapper main">
+
+      
+      <div class="topbar flexColumn flexMid">
+        
+        <div class="gnb_header">
+          
+          
+            <div id="main_login_menu"></div>
+          
+        </div>
+        <div id="main_gnb_menu"></div>
+
+        
+        <div class="banners flexTop flexBetween">
+          <div class="banner_left">
+            <img src="/assets/images/common/main_copy_01.png">
+            <div class="buttons mTop30">
+              <a href="/html/ipsap/service_01.html" class="btn label main_btn_help">IPSAP 이용안내<i class="fas fa-chevron-circle-right bg_white mLeft10"></i></a>
+              <a href="/html/register/register-agreement.html" target="_blank" class="btn label main_btn_join mLeft5">서비스 신청하기<i class="fas fa-chevron-circle-right bg_white mLeft10"></i></a>
+              
+            </div>
+          </div>
+          <div class="banner_right btn_top_login_set hidden">
+            <a href="#" data-toggle="modal" data-target="#modal_login"><img src="/assets/images/common/banner_IACUC_out.png"></a>
+            <a href="#" data-toggle="modal" data-target="#modal_login"><img src="/assets/images/common/banner_IBC_out.png"></a>
+            <a href="#" data-toggle="modal" data-target="#modal_login"><img src="/assets/images/common/banner_IRB_out.png"></a>
+            
+          </div>
+          <div class="banner_right btn_top_logout_set hidden">
+            <a href="#" class="inst_go_top" data-toggle="modal" data-target="#modal_all_joining"><img src="/assets/images/common/banner_IACUC_out.png"></a>
+            <a href="#" class="inst_go_top" data-toggle="modal" data-target="#modal_all_joining"><img src="/assets/images/common/banner_IBC_out.png"></a>
+            <a href="#" class="inst_go_top" data-toggle="modal" data-target="#modal_all_joining"><img src="/assets/images/common/banner_IRB_out.png"></a>
+          </div>
+        </div>
+
+        
+        <div class="tabs">
+          <div class="tab_header flexMid">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item tab">
+                <a href="#announce" class="nav-link active" data-toggle="tab">공지사항</a>
+              </li>
+              <li class="nav-item tab">
+                <a href="#reference" class="nav-link" data-toggle="tab">자료실</a>
+              </li>
+              <li class="nav-item tab">
+                <a href="#faq" class="nav-link" data-toggle="tab">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div id="announce" class="tab-pane active">
+              <table class="dt-responsive">
+                <tbody>
+                  <tr>
+                    <td colspan="2">등록된 공지사항이 없습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div id="reference" class="tab-pane">
+              <table>
+                <tbody>
+                  <tr>
+                    <td colspan="2">등록된 자료가 없습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div id="faq" class="tab-pane">
+              <table>
+                <tbody>
+                  <tr>
+                    <td colspan="2">등록된 FAQ가 없습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer text-center"></footer>
+      </div>
+      
+
+      
+      <div class="page-content noScroll">
+
+        <div id="background-carousel">
+            
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" id="bg_main_01"></div>
+                <div class="carousel-item" id="bg_main_02"></div>
+                <div class="carousel-item" id="bg_main_03"></div>
+              </div>
+            </div>
+        </div>
+        <div id="content-wrapper">
+          
+        </div>
+
+        
+        
+      </div>
+      
+
+    </div>
+    
+
+
+
+    
+    
+    <div class="modal fade" id="modal_login" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+            <div class="comment">
+              IPSAP의 프로토콜 리뷰 서비스에 로그인합니다.<br>등록된 아이디(Email)를 이용하여 로그인해 주세요.
+            </div>
+          </div>
+          <div class="login_body">
+            <form>
+              <div>
+                <input type="email" name="email" maxlength="100" class="form-control" placeholder="이메일" autofocus>
+              </div>
+              <div class="mTop10">
+                <input type="password" name="pw" maxlength="100" class="form-control" placeholder="비밀번호">
+              </div>
+              <button type="button" class="btn btn_login_main btn-block mTop10" id="btn_login">로그인</button>
+            </form>
+          </div>
+          
+
+          <div class="login_footer">
+            <a href="#" data-toggle="modal" data-target="#modal_find_id" data-target-tab="#find_id_tab" data-dismiss="modal">아이디(Email) 찾기</a>
+            <a href="#" data-toggle="modal" data-target="#modal_find_id" data-target-tab="#find_pw_tab" data-dismiss="modal">비밀번호 찾기</a>
+            <a href="/html/register/register-agreement.html" target="_blank">서비스 신청</a><br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_all_joining" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+            <div class="comment">
+              IPSAP 프로토콜 리뷰 서비스를 이용할<br>
+              소속 기관을 선택해주세요.
+            </div>
+          </div>
+          <div class="mTop30">
+            <ul class="list-group list-group-flush border">
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_find_id" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          
+
+
+            <div class="tabs">
+              <div class="tab_header flexMid">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item tab">
+                    <a href="#find_id" class="nav-link active" id="find_id_tab" data-toggle="tab">아이디 찾기</a>
+                  </li>
+                  <li class="nav-item tab">
+                    <a href="#find_pw" class="nav-link" id="find_pw_tab" data-toggle="tab">비밀번호 찾기</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div id="find_id" class="tab-pane active">
+                  <div class="comment">
+                    아이디 확인을 위한 정보를 입력해 주세요.
+                  </div>
+                  <form>
+                    <div>
+                      <input type="text" name="name" maxlength="40" class="form-control" placeholder="이름" autofocus>
+                    </div>
+                    <div class="mTop10">
+                      <input type="text" name="phoneno" maxlength="11" class="form-control" placeholder="연락처(- 없이 숫자만 입력)">
+                    </div>
+                    <button type="button" class="btn btn_login_main btn-block mTop30" id="btn_find_id">아이디 찾기</button>
+                  </form>
+                </div>
+
+                <div id="find_pw" class="tab-pane">
+                  <div class="comment">
+                    임시 비밀번호 수신을 위한 정보를 입력해 주세요.
+                  </div>
+                  <form>
+                    <div>
+                      <input type="email" name="email" maxlength="40" class="form-control" placeholder="아이디" autofocus>
+                    </div>
+                    <div class="mTop10">
+                      <input type="text" name="name" maxlength="100" class="form-control" placeholder="이름">
+                    </div>
+                    <div class="mTop10">
+                      <input type="text" name="phoneno" maxlength="11" class="form-control" placeholder="연락처(- 없이 숫자만 입력)">
+                    </div>
+                    <button type="button" class="btn btn_login_main btn-block mTop30" id="btn_find_pw">비밀번호 찾기</button>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="login_footer">
+              <a href="#" data-toggle="modal" data-target="#modal_login" data-dismiss="modal">로그인</a>
+              <a href="/html/register/register.html" target="_blank">서비스 신청</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+
+    
+    <div class="modal fade" id="modal_find_id_result" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+          </div>
+          <div class="login_body">
+            <div class="comment">
+              회원님의 아이디(Email 주소)는,
+            </div>
+            
+            <span class="fs_large fw_bold blue_vivid">abcdefg@lab.co.kr</span>
+            <div class="mTop10">입니다.</div>
+          </div>
+
+          <div class="login_footer">
+            <a href="#" data-toggle="modal" data-target="#modal_login" data-dismiss="modal">로그인</a>
+            <a href="#" data-toggle="modal" data-target="#modal_find_id" data-target-tab="#find_pw_tab" data-dismiss="modal">비밀번호 찾기</a>
+            <a href="/html/register/register.html" target="_blank">서비스 신청</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal_find_pw_result" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+          </div>
+          <div class="login_body">
+            <div class="comment">
+              회원님의 아이디(Email 주소)
+            </div>
+            
+            <span class="fw_bold blue_vivid">abcdefg@lab.co.kr</span>
+            <div class="mTop10">로 임시 비밀번호가 발송되었습니다.</div>
+            <div class="mTop15 red">※ 로그인 후 반드시 새로운 비밀번호를 등록해 주세요.</div>
+          </div>
+
+          <div class="login_footer">
+            <a href="#" data-toggle="modal" data-target="#modal_login" data-dismiss="modal">로그인</a>
+            <a href="/html/register/register.html" target="_blank">서비스 신청</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_joining" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 기관 목록</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body pHside30">
+            <div class="text-center">
+              현재 소속된 모든 기관 목록입니다. <span class="pink_vivid">소속 기관으로 이동하기</span>를 클릭하여 해당 기관으로 이동할 수 있습니다.
+            </div>
+
+            <table class="table info_table onHover mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                
+              </tbody>
+            </table>
+
+            <table class="table info_table onHover mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_information" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content pHside45 pBot20">
+
+          <div class="information-header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+          </div>
+          <div class="modal-body mTop20 pLeft30">
+            <h2 class="fw_black text-center">IBC<span class="op_60">(기관생물안전위원회)</span> 심사서비스<br>오픈베타 프로모션 안내</h2><br>
+            <div class="comment mTop10"><h5>안녕하십니까?<br>
+              IPSAP가 기관생물안전위원회의 심사지원을 위한 <span class="blue_deep">IBC 심사 프로세스</span>의 <span class="blue_deep">오픈 베타 서비스</span>를 진행합니다.<br><br>
+              IBC 심사 프로세스는 기존 고객의 경우 추가 비용없이 이용하실 수 있으며, 신규 가입 고객은<br>프로모션 특가로 이용할 수 있습니다.<br>
+              이번 오픈베타 서비스를 통해 표준화된 IBC 심사절차를 완성하여 2022년 10월부터 정식 서비스를 <br>진행할 예정입니다.<br>
+              IBC 서비스를 이용하는 기관에서는 오픈베타 서비스 기간 동안 다양한 의견을 주시면 <br><span class="blue_deep">심사 프로세스 표준화</span> 작업에 반영할 수 있도록 하겠습니다.</h5>
+            </div>
+            <div class="mTop20">
+              <h5>
+                IBC 오픈 베타 프로모션: <span class="blue_deep">2022.07.01 ~ 09.30</span><br>
+              </h5>
+
+              <div class="mTop20">
+                <table class="list_table announce_table noSide">
+                  <thead>
+                    <tr>
+                      <th>플랜 항목</th>
+                      <th>정상 가격</th>
+                      <th>프로모션 혜택</th>
+                      <th class="text-center fw_bold blue_deep">프로모션 특가</th>
+                      <th>비고</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>가입비</td>
+                      <td><del>330,000원</del></td>
+                      <td><span class="red">83% 할인</span> 혜택</td>
+                      <td class="text-center fw_bold blue_deep">55,000원</td>
+                      <td>서비스 신청 후 멤버십 플랜 가입</td>
+                    </tr>
+                    <tr>
+                      <td>월정액</td>
+                      <td><del>99,000원</del></td>
+                      <td><span class="red">9월 30일까지 무료</span> 이용</td>
+                      <td class="text-center fw_bold blue_deep">99,000원</td>
+                      <td>2022년 10월 1일부터 유료 결제(선택사항)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mTop10 fs_13p fw_normal lh_medium">
+                * 프로모션 기간 내에 [<span class="red underline">IBC 오픈베타 프로모션</span>] 플랜에 가입하는 고객은 <span class="pink_vivid">가입비를 할인</span> 받을 수 있습니다.<br>
+                * [IBC 오픈베타 프로모션] 플랜 가입 후에는 IACUC 및 IBC 심사 서비스를 2022년 9월말(월간 최대 10건)까지<br>
+                &nbsp;&nbsp;&nbsp;무료로 이용할 수 있습니다.<br>
+                * 2022년 10월부터 기관의 월간 심사건수를 고려하여 플랜을 업그레이드 할 수 있습니다.(월정액 유료 결제)
+              </div>
+            </div>
+            <div class="mTop30">
+              <h4>[IBC 오픈베타 프로모션 참여안내]</h4>
+              <h5 class="mTop20">
+                <span class="fs_same blue_deep">Step1.</span><br>
+                홈페이지(www.ipsap.co.kr) 중앙의 "<span class="blue_vivid">서비스 신청하기</span>" 버튼을 눌러 약관 및 개인정보<br>처리방침에 동의합니다.</h5>
+              <h5 class="mTop20">
+                <span class="fs_same blue_deep">Step2.</span><br>
+                온라인 심사시스템 서비스 신청서에 필수정보를 모두 입력합니다.
+                <div class="fs_same pLeft20 pTop10">
+                  <div class="flexMid">- 연구기관 정보 <span class="fw_normal blue_deep mLeft5">: 소속 기관의 기본 정보를 입력합니다.</span></div>
+                  <div class="flexMid mTop5">- 행정업무 담당자 정보 <span class="fw_normal blue_deep mLeft5">: 반드시 행정간사의 정보를 입력해 주십시오.</span></div>
+                  <div class="flexMid mTop5">- 심사유형 <span class="fw_normal blue_deep mLeft5">: 프로모션 기간동안 IACUC와 IBC 서비스를 사용할 수 있습니다.</span></div>
+                </div>
+              </h5>
+              <h5 class="mTop20"><span class="fs_same blue_deep">Step3.</span><br>
+                서비스 신청을 완료하면 행정간사님께 플랫폼 승인 안내 메일이 발송됩니다.
+                <div class="mTop10 mLeft10"><h6 class="blue_deep">*승인안내 메일이 스팸으로 처리되지 않았는지 반드시 확인해 주십시오.</h6></div>
+              </h5>
+              <h5 class="mTop20"><span class="fs_same blue_deep">Step4.</span><br>
+                IPSAP 사용을 위해 플랫폼 관리자가 개별 안내를 드립니다.</h5><br>
+              <h5>감사합니다.</h5>
+            </div>
+            <div class="mTop30">
+              ※ [IBC 오픈베타 프로모션] 관련 문의는 <a href="mailto:support@ipsap.co.kr" class="blue_deep">support@ipsap.co.kr</a>로 연락 주십시오.
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <div class="checkbox checkbox-primary">
+              <input type="checkbox" id="daycheck">
+              <label class="custom-control-label" for="daycheck">하루 동안 이 창을 열지 않습니다.</label>
+            </div>
+            <button type="button" class="btn btn-secondary btn-xs mLeft20" data-dismiss="modal">닫기</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_browser" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content pHside45 pBot20" style="width:700px;">
+
+          <div class="information-header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+          </div>
+          <div class="modal-body mTop20 pLeft30">
+            <h2 class="fw_black text-center">IPSAP 브라우저 호환 안내</h2><br>
+            <div class="comment mTop10">
+              <h5>안녕하십니까.<br>
+                실험동물보호와 심사표준화를 위한 통합플랫폼 IPSAP 관리자입니다.
+              </h5>
+            </div>
+            <div class="mTop20">
+              <h5>
+                IPSAP 서비스는 <span class="blue_vivid">크롬(chrome)</span>과 <span class="blue_vivid">마이크로소프트 엣지(Microsoft Edge)</span><br>
+                브라우저에 최적화되어 있습니다.<br>
+                마이크로소프트 익스플로러(Explorer)는 2022년에 서비스가 종료될 예정인 브라우저로,<br>
+                IPSAP 서비스는 <span class="red underline">마이크로소프트 익스플로러(Explorer) 브라우저를<br>
+                지원하지 않고 있습니다.</span><br><br>
+                IPSAP의 신청서 작성 및 심사 프로세스의 원활한 사용을 위해서는<br>
+                반드시 <span class="blue_vivid">크롬(chrome)</span> 또는 <span class="blue_vivid">마이크로소프트 엣지(Microsoft Edge)</span> 브라우저를<br>
+                사용해 주시면 감사하겠습니다.<br><br>
+                보다 나은 사용환경 개선을 위해 계속 노력하겠습니다.<br>
+                감사합니다.<br><br>
+              </h5>
+              <h5 class="text-end">IPSAP 플랫폼 관리자 배상</h5>
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <div class="checkbox checkbox-primary">
+              <input type="checkbox" id="daycheck">
+              <label class="custom-control-label" for="daycheck">하루 동안 이 창을 열지 않습니다.</label>
+            </div>
+            <button type="button" class="btn btn-secondary btn-xs mLeft20" data-dismiss="modal">닫기</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    
+
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    
+
+    
+    <script src="./assets/vendors/crypto-js/core.js"></script>
+    <script src="./assets/vendors/crypto-js/enc-base64.js"></script>
+    <script src="./assets/vendors/crypto-js/md5.js"></script>
+    <script src="./assets/vendors/crypto-js/evpkdf.js"></script>
+    <script src="./assets/vendors/crypto-js/cipher-core.js"></script>
+    <script src="./assets/vendors/crypto-js/sha1.js"></script>
+    <script src="./assets/vendors/crypto-js/hmac.js"></script>
+    <script src="./assets/vendors/crypto-js/pbkdf2.js"></script>
+    <script src="./assets/vendors/crypto-js/aes.js"></script>
+
+    
+    <script src="../../assets/js/common/const.js"></script>
+    <script src="../../assets/js/common/common.js"></script>
+    
+    <script src="./index.js"></script>
+    <script src="./login.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer" data-fold-menu="1630">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">행정 검토</h4>
+                    <div class="comment">제출된 실험 계획서 중에 행정 검토 또는 심사 설정 대상인 신청서 목록 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                
+                <div class="card-header">
+                  <div class="flexMid">
+                    <h4 class="card-title">행정 검토 및 심사 설정 대상 목록</h4>
+                    <div class="mLeft20" id="type_changer">
+                      <div class="radio radio-primary form-check-inline">
+                        <input type="radio" id="type1" value="card_type" name="list_type" class="mRight5" checked="checked">
+                        <label for="type1" class="mBot0">Card 형</label>
+                      </div>
+                      <div class="radio radio-primary form-check-inline">
+                        <input type="radio" id="type2" value="list_type" name="list_type" class="mRight5">
+                        <label for="type2" class="mBot0">List 형</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexMid">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap w100p card_type">
+                    <colgroup>
+                      <col width="135">   
+                      <col width="100">   
+                      <col width="*">     
+                      <col width="80">    
+                      <col width="80">    
+                      <col width="80">    
+                      <col width="120">   
+                      <col width="80">    
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="150" class="noCard_type">   
+                    </colgroup>
+                    <thead data-init-order="2,1" data-order-direction="desc,desc">
+                      <tr>
+                        <th>접수 번호</th>
+                        <th>접수 일자</th>
+                        <th>과제명</th>
+                        <th class="thick">심의 유형</th>
+                        <th>서식 유형</th>
+                        <th>진행 단계</th>
+                        <th>진행 상태</th>
+                        <th>작성자</th>
+                        <th>소속 기관</th>
+                        <th>소속 부서</th>
+                        <th class="text-center no-order noCard_type">행정 처리 실행</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr data-url="./reviewOffice_list-setup.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0004-00</td>
+                        <td data-title="접수 일자:">2020-01-13</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 4</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">신규 승인</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-primary btn-xs">심사 설정</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review_end.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0003-FF</td>
+                        <td data-title="접수 일자:">2021-08-01</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 3</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">종료 보고</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          
+                          <a href="./reviewOffice_list-review_end.html" class="btn btn-primary btn-xs">행정 검토</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review_bring.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0003-P1</td>
+                        <td data-title="접수 일자:">2020-01-11</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 3</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">반입 보고</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          
+                          <a href="./reviewOffice_list-review_bring.html" class="btn btn-primary btn-xs">행정 검토</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review_renew.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0003-R1</td>
+                        <td data-title="접수 일자:">2020-01-06</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 3</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">재승인</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review_change.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0003-M1</td>
+                        <td data-title="접수 일자:">2020-01-02</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 3</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">변경 승인</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review_inspection.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0003-E1</td>
+                        <td data-title="접수 일자:">2020-01-02</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 3</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">승인 후 점검</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          
+                          <a href="./reviewOffice_list-review_inspection.html" class="btn btn-primary btn-xs">행정 검토</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0003-00</td>
+                        <td data-title="접수 일자:">2020-01-12</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 2</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">신규 승인</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review.html" data-id="1" class="IRB">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0002-00</td>
+                        <td data-title="접수 일자:">2020-01-02</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 2</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IRB</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">신규 승인</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./reviewOffice_list-review.html" data-id="1" class="IBC">
+                        <td data-title="접수 번호:" class="order_1">HUM-2020-IA0001-00</td>
+                        <td data-title="접수 일자:">2020-01-02</td>
+                        <td data-title="과제명:" class="short_col title_col">동물실험 연구 1</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IBC</td>
+                        <td data-title="서식 유형:" class="fw_bold committee_color">신규 승인</td>
+                        <td data-title="진행 단계:" class="line_top short_col">행정 검토</td>
+                        <td data-title="진행 상태:" class="line_bottom">검토중</td>
+                        <td data-title="작성자:">***</td>
+                        <td data-title="소속 기관:">한국 대학교</td>
+                        <td data-title="소속 부서:">실험 동물실</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./common_officer.js"></script>
+    <script src="./reviewOffice_list.js"></script>
+
+  </body>
+
+</html>

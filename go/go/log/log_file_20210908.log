@@ -1,0 +1,23 @@
+2021/09/08 10:04:50 ipsap_batch.go:73: IPSAP Batch Start
+2021/09/08 10:08:14 ipsap_batch.go:73: IPSAP Batch Start
+2021/09/08 10:09:14 ipsap_batch.go:120: 20210908
+2021/09/08 10:09:14 database.go:123: 
+					SELECT instt.institution_seq, plan.name, prod.discounted_amount,
+								 (SELECT group_concat(user.user_seq)
+										FROM t_user user
+									 WHERE user.institution_seq = instt.institution_seq
+										 AND user.user_type LIKE '%date_format(now(), '%%Y%%m%%d') > instt.expiration_date #만료일이 지났을때%'
+										 AND user.user_status = 2) AS user_arr,
+								 IF(instt.payment_setting = 1, "신용카드 - 직접", "신용카드 - 자동") as payment_method
+						FROM t_institution instt
+						LEFT OUTER JOIN t_products prod ON (instt.product_seq = prod.product_seq)
+						LEFT OUTER JOIN t_membership_plan plan ON (prod.plan_seq = plan.plan_seq)
+					 WHERE 1 = 1
+					   AND 1	#moreCondition
+						 AND instt.service_status = 1 # 이용중
+						 AND instt.membership_fee_status > 0 # 회원가입비 지불
+						 AND instt.product_seq > 0 #사용중인 요금제가 있을때
+2021/09/08 10:09:14 database.go:124: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%Y%%m%%d') > instt.expiration_date #만료일이 지났을때%'
+										 AN...' at line 5
+2021/09/08 10:27:27 ipsap_batch.go:73: IPSAP Batch Start
+2021/09/08 10:28:47 ipsap_batch.go:73: IPSAP Batch Start

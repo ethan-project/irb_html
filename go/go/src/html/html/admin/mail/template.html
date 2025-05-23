@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content flexCentral">
+        <div class="container-fluid limited_width">
+
+          <div class="row">
+            <div class="col-lg-12">
+
+              
+              <div class="card thick mTop30">
+                <div class="card-header mail_content flexMid flexCenter">
+                  <div class="card-title flexCentral">Mail Template</div>
+                  <div class="comment mLeft20 mTop10">저장된 Mail Template의 확인만 가능하며, 내용의 변경은 Template File을 직접 수정해야 됩니다.</div>
+                </div>
+                <div class="card-body">
+
+                  
+                  <div class="mSide15 fs_large fw_bold blue_deep"><i class="fas fa-file-alt mRight10"></i>신청, 심사</div>
+                  <ul class="list-group list-group-flush border">
+                    
+                    <a href="/html/admin/mail/template-01.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-01
+                        <span class="blue_vivid mLeft10">[심사 진행 단계 안내]</span>
+                      </div>
+                      <div class="text-center w150">연구책임자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] &lt;IACUC ${신청서유형} - ${과제명}&gt;의 ${진행단계} 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-02.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-02
+                        <span class="blue_vivid mLeft10">[심사 시작/미이행 안내]</span>
+                      </div>
+                      <div class="text-center red w150">심사위원</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] &lt;IACUC ${신청서유형} - ${과제명}&gt;의 심사 ${진행상태} 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-03.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-03
+                        <span class="blue_vivid mLeft10">[심사 종료 안내]</span>
+                      </div>
+                      <div class="text-center red w150">심사위원</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] &lt;IACUC ${신청서유형} - ${과제명}&gt;의 심사 ${진행상태} 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-04.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-04
+                        <span class="blue_vivid mLeft10">[심사 결과 안내]</span>
+                      </div>
+                      <div class="text-center w150">연구책임자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] &lt;IACUC ${신청서유형} - ${과제명}&gt;의 심사 결과 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-10.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-10
+                        <span class="blue_vivid mLeft10">[재승인 신청 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사, 연구책임자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] &lt;IACUC ${과제명}&gt;의 재승인 신청 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-11.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-11
+                        <span class="blue_vivid mLeft10">[재승인 신청기한 경과 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사, 연구책임자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] &lt;IACUC ${과제명}&gt;의 재승인 신청기한 경과 안내입니다.</span>
+                      </div>
+                    </a>
+                  </ul>
+
+
+                  
+                  <div class="mSide15 fs_large fw_bold blue_deep"><i class="fas fa-file-alt mRight10"></i>계정</div>
+                  <ul class="list-group list-group-flush border">
+                    
+                    <a href="/html/admin/mail/template-50.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-50
+                        <span class="blue_vivid mLeft10">[IPSAP 기관 계정 등록 승인 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 서비스 이용이 승인되었습니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-51.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-51
+                        <span class="blue_vivid mLeft10">[IPSAP 기관 정보 변경 승인 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 정보 변경이 승인되었습니다.</span>
+                      </div>
+                    </a>
+
+                    
+                    <a href="/html/admin/mail/template-52.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-52
+                        <span class="blue_vivid mLeft10">[IPSAP 기관 계정 탈퇴 접수 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 IPSAP 기관 계정 탈퇴 신청 접수 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-53.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-53
+                        <span class="blue_vivid mLeft10">[IPSAP 기관 계정 탈퇴 신청 알림]</span>
+                      </div>
+                      <div class="text-center red w150">관리자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}(이)가 IPSAP 기관 계정 탈퇴를 신청하였습니다.</span>
+                      </div>
+                    </a>
+
+                    <a href="/html/admin/mail/template-54.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-54
+                        <span class="blue_vivid mLeft10">[IPSAP 기관 계정 탈퇴 완료 안내]</span>
+                      </div>
+                      <div class="text-center w150">기관 사용자 모두</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 IPSAP 기관 계정 탈퇴 완료 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-55.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-55
+                        <span class="blue_vivid mLeft10">[IPSAP 기관 계정 탈퇴 완료 알림]</span>
+                      </div>
+                      <div class="text-center red w150">관리자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 IPSAP 기관 계정이 탈퇴 처리 되었습니다.</span>
+                      </div>
+                    </a>
+
+                    
+                    <a href="/html/admin/mail/template-56.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-56
+                        <span class="blue_vivid mLeft10">[IPSAP 사용자 계정 탈퇴 안내]</span>
+                      </div>
+                      <div class="text-center red w150">신청자 본인</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] IPSAP 사용자 계정 탈퇴 안내입니다.</span>
+                      </div>
+                    </a>
+
+
+                    
+                    
+                    <a href="/html/admin/mail/template-60.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-60
+                        <span class="blue_vivid mLeft10">[임시 비밀번호 발급 안내]</span>
+                      </div>
+                      <div class="text-center red w150">신청자 본인</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${대상자}님의 임시 비밀번호 발급 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-61.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-61
+                        <span class="blue_vivid mLeft10">[신규 계정, 사용자 등록 안내]</span>
+                      </div>
+                      <div class="text-center w150">피 등록자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] IPSAP 계정 및 ${기관명}의 사용자 등록 안내입니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-62.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-62
+                        <span class="blue_vivid mLeft10">[기관 사용자 등록 안내]</span>
+                      </div>
+                      <div class="text-center w150">피 등록자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 사용자 등록 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-63.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-63
+                        <span class="blue_vivid mLeft10">[기관 사용자 탈퇴 안내]</span>
+                      </div>
+                      <div class="text-center red w150">신청자 본인</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 사용자 탈퇴 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-64.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-64
+                        <span class="blue_vivid mLeft10">[기관 사용자 탈퇴 완료 안내]</span>
+                      </div>
+                      <div class="text-center red w150">신청자 본인</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 사용자 탈퇴 완료 안내입니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-65.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-65
+                        <span class="blue_vivid mLeft10">[기관 사용자 탈퇴 공지]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 사용자 탈퇴 공지입니다.</span>
+                      </div>
+                    </a>
+                  </ul>
+
+                  
+                  <div class="mSide15 fs_large fw_bold blue_deep"><i class="fas fa-id-card mRight10"></i>멤버십</div>
+                  <ul class="list-group list-group-flush border">
+                    
+                    <a href="/html/admin/mail/template-70.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-70
+                        <span class="blue_vivid mLeft10">[멤버십 가입 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 ${멤버십명} 가입 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-71.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-71
+                        <span class="blue_vivid mLeft10">[멤버십 가입 알림]</span>
+                      </div>
+                      <div class="text-center red w150">관리자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}이(가) ${멤버십명}에 가입하였습니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-72.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-72
+                        <span class="blue_vivid mLeft10">[멤버십 해지 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}이(가) ${멤버십명} 해지 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-73.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-73
+                        <span class="blue_vivid mLeft10">[멤버십 해지 알림]</span>
+                      </div>
+                      <div class="text-center red w150">관리자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}이(가) ${멤버십명}을 해지하였습니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-74.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-74
+                        <span class="blue_vivid mLeft10">[멤버십 이용중지 예정 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 ${멤버십명} 이용 중지 예정 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-75.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-75
+                        <span class="blue_vivid mLeft10">[멤버십 이용중지 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 ${멤버십명} 이용 중지 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-76.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-76
+                        <span class="blue_vivid mLeft10">[멤버십 이용중지 알림]</span>
+                      </div>
+                      <div class="text-center red w150">관리자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 ${멤버십명} 이용이 중지되었습니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-77.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-77
+                        <span class="blue_vivid mLeft10">[멤버십 무료이용 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 멤버십 무료이용 안내입니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-78.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-78
+                        <span class="blue_vivid mLeft10">[멤버십 재가입 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 ${멤버십명} 재가입 안내입니다.</span>
+                      </div>
+                    </a>
+
+
+                    
+                    
+                    <a href="/html/admin/mail/template-80.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-80
+                        <span class="blue_vivid mLeft10">[멤버십 Plan 변경 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 멤버십 Plan 변경 안내입니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-81.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-81
+                        <span class="blue_vivid mLeft10">[멤버십 Plan 만료 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 ${멤버십명} Plan이 곧 만료됩니다.</span>
+                      </div>
+                    </a>
+
+
+                    
+                    
+                    <a href="/html/admin/mail/template-90.html" target="_blank" class="list-group-item flexMid border_top">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-90
+                        <span class="blue_vivid mLeft10">[멤버십 결제 예정 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 멤버십 결제 예정 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-91.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-91
+                        <span class="blue_vivid mLeft10">[멤버십 결제 완료 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 멤버십이 결제 되었습니다.</span>
+                      </div>
+                    </a>
+                    
+                    <a href="/html/admin/mail/template-92.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-92
+                        <span class="blue_vivid mLeft10">[멤버십 월 이용료 미납 안내]</span>
+                      </div>
+                      <div class="text-center w150">행정간사</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 멤버십 월 이용료 미납 안내입니다.</span>
+                      </div>
+                    </a>
+                    <a href="/html/admin/mail/template-93.html" target="_blank" class="list-group-item flexMid">
+                      <div class="w300">
+                        <i class="far fa-window-restore mRight10"></i>Template-93
+                        <span class="blue_vivid mLeft10">[멤버십 월 이용료 미납 알림]</span>
+                      </div>
+                      <div class="text-center red w150">관리자</div>
+                      <div>
+                        <span class="mLeft20">[IPSAP] ${기관명}의 멤버십 월 이용료가 미납되었습니다.</span>
+                      </div>
+                    </a>
+
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+
+    
+    <script src="/assets/js/common/const.js"></script>
+    <script src="/assets/js/common/common.js"></script>
+    <script src="/html/admin/common_admin.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<tr id="pain_d_anesthetic_1">
+  <td>
+    <select class="form-control btn-outline-primary small_select anesthetic_type" id="anesthetic_type_1">
+      <option selected="selected" disabled="disabled">종류 선택</option>
+      <optgroup label="—">
+        <option>마취제</option>
+        <option>항생,소염제</option>
+        <option>진통제</option>
+        <option>수액</option>
+      </optgroup>
+      <optgroup label="—">
+        <option value="new" data-custom-toggle="visible">직접입력</option>
+      </optgroup>
+    </select>
+    <input class="form-control form-control-sm hidden mTop5 anesthetic_type_text" type="text">
+  </td>
+  <td><input type="text" maxlength="20" class="form-control form-control-sm anesthetic_name" placeholder="예) Cefazoline" id="anesthetic_name_1"></td>
+  <td><input type="text" maxlength="20" class="form-control form-control-sm injection_mg" placeholder="예) 10~30mg/kg" id="injection_mg_1"></td>
+  <td>
+    <select class="form-control btn-outline-primary small_select injection_route" id="injection_route_1">
+      <option selected="selected" disabled="disabled">종류 선택</option>
+      <optgroup label="—">
+        <option>IM (근육주사)</option>
+        <option>IP (복강주사)</option>
+        <option>IV (정맥주사)</option>
+        <option>PO (경구투여)</option>
+        <option>SC (피하주사)</option>
+      </optgroup>
+      <optgroup label="—">
+        <option value="new" data-custom-toggle="visible">직접입력</option>
+      </optgroup>
+    </select>
+    <input class="form-control form-control-sm hidden mTop5 injection_route_text" type="text">
+  </td>
+  
+  <td class="hidden"><input type="text" maxlength="20" class="form-control form-control-sm" id="injection_time1_1" placeholder="예) 수술 전후 3-5일간"></td>
+  <td class="hidden"><input type="text" maxlength="20" class="form-control form-control-sm" id="injection_cnt1_1" placeholder="예) 하루 2-3회"></td>
+  <td>
+    <a href="javascript: void(0)" class="btn btn-xs btn-outline-danger btn-tr-del"><i class="far fa-trash-alt mRight5"></i>삭제</a>
+  </td>
+</tr>

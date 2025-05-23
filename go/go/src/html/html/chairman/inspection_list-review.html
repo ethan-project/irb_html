@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/rating/themes/rating.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="chairman">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">실험 계획서 내용</h4>
+                    <div class="comment">내가 점검할 실험의 실험 계획서 내용을 확인합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">승인 후 점검</div>
+                    <div class="apptype_date">승인: 2021-01-31</div>
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <div class="step">전문 심사</div>
+                    <div class="step">일반 심사</div>
+                    <div class="step">최종 심의</div>
+                    <div class="step active">실험 수행</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in">
+                        
+                        <div class="app_summary">
+                          <span class="review_type committee_color">IACUC</span>
+                          <div class="card-title task_title_ko">-</div>
+                          <div class="title_desc task_director_all">(연구 책임자 : -)</div>
+                          <div class="text-muted mb-0"><span class="register_num">-</span></div>
+                        </div>
+                        <a href="#" class="row process_content" data-process-num="1" data-move-to="#form_01-1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="2" data-move-to="#form_02-1">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="3" data-move-to="#form_03-1">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="4" data-move-to="#form_04-1">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="5" data-move-to="#form_05-1">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="6" data-move-to="#form_06-1">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="7" data-move-to="#form_07-1">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="8" data-move-to="#form_08-1">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="9" data-move-to="#form_09-1">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="10" data-move-to="#form_10-1">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents" id="all_app_r"></div>
+
+
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="./inspection_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>점검표 목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal draggable fade in" data-backdrop="false" data-keyboard="false" id="modal_inspection_after">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal_hint">
+          <div class="hint_header">이 부분을 드래그하여 움직일 수 있습니다.</div>
+          <div class="hint_title">이 부분을 클릭하면 신청서의 해당항목으로 이동합니다.</div>
+        </div>
+        <div class="modal-content">
+          <div class="modal-header bg-primary flexMid">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">승인 후 점검표</h5>
+          </div>
+          
+          <div class="modal-body">
+            <div class="card-body noPadding pLeft15">
+              <h5 class="mTop0 mBot2 task_title_ko">-</h5>
+              <p class="text-muted mBot10 task_title_en">-</p>
+              <ul class="card_sum noBullet">
+                <li><span class="sum_label">연구 책임자:</span><span class="sum_content task_director">-</span></li>
+                <li><span class="sum_label">소속 부서:</span><span class="sum_content task_director_dept">-</span></li>
+                <li><span class="sum_label">연락처:</span><span class="sum_content task_director_contact">- / -</span></li>
+                <li><span class="sum_label">심의 유형:</span><span class="sum_content judge_type_str">IACUC</span></li>
+                <li><span class="sum_label">실험 기간:</span><span class="sum_content"><span class="task_approved_date">-</span> ~ <span class="task_period">-</span> (총 <span class="task_days">-</span>일)</span></li>
+              </ul>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-primary waves-effect waves-light btn-sm" onclick="newWindowPopup('./_popup_application-info.html');"><i class="fas fa-download mRight5"></i>실험 계획서 다운로드</button>
+              </div>
+            </div>
+            <div class="card-body pTop20">
+              <form name="form_review">
+                <div class="form-group">
+                  
+                  <div class="app_anchor mTop-20" id="review_top"></div>
+                  <div class="approved_inspection_list">
+                    <ul class="list-group focus_area" data-focus-to="#form_01">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_01-1">
+                        <span>1. 일반 정보<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">동물 실험 계획서의 승인 기간이 유효한가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_01-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">케이지의 명찰 기록(승인번호, 실험기간 등)이 정확한가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_01-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_01" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_02">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_02-1">
+                        <span>2. 동물실험 목적<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">동물실험계획서의 목적에 따라 실험이 진행되고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_02-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_02" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_03">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_03-1">
+                        <span>3. 실험동물 정보<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">승인된 동물종/계통/수량대로 실험이 진행되고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_03-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">계획한 사육시설에서 사육되고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_03-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">계획한 실험동물의 공급처에서 공급 받았는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_03-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_03" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_04">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_04-1">
+                        <span>4. 실험물질 정보<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">사용하는 투여물질의 관리가 잘되고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_04-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_04" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_05">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_05-1">
+                        <span>5. 동물실험 방법<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">승인된 동물실험 일정과 절차대로 실험이 진행되고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_05-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">변경사항에 대한 사전승인을 받았는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_05-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">생존성 수술을 위한 무균조작을 진행하는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_05-3" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">실험시설 사용 절차를 준수하는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_05-4" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_05" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_06">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_06-1">
+                        <span>6. 고통등급<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">사전에 평가한 고통등급보다 더 큰 고통이 관찰되지 않는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_06-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">계획한 고통경감조치를 수행하고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_06-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_06" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_07">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_07-1">
+                        <span>7. 고통경감 방안<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">실험/수술후 통증, 감염관리에 대한 모니터링과 적절한 조치를 진행하는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_07-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">수의학적 관리가 적절하게 이루어지고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_07-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">인도적인 종료시점 기준이 적용되고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_07-3" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_07" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_08">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_08-1">
+                        <span>8. 사육관리<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">적절한 사육공간(과밀사육, 개체간 다툼 여부 확인)을 유지하고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_08-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">케이지 교체, 사료/음수 공급 등이 적절히 이루어지고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_08-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">실험 진행 없이 동물이 장기간 방치되고 있지는 않은가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_08-3" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">적합한 군집사육을 진행하고 있으며 풍부화를 적절하게 사용하고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_08-4" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_08" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_09">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_09-1">
+                        <span>9. 안락사<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">IACUC에서 승인한 안락사 지침에 따라 안락사를 수행하는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_09-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">안락사 후 적합한 방법에 의해 사체를 폐기 하는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_09-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">사체 폐기에 대한 기록을 적절히 하는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_09-3" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_09" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+
+                    
+                    <ul class="list-group focus_area" data-focus-to="#form_10">
+                      <li class="list-group-item list_group_title flexMid flexBetween" data-move-to="#form_10-1">
+                        <span>10. 연구책임자 준수사항<span class="light mLeft15"><i class="fas fa-angle-left mRight5"></i>신청서 보기</span></span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">연구수행자를 위한 안전대책이 잘 준비되어 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_10-1" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item small_pass flexMid">
+                        <span class="flex_1">연구책임자롸 참여하는 모든 연구원이 준수사항을 잘 이행하고 있는가?</span>
+                        <span>
+                          <select class="rating_pass" name="ins_pass_10-2" autocomplete="off" style="display: none;">
+                            <option value="0">부적합</option>
+                            <option value="1" selected="selected">적합</option>
+                          </select>
+                          <div class="rating_pass">
+                            <a href="javascript:void(0);" class="rating_pass active" data-value="1" selected="selected">적합</a>
+                            <a href="javascript:void(0);" class="rating_pass" data-value="0">부적합</a>
+                          </div>
+                        </span>
+                      </li>
+                      <li class="list-group-item hovered">
+                        <div class="mBot5">점검 의견</div>
+                        <textarea class="form-control sub-input" rows="2" id="ins_input_10" placeholder="[부적합] 선택 시 반드시 입력해주세요."></textarea>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div class="hidden" id="supp_comment">
+                    <div class="card-footer pSide20 border_red supplement_comment">
+                      <div class="checkbox checkbox-danger">
+                        <input type="checkbox" value="1" checked="checked" readonly="readonly">
+                        <label>보고서 보완 요청</label>
+                      </div>
+                      <div class="data" id="supp_comment_text">
+                        승인된 내용과 실행 내역을 다시 확인하고 제출해주세요.
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  
+                  <div class="sign_area pBot0">
+                    <div class="checkbox checkbox-primary flexRight mTop20">
+                      <input type="checkbox" id="check_01">
+                      <label class="custom-control-label blue_deep" for="check_01">위와 같이 승인 후 점검표를 제출합니다.</label>
+                    </div>
+                    <div class="mTop10 flexMid flexRight">
+                      <div class="agree_date">-년 -월 -일</div>
+                      <div class="agree_author mTop0 mLeft20">점검 위원<span class="reviewer">-</span></div>
+                    </div>
+                  </div>
+                  
+
+                </div>
+              </form>
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm pHside15" id="modal_review" data-toggle="modal" data-target="#modal_review_confirm">승인 후 점검표 제출</button>
+            
+            <a href="./inspection_list.html" class="btn btn-outline-secondary btn-sm mLeft0">작성 취소
+            <a href="#review_top" data-move-to="#form_01-1" class="btn btn-outline-secondary btn-sm waves-light" id="move_top"><i class="fas fa-angle-double-up mRight5"></i>첫 항목으로</a>
+          </a></div>
+          
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_review_confirm">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">승인 후 점검 완료</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5"><div class="app_title">동물 실험 계획서</div>
+                  [<span class="red underline register_num2 app_no">HUM_2020_IA0001-00</span>]와 진행중인 실험의
+                  <div>승인 후 점검을 마치고, 점검표를 제출 하시겠습니까?</div>
+                </h5>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="javascript:void(0);" class="btn btn-primary" id="inspect_submit">승인 후 점검 완료 및 제출</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_input_alert">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">점검 의견 입력 안내</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5"><span class="underline">부적합 판정을 선택한 경우</span>
+                  <div>해당 항목에 <span class="red">반드시 점검 의견을 입력</span>해야 합니다.</div>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../officer/inspection_common.js"></script>
+    <script src="../../plugins/rating/jquery.barrating.min.js"></script>
+    <script src="../../assets/js/common/rating.init.js"></script>
+
+  </body>
+
+</html>

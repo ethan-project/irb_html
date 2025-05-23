@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="enlarge-menu index">
+
+
+    <div class="page-wrapper main">
+
+      
+      <div class="topbar flexColumn flexMid">
+        
+        <div class="gnb_header">
+          
+          
+            <div id="main_login_menu"></div>
+          
+        </div>
+        <div id="main_gnb_menu"></div>
+
+        
+        <div class="top_bg bg-01"></div>
+        
+
+        
+        <div class="main_contents">
+          <span class="main_breadcrumbs">게시판 &gt; 관련 사이트</span>
+          <div class="main_title">관련 사이트</div>
+          <div class="main_content mTop40">
+            <div class="main_text board_content board_04">
+              <div class="row flexBetween">
+                <a href="http://www.animal.go.kr" target="_blank"><img src="/assets/images/common/board_04-1.png"></a> 
+                <a href="http://www.mohw.go.kr" target="_blank"><img src="/assets/images/common/board_04-2.png"></a>   
+                <a href="https://www.kdca.go.kr" target="_blank"><img src="/assets/images/common/board_04-3.png"></a>   
+                <a href="https://www.qia.go.kr" target="_blank"><img src="/assets/images/common/board_04-4.png"></a>   
+              </div>
+              <div class="row flexBetween mTop15">
+                <a href="http://www.nibp.kr" target="_blank"><img src="/assets/images/common/board_04-5.png"></a>      
+                <a href="http://www.kafla.kr" target="_blank"><img src="/assets/images/common/board_04-6.png"></a>     
+                <a href="http://www.kalas.or.kr" target="_blank"><img src="/assets/images/common/board_04-7.png"></a>  
+                <img src="/assets/images/common/board_04-8.png">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+
+        <footer class="footer text-center"></footer>
+
+      </div>
+      
+    </div>
+    
+
+
+
+    
+    
+    <div class="modal fade" id="modal_login" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+            <div class="comment">
+              IPSAP의 프로토콜 리뷰 서비스에 로그인합니다.<br>등록된 아이디(Email)를 이용하여 로그인해 주세요.
+            </div>
+          </div>
+          <div class="login_body">
+            <form>
+              <div>
+                <input type="email" name="email" maxlength="100" class="form-control" placeholder="이메일" autofocus>
+              </div>
+              <div class="mTop10">
+                <input type="password" name="pw" maxlength="100" class="form-control" placeholder="비밀번호">
+              </div>
+              <button type="button" class="btn btn_login_main btn-block mTop10" id="btn_login">로그인</button>
+            </form>
+          </div>
+          
+
+          <div class="login_footer">
+            <a href="#" data-toggle="modal" data-target="#modal_find_id" data-target-tab="#find_id_tab" data-dismiss="modal">아이디(Email) 찾기</a>
+            <a href="#" data-toggle="modal" data-target="#modal_find_id" data-target-tab="#find_pw_tab" data-dismiss="modal">비밀번호 찾기</a>
+            <a href="/html/register/register.html" target="_blank">서비스 신청</a><br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_all_joining" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+            <div class="comment">
+              IPSAP 프로토콜 리뷰 서비스를 이용할<br>
+              소속 기관을 선택해주세요.
+            </div>
+          </div>
+          <div class="mTop30">
+            <ul class="list-group list-group-flush border">
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_find_id" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          
+
+
+            <div class="tabs">
+              <div class="tab_header flexMid">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item tab">
+                    <a href="#find_id" class="nav-link active" id="find_id_tab" data-toggle="tab">아이디 찾기</a>
+                  </li>
+                  <li class="nav-item tab">
+                    <a href="#find_pw" class="nav-link" id="find_pw_tab" data-toggle="tab">비밀번호 찾기</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div id="find_id" class="tab-pane active">
+                  <div class="comment">
+                    아이디 확인을 위한 정보를 입력해 주세요.
+                  </div>
+                  <form>
+                    <div>
+                      <input type="text" name="name" maxlength="40" class="form-control" placeholder="이름" autofocus>
+                    </div>
+                    <div class="mTop10">
+                      <input type="text" name="phoneno" maxlength="11" class="form-control" placeholder="연락처(- 없이 숫자만 입력)">
+                    </div>
+                    <button type="button" class="btn btn_login_main btn-block mTop30" id="btn_find_id">아이디 찾기</button>
+                  </form>
+                </div>
+
+                <div id="find_pw" class="tab-pane">
+                  <div class="comment">
+                    임시 비밀번호 수신을 위한 정보를 입력해 주세요.
+                  </div>
+                  <form>
+                    <div>
+                      <input type="email" name="email" maxlength="40" class="form-control" placeholder="아이디" autofocus>
+                    </div>
+                    <div class="mTop10">
+                      <input type="text" name="name" maxlength="100" class="form-control" placeholder="이름">
+                    </div>
+                    <div class="mTop10">
+                      <input type="text" name="phoneno" maxlength="11" class="form-control" placeholder="연락처(- 없이 숫자만 입력)">
+                    </div>
+                    <button type="button" class="btn btn_login_main btn-block mTop30" id="btn_find_pw">비밀번호 찾기</button>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="login_footer">
+              <a href="#" data-toggle="modal" data-target="#modal_login" data-dismiss="modal">로그인</a>
+              <a href="/html/register/register.html" target="_blank">서비스 신청</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+
+    
+    <div class="modal fade" id="modal_find_id_result" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+          </div>
+          <div class="login_body">
+            <div class="comment">
+              회원님의 아이디(Email 주소)는,
+            </div>
+            
+            <span class="fs_large fw_bold blue_vivid">abcdefg@lab.co.kr</span>
+            <div class="mTop10">입니다.</div>
+          </div>
+
+          <div class="login_footer">
+            <a href="#" data-toggle="modal" data-target="#modal_login" data-dismiss="modal">로그인</a>
+            <a href="#" data-toggle="modal" data-target="#modal_find_id" data-target-tab="#find_pw_tab" data-dismiss="modal">비밀번호 찾기</a>
+            <a href="/html/register/register.html" target="_blank">서비스 신청</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="modal_find_pw_result" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="login_header">
+            <img src="/assets/images/common/IPSAP_logo_login.png">
+          </div>
+          <div class="login_body">
+            <div class="comment">
+              회원님의 아이디(Email 주소)
+            </div>
+            
+            <span class="fw_bold blue_vivid">abcdefg@lab.co.kr</span>
+            <div class="mTop10">로 임시 비밀번호가 발송되었습니다.</div>
+            <div class="mTop15 red">※ 로그인 후 반드시 새로운 비밀번호를 등록해 주세요.</div>
+          </div>
+
+          <div class="login_footer">
+            <a href="#" data-toggle="modal" data-target="#modal_login" data-dismiss="modal">로그인</a>
+            <a href="/html/register/register.html" target="_blank">서비스 신청</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="modal_joining" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 기관 목록</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body pHside30">
+            <div class="text-center">
+              현재 소속된 모든 기관 목록입니다. <span class="pink_vivid">소속 기관으로 이동하기</span>를 클릭하여 해당 기관으로 이동할 수 있습니다.
+            </div>
+
+            <table class="table info_table onHover mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="info_name">소속 기관명</td>
+                  <td class="data flexMid">
+                    <span class="">
+                      <span class="gray mRight5">(국문)</span>한국 대학교 2<br>
+                      <span class="gray mRight5">(영문)</span>Hankuk University Second
+                    </span>
+                    <a href="" class="btn btn-warning btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="info_name">참여 권한</td>
+                  <td class="data"><span class="label auth_label">심사위원</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="table info_table onHover mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="info_name">소속 기관명</td>
+                  <td class="data flexMid">
+                    <span class="">
+                      <span class="gray mRight5">(국문)</span>한국 대학교 3<br>
+                      <span class="gray mRight5">(영문)</span>Hankuk University Third
+                    </span>
+                    <a href="" class="btn btn-warning btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="info_name">참여 권한</td>
+                  <td class="data"><span class="label auth_label">심사위원</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    
+
+    
+    <script src="/assets/js/common/const.js"></script>
+    <script src="/assets/js/common/common.js"></script>
+    <script src="/assets/js/common/datatable.init.js"></script>
+    <script src="/html/ipsap/board_common.js"></script>
+    
+    <script src="/index.js"></script>
+    <script src="/login.js"></script>
+
+    
+    <script src="/assets/vendors/crypto-js/core.js"></script>
+    <script src="/assets/vendors/crypto-js/enc-base64.js"></script>
+    <script src="/assets/vendors/crypto-js/md5.js"></script>
+    <script src="/assets/vendors/crypto-js/evpkdf.js"></script>
+    <script src="/assets/vendors/crypto-js/cipher-core.js"></script>
+    <script src="/assets/vendors/crypto-js/sha1.js"></script>
+    <script src="/assets/vendors/crypto-js/hmac.js"></script>
+    <script src="/assets/vendors/crypto-js/pbkdf2.js"></script>
+    <script src="/assets/vendors/crypto-js/aes.js"></script>
+
+  </body>
+</html>

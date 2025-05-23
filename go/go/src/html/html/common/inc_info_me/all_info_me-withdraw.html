@@ -1,0 +1,298 @@
+<div class="col-sm-12">
+  <div class="page-title-box">
+    <div class="row">
+      <div class="col">
+        <h4 class="page-title">기관 사용자 탈퇴</h4>
+        
+        <div class="comment">"<span class="blue_vivid">-</span>"의 온라인 심사 서비스의 기관 사용자 탈퇴를 진행합니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="comment">※ 기관 사용자 탈퇴는 <span class="red">현재 접속한 기관의 서비스에만 해당</span>하며, <span class="underline">복수의 기관에 가입된 경우</span> <span class="pink_vivid">기관 정보를 반드시 확인하고 회원 탈퇴를 진행</span>하시기 바랍니다.</div>
+    </div>
+    <div class="card-body pVside20 pHside40">
+
+        <div class="row">
+          <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 소속 정보</h4>
+          <div class="header_comment mLeft20">
+            <button type="button" class="btn btn-danger btn_xxs noMinWidth" data-toggle="modal" data-target="#modal_all_joining">
+              <i class="fas fa-user-tie mRight8"></i>나의 타기관 소속 정보
+            </button>
+          </div>
+        </div>
+        
+        <div class="row pHside10 mTop10">
+          <table class="table info_table info_table_content">
+            <colgroup>
+              <col width="200">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="info_name">소속 기관명</td>
+                <td class="data"><span class="gray mRight5">(국문)</span><span>-</span><span class="mLeft20"></span><span class="gray mRight5">(영문)</span><span>-</span></td>
+              </tr>
+              <tr>
+                <td class="info_name">기관 코드</td>
+                <td class="data">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row mTop15">
+          <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>나의 계정 정보</h4>
+          <div class="header_comment"></div>
+        </div>
+        
+        <div class="row pHside10 mTop10">
+          <table class="table info_table info_table_content">
+            <colgroup>
+              <col width="200">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="info_name">성명</td>
+                <td class="data">-</td>
+              </tr>
+              <tr>
+                <td class="info_name">연락처</td>
+                <td class="data">-</td>
+              </tr>
+              <tr>
+                <td class="info_name">Email</td>
+                <td class="data">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        
+        <div class="card thick mTop15">
+
+          
+          <div class="card-header">
+            <h4 class="card-title">※ 기관 사용자 탈퇴 시 유의사항</h4>
+          </div>
+
+          
+          <div class="card-body pVside20">
+            <div class="row">
+              <pre class="withdraw_box">
+※ 기관 사용자 탈퇴 관련 안내사항
+  - 기관 사용자 탈퇴는 현재 접속한 기관의 서비스에만 해당하며, 복수의 기관에 가입된 경우 기관 정보를 반드시 확인하고 회원 탈퇴를 진행하시기 바랍니다.
+  - 본인이 현 기관의 행정 간사인 경우, 기관의 행정 간사가 본인을 제외하고 1명 이상인 경우에만 기관 사용자 탈퇴가 가능합니다.
+  - 탈퇴를 원하지 않을 경우, 탈퇴 신청 후 수신한 "탈퇴 안내 Email"을 통해 7일 이내에 탈퇴를 철회할 수 있습니다.
+  - 기관 사용자의 개인정보는 개인정보 처리방침에 따라 관리됩니다.</pre>
+            </div>
+          </div>
+
+          
+          <div class="card-footer">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" name="agree_using" class="custom-control-input" id="agree_using" value="1">
+              <label class="custom-control-label" for="agree_using">기관 사용자 탈퇴 시 유의사항을 확인하였으며, 모두 동의합니다.</label>
+            </div>
+          </div>
+
+        </div>
+        
+
+      <div class="app_anchor" id="bottom_anchor"></div>
+    </div>
+    
+
+    
+    
+    
+    <div class="card-footer flexCenter">
+      <a href="./info_me.html" class="btn btn-outline-secondary waves-light mLeft10"><i class="fas fa-times mRight5"></i>취소</a>
+      <button type="button" class="btn btn-danger waves-effect waves-light mLeft10" id="btn_withdraw_check" data-toggle="modal" data-target="#modal_withdraw" disabled="disabled"><i class="fas fa-sign-out-alt mRight5"></i>기관 사용자 탈퇴</button>
+      
+      
+    </div>
+
+  </div>
+  
+
+</div>
+
+
+<div class="modal fade" id="modal_all_joining" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 타 기관 정보</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="la la-times"></i></span>
+        </button>
+      </div>
+
+      <div class="modal-body pHside30">
+        <div class="text-center">
+          현재 접속한 기관 외에 내가 소속된 타기관 목록입니다. <span class="pink_vivid">소속 기관으로 이동하기</span>를 클릭하여 해당 기관으로 이동할 수 있습니다.
+        </div>
+
+        <table class="table info_table mTop10">
+          <colgroup>
+            <col width="25%">
+            <col width="*">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="info_name">소속 기관명</td>
+              <td class="data flexMid">
+                <span class="">
+                  <span class="gray mRight5">(국문)</span>-<br>
+                  <span class="gray mRight5">(영문)</span>-
+                </span>
+                <a href="" class="btn btn-danger btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="info_name">기관 코드</td>
+              <td class="data">-</td>
+            </tr>
+            <tr>
+              <td class="info_name">참여 권한</td>
+              <td class="data"><span class="label auth_label">-</span></td>
+            </tr>
+            <tr>
+              <td class="info_name">소속 정보</td>
+              <td class="data">
+                <span class=""><span class="gray mRight5">부서)</span>-</span>
+                <span class="mLeft10"><span class="gray mRight5">직책)</span>-</span>
+                <span class="mLeft10"><span class="gray mRight5">분야)</span>-</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table info_table mTop10">
+          <colgroup>
+            <col width="25%">
+            <col width="*">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="info_name">소속 기관명</td>
+              <td class="data flexMid">
+                <span class="">
+                  <span class="gray mRight5">(국문)</span>-<br>
+                  <span class="gray mRight5">(영문)</span>-
+                </span>
+                <a href="" class="btn btn-danger btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="info_name">기관 코드</td>
+              <td class="data">-</td>
+            </tr>
+            <tr>
+              <td class="info_name">참여 권한</td>
+              <td class="data"><span class="label auth_label">-</span></td>
+            </tr>
+            <tr>
+              <td class="info_name">소속 정보</td>
+              <td class="data">
+                <span class=""><span class="gray mRight5">부서)</span>-</span>
+                <span class="mLeft10"><span class="gray mRight5">직책)</span>-</span>
+                <span class="mLeft10"><span class="gray mRight5">분야)</span>-</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="modal_withdraw" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">기관 사용자 탈퇴 실행</h5>
+      </div>
+      
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-3 text-right pRight10">
+            
+            <i class="typcn typcn-warning-outline symbol"></i>
+            
+            
+            
+            
+          </div>
+          <div class="col-lg-9 pBot10">
+            <h5 class="mBot5">온라인 심사 서비스의<br><span class="pink_vivid">기관 사용자 탈퇴를 실행</span> 하시겠습니까?</h5>
+            <h6 class="lh_vivid">기관 사용자 탈퇴를 실행하면,<br>본 기관의 온라인 심사 서비스를 이용할 수 없습니다.</h6>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        
+        <a href="#" class="btn btn-primary" id="btn_withdraw">기관 사용자 탈퇴 실행</a>
+        <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="modal_withdraw_alert" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">행정 인원의 기관 사용자 탈퇴</h5>
+      </div>
+      
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-3 text-right pRight10">
+            
+            <i class="typcn typcn-warning-outline symbol"></i>
+            
+            
+            
+            
+          </div>
+          <div class="col-lg-9 pBot10">
+            <h5 class="mBot5">기관 사용자 탈퇴를 실행할 수 없습니다.</h5>
+            <h6 class="lh_vivid">
+              온라인 심사 서비스의<br>
+              <span class="pink_vivid">행정 간사는 반드시 1명 이상</span> 존재해야합니다.<br>
+              기관 사용자 탈퇴 전에 <span class="pink_vivid">행정 간사를 추가로 지정</span>해주세요.
+            </h6>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary" data-dismiss="modal">확인</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script src="/html/common/inc_info_me/all_info_me-withdraw.js"></script>

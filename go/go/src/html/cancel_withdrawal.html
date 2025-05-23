@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="./assets/images/common/favicon.png">
+
+    <!-- App css -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="./plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/common/common.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery  -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./assets/js/metismenu.min.js"></script> -->
+    <script src="./assets/js/waves.js"></script>
+    <script src="./assets/js/feather.min.js"></script>
+    <script src="./assets/js/simplebar.min.js"></script>
+    <script src="./assets/js/moment.js"></script>
+    <!-- <script src="./plugins/daterangepicker/daterangepicker.js"></script> -->
+    <!-- <script src="./plugins/tippy/tippy.all.min.js"></script> -->
+
+    <!-- common -->
+    <script src="./assets/js/common/const.js"></script>
+    <script src="./assets/js/common/common.js"></script>
+    <!-- <script src="./assets/js/common/api.js"></script> -->
+    <!-- <script src='./assets/js/ipsap/ipsap_common.js'></script>; -->
+
+    <!-- 암호화 함수 정의 -->
+    <script src="./assets/vendors/crypto-js/core.js"></script>
+    <script src="./assets/vendors/crypto-js/enc-base64.js"></script>
+    <script src="./assets/vendors/crypto-js/md5.js"></script>
+    <script src="./assets/vendors/crypto-js/evpkdf.js"></script>
+    <script src="./assets/vendors/crypto-js/cipher-core.js"></script>
+    <script src="./assets/vendors/crypto-js/sha1.js"></script>
+    <script src="./assets/vendors/crypto-js/hmac.js"></script>
+    <script src="./assets/vendors/crypto-js/pbkdf2.js"></script>
+    <script src="./assets/vendors/crypto-js/aes.js"></script>
+    <!-- login -->
+    <script src="cancel_withdrawal.js"></script>
+
+    <!-- App js -->
+    <!-- <script src="./assets/js/app.js"></script> -->
+
+    <!-- custom js for this page -->
+
+  </head>
+
+  <body class="enlarge-menu">
+
+    <!-- Logo -->
+    <a href="/index.html" class="logo_single">
+      <img src="/assets/images/common/IPSAP_logo_top.png">
+    </a>
+    <!--//logo-->
+
+    <div class="page-wrapper">
+
+      <!-- <div id="topbar" class="topbar"></div> -->
+
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="page_body_box flexCentral flexColumn">
+                <div class="page-title-box">
+                  <div class="row">
+                    <div class="col text-center">
+                      <h4 class="page-title">IPSAP 서비스 - 탈퇴 철회</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="border_area flexCentral">
+                  <div class="card cmte_type wide">
+                    <div class="card-header">
+                      <h5 class="mLeft15 mTop15"><i class="fas fa-plus-square mRight10"></i>탈퇴 철회 계정 정보</h5>
+                      <form>
+                        <ul class="list-group list-group-flush">
+                          <div class="flexMid list-group-item border-0">
+                            <label for="user_id" class="mRight10 mBot0 w100">ID :</label>
+                            <input type="email" name="email" maxlength="100" class="form-control" placeholder="Email">
+                          </div>
+                          <div class="flexMid list-group-item border-0">
+                            <label for="user_pw" class="mRight10 mBot0 w100">PASSWORD :</label>
+                            <input type="password" name="pw" maxlength="100" class="form-control">
+                          </div>
+                        </ul>
+                      </form>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="mLeft15"><i class="fas fa-plus-square mRight10"></i>탈퇴 철회 안내</h5>
+
+                    </div>
+                    <div class="card-footer text-center">
+                      <button type="button" class="btn btn-primary pHside30" id="btnLogin"><i class="fas fa-lock-open mRight5"></i>탈퇴 철회 실행</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mTop20">
+                  <div class="row">
+                    <div class="col text-center">
+                      <!-- <div class="comment">※ <span class="blue_deep">반입 보고서</span>, <span class="blue_deep">종료 보고서</span>는 <span class="fw_bold blue_vivid">승인 후 관리</span> 메뉴에서 작성할 수 있습니다.</div> -->
+                    </div>
+                  </div><!--//row-->
+                </div>
+              </div>
+
+            </div><!--//col-->
+          </div><!--//row-->
+          <!--//page title end breadcrumb -->
+
+        </div>
+        <!--//container-fluid -->
+
+        <footer id="footer" class="footer text-center"></footer>
+        <!--//footer-->
+      </div>
+      <!--//page content -->
+    </div>
+    <!--//page-wrapper -->
+
+  </body>
+
+</html>
+
+<!-- Modal: ID 찾기 결과 -->
+<div class="modal fade" id="modal_result" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="login_header">
+        <img src="/assets/images/common/IPSAP_logo_login.png">
+      </div>
+      <div class="login_body">
+        <div class="comment">
+          회원님의 탈퇴가 철회되었습니다. 하단 버튼을 클릭하여 </br>
+          메인페이지에서 다시 로그인 해주시기 바랍니다.
+        </div>
+      </div>
+
+      <div class="login_footer">
+        <a href="/index.html">메인 화면으로 돌아가기</a>
+      </div>
+
+    </div>
+  </div>
+</div>

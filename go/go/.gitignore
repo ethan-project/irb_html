@@ -1,0 +1,11 @@
+.ftpconfig
+.ftpignore
+src/github.com
+src/golang
+src/golang.org
+src/google.golang.org
+src/gopkg.in
+src/donghun_run_ipsap.sh
+src/test.go
+bin
+pkg

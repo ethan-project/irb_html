@@ -1,0 +1,1 @@
+$((function(){window.alert=function(e){let t=document.createElement("IFRAME");t.style.display="none",t.setAttribute("src","data:text/plain"),document.documentElement.appendChild(t),window.frames[0].window.alert(e),t.parentNode.removeChild(t)},$(window).on({load:function(e){setTimeout((function(){$(".child_trigger").first().trigger("click")}),500)}})}));

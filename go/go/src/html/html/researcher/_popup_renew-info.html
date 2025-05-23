@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            
+            <div class="card thick IACUC">
+              <div class="card-header flexBetween">
+                <div class="title_area">
+                  <h4 class="card-title flexMid">실험 계획 재승인 신청서 - 심사 결과<span class="title_desc mLeft10">(연구 책임자 : -)</span></h4>
+                  <p class="text-muted mb-0">재승인 접수 번호 :<span class="register_num">-</span></p>
+                </div>
+                <div class="progress_area">
+                  <div class="step active">행정 검토</div>
+                </div>
+                <div class="desc_area">
+                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                </div>
+              </div>
+              <div class="card-body pHside40">
+
+                
+                <div class="mTop20 flexMid">
+                  <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>실험 계획서 원안 (기본 정보)</h4>
+                  <div class="header_comment mLeft20 noPrint">
+                    
+                  </div>
+                </div>
+                <div class="mTop10">
+                  <div class="flexMid">
+                    <label class="mRight10 mBot0">국문 :</label>
+                    <span class="data">-</span>
+                  </div>
+                  <div class="flexMid">
+                    <label class="mRight10 mBot0">영문 :</label>
+                    <span class="data">-</span>
+                  </div>
+                  <div class="flexMid">
+                    <label class="mRight10 mBot0">연구 기간 :</label>
+                    <span class="data">~</span>
+                  </div>
+                </div>
+
+                <div class="mTop30">
+                  <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>재승인 요약표</h4>
+                  <div class="comment_box red_box mTop10">
+                    <ul class="pLeft15 mBot0">
+                      <li>다년간 진행되는 동물실험의 경우, <span class="red">승인 유효기간(1년)이 경과하기 전</span>에 동물실험에 대해 <span class="red">재승인</span>을 받아야 합니다.</li>
+                      <li>기 승인된 동물 실험계획의 <span class="underline">내용 변경없이 지속되는 경우</span>에는 해당년도에 수행된 실험에 대해 <span class="red">요약 보고</span>합니다.</li>
+                      <li>기 승인된 동물 실험계획의 <span class="underline">일부 변경이 있는 경우</span>에는 <span class="underline">재승인 신청 전</span>에 변경사항에 대한 <span class="red">변경 승인</span>을 받아야 합니다.</li>
+                      <li>변경승인을 받은 경우에는 변경내역을 재승인 신청서의 실험요약에 기재해 주시기 바랍니다.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mTop15 mLeft20">
+                  <div class="custom-control custom-radio flexMid">
+                    <input type="radio" name="radio_10_group" value="0" class="custom-control-input" id="radio_01" disabled="disabled">
+                    <label class="custom-control-label">승인받은 동물실험계획서의 내용 변경없이 지속</label>
+                  </div>
+                  <div class="custom-control custom-radio flexMid mTop10">
+                    <input type="radio" name="radio_10_group" value="1" class="custom-control-input" id="radio_02" checked="checked" readonly="readonly">
+                    <label class="custom-control-label">승인받은 동물실험계획서의 일부 내용 변경 (변경 승인 신청서 함께 제출)</label>
+                    <a href="javascript:newWindowPopup('./experiment_list-info_change.html');" class="data mLeft20"><i class="fas fa-file-alt mRight5"></i>변경 승인 신청서 (HUM-2020-IA0001-01)</a>
+                  </div>
+                  <div class="custom-control custom-radio flexMid mTop10">
+                    <input type="radio" name="radio_10_group" value="2" class="custom-control-input" id="radio_03" disabled="disabled">
+                    <label class="custom-control-label w50">기타</label>
+                    <input type="text" class="form-control form-control-sm hidden">
+                  </div>
+                </div>
+
+                <div class="mTop30">
+                  <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>해당년도 실험 요약</h4>
+                  <div class="header_comment mTop10">※ 변경 승인신청서를 제출한 경우에도 해당년도의 <span class="red">실험 요약 보고는 반드시 작성</span>해야합니다.</div>
+                </div>
+                <div class="mTop15 mLeft20">
+                  <div class="form-group flexMid flexNoWrap">
+                    <label class="mRight10 mBot0">사용 동물 종 :</label>
+                    <span class="data">Mouse, 랫드</span>
+                  </div>
+                  <div class="form-group flexMid flexNoWrap">
+                    <label class="mRight10 mBot0">사용 동물 수 :</label>
+                    <span class="data">Mouse 30마리, 랫드 20마리</span>
+                  </div>
+                  <div class="form-group flexTop flexNoWrap">
+                    <label class="mRight10 mBot0">실험 방법 요약 :</label>
+                    <span class="data">Mouse와 랫드를 이용한 A약물의 효과에 대한 동물실험은, 계획서를 준수하여 1차년도를 진행하였으며, 2차년도에도 변경없이 실험을 진행하고자 합니다.</span>
+                  </div>
+                </div>
+
+                
+                <div class="sign_area">
+                  <div class="checkbox checkbox-primary mTop20">
+                    <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                    <label class="custom-control-label blue_deep">위와 같이 재승인 신청서를 제출합니다.</label>
+                  </div>
+                  <div class="mTop10 flexMid">
+                    <div class="agree_date">-년 -월 -일</div>
+                    <div class="agree_author mTop0 mLeft20">연구 책임자<span class="reviewer">-</span></div>
+                  </div>
+                </div>
+                
+
+                <div class="app_anchor" id="bottom_anchor"></div>
+              </div>
+              
+
+              
+              <div id="footer_anchor"></div>
+              <div class="card-footer flexCenter side_type">
+                <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+              </div>
+
+            </div>
+            
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./_popup_application-info.js"></script>
+
+  </body>
+
+</html>

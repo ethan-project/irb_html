@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">생물안전위원회 심의 신청</h4>
+                    <div class="comment">새로운 IBC 심의 신청서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-IBC_01_1.html" class="row process_content active sub_4 active_sub_4" data-process-num="1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_02_1.html" class="row process_content" data-process-num="2">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_03_1.html" class="row process_content" data-process-num="3">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_04_1.html" class="row process_content" data-process-num="4">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-4. 실험동물 사용 유무</h4>
+                        <div class="header_comment">
+                          <div class="checkbox">
+                            <div class="custom-control custom-checkbox">
+                              
+                              
+                              <input type="checkbox" name="input_01-4" class="custom-control-input" id="ibc_general_animal_flag-main_check" data-toggle="collapse" data-target="#input_01-4_group" value="1">
+                              <label class="custom-control-label" for="ibc_general_animal_flag-main_check">해당사항 없음</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="row app_content collapse show" id="input_01-4_group">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap">
+                            
+                            
+                            <label for="ibc_general_animal_name" class="mRight10 mBot0 w150">실험동물의 종 및 strain</label>
+                            <input type="text" name="ibc_general_animal_name" maxlength="100" class="form-control flex_1" id="ibc_general_animal_name" placeholder="다수의 실험 동물을 사용하는 경우 쉼표로 분리하여 입력해 주세요.">
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="input_01-4-2" class="mRight10 mBot0 w110">IACUC 승인번호</label>
+                            <input type="text" name="input_01-4-2" maxlength="30" class="form-control w150" id="ibc_general_animal_iacuc_num" placeholder="IACUC 승인 번호">
+                            
+                            <button type="button" class="btn btn-primary btn_xxs mLeft25" id="btn_movetoIACUC">IACUC 승인 신청서 선택을 위해 이동<i class="fas fa-arrow-right mLeft5"></i></button>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label class="mRight10 mBot0 w110">IACUC 승인예정</label>
+                            <div class="custom-control custom-radio" id="ibc_general_animal_iacuc_flag_odd">
+                              <input type="radio" name="input_01-4-3" value="1" id="input_01-4-3" class="custom-control-input">
+                              <label class="custom-control-label" for="input_01-4-3">예</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20" id="ibc_general_animal_iacuc_flag_even">
+                              <input type="radio" name="input_01-4-3" value="0" id="input_01-4-4" class="custom-control-input">
+                              <label class="custom-control-label" for="input_01-4-4">아니오</label>
+                            </div>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label class="mRight10 mBot0 w110">감염실험 여부</label>
+                            <div class="custom-control custom-radio" id="ibc_general_animal_exp_flag_odd">
+                              <input type="radio" name="input_01-4-5" value="1" id="input_01-4-5" class="custom-control-input">
+                              <label class="custom-control-label" for="input_01-4-5">예</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20" id="ibc_general_animal_exp_flag_even">
+                              <input type="radio" name="input_01-4-5" value="0" id="input_01-4-6" class="custom-control-input">
+                              <label class="custom-control-label" for="input_01-4-6">아니오</label>
+                            </div>
+                          </div>
+
+                          <div class="form-group row flexTop flexNoWrap">
+                            <label for="input_01-4-7" class="mRight10 mBot0 mTop10 w110">동물실험 용도</label>
+                            <textarea class="form-control flex_1" rows="3" id="ibc_general_animal_purpose"></textarea>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li>동물실험을 수행하는 경우 동물실험윤리위원회(IACUC)의 승인을 받아야 합니다.</li>
+                            <li>IACUC 승인예정: 향후 승인 획득 예정인 경우 “예”로 표기합니다.</li>
+                            <li>동물실험 용도: 동물실험의 용도를 간략히 기재합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+
+
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-5. 기타 관련자료의 제출</h4>
+                        <div class="header_comment">MSDS, 생물안전 자료, 수입신고확인서, LMO 관련서류 등을 첨부하여 제출합니다.</div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        
+                        <div class="col-sm-9" id="ibc_general_ref">
+                          <div class="row flexMid">
+                            <label for="input_01-6_1" class="mRight10 mBot0 w110">관련 자료 1 :</label>
+                            <div class="custom-file flex_1 uploaded_file_box">
+                              <a href="#" class="data">이미 첨부된 자료 File.zip</a>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-outline-primary mLeft10 btn-file-add" title="첨부 File 추가"><i class="fas fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                          <div class="row flexMid mTop5">
+                            <label for="input_01-6_2" class="mRight10 mBot0 w110">관련 자료 2 :</label>
+                            <div class="custom-file flex_1">
+                              <input type="file" name="ref_file_1" class="custom-file-input" id="input_01-6_2">
+                              <label class="custom-file-label" for="input_01-6_2" data-button-text="첨부 File 선택"></label>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-outline-primary mLeft10 btn-file-add" title="첨부 File 추가"><i class="fas fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_ref_guide">
+                            <li>제출할 자료가 다수인 경우 추가 버튼을 눌러 첨부할 수 있습니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="javascript:void(0);" onclick="appNaviPrePage();" id="app_page_navi_pre_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  
+                  <a href="javascript:void(0);" onclick="validCheckAfterClickNextPage();" id="app_page_navi_next_btn" class="btn btn-primary waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                  <i class="fas fa-check mRight5"></i>IBC 심의 신청서 완료</a>
+                  
+                  
+                  <a href="javascript:void(0);" class="btn btn-primary waves-effect waves-light tippy-btn mLeft10" onclick="validCheckAndJumpPage();" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-check mRight5"></i>IBC 심의 신청서 완료</a>
+                  <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect tippy-btn waves-light mLeft30" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true" onclick="validCheckAfterClickTempSave();"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
+                  <a href=".../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_tempSave" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
+                <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+               
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+            <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    
+    <script src="/html/researcher/IBC/application_new-IBC_01_4.js"></script>
+  </body>
+
+</html>

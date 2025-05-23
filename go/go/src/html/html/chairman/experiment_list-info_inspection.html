@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="chairman">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    
+                    <h4 class="page-title">승인 후 점검표 - 상세 내용</h4>
+                    <div class="comment">본 실험의 승인 후 점검표를 확인합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC inspection_list_info" id="print_region">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    
+                    
+                    
+                    
+                    <div class="apptype_title">승인후 점검</div>
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid">승인 후 점검표<span class="title_desc mLeft10">(점검위원 : -)</span></h4>
+                    <p class="text-muted mb-0">승인 후 점검표 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area noPrint">
+                    
+                    <div class="step">신청서 작성</div>
+                    <div class="step active">행정 검토</div>
+                    <div class="step">최종 심의</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+
+                <div class="card-body pHside40">
+
+                  
+                  <div class="mTop20 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>실험 계획서 원안 (기본 정보)</h4>
+                    <div class="header_comment mLeft20 noPrint">
+                      <button type="button" onclick="newWindowPopup('./_popup_application-info.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>실험 계획서 원안 보기</button>
+                    </div>
+                  </div>
+                  <div class="mTop10">
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">국문 :</label>
+                      <span class="data">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">영문 :</label>
+                      <span class="data">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">연구 기간 :</label>
+                      <span class="data">~</span>
+                    </div>
+                  </div>
+
+                  <div class="mTop30 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>승인 후 점검 결과</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+                  <table class="table list_table mTop20" id="inspection_table">
+                    <colgroup>
+                      <col width="*">   
+                      <col width="400"> 
+                      <col width="*">   
+                      <col width="*">   
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="pLeft20">평가 항목</th>
+                        <th>세부 평가 항목</th>
+                        <th class="text-center">평가 결과</th>
+                        <th>점검위원 의견</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr>
+                        <td rowspan="2" class="border_right">1. 일반정보</td>
+                        <td>동물 실험 계획서의 승인 기간이 유효한가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="2" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>케이지의 명찰 기록(승인번호, 실험기간 등)이 정확한가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="1" class="border_right">2. 동물실험 정보</td>
+                        <td>동물실험계획서의 목적에 따라 실험이 진행되고 있는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="1" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="3" class="border_right">3. 실험동물 정보</td>
+                        <td>승인된 동물종/계통/수량대로 실험이 진행되고 있는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="3" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>계획한 사육시설에서 사육되고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>계획한 실험동물의 공급처에서 공급 받았는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="1" class="border_right">4. 실험물질 정보</td>
+                        <td>사용하는 투여물질의 관리가 잘되고 있는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="1" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="4" class="border_right">5. 동물실험 방법</td>
+                        <td>승인된 동물실험 일정과 절차대로 실험이 진행되고 있는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="4" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>변경사항에 대한 사전승인을 받았는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>생존성 수술을 위한 무균조작을 진행하는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>실험시설 사용 절차를 준수하는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="2" class="border_right">6. 고통등급</td>
+                        <td>사전에 평가한 고통등급보다 더 큰 고통이 관찰되지 않는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="2" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>계획한 고통경감조치를 수행하고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="3" class="border_right">7. 고통경감 방안</td>
+                        <td>실험/수술후 통증, 감염관리에 대한 모니터링과 적절한 조치를 진행하는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="3" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>수의학적 관리가 적절하게 이루어지고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>인도적인 종료시점 기준이 적용되고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="4" class="border_right">8. 사육관리</td>
+                        <td>적절한 사육공간(과밀사육, 개체간 다툼 여부 확인)을 유지하고 있는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="4" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>케이지 교체, 사료/음수 공급 등이 적절히 이루어지고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>실험 진행 없이 동물이 장기간 방치되고 있지는 않은가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>적합한 군집사육을 진행하고 있으며 풍부화를 적절하게 사용하고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="3" class="border_right">9. 안락사</td>
+                        <td>IACUC에서 승인한 안락사 지침에 따라 안락사를 수행하는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="3" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>안락사 후 적합한 방법에 의해 사체를 폐기 하는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>사체 폐기에 대한 기록을 적절히 하는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr class="border_top">
+                        <td rowspan="2" class="border_right">10. 연구자 준수사항</td>
+                        <td>연구수행자를 위한 안전대책이 잘 준비되어 있는가?</td>
+                        <td class="text-center">-</td>
+                        <td rowspan="2" class="border_left noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>연구책임자롸 참여하는 모든 연구원이 준수사항을 잘 이행하고 있는가?</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  
+                  <div class="sign_area">
+                    <div class="checkbox checkbox-primary mTop20">
+                      <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                      <label class="custom-control-label blue_deep" for="check_01">위와 같이 승인 후 점검표를 제출합니다.</label>
+                    </div>
+                    <div class="mTop10 flexMid">
+                      <div class="agree_date">-년 -월 -일</div>
+                      <div class="agree_author mTop0 mLeft20">점검 위원<span class="reviewer">-</span></div>
+                    </div>
+                  </div>
+                  
+                  <div class="app_anchor" id="bottom_anchor"></div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                  <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                  <a href="./inspection_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>점검표 목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_spinner" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered flexCentral flexColumn">
+        <div class="spinner-border text-light" role="status"></div>
+        <div class="spinner_comment mTop15">저장중 입니다.</div>
+      </div>
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    
+    <script src="./inspection_list-info.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+  </body>
+
+</html>

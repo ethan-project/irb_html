@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[IPSAP] ${기관명}의 사용자 탈퇴 안내입니다.</title>
+  </head>
+  <body>
+    <table style="width:100%; height:100%; box-sizing:border-box;
+                  font-family:'맑은 고딕','Malgun Gothic','돋움',dotum,sans-serif !important; font-size:14px; letter-spacing:-0.5px;
+                  background-color:transparent; margin:0;" bgcolor="transparent">
+      <tbody>
+        <tr>
+          <td align="center" valign="middle">
+            <table width="800" cellpadding="0" cellspacing="0" border="0" bgcolor="transparent"
+                   style="max-width:800px; width:800px; margin-top:30px; margin-left:30px; box-shadow:0 0 0 3px #DCE6F0;
+                          border:1px solid #C8D2DC; border-radius:10px; background:#FFFFFF;">
+              <tbody>
+                <tr>
+                  <td style="padding:20px 30px 10px 20px; border-radius:0;">
+                    <img height="60" src="/attach/org/sample_org/sample_logo.png" alt="기관 Logo" align="left" style="">
+                    <img src="/assets/images/common/IPSAP_logo_top_fitted.png" alt="IPSAP Logo" align="right" style="padding:15px 0px 0px 0px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px 20px 20px 20px; font-size:18px; font-weight:bold; color:#FFFFFF; background:#283C64;" align="center" valign="top">
+                    ${기관명} IPSAP 서비스 사용자 탈퇴 안내
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:40px; word-break:keep-all; line-height:1.5em;">
+                    <div><strong>${수신자}</strong>님, 안녕하세요. 동물실험 연구윤리 심사절차 표준화 플랫폼(IPSAP)의 관리자입니다.</div>
+                    <div style="margin-top:1.2em;"><strong style="padding:0 3px; background:#D2F0FF;">${대상자}</strong>님이 <strong>${기관명} IPSAP 서비스에서</strong> <strong style="padding:0 3px; background:#D2F0FF;">탈퇴될 예정</strong>입니다.<br>
+                      서비스 탈퇴를 원하지 않을 경우, 탈퇴 신청일로부터 <strong style="padding:0 3px; background:#FFD2EB;">7일 이내에 탈퇴를 철회할 수 있습니다.</strong><br>
+                      (서비스 탈퇴 철회는 Email 하단의 <strong style="padding:0 3px; background:#FFD2EB;">탈퇴 철회 바로가기를 통해서만 가능</strong>합니다.)</div>
+                    <div style="margin-top:1.2em;">※ ${기관명}의 IPSAP 서비스 사용자 탈퇴는 <strong style="text-decoration:underline;">IPSAP 서비스 자체 계정의 탈퇴를 의미하는 것은 아니며,</strong><br>
+                      <strong style="margin-left:1.2em; text-decoration:underline;">해당 기관에서의 서비스만 사용이 제한되는 것</strong>을 의미합니다.<br>
+                      <strong style="margin-left:1.2em; padding:0 3px; background:#D2F0FF;">타 기관의 IPSAP 서비스 이용에는 영향이 없으니</strong> 참고하시기 바랍니다.
+                    </div>
+                    <br>
+
+                    <table width="100%" align="center" bgcolor="#F4F5F7" style="border:1px solid #DFE2E7; border-radius:5px; margin:0 auto;">
+                      <tr>
+                        <td height="10"></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">기관명:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${기관명}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">이름:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${대상자}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">아이디(Email):</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${아이디}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">권한:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${권한}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">철회 가능 기간:</td>
+                        <td width="5"></td>
+                        <!-- 신청일 +6일 까지 신청 가능 -->
+                        <!-- 신청일 +7일, 00:00:00 에 탈퇴 실행 -->
+                        <td align="left"><strong>${철회가능기간}</strong></td>
+                      </tr>
+                      <tr>
+                        <td height="10"></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </table>
+                    <br>
+
+                    <div style="text-align:center;">
+                      <table cellpadding="0" cellspacing="0" align="center" style="border:1px solid #283C64; border-radius:3px; background:#3C5078; margin:0 auto;">
+                        <tr>
+                          <td valign="middle" align="center" height="40" bgcolor="##3C5078" onMouseOver="this.style.backgroundColor='#283C64'" onMouseOut="this.style.backgroundColor='#3C5078'">
+                            <div style="margin:0; padding:0; mso-table-lspace:0; mso-table-rspace:0;">
+                              <a href="${메일링크}" style="padding:11px 30px 12px 30px; font-weight:bold; text-decoration:none; color:#ffffff; border:0; mso-table-lspace:0; mso-table-rspace:0;" border="0">탈퇴 철회 바로가기</a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom:20px; font-size:11px; color:#3C5078" align="center">
+                    본 이메일은 발신 전용이므로 회신할 수 없습니다. 기타 문의사항은 ${기관명}의 ${행정간사} <span style="color:#1E64FF;"><${행정간사전화}, ${행정간사email}></span> 로 연락주시기 바랍니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border-top:1px solid #D2DCE6; padding:15px 0; font-size:11px; color:#3C5078; background:#F4F5F7" align="center">
+                    서울특별시 강남구 언주로 732, 세종빌딩 9층<span style="margin:0 10px; opacity:0.5">|</span><a href="https://www.ipsap.co.kr" style="text-decoration:none;">https://www.ipsap.co.kr</a><span style="margin:0 10px; opacity:0.5">|</span><a href="mailto:${서비스관리자email};" style="text-decoration:none;">${서비스관리자email}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10" style="border-top:1px solid #DCE6F0; background:none;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

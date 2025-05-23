@@ -1,0 +1,165 @@
+
+<div class="topbar">
+  
+  <nav class="navbar-custom flexMid">
+
+    <div class="top_left flexMid">
+      <ul class="list-unstyled topbar-nav mb-0" id="nav_btn">
+        <li>
+          <button class="nav-link button-menu-mobile">
+            <i class="fas fa-angle-double-left align-self-center topbar-icon"></i>
+          </button>
+        </li>
+      </ul>
+
+      <div class="auth_menu">
+        <div class="auth_title">나의 권한:</div>
+        <a class="btn_auth officer" href="/html/officer/dashboard.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>행정 간사</a>
+        
+        <a class="btn_auth researcher" href="/html/researcher/dashboard.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>연구원</a>
+        <a class="btn_auth committee" href="/html/committee/review_list.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>심사 위원</a>
+        <a class="btn_auth chairman" href="/html/chairman/dashboard.html">
+          <i class="fas fa-check-circle onlyActive mRight5"></i>위원장</a>
+      </div>
+    </div>
+
+    
+    <ul class="list-unstyled flexMid" id="gnb_menu">
+      <li><a href="/html/member/board_01-list.html" class="">공지사항</a></li>
+      <li><a href="/html/member/board_02-list.html" class="">자료실</a></li>
+    </ul>
+
+    <ul class="list-unstyled topbar-nav mb-0">
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#">
+          <span class="user_info text-right mRight5"><div class="user_name">홍길동</div><div class="user_depart">한국대학교 (약학과)</div></span>
+          <i data-feather="user" class="user_icon icon-dual mRight10"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="./info_me.html"><i class="fas fa-user-circle align-self-center mRight5"></i>나의 정보</a>
+          <a class="dropdown-item" id="inst_list" href="#" data-toggle="modal" data-target="#modal_all_joining"><i class="fas fa-user-circle align-self-center mRight5"></i>타기관 소속 정보</a>
+          <div class="dropdown-divider mb-0"></div>
+          <a class="dropdown-item" href="/index.html" id="ipsapLogout"><i class="fas fa-sign-out-alt align-self-center mRight5"></i>Logout</a>
+        </div>
+      </li>
+    </ul>
+    
+
+  </nav>
+  
+
+  
+  <div class="modal fade" id="modal_all_joining" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 타 기관 정보</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="la la-times"></i></span>
+          </button>
+        </div>
+
+        <div class="modal-body pHside30 inst_list">
+          <div class="text-center joining_comment">
+            현재 접속한 기관 외에 내가 소속된 타기관 목록입니다. <span class="blue_vivid">소속 기관으로 이동하기</span>를 클릭하여 해당 기관으로 이동할 수 있습니다.
+          </div>
+
+          <table class="table info_table mTop10">
+            <colgroup>
+              <col width="25%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="info_name">소속 기관명</td>
+                <td class="data flexMid">
+                  <span class="">
+                    <span class="gray mRight5">(국문)</span><span class="name_ko">한국 대학교 2</span><br>
+                    <span class="gray mRight5">(영문)</span><span class="name_en">Hankuk University Second</span>
+                  </span>
+                  <a href="#" class="btn btn-primary btn-xs mLeft30 inst_move"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="info_name">기관 코드</td>
+                <td class="data">HUN</td>
+              </tr>
+              <tr>
+                <td class="info_name">참여 권한</td>
+                <td class="data"><span class="label auth_label">심사위원</span></td>
+              </tr>
+              <tr>
+                <td class="info_name">소속 정보</td>
+                <td class="data">
+                  <span class=""><span class="gray mRight5">부서)</span><span id="dept">-</span></span>
+                  <span class="mLeft10"><span class="gray mRight5">직책)</span><span id="position">-</span></span>
+                  <span class="mLeft10"><span class="gray mRight5">분야)</span><span id="major">-</span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table info_table mTop10">
+            <colgroup>
+              <col width="25%">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="info_name">소속 기관명</td>
+                <td class="data flexMid">
+                  <span class="">
+                    <span class="gray mRight5">(국문)</span>한국 대학교 3<br>
+                    <span class="gray mRight5">(영문)</span>Hankuk University Third
+                  </span>
+                  <a href="" class="btn btn-primary btn-xs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="info_name">기관 코드</td>
+                <td class="data">HUP</td>
+              </tr>
+              <tr>
+                <td class="info_name">참여 권한</td>
+                <td class="data"><span class="label auth_label">심사위원</span></td>
+              </tr>
+              <tr>
+                <td class="info_name">소속 정보</td>
+                <td class="data">
+                  <span class=""><span class="gray mRight5">부서)</span>동물 임상실</span>
+                  <span class="mLeft10"><span class="gray mRight5">직책)</span>-</span>
+                  <span class="mLeft10"><span class="gray mRight5">분야)</span>-</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+
+
+<body>
+  <script src="/assets/vendors/crypto-js/core.js"></script>
+  <script src="/assets/vendors/crypto-js/enc-base64.js"></script>
+  <script src="/assets/vendors/crypto-js/sha256.js"></script>
+  <script src="/assets/vendors/crypto-js/md5.js"></script>
+  <script src="/assets/vendors/crypto-js/evpkdf.js"></script>
+  <script src="/assets/vendors/crypto-js/cipher-core.js"></script>
+  <script src="/assets/vendors/crypto-js/sha1.js"></script>
+  <script src="/assets/vendors/crypto-js/hmac.js"></script>
+  <script src="/assets/vendors/crypto-js/pbkdf2.js"></script>
+  <script src="/assets/vendors/crypto-js/aes.js"></script>
+</body>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title noBread">IPSAP 멤버십 Plan 관리</h4>
+                    <div class="comment">IPSAP 서비스의 멤버십 요금제 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">IPSAP 멤버십 Plan 목록</h4>
+                  <div class="flexMid">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap text-right hidden" data-buttons-text="Plan 등록, 무료 멤버십 관리" data-buttons-icon="far fa-credit-card, far fa-credit-card" data-buttons-url="./plan_list-new.html, ./plan_list-info_free.html">
+                    <colgroup>
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                    </colgroup>
+                    <thead data-init-order="0" data-order-direction="desc">
+                      <tr>
+                        <th class="text-left">멤버십 Plan 명</th>
+                        <th>월정액 (원)</th>
+                        <th>할인액 (원)</th>
+                        <th>실 월정액 (원)</th>
+                        <th>실 가입비 (원)</th>
+                        <th>이용 제한 건수</th>
+                        <th class="text-center">사용 여부</th>
+                        <th class="text-center">등록일</th>
+                      </tr>
+                    </thead>
+                    <tbody id="plan_list">
+                      
+                      <tr data-url="./plan_list-info.html" class="paid available">
+                        <td class="text-left">IPSAP 2021 프리미엄 멤버십</td>
+                        <td>330,000</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">330,000</td>
+                        <td>330,000</td>
+                        <td>무제한</td>
+                        <td class="usage_status text-center">사용</td>
+                        <td class="text-center">2020-12-15</td>
+                      </tr>
+                      <tr data-url="./plan_list-info.html" class="paid available">
+                        <td class="text-left">IPSAP 2021 프로페셔널 멤버십</td>
+                        <td>165,000</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">165,000</td>
+                        <td>330,000</td>
+                        <td>20</td>
+                        <td class="usage_status text-center">사용</td>
+                        <td class="text-center">2020-12-15</td>
+                      </tr>
+                      <tr data-url="./plan_list-info.html" class="paid available">
+                        <td class="text-left">IPSAP 2021 베이직 멤버십</td>
+                        <td>99,000</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">99,000</td>
+                        <td>330,000</td>
+                        <td>10</td>
+                        <td class="usage_status text-center">사용</td>
+                        <td class="text-center">2020-12-15</td>
+                      </tr>
+                      <tr data-url="./plan_list-info.html" class="paid unavailable">
+                        <td class="text-left">IPSAP 2020 프리미엄 멤버십</td>
+                        <td>330,000</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">330,000</td>
+                        <td>330,000</td>
+                        <td>무제한</td>
+                        <td class="usage_status text-center">미사용</td>
+                        <td class="text-center">2020-04-03</td>
+                      </tr>
+                      <tr data-url="./plan_list-info.html" class="paid unavailable">
+                        <td class="text-left">IPSAP 2020 프로페셔널 멤버십</td>
+                        <td>165,000</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">165,000</td>
+                        <td>330,000</td>
+                        <td>20</td>
+                        <td class="usage_status text-center">미사용</td>
+                        <td class="text-center">2020-04-03</td>
+                      </tr>
+                      <tr data-url="./plan_list-info.html" class="paid unavailable">
+                        <td class="text-left">IPSAP 2020 베이직 멤버십</td>
+                        <td>99,000</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">99,000</td>
+                        <td>330,000</td>
+                        <td>10</td>
+                        <td class="usage_status text-center">미사용</td>
+                        <td class="text-center">2020-04-03</td>
+                      </tr>
+                      
+                      <tr data-url="./plan_list-info_free.html" class="free available">
+                        <td class="text-left">IPSAP 무료 멤버십</td>
+                        <td>0</td>
+                        <td>0 (0%)</td>
+                        <td class="rate">0</td>
+                        <td>별도 지정</td>
+                        <td>별도 지정</td>
+                        <td class="usage_status text-center">사용</td>
+                        <td class="text-center">2020-04-03</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/admin/common_admin.js"></script>
+    <script src="./plan_list.js"></script>
+
+  </body>
+
+</html>

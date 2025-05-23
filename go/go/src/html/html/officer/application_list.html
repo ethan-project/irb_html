@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer" data-fold-menu="1660">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">전체 신청서 / 보고서</h4>
+                    <div class="comment">현재 제출된 모든 신청서 및 보고서 목록 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                <div class="card-header">
+                  <h4 class="card-title">전체 동물실험 계획서 목록</h4>
+                  <div class="flexMid">
+                    <div class="filters"></div>
+                    <div class="search_info">검색 결과</div>
+                    <div class="flexMid check_filters">
+                      <div class="appType_filters check_filter flexMid" data-column="5"></div>
+                      <div class="progress_filters check_filter flexMid" data-column="6"></div>
+                      <div class="status_filters check_filter flexMid" data-column="7"></div>
+                    </div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="datatable" class="table list_table noSide nowrap w100p" data-page-length="15">
+                    <colgroup>
+                      <col width="135">    
+                      <col width="80" class="max_w80"> 
+                      <col width="*" class="max_w250"> 
+                      <col width="80">     
+                      <col width="80">     
+                      <col width="80">     
+                      <col width="120">    
+                      <col width="80">     
+                      <col width="*">      
+                      <col width="*">      
+                      <col width="120" class="proc_exec_field">  
+                    </colgroup>
+                    <thead data-rowgroup="0" data-rowgroup-start="0" data-init-order="2,1" data-order-direction="desc,desc" data-page-length="15" data-rowgroup-folded="true" data-block-size="100">
+                      <tr>
+                        <th>접수 번호</th>
+                        <th>접수 일자</th>
+                        <th class="title max_w250">과제명 - 국문(영문)</th>
+                        <th class="thick">심의 유형</th>
+                        <th>서식 유형</th>
+                        <th>진행 단계</th>
+                        <th>진행 상태</th>
+                        <th>작성자</th>
+                        <th>소속 기관</th>
+                        <th>소속 부서</th>
+                        <th class="text-center no-order proc_exec_field noCard_type">행정 처리 실행</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0080-00</td>
+                        <td>2020-01-08</td>
+                        <td class="title">동물실험 연구 8 (임시 저장)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>신청서 작성</td>
+                        <td class="status">임시 저장</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0071-00</td>
+                        <td>2020-01-07</td>
+                        <td class="title">동물실험 연구 7-1 (행정 검토 - 심사 설정)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0070-00</td>
+                        <td>2020-01-07</td>
+                        <td class="title">동물실험 연구 7 (행정 검토)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-primary btn-xs">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0061-M1</td>
+                        <td>2020-01-05</td>
+                        <td class="title">동물실험 연구 6-1</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>변경 승인</td>
+                        <td>일반 심사</td>
+                        <td class="status">심사 종료</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                      </td></tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0060-M1</td>
+                        <td>2020-01-05</td>
+                        <td class="title">동물실험 연구 6</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>변경 승인</td>
+                        <td>최종 심의</td>
+                        <td class="status">심사 종료</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-primary btn-xs">최종 심의</a>
+                      </td></tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0050-R1</td>
+                        <td>2020-01-04</td>
+                        <td class="title">동물실험 연구 5</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>재승인</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-primary btn-xs">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0040-P1</td>
+                        <td>2020-01-03</td>
+                        <td class="title">동물실험 연구 4</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>반입 보고</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled invisible">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled invisible">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC completed">
+                        <td>HUM-2021-IA0027-00</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 2-4 (실험 종료)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>과제 수행</td>
+                        <td class="status">실험 종료</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0030-E1</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 3</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>승인 후 점검</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled invisible">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled invisible">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC inProgress">
+                        <td>HUM-2021-IA0024-00</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 2-1 (실험중)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>과제 수행</td>
+                        <td class="status">실험중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC closed">
+                        <td>HUM-2021-IA0025-00</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 2-2 (실험 종료)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>신규 승인</td>
+                        <td>과제 수행</td>
+                        <td class="status">실험 종료</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IACUC">
+                        <td>HUM-2021-IA0026-FF</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 2-3 (실험 종료 후 종료 보고)</td>
+                        <td class="committee_color thick">IACUC</td>
+                        <td>종료 보고</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled invisible">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled invisible">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IRB">
+                        <td>HUM-2021-IA0020-FF</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 2</td>
+                        <td class="committee_color thick">IRB</td>
+                        <td>종료 보고</td>
+                        <td>행정 검토</td>
+                        <td class="status">검토중</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-primary btn-xs">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                      <tr data-url="./application_list-info.html" data-id="1" class="IBC">
+                        <td>HUM-2021-IA0010-FF</td>
+                        <td>2020-01-02</td>
+                        <td class="title">동물실험 연구 1</td>
+                        <td class="committee_color thick">IBC</td>
+                        <td>종료 보고</td>
+                        <td>일반 심사</td>
+                        <td class="status">심사 종료</td>
+                        <td>***</td>
+                        <td>한국 대학교</td>
+                        <td>실험 동물실</td>
+                        <td class="text-center action_buttons">
+                          <a href="./reviewOffice_list-review.html" class="btn btn-outline-primary btn-xs disabled">행정 검토</a>
+                          <a href="./reviewOffice_list-setup.html" class="btn btn-outline-primary btn-xs disabled">심사 설정</a>
+                          <a href="./reviewConfirm_list-review" class="btn btn-outline-primary btn-xs disabled">최종 심의</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_application_delete" data-keyboard="false" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">신청서 삭제</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <i class="typcn typcn-warning-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h6 class="mBot5">[<span class="red underline app_no">HUM_2020_IA0001-M1</span>]의 신청서를 삭제 하시겠습니까?                
+                </h6>
+                <div class="thin mTop10">
+                  신청서를 삭제하면 다시 복구할수 없습니다.
+                  <div>그래도 삭제를 진행하시겠습니까?</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="deleteApp">신청서 삭제</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+    <script src="./application_list.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+  </body>
+
+</html>

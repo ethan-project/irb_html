@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">생물안전위원회 심의 신청</h4>
+                    <div class="comment">새로운 IBC 심의 신청서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-IBC_01_1.html" class="row process_content" data-process-num="1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_02_1.html" class="row process_content active sub_2 active_sub_1" data-process-num="2">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_03_1.html" class="row process_content" data-process-num="3">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_04_1.html" class="row process_content" data-process-num="4">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-1. 연구과제 기본 정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 과제명</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_title_name_ko" class="mRight10 mBot0">국문 :</label>
+                            <div class="data" id="general_title_name_ko">한국대학교 IBC 연구과제 1</div>
+                            <a href="./application_new-IBC_01_1.html" class="btn btn-primary btn_xxs mLeft25">기본 정보 수정을 위해 이동<i class="fas fa-arrow-right mLeft5"></i></a>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_title_name_en" class="mRight10 mBot0">영문 :</label>
+                            <div class="data" id="general_title_name_en">Hankook University IBC research subject No.1</div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li class="red">면제 실험인 경우에는 연구계획서는 작성하지 않습니다.</li>
+                            <li>국가/기관 승인 또는 기관신고 실험인 경우에만 연구계획서를 작성합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 책임자</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="15%">
+                              <col width="30%">
+                              <col width="15%">
+                              <col width="40%">
+                            </colgroup>
+                            <tbody id="general_director">
+                              <tr>
+                                <td class="info_name">성명</td>
+                                <td class="data" id="general_director_name">홍길동</td>
+                                <td class="info_name">Email</td>
+                                <td class="data" id="general_director_email">gildong.hong@lab.co.kr</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">소속 부서</td>
+                                <td class="data" id="general_director_dept">동물 실험실</td>
+                                <td class="info_name">교육 일자</td>
+                                <td class="data" id="general_director_edu_date">2020-01-06</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">직책</td>
+                                <td class="data" id="general_director_position">교수</td>
+                                <td class="info_name">교육 기관명</td>
+                                <td class="data" id="general_director_edu_instition">수의사 협회</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">전공 분야</td>
+                                <td class="data" id="general_director_major_field">수의학</td>
+                                <td class="info_name">교육 이수 번호</td>
+                                <td class="data" id="general_director_edu_course_num">000-0000-0000</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">휴대 전화</td>
+                                <td class="data" id="general_director_phoneno">010-1234-5678</td>
+                                <td class="info_name">교육 이수 정보</td>
+                                <td class="data" id="general_director_edu_course"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_director_guide">
+                            <li>연구책임자의 교육이수 정보가 최신의 정보인지 확인하고 실험 경력년수를 입력합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>실험 분류</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="data" id="classification">국가 승인실험</div>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-2. 실험 구분</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <li class="content_comment">해당사항에 모두 체크해 주세요.</li>
+                          <div id="ibc_plan_classification">
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="check_02-2_1" value="1">
+                              <label for="check_02-2_1">LMO 이용</label>
+                            </div>
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="check_02-2_2" value="2">
+                              <label for="check_02-2_2">LMO 개발</label>
+                            </div>
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="check_02-2_3" value="3">
+                              <label for="check_02-2_3">일반 생물체 이용</label>
+                            </div>
+                            <div class="checkbox checkbox-primary flexMid pLeft3">
+                              <input type="checkbox" id="check_02-2_4" value="new" data-custom-toggle="visible">
+                              <label class="w50" for="check_02-2_4">기타</label>
+                              <input type="text" class="form-control form-control-sm hidden" placeholder="기타 내용을 입력해 주세요.">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li>해당 항목이 없는 경우 기타에 표기하고 상세내용을 입력해 주십시오.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="javascript:void(0);" onclick="appNaviPrePage();" id="app_page_navi_pre_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="javascript:void(0);" onclick="validCheckAfterClickNextPage();" id="app_page_navi_next_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" onclick="validCheckAfterClickTempSave();"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
+                  <a href="../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_tempSave" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
+                <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+               
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+            <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    
+    <script src="/html/researcher/IBC/application_new-IBC_02_1.js"></script>
+
+  </body>
+
+</html>

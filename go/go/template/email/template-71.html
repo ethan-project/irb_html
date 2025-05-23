@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[IPSAP] ${기관명}이(가) ${멤버십명}에 가입하였습니다.</title>
+  </head>
+  <body>
+    <table style="width:100%; height:100%; box-sizing:border-box;
+                  font-family:'맑은 고딕','Malgun Gothic','돋움',dotum,sans-serif !important; font-size:14px; letter-spacing:-0.5px;
+                  background-color:transparent; margin:0;" bgcolor="transparent">
+      <tbody>
+        <tr>
+          <td align="center" valign="middle">
+            <table width="800" cellpadding="0" cellspacing="0" border="0" bgcolor="transparent"
+                   style="max-width:800px; width:800px; margin-top:30px; margin-left:30px; box-shadow:0 0 0 3px #DCE6F0;
+                          border:1px solid #C8D2DC; border-radius:10px; background:#FFFFFF;">
+              <tbody>
+                <tr>
+                  <td style="padding:20px 30px 10px 20px; border-radius:0;">
+                    <img height="60" src="/attach/org/sample_org/sample_logo.png" alt="기관 Logo" align="left" style="">
+                    <img src="/assets/images/common/IPSAP_logo_top_fitted.png" alt="IPSAP Logo" align="right" style="padding:15px 0px 0px 0px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px 20px 20px 20px; font-size:18px; font-weight:bold; color:#FFFFFF; background:#283C64;" align="center" valign="top">
+                    ${기관명}의 IPSAP 서비스 멤버십 가입 알림
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:40px; word-break:keep-all; line-height:1.5em;">
+                    <div><strong>${기관명}</strong>이(가) IPSAP 서비스 <strong style="padding:0 3px; background:#FFD2EB;">${멤버십명}에 가입</strong>하였습니다.</div>
+                    <div style="margin-top:1.2em;">멤버십의 이용 기간은 <strong style="padding:0 3px; background:#FFD2EB;">가입일의 다음달 1일부터 1년(12개월) 간</strong>이며,<br>
+                      <strong style="padding:0 3px; background:#FFD2EB;">가입 당월의 말일까지</strong>는 <strong style="padding:0 3px; background:#FFD2EB;">무료로 서비스를 이용</strong>할 수 있으니, 서비스 이용에 착오 없으시기 바랍니다.<br>
+                      <strong style="text-decoration:underline;">무료 이용 기간동안 작성한 데이터도, 무료 종료 이후에 계속 이용할 수 있습니다.</strong></div>
+                    <div style="margin-top:1.2em;"><strong style="text-decoration:underline;">서비스 월이용료는 가입 다음달부터 결제</strong>가 진행될 예정입니다.<br>
+                      상세한 결제 내역은 IPSAP 서비스에서 확인할 수 있습니다.</div>
+                    <br>
+
+                    <table width="100%" align="center" bgcolor="#F4F5F7" style="border:1px solid #DFE2E7; border-radius:5px; margin:0 auto;">
+                      <tr>
+                        <td height="10"></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">기관명:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${기관명}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">멤버십 명:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${멤버십명}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">멤버십 이용 기간:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${멤버십가입일} ~ ${멤버십만료일}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">무료 이용 기간:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${멤버십가입일} ~ ${무료만료일}</strong> (<strong style="color:#F00;">${무료일수}</strong> 일)</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"><hr style="width:90%; height:0; border:none; border-top:1px solid #DFE2E7"></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">가입비 결제 일시:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${결제일시}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">가입비 결제 번호:</td>
+                        <td width="5"></td>
+                        <td align="left"><strong>${결제번호}</strong></td>
+                      </tr>
+                      <tr>
+                        <td width="25%" height="30" align="right">가입비 결제 금액:</td>
+                        <td width="5"></td>
+                        <td align="left" style="font-size:16px; font-weight:bold; color:#1E64FF;"><strong>${결제금액}</strong></td>
+                      </tr>
+                      <tr>
+                        <td height="10"></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </table>
+                    <br>
+
+                    <div style="text-align:center;">
+                      <table cellpadding="0" cellspacing="0" align="center" style="border:1px solid #283C64; border-radius:3px; background:#3C5078; margin:0 auto;">
+                        <tr>
+                          <td valign="middle" align="center" height="40" bgcolor="##3C5078" onMouseOver="this.style.backgroundColor='#283C64'" onMouseOut="this.style.backgroundColor='#3C5078'">
+                            <div style="margin:0; padding:0; mso-table-lspace:0; mso-table-rspace:0;">
+                              <a href="${메일링크}" style="padding:11px 30px 12px 30px; font-weight:bold; text-decoration:none; color:#ffffff; border:0; mso-table-lspace:0; mso-table-rspace:0;" border="0">
+                                서비스 바로가기
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom:20px; font-size:11px; color:#3C5078" align="center">
+                    본 이메일은 발신 전용이므로 회신할 수 없습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border-top:1px solid #D2DCE6; padding:15px 0; font-size:11px; color:#3C5078; background:#F4F5F7" align="center">
+                    서울특별시 강남구 언주로 732, 세종빌딩 9층<span style="margin:0 10px; opacity:0.5">|</span><a href="https://www.ipsap.co.kr" style="text-decoration:none;">https://www.ipsap.co.kr</a><span style="margin:0 10px; opacity:0.5">|</span><a href="mailto:${서비스관리자email};" style="text-decoration:none;">${서비스관리자email}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="10" style="border-top:1px solid #DCE6F0; background:none;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

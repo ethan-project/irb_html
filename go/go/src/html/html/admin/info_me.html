@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content" id="pdf_area">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">플랫폼 관리자 정보 관리</h4>
+                    <div class="comment">플랫폼 관리자의 정보를 확인, 변경할 수 있습니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" id="all_info_me-edit">
+                <div class="card-header">
+                  <div class="comment">※ <span class="underline">플랫폼 관리자의 비밀번호를 분실할 경우</span> <span class="blue_vivid">관리자로 접속할 수 없으니</span> 주의하시기 바랍니다.</div>
+                </div>
+                <div class="card-body pVside20 pHside40">
+
+                    <div class="row">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>플랫폼 관리자 정보</h4>
+                    </div>
+
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name required">플랫폼 관리자명</td>
+                            <td><input type="text" maxlength="20" name="admin_name" class="form-control form-control-sm w250" id="admin_name" placeholder="예) 관리자" required></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <button type="button" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_confirm"><i class="fas fa-check mRight5"></i>관리자 정보 변경</button>
+                  <a href="/html/admin/dashboard.html" class="btn btn-outline-secondary waves-effect waves-light mLeft10"><i class="fas fa-times mRight5"></i>취소</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_change_pw" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">비밀번호 변경</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body pHside30">
+            <form>
+              <label for="old_password" class="mBot3">현재의 비밀번호</label>
+              <input type="password" maxlength="20" class="form-control form-control-sm" id="old_password" placeholder="나의 현재 비밀번호">
+              <label for="new_password" class="mBot3 mTop10">새로운 비밀번호</label>
+              <input type="password" maxlength="20" class="form-control form-control-sm" id="new_password" placeholder="영문, 숫자, 특수문자 (최소8자리)">
+              <label for="renew_password" class="mBot3 mTop10">비밀번호 재입력</label>
+              <div>
+                <input type="password" maxlength="20" class="form-control form-control-sm" id="renew_password" placeholder="비밀번호 재입력">
+
+                <div class="blue_deep pwd_blue mTop5" hidden>비밀번호가 일치합니다.</div>
+
+                <div class="red pwd_red mTop5" hidden>비밀번호가 일치하지 않습니다.</div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm" id="btn_init_pw">비밀번호 변경</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_confirm">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">관리자 정보 변경 안내</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <i class="typcn typcn-phone-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">관리자 정보를 <span class="blue_deep">변경</span> 하시겠습니까?</h5>
+                <span class="">
+                  관리자 정보는 <span class="red">각종 문의처 정보</span>에 사용되니 주의하시기 바랍니다.
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btn_confirm">관리자 정보 변경</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="/html/admin/common_admin.js"></script>
+    <script src="/html/admin/info_me.js"></script>
+
+  </body>
+
+</html>

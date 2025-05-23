@@ -1,0 +1,99 @@
+<div class="card-footer flexCenter">
+
+  <a href="javascript:void(0);" onclick="appNaviPrePage();" id="app_page_navi_pre_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+     <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+
+  <a href="javascript:void(0);" onclick="validCheckAfterClickNextPage();" id="app_page_navi_next_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+     <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+
+  <a href="javascript:void(0);" onclick="validCheckAfterClickTempSave();" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" id="btn_tempSave">
+     <i class="fas fa-check mRight5"></i>임시 저장</a>
+
+  <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
+  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0">
+    <i class="fas fa-bars mRight5"></i>목록 보기</a>
+
+</div>
+
+
+<div class="modal fade" id="modal_tempSave" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+      </div>
+      
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-3 text-right pRight10">
+            
+            
+            
+            <i class="typcn typcn-input-checked symbol"></i>
+            
+            
+          </div>
+          <div class="col-lg-9 pBot10">
+            <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
+            <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+           
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" id="btn_keep" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+        <a href="./application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="modal_del_app" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title m-0 text-white">작성중인 신청서 삭제</h5>
+      </div>
+      
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-3 text-right pRight10">
+            
+            <i class="typcn typcn-warning-outline symbol"></i>
+            
+            
+            
+            
+          </div>
+          <div class="col-lg-9 pBot10">
+            <h5 class="mBot5">작성중인 신청서를 <span class="red">삭제</span>하시겠습니까?</h5>
+            <span class=""><span class="red">삭제한 신청서는 복구가 불가능</span>하니 주의하시기 바랍니다.</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-outline-danger" onclick="tempSaveAppDelete();">신청서 삭제
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+      </button></div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="modal_spinner" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered flexCentral flexColumn">
+    <div class="spinner-border text-light" role="status"></div>
+    <div class="spinner_comment mTop15">저장중 입니다.</div>
+  </div>
+</div>
+

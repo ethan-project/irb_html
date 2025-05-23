@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="./assets/images/common/favicon.png">
+
+    <!-- App css -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="./plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/common/common.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery  -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./assets/js/metismenu.min.js"></script> -->
+    <script src="./assets/js/waves.js"></script>
+    <script src="./assets/js/feather.min.js"></script>
+    <script src="./assets/js/simplebar.min.js"></script>
+    <script src="./assets/js/moment.js"></script>
+    <!-- <script src="./plugins/daterangepicker/daterangepicker.js"></script> -->
+    <!-- <script src="./plugins/tippy/tippy.all.min.js"></script> -->
+
+    <!-- common -->
+    <script src="./assets/js/common/const.js"></script>
+    <script src="./assets/js/common/common.js"></script>
+    <!-- <script src="./assets/js/common/api.js"></script> -->
+    <script src='./assets/js/ipsap/ipsap_application_common.js'></script>;
+
+    <!-- 암호화 함수 정의 -->
+    <script src="./assets/vendors/crypto-js/core.js"></script>
+    <script src="./assets/vendors/crypto-js/enc-base64.js"></script>
+    <script src="./assets/vendors/crypto-js/md5.js"></script>
+    <script src="./assets/vendors/crypto-js/evpkdf.js"></script>
+    <script src="./assets/vendors/crypto-js/cipher-core.js"></script>
+    <script src="./assets/vendors/crypto-js/sha1.js"></script>
+    <script src="./assets/vendors/crypto-js/hmac.js"></script>
+    <script src="./assets/vendors/crypto-js/pbkdf2.js"></script>
+    <script src="./assets/vendors/crypto-js/aes.js"></script>
+    <!-- login -->
+    <!-- <script src="login.js"></script> -->
+    <script src="login3.js"></script>
+
+    <!-- App js -->
+    <!-- <script src="./assets/js/app.js"></script> -->
+
+    <!-- custom js for this page -->
+
+  </head>
+
+  <body class="enlarge-menu">
+
+    <!-- Logo -->
+    <a href="/index.html" class="logo_single">
+      <img src="/assets/images/common/IPSAP_logo_top.png">
+    </a>
+    <!--//logo-->
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+
+              <div class="page_body_box flexCentral flexColumn">
+                <div class="page-title-box">
+                  <div class="row">
+                    <div class="col text-center">
+                      <h4 class="page-title">LOGIN</h4>
+                      <div class="comment">IPSAP 온라인 심사 플랫폼 로그인</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border_area flexCentral">
+                  <div class="card cmte_type">
+                    <!-- <div class="card-header">
+                      <h4 class="card-title">LOGIN</h4>
+                    </div> -->
+                    <div class="card-body">
+                      <form>
+                        <ul class="list-group list-group-flush">
+                          <div class="form-group list-group-item border-0">
+                            <label for="user_id" class="mRight10 mBot0 w80">ID :</label>
+                            <input type="email" name="email" maxlength="100" class="form-control" placeholder="Email">
+                          </div>
+                          <div class="form-group list-group-item border-0">
+                            <label for="user_pw" class="mRight10 mBot0 w80">PASSWORD :</label>
+                            <input type="password" name="pw" maxlength="100" class="form-control">
+                          </div>
+                        </ul>
+                      </form>
+                    </div>
+                    <div class="card-footer">
+                      <button type="button" class="btn btn-primary btn-block" id="btnLogin"><i class="fas fa-lock-open mRight5"></i>Login</button>
+                      <!-- <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal_all_joining"><i class="fas fa-lock-open mRight5"></i>기관 목록 (Sample)</button> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="mTop20">
+                  <div class="row">
+                    <div class="col text-center">
+                      <!-- <div class="comment">※ <span class="blue_deep">반입 보고서</span>, <span class="blue_deep">종료 보고서</span>는 <span class="fw_bold blue_vivid">승인 후 관리</span> 메뉴에서 작성할 수 있습니다.</div> -->
+                    </div>
+                  </div><!--//row-->
+                </div>
+              </div>
+
+            </div><!--//col-->
+          </div><!--//row-->
+          <!--//page title end breadcrumb -->
+
+        </div>
+        <!--//container-fluid -->
+
+        <footer id="footer" class="footer text-center"></footer>
+        <!--//footer-->
+      </div>
+      <!--//page content -->
+    </div>
+    <!--//page-wrapper -->
+
+    <!-- Modal: 나의 소속 기관 목록 -->
+    <!-- <div class="modal fade" id="modal_all_joining" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 기관 목록</h5>
+            <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body pHside30">
+            <div class="text-center">
+              현재 소속된 모든 기관 목록입니다. <span class="blue_vivid">소속 기관으로 이동하기</span>를 클릭하여 해당 기관으로 이동할 수 있습니다.
+            </div>
+
+            <table class="table info_table onHover mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="info_name">소속 기관명</td>
+                  <td class="data flexMid">
+                    <span class="">
+                      <span class="gray mRight5">(국문)</span>한국 대학교 2<br>
+                      <span class="gray mRight5">(영문)</span>Hankuk University Second
+                    </span>
+                    <a href="" class="btn btn-primary btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="info_name">참여 권한</td>
+                  <td class="data"><span class="label auth_label">심사위원</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="table info_table onHover mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="info_name">소속 기관명</td>
+                  <td class="data flexMid">
+                    <span class="">
+                      <span class="gray mRight5">(국문)</span>한국 대학교 3<br>
+                      <span class="gray mRight5">(영문)</span>Hankuk University Third
+                    </span>
+                    <a href="" class="btn btn-primary btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="info_name">참여 권한</td>
+                  <td class="data"><span class="label auth_label">심사위원</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <!--//modal-->
+
+    <!-- Modal: 다른 기관으로 로그인 알림 -->
+    <div class="modal fade" id="modal_other_institution_alert">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">타 기관 로그인 안내</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <i class="typcn typcn-warning-outline symbol"></i>
+                <!-- v -->
+                <!-- <i class="typcn typcn-input-checked symbol"></i> -->
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5"><span class="underline">현재 요청하신 로그인 정보는</span>
+                  <div>송부된 <span class="red">메일의 로그인 정보</span>와 다릅니다.</div>
+                  <div>[입력하신 ID의 소속 기관과 메일로 요청된 소속 기관 정보가 다릅니다.]</div>
+                  <div><span class="red">소속 기관으로 가기</span>를 누르시면 <span class="underline">메일로 요청된 소속 기관으로 재로그인 후 이동합니다.</span></div>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="mailLinkRedirect">소속 기관으로 가기</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+
+  </body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">사용자 등록</h4>
+                    <div class="comment">기관의 실험, 심사, 행정에 참여할 수 있는 사용자를 일괄로 등록합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">사용자 신규 등록</h4>
+                  <ul class="mBot0 pLeft30">
+                    <li><span class="pink_vivid black">등록되는 사용자의 개인 정보 보호를 위해 최소한의 본인 확인이 가능한 정보로 임시 계정을 생성합니다.</span></li>
+                    <li>동물실험 심사절차에 참여하는 위원장, 연구원, 심사위원 및 행정 담당자를 등록해 주세요.</li>
+                    <li>연구원은 연구 책임자와 동물실험 수행자를 모두 등록해 주세요.</li>
+                    <li>심사위원은 전문위원과 일반위원(내부/외부)을 모두 등록해 주세요.</li>
+                    <li>행정 담당자는 행정간사 이외에 행정업무를 처리하는 담당자를 등록할 경우 선택해 주세요.<br>
+                        ※ <span class="red">행정 담당자</span>는 <span class="pink_vivid">행정 업무자(행정 간사, 행정 담당자) 등록 권한을 제외한 모든 권한</span>이 행정 간사와 동일합니다.</li>
+                    <li>사용자의 Email과 휴대 전화 번호 등의 연락처를 모두 입력한 경우에만 등록이 가능합니다.</li>
+                  </ul>
+                </div>
+                <div class="card-body pVside20 pHside40">
+
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>사용자 일괄 등록</h4>
+                  </div>
+                  
+                  <div class="pHside10 mTop10">
+                    <div class="">아래의 Excel 양식을 Download 받아 작성 후 등록해 주세요.</div>
+                    <div class="red mBot10">※ 행정 간사와 행정 담당자는 일괄 등록할 수 없습니다.</div>
+                    <a href="/attach/sample/multiple_user_sample.xls" class="btn btn-outline-primary waves-effect waves-light btn-block max_w600 excel_color">
+                      <i class="fas fa-table mRight5"></i>Excel 양식 다운로드
+                    </a>
+                  </div>
+                  <div class="pHside10 mTop30">
+                    <div class="mBot10">양식에 맞춰 작성이 완료된 Excel 파일을 등록해 주세요.</div>
+                    <div class="custom-file flexMid max_w600">
+                      <input type="file" name="register_member_file" class="custom-file-input" id="register_member_file" accept=".xls, .xlsx">
+                      <label class="custom-file-label excel_color" for="register_member_file" data-button-text="Upload할 양식 선택"></label>
+                    </div>
+                  </div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="#" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_new_user"><i class="fas fa-check mRight5"></i>사용자 일괄 등록</a>
+                  <a href="./staff_list.html" class="btn btn-outline-secondary waves-effect waves-light mLeft10"><i class="fas fa-times mRight5"></i>취소</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_new_user" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">사용자 일괄 등록 확인</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">
+                  새로운 사용자를 일괄로 등록하시겠습니까?<br>
+                  등록한 <span class="red">연락처로 사용자 등록 안내가 일괄로 발송</span>됩니다.
+                </h5>
+                <span class="bg-soft-secondary">
+                  등록한 기본 정보외에 상세한 사용자 정보와 약관 동의 과정은,<br>
+                  해당 사용자가 로그인한 후 직접 진행합니다.
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="#" class="btn btn-primary" id="btn_register_batch">사용자 일괄 등록 실행</a>
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_failure" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">사용자 일괄 등록 실패</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">
+                  사용자 일괄 등록을 실패하였습니다.<br>
+                  사유는 아래와 같습니다.
+                </h5>
+                <h5 class="mBot5">
+                  <span class="red" id="failure_message"></span>
+                </h5>
+                <span class="bg-soft-secondary">
+                  해당 사유에 관한 문의가 있으시면<br>
+                  02-1234-5678 로 문의주시기 바랍니다.
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary" data-dismiss="modal">확인</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+    <script src="/assets/vendors/sheetjs/xlsx.full.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./staff_list-new_multiple.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,2715 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    <!-- App css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">생물안전위원회 심의 신청서 - 원안</h4>
+                    <div class="comment">변경 심의를 신청할 IBC 심의 신청서 원안의 내용입니다.</div>
+                  </div>
+                </div><!--//row-->
+              </div>
+
+              <!-- class: IBC -->
+              <div class="card thick IBC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    <!-- <div class="apptype_title">변경 심의</div> -->
+
+                    <!-- <div class="apptype_date">미승인</div> -->
+                    <div class="apptype_date">승인: -</div>
+                    <!-- <div class="apptype_date">조건부 승인: -</div> -->
+                    <!-- <div class="apptype_date">보완후 재심</div> -->
+                    <!-- <div class="apptype_date">반려</div> -->
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <!-- 전문, 일반, 최종 심의 모두 "심의 진행" -->
+                    <div class="step">심의 진행</div>
+                    <!-- 실험 수행은 신규 심의만 해당 -->
+                    <!-- <div class="step active">실험 수행</div> -->
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="">
+                        <!--
+                          Process 비활성화 : .inactive
+
+                          * 신청서 작성 상태일 경우
+                          작성중   : .pending   (작성한 항목과 미완료 항목이 같이 존재하는 경우)
+                          작성완료 : .completed (모든 항목의 작성이 완료된 경우)
+                          보완중   : .supplement(행정 검토에 의해 보완이 필요한 경우).completed (모든 항목의 작성이 완료된 경우)
+
+                          * 신청서가 제출된 이후의 상태(행정검토 ~ 최종심의)일 경우
+                          검토중   : .pending   (검토한 항목과 미완료 항목이 같이 존재하는 경우)
+                          검토완료 : .completed (모든 항목의 검토가 완료된 경우)
+                         -->
+                        <div class="app_summary">
+                          <span class="review_type committee_color IBC">IBC</span>
+                          <div class="card-title task_title_ko">-</div>
+                          <div class="title_desc task_director_all">(연구 책임자 : -)</div>
+                          <div class="text-muted mb-0"><span class="register_num">-</span></div>
+                        </div>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="1" data-move-to="#form_01-1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="2" data-move-to="#form_02-1">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="3" data-move-to="#form_03-1">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="javascript:void(0);" class="row process_content" data-process-num="4" data-move-to="#form_04-1">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+
+                    <!-- <div class="col-sm-10 app_col app_contents" id="all_app_r"></div> -->
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      <!-- 항목 01-1 -->
+                      <div class="app_anchor" id="form_01-1"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-1. 연구과제 기본 정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- 항목 01-1-1 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 과제명</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_title_name_ko" class="mRight10 mBot0 w50">국문 :</label>
+                            <span class="data">한국 대학교</span>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_title_name_en" class="mRight10 mBot0 w50">영문 :</label>
+                            <span class="data">Hankook Univ.</span>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li>동물실험의 목적과 내용을 내포하는 과제명을 간결, 명확하게 지정합니다.</li>
+                            <li>영문 과제명은 국제적으로 통용될 수 있도록 지정합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <!-- 항목 01-1-2 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 기간</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid">
+                            <label class="mRight10 mBot0 w50">시작일 :</label>
+                            <span>IBC 위원회 승인일</span>
+                          </div>
+                          <div class="form-group row flexMid">
+                            <label for="general_end_date" class="mRight10 mBot0 w50">종료일 :</label>
+                            <input class="form-control wCalendar" type="date" value="2021-05-05" id="general_end_date" readonly>
+                          </div>
+                          <div class="form-group row flexMid">
+                            <label for="general_experiment_cnt" class="mRight10 mBot0">동물 실험의 총 횟수 :</label>
+                            <input type="number" name="exp_num" class="form-control w70" min="0" value="5" id="general_experiment_cnt" readonly>
+                            <label for="general_experiment_cnt" class="mLeft5 mBot0">회</label>
+                            <label for="general_experiment_degree" class="mRight10 mBot0 mLeft30">동물 실험의 총 차수 :</label>
+                            <input type="number" name="exp_times" class="form-control w70" min="0" value="5" id="general_experiment_degree" readonly>
+                            <label for="general_experiment_degree" class="mLeft5 mBot0">회</label>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_date_cnt_guide">
+                            <li>연구기간은 최대 3년까지 가능하며, 연장(계속) 신청은 1회에 한하여 최대 2년까지 가능합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <!-- 항목 01-1-3 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구비 지원 기관</h5>
+                        <div class="header_comment">
+                          <div class="checkbox">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" name="agree_form_01-3" class="custom-control-input" id="general_fund_org-main_check" data-toggle="collapse" data-target="#input_01-3_group" value="1" disabled>
+                              <label class="custom-control-label" for="general_fund_org-main_check">해당사항 없음</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content collapse show" id="input_01-3_group">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_fund_org_name" class="mRight10 mBot0 w100">연구 기관명 :</label>
+                            <input type="text" name="org_name" maxlength="30" class="form-control"  id="general_fund_org_name" placeholder="연구비 지원기관명을 입려해 주세요." readonly>
+                          </div>
+                          <div class="row">
+                            <label for="input_01-3_3" class="mRight10 mBot0 w100">이해 상충여부 :</label>
+                            <div id="general_fund_conflict">
+                              <div class="custom-control custom-radio d-block">
+                                <input type="radio" name="org_conflict" value="1" class="custom-control-input" id="input_01-3_3" checked readonly>
+                                <label class="custom-control-label" for="input_01-3_3">이해상충 없음 : 연구비지원기관과 경제적 또는 기타 이행상충 없음을 신고함</label>
+                              </div>
+                              <div class="custom-control custom-radio mTop10">
+                                <input type="radio" name="org_conflict" value="2" class="custom-control-input" id="input_01-3_4" disabled>
+                                <label class="custom-control-label" for="input_01-3_4">이해상충 있음 : 이해상충 관련사항은 별도로 보고함.</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_fund_org_guide">
+                            <li>연구비를 지원받는 경우, 기관명과 이해상충 여부를 입력합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+
+                      <!-- 항목 01-2 -->
+                      <div class="app_anchor" id="form_01-2"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-2. 연구원 및 연구시설 정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- 항목 01-2-1 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 책임자</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="15%">
+                              <col width="30%">
+                              <col width="15%">
+                              <col width="40%">
+                            </colgroup>
+                            <tbody id="general_director">
+                              <tr>
+                                <td class="info_name">성명</td>
+                                <td id="general_director_name">-</td>
+                                <td class="info_name">-</td>
+                                <td id="general_director_email">-</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">소속 부서</td>
+                                <td id="general_director_dept">-</td>
+                                <td class="info_name">교육 일자</td>
+                                <td id="general_director_edu_date">-</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">직책</td>
+                                <td id="general_director_position">-</td>
+                                <td class="info_name">-</td>
+                                <td id="general_director_edu_instition">-</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">전공 분야</td>
+                                <td id="general_director_major_field">-</td>
+                                <td class="info_name">교육 이수 번호</td>
+                                <td id="general_director_edu_course_num">-</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">휴대 전화</td>
+                                <td id="general_director_phoneno">-</td>
+                                <td class="info_name">동물실험 경력 년수</td>
+                                <td>
+                                  <div class="btn-group">
+                                    <select class="form-control btn-outline-primary small_select" id="general_director_select">
+                                      <option selected disabled>경력 선택</option>
+                                      <option>1년 미만</option>
+                                      <option>1년 ~ 3년</option>
+                                      <option>3년 이상</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_director_guide">
+                            <li>연구책임자의 교육이수 정보가 최신의 정보인지 확인하고 실험 경력년수를 입력합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <!-- 항목 01-2-2 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>실험 수행자</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table text-center list_table">
+                            <colgroup>
+                              <col width="70">   <!-- 1. 실험담당 -->
+                              <!-- <col width="*">    2. 구분 -->
+                              <col width="*">    <!-- 2. 성명 -->
+                              <col width="*">    <!-- 3. 부서 -->
+                              <col width="*">    <!-- 4. 직책 -->
+                              <col width="*">    <!-- 5. 전공<br>분야 -->
+                              <col width="*">    <!-- 6. 휴대전화 -->
+                              <col width="*">    <!-- 7. Email -->
+                              <col width="*">    <!-- 8. 교육이수 번호 -->
+                              <col width="130">  <!-- 9. 동물실험 경력년수 -->
+                              <!-- <col width="80"> -->   <!-- 10. 삭제 -->
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>실험담당</th>
+                                <th>성명</th>
+                                <th>부서</th>
+                                <th>직책</th>
+                                <th>전공<br>분야</th>
+                                <th>휴대전화</th>
+                                <th>Email</th>
+                                <th>교육이수 번호</th>
+                                <th>동물실험<br>경력년수</th>
+                                <!-- <th>삭제</th> -->
+                              </tr>
+                            </thead>
+                            <tbody id="general_expt">
+                              <tr >
+                                <td>
+                                  <div class="custom-radio">
+                                    <input type="radio" id="org_conflict_1" name="exp_manager" value="1" class="" checked>
+                                  </div>
+                                </td>
+                                <td>홍길동</td>
+                                <td>약학과</td>
+                                <td>학부생</td>
+                                <td>수의학</td>
+                                <td>010-1234-5678</td>
+                                <td>manager@company.co.kr</td>
+                                <td>000-0000-0000</td>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected disabled>경력</option>
+                                    <option>1년 미만</option>
+                                    <option>1년 ~ 3년</option>
+                                    <option>3년 이상</option>
+                                  </select>
+                                </td>
+                                <!-- <td>
+                                  <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class="far fa-trash-alt mRight5"></i>삭제</a>
+                                </td> -->
+                              </tr>
+                              <!-- <tr class="add_row">
+                                <td colspan="10">
+                                  <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary" data-toggle="modal" data-target="#modal_staff"><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>
+                                </td>
+                              </tr> -->
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_expt_guide">
+                            <li>실험수행자가 기관의 리스트에 없는 경우 행정간사에 연락하여 사전 등록을 요청해야 합니다.</li>
+                            <li>실험수행자(참여연구원) 중 1명을 반드시 실험담당자로 지정해야 합니다</li>
+                            <li>생물안전교육은 매년 2시간 이상 이수해야 하므로, 최신의 교육정보가 입력되었는지 확인합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <!-- 항목 01-2-3 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구시설 정보</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <!--
+                          첨부 결과 출력하는 경우:
+                          File : File 명을 <a href="" class="data"> Tag로 나열하여 출력
+                                 label이 있는 경우 필요에 따라 폭을 나타내는 class 변경(.w50.w100 등 -> .mRight10)
+                        -->
+                        <div class="col-sm-9">
+                          <table class="table text-center list_table">
+                            <colgroup>
+                              <col width="200">
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                              <!-- <col width="80"> -->
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>생물안전<br>연구시설 번호</th>
+                                <th>시설 종류</th>
+                                <th>안전 관리등급</th>
+                                <th>LMO 연구시설</th>
+                                <!-- <th>삭제</th> -->
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="flexMid flexCenter">
+                                  <span class="mRight5">제</span><span class="data">109</span><span class="mLeft5">호</span>
+                                </td>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected disabled>종류 선택</option>
+                                    <optgroup label="—">
+                                      <option>일반</option>
+                                      <option selected>동물</option>
+                                      <option>식물</option>
+                                      <option>곤충</option>
+                                      <option>대량배양</option>
+                                    </optgroup>
+                                    <optgroup label="—">
+                                      <option value="new" data-custom-toggle='visible'>직접입력</option>
+                                    </optgroup>
+                                  </select>
+                                  <input class="form-control form-control-sm hidden mTop5" type="text">
+                                </td>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected disabled>등급 선택</option>
+                                    <option>1등급</option>
+                                    <option>2등급</option>
+                                    <option selected>3등급</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected disabled>선택</option>
+                                    <option selected>해당</option>
+                                    <option>비해당</option>
+                                  </select>
+                                </td>
+                                <!-- <td>
+                                  <a href="#" class="btn btn-xs btn-outline-danger"><i class="far fa-trash-alt mRight5"></i>삭제</a>
+                                </td> -->
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- <div class="flexCenter mBot20">
+                            <a href="javascript: void(0)" class="btn btn-xs btn-outline-primary btn-tr-add"><i class="fas fa-user-plus mRight5"></i>시설 추가</a>
+                          </div> -->
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul>
+                            <li>다수의 연구시설에서 실험을 수행하는 경우, “+추가입력” 버튼을 눌러 추가 입력할 수 있습니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      <!-- 항목 01-3 -->
+                      <div class="app_anchor" id="form_01-3"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-3. 실험 분류</h4>
+                        <div class="header_comment red">※ 본 항목은 제출후 변경이 불가능합니다. 주의하시기 바랍니다.</div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <!-- <h6 class="content_title"><i class="fas fa-square mRight10"></i></h6> -->
+                          <!-- 제출된 이후에는 해당항목 주석처리 -->
+                          <li class="content_comment">해당하는 항목에 모두 체크해 주세요.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <!-- data-printable-rule -->
+                          <table class="table list_table mBot0" data-printable-rule="{'checkbox':'pBot0'}"> <!-- 하위에 setPrintableForm 실행 시 적용할 예외 규칙 -->
+                            <colgroup>
+                              <col width="150">  <!-- 1. 구분 -->
+                              <col width="*">    <!-- 2. 심사 요청 사항 -->
+                              <col width="150">  <!-- 3. 제출 서류 -->
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th class="text-center">구분</th>
+                                <th>심사 요청 사항</th>
+                                <th>제출 서류</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="text-center">국가 승인실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-1" data-exp-type="IBC_nat_approval" value="1" disabled>
+                                    <label for="check_01-3-1" class="mBot0">종명이 명시되어 있지 않고 인체병원성 여부가 밝혀지지 않은 미생물을 사용하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-2" data-exp-type="IBC_nat_approval" value="2" disabled>
+                                    <label for="check_01-3-2" class="mBot0">독소 독성 LD50<100ng/kg을 사용하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-3" data-exp-type="IBC_nat_approval" value="3" disabled>
+                                    <label for="check_01-3-3" class="mBot0">자연적으로 발생하지 않는 방식으로 약제내성 유전자를 의도적으로 도입하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_nat_approval" id="check_01-3-4" data-exp-type="IBC_nat_approval" value="4" disabled>
+                                    <label for="check_01-3-4" class="mBot0">고위험 병원체를 이용하는 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서<br>연구계획서<br>위해성평가서<br><span class="red">*기관승인후 개별 안내</span></td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">기관 승인실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-5" data-exp-type="IBC_ins_approval" value="1" checked readonly>
+                                    <label for="check_01-3-5" class="mBot0">제2위험군 이상의 생물체를 숙주-벡터계 또는 DNA 공여체로 이용하는 실험 (고위험병원체 제외)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-6" data-exp-type="IBC_ins_approval" value="2" checked readonly>
+                                    <label for="check_01-3-6" class="mBot0">대량배양을 포함하는 실험 (10ℓ이상)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-7" data-exp-type="IBC_ins_approval" value="3" disabled>
+                                    <label for="check_01-3-7" class="mBot0">독소 독성 0.1㎍/kg≤LD50≤100㎍/kg을 사용하는 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-8" data-exp-type="IBC_ins_approval" value="4" disabled>
+                                    <label for="check_01-3-8" class="mBot0">약제내성 유전자를 의도적으로 도입하는 실험 중 승인 대상 유전자를 사용</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_approval" id="check_01-3-9" data-exp-type="IBC_ins_approval" value="5" disabled>
+                                    <label for="check_01-3-9" class="mBot0">기타 기관생물안전위원회에서 승인대상으로 정한 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서<br>연구계획서<br>위해성평가서</td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">기관 신고실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_ins_report" id="check_01-3-10" data-exp-type="IBC_ins_report" value="1" disabled>
+                                    <label for="check_01-3-10" class="mBot0">제1위험군 생물체를 숙주-벡터계 및 DNA 공여체로 이용하는 실험<br>(기관승인실험 및 면제실험에 해당하지 않는 실험에 한함)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_ins_report" id="check_01-3-11" data-exp-type="IBC_ins_report" value="2" disabled>
+                                    <label for="check_01-3-11" class="mBot0">기타 기관생물안전위원회에서 신고대상으로 정한 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서<br>연구계획서</td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">면제실험</td>
+                                <td>
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="IBC_exemption" id="check_01-3-12" data-exp-type="IBC_exemption" value="1" disabled>
+                                    <label for="check_01-3-12" class="mBot0">지정된 숙주-벡터계와 제1위험군의 생물체만을 사용하여 승인이나 신고없이 수행 가능한 실험</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop5">
+                                    <input type="checkbox" name="IBC_exemption" id="check_01-3-13" data-exp-type="IBC_exemption" value="2" disabled>
+                                    <label for="check_01-3-13" class="mBot0">자연적으로 DNA 교환이 일어나는 것으로 알려진 범위 내에서 이루어지는 지정 실험</label>
+                                  </div>
+                                </td>
+                                <td>심의신청서</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="comment red mTop10">※ 여러 항목에 표기된 경우, 가장 위해성이 높은 실험에 준하여 심의가 진행됩니다.</div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul>
+                            <li>심의대상 분류기준표</li>
+                            <li><span class="red">국가승인 제외대상 약제내성 유전자:</span><br>「유전자변형생물체의 국가간 이동 등에 관한 통합고시」 [별표2-2]</li>
+                            <li><span class="red">고위험 병원체:</span><br>「감염병의 예방 및 관리에 관한 법률 시행규칙」 [별표1]</li>
+                            <li>승인 대상 유전자 목록</li>
+                            <li>기관생물안전위원회 승인 대상 실험</li>
+                            <li>기관 생물안전위원회 신고대상 실험</li>
+                            <li class="mTop120"><span class="red">승인, 신고없이 사용 가능한 숙주-벡터계<br>- Eschrica Coli K12 숙주-벡터계<br>- Saccharomyces 숙주-벡터계<br>- Bacillus subtiles(또는 Iicheniformics) 숙주-벡터계</span></li>
+                            <li>면제실험 가능한 지정 실험</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      <!-- 항목 01-4 -->
+                      <div class="app_anchor" id="form_01-4"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-4. 실험동물 사용 유무</h4>
+                        <div class="header_comment">
+                          <div class="checkbox">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" name="agree_form_01-3" class="custom-control-input" id="check_01-4-1" data-toggle="collapse" data-target="#input_01-4_group" value="1" disabled>
+                              <label class="custom-control-label" for="check_01-4-1">해당사항 없음</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- contents -->
+                      <!-- 항목 01-4-1 -->
+                      <div class="row app_content collapse show" id="input_01-4_group">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="input_01-4-1" class="mRight10 mBot0 w110">실험 동물명</label>
+                            <input type="text" name="input_01-4-1" maxlength="100" class="form-control flex_1" id="input_01-4-1" placeholder="쉼표로 분리하여 입력해주세요.">
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="input_01-4-2" class="mRight10 mBot0 w110">IACUC 승인번호</label>
+                            <input type="text" name="input_01-4-2" maxlength="30" class="form-control w150" id="input_01-4-2" placeholder="IACUC 승인 번호">
+                            <!-- <a href="./application_new-IBC_01_1.html" class="btn btn-primary btn_xxs mLeft25">IACUC 승인 신청서 선택을위해 이동<i class="fas fa-arrow-right mLeft5"></i></a> -->
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label class="mRight10 mBot0 w110">IACUC 승인예정</label>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="input_01-4-3" value="1" id="input_01-4-3" class="custom-control-input" checked readonly>
+                              <label class="custom-control-label" for="input_01-4-3">예</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" name="input_01-4-3" value="0" id="input_01-4-4" class="custom-control-input" disabled>
+                              <label class="custom-control-label" for="input_01-4-4">아니오</label>
+                            </div>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label class="mRight10 mBot0 w110">감염실험 여부</label>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="input_01-4-5" value="1" id="input_01-4-5" class="custom-control-input" disabled>
+                              <label class="custom-control-label" for="input_01-4-5">예</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" name="input_01-4-5" value="0" id="input_01-4-6" class="custom-control-input" checked readonly>
+                              <label class="custom-control-label" for="input_01-4-6">아니오</label>
+                            </div>
+                          </div>
+
+                          <div class="form-group row flexTop flexNoWrap">
+                            <label for="input_01-4-7" class="mRight10 mBot0 mTop10 w110">동물실험 용도</label>
+                            <textarea class="form-control flex_1" rows="3" id="input_01-4-7"></textarea>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li>동물실험을 수행하는 경우 동물실험윤리위원회(IACUC)의 승인을 받아야 합니다.</li>
+                            <li>IACUC 승인예정: 향후 승인 획득 예정인 경우 “예”로 표기합니다.</li>
+                            <li>동물실험 용도: 동물실험의 용도를 간략히 기재합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      <!-- 항목 01-5 -->
+                      <div class="app_anchor" id="form_01-5"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-5. 기타 관련자료의 제출</h4>
+                        <div class="header_comment">MSDS, 생물안전 자료, 수입신고확인서, LMO 관련서류 등을 첨부하여 제출합니다.</div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <!--
+                          첨부 결과 출력하는 경우:
+                          File : File 명을 <a href="" class="data"> Tag로 나열하여 출력
+                                 label이 있는 경우 필요에 따라 폭을 나타내는 class 변경(.w50.w100 등 -> .mRight10)
+                        -->
+                        <div class="col-sm-9" id="general_ref">
+                          <div class="row flexMid" >
+                            <label for="input_01-5_1" class="mRight10 mBot0 w110">관련 자료 1 :</label>
+                            <div class="custom-file flex_1 uploaded_file_box">
+                              <a href="#" class="data">-</a>
+                            </div>
+                            <!-- <a href="javascript:void(0);" class="btn btn-outline-primary mLeft10 btn-file-add" title="첨부 File 추가"><i class="fas fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a> -->
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_ref_guide">
+                            <li>제출할 자료가 다수인 경우 추가 버튼을 눌러 첨부할 수 있습니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      <!-- 항목 02-1 -->
+                      <div class="app_anchor" id="form_02-1"></div>
+                      <div class="row app_header mTop20">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-1. 연구과제 기본 정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- 항목 02-1-1 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 과제명</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_title_name_ko" class="mRight10 mBot0 mRight10">국문 :</label>
+                            <div class="data">한국대학교 IBC 연구과제 1</div>
+                            <!-- <a href="./application_new-IBC_01_1.html" class="btn btn-primary btn_xxs mLeft25">기본 정보 수정을위해 이동<i class="fas fa-arrow-right mLeft5"></i></a> -->
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap">
+                            <label for="general_title_name_en" class="mRight10 mBot0 mRight10">영문 :</label>
+                            <div class="data">Hankook University IBC research subject No.1</div>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li class="red">면제 실험인 경우에는 연구계획서는 작성하지 않습니다.</li>
+                            <li>국가/기관 승인 또는 기관신고 실험인 경우에만 연구계획서를 작성합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <!-- 항목 02-1-2 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 책임자</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="15%">
+                              <col width="30%">
+                              <col width="15%">
+                              <col width="40%">
+                            </colgroup>
+                            <tbody id="general_director">
+                              <tr>
+                                <td class="info_name">성명</td>
+                                <td class="data" id="general_director_name">홍길동</td>
+                                <td class="info_name">Email</td>
+                                <td class="data" id="general_director_email">gildong.hong@lab.co.kr</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">소속 부서</td>
+                                <td class="data" id="general_director_dept">동물 실험실</td>
+                                <td class="info_name">교육 일자</td>
+                                <td class="data" id="general_director_edu_date">2020-01-06</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">직책</td>
+                                <td class="data" id="general_director_position">교수</td>
+                                <td class="info_name">교육 기관명</td>
+                                <td class="data" id="general_director_edu_instition">수의사 협회</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">전공 분야</td>
+                                <td class="data" id="general_director_major_field">수의학</td>
+                                <td class="info_name">교육 이수 번호</td>
+                                <td class="data" id="general_director_edu_course_num">000-0000-0000</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">휴대 전화</td>
+                                <td class="data" id="general_director_phoneno">010-1234-5678</td>
+                                <td class="info_name">동물실험 경력 년수</td>
+                                <td class="data" id="general_director_select">1년 ~ 3년</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_director_guide">
+                            <li>연구책임자의 교육이수 정보가 최신의 정보인지 확인하고 실험 경력년수를 입력합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      <!-- 항목 02-1-3 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>실험 분류</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="data">국가 승인실험</div>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      <!-- 항목 02-2 -->
+                      <div class="app_anchor" id="form_02-2"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-2. 실험 구분</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <li class="content_comment">해당사항에 모두 체크해 주세요.</li>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_02-2_1" value="1">
+                            <label for="check_02-2_1">LMO 이용</label>
+                          </div>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_02-2_2" value="2">
+                            <label for="check_02-2_2">LMO 개발</label>
+                          </div>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_02-2_3" value="3">
+                            <label for="check_02-2_3">일반 생물체 이용</label>
+                          </div>
+                          <div class="checkbox checkbox-primary flexMid pLeft3">
+                            <input type="checkbox" id="check_02-2_4" value="new" data-custom-toggle='visible'>
+                            <label class="w50" for="check_02-2_4">기타</label>
+                            <input type="text" class="form-control form-control-sm hidden" placeholder="기타 내용을 입력해 주세요.">
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_title_guide">
+                            <li>해당 항목이 없는 경우 기타에 표기하고 상세내용을 입력해 주십시오.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      <!-- 항목 02-3 -->
+                      <div class="app_anchor" id="form_02-3"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-3. 연구목적 및 예상 성과</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="5"></textarea>
+                          <li class="content_comment mTop20">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                          <div class="flexMid">
+                            <label for="file_02-3" class="mRight10 mBot0 w80">관련 자료 :</label>
+                            <div class="custom-file flex_1">
+                              <input type="file" name="file_02-3" class="custom-file-input" id="file_02-3">
+                              <label class="custom-file-label" for="file_02-3" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                            </div>
+                            <a href="#" class="btn btn-outline-danger mLeft5" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul>
+                            <li>연구를 통해 얻고자 하는 목적 및 실험이 수행되어야 하는 타당성에 대해 기술해 주십시오.</li>
+                            <li>복잡한 연구계획의 설명을 위해 필요한 경우 관련 자료를 첨부할 수 있습니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      <!-- 항목 02-4 -->
+                      <div class="app_anchor" id="form_02-4"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-4. 연구내용 및 범위</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="5"></textarea>
+                          <li class="content_comment mTop20">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                          <div class="flexMid">
+                            <label for="file_02-4" class="mRight10 mBot0 w80">관련 자료 :</label>
+                            <div class="custom-file flex_1">
+                              <input type="file" name="file_02-4" class="custom-file-input" id="file_02-4">
+                              <label class="custom-file-label" for="file_02-4" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                            </div>
+                            <a href="#" class="btn btn-outline-danger mLeft5" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide"></div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      <!-- 항목 02-5 -->
+                      <div class="app_anchor" id="form_02-5"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>2-5. 연구방법</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="5"></textarea>
+                          <li class="content_comment mTop20">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                          <div class="flexMid">
+                            <label for="file_02-5" class="mRight10 mBot0 w80">관련 자료 :</label>
+                            <div class="custom-file flex_1">
+                              <input type="file" name="file_02-5" class="custom-file-input" id="file_02-5">
+                              <label class="custom-file-label" for="file_02-5" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                            </div>
+                            <a href="#" class="btn btn-outline-danger mLeft5" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide">
+                          <ul>
+                            <!-- <li>LMO 또는 감염성 물질 사용 시, 생물학적 활성 제거 및 폐기에 관한 내용을 기술합니다.</li> -->
+                            <li>IBC 대상 물질이 투여되는 숙주 및 구체적인 실험 방법, 기전에 대해 상세히 기술합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      <!-- 항목 03-1 -->
+                      <div class="app_anchor" id="form_03-1"></div>
+                      <div class="row app_header mTop20">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>3-1. 취급 생물체 및 물질 정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="content_wrapper">
+                        <!-- 항목 03-1-A -->
+                        <div class="row app_header">
+                          <h4 class="card-title">
+                            <i class="far fa-plus-square mRight10"></i>A. 병원체 등을 이용하여 국가승인 또는 기관승인 심의신청을 하는 경우<br>
+                            <span class="mLeft40 fw_normal">(LMO, Non-LMO 공통, 유전물질·재조합 병원체 등 포함)</span>
+                          </h4>
+                          <div class="header_comment">
+                            <div class="checkbox">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="check_03-1-A" class="custom-control-input" id="check_03-1-A" data-toggle="collapse" data-target="#input_03-1-A_group" value="1">
+                                <label class="custom-control-label" for="check_03-1-A">해당사항 없음</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contents -->
+                        <div class="row app_content collapse show pBot20" id="input_03-1-A_group">
+                          <div class="col-sm-9">
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-A_1" class="mRight10 mBot0 w100">병원체명</label>
+                              <input type="text" name="input_03-1-A_1" maxlength="100" class="form-control flex_1" id="03-1-A_1">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot25">
+                              <label for="input_03-1-A_2" class="mRight10 mBot0 w100">용도</label>
+                              <input type="text" name="input_03-1-A_2" maxlength="100" class="form-control flex_1" id="03-1-A_2">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">병원성</label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-A_3-1" value="1">
+                                <label for="check_03-1-A_3-1">인간병원성</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_3-2" value="2">
+                                <label for="check_03-1-A_3-2">동물병원성</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_3-3" value="3">
+                                <label for="check_03-1-A_3-3">인수공통병원성</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_3-4" value="4">
+                                <label for="check_03-1-A_3-4">식물병원성</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">위험군(RG)</label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-A_4-1" value="1">
+                                <label for="check_03-1-A_4-1">제1위험군</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_4-2" value="2">
+                                <label for="check_03-1-A_4-2">제2위험군</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_4-3" value="3">
+                                <label for="check_03-1-A_4-3">제3위험군</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_4-4" value="4">
+                                <label for="check_03-1-A_4-4">제4위험군</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">분류</label>
+                              <div>
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" name="radio_03-1-A_5" value="1" id="radio_03-1-A_5-1" class="custom-control-input" checked>
+                                  <label class="custom-control-label" for="radio_03-1-A_5-1">해당사항 없음</label>
+                                </div>
+                                <div class="custom-control custom-radio mTop5">
+                                  <input type="radio" name="radio_03-1-A_5" value="1" id="radio_03-1-A_5-2" class="custom-control-input">
+                                  <label class="custom-control-label" for="radio_03-1-A_5-2">고위험 병원체</label>
+                                </div>
+                                <div class="custom-control custom-radio mTop5">
+                                  <input type="radio" name="radio_03-1-A_5" value="1" id="radio_03-1-A_5-3" class="custom-control-input">
+                                  <label class="custom-control-label" for="radio_03-1-A_5-3">생물 작용제</label>
+                                </div>
+                                <div class="custom-control custom-radio mTop5">
+                                  <input type="radio" name="radio_03-1-A_5" value="1" id="radio_03-1-A_5-4" class="custom-control-input">
+                                  <label class="custom-control-label" for="radio_03-1-A_5-4">종명이 불확실한 미생물</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-A_6" class="mRight10 mBot0 w100">감염증상</label>
+                              <input type="text" name="input_03-1-A_6" maxlength="100" class="form-control flex_1" id="input_03-1-A_6">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-A_7" class="mRight10 mBot0 w100">감염경로</label>
+                              <input type="text" name="input_03-1-A_7" maxlength="100" class="form-control flex_1" id="input_03-1-A_7">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-A_8" class="mRight10 mBot0 w100">예방 및 치료법</label>
+                              <input type="text" name="input_03-1-A_8" maxlength="100" class="form-control flex_1" id="input_03-1-A_8">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">취득방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-A_9-1" value="1" data-toggle="collapse" data-target="#input_03-1-A_9-1_group">
+                                <label for="check_03-1-A_9-1">자가분리</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-A_9-1_group">
+                                <label for="input_03-1-A_9-1_1" class="mLeft20 mRight10 mBot0">분리원</label>
+                                <input type="text" name="input_03-1-A_9-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-A_9-1_1">
+                                <label for="input_03-1-A_9-1_2" class="mLeft20 mRight10 mBot0">분리방법</label>
+                                <input type="text" name="input_03-1-A_9-1_2" maxlength="100" class="form-control flex_1" id="input_03-1-A_9-1_2">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary w100">
+                                <input type="checkbox" id="check_03-1-A_9-2" value="1" data-toggle="collapse" data-target="#input_03-1-A_9-2_group">
+                                <label for="check_03-1-A_9-2" class="mBot0">상용제품 구입</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-A_9-2_group">
+                                <label for="input_03-1-A_9-2_1" class="mLeft20 mRight10 mBot0">구입처</label>
+                                <input type="text" name="input_03-1-A_9-2_1" maxlength="100" class="form-control flex_1" id="input_03-1-A_9-2_1">
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">보관방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-A_10-1" value="1" data-toggle="collapse" data-target="#input_03-1-A_10-1_group">
+                                <label for="check_03-1-A_10-1">보존 중</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-A_10-1_group">
+                                <label for="input_03-1-A_10-1_1" class="mLeft20 mRight10 mBot0">보관방법</label>
+                                <input type="text" name="input_03-1-A_10-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-A_10-1_1">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-A_10-1_2" value="1">
+                                <label for="check_03-1-A_10-1_2">국내 분양 예정</label>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-A_10-1_3" value="1">
+                                <label for="check_03-1-A_10-1_3">수입 예정</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">사용량</label>
+                              <label for="input_03-1-A_11_1" class="mRight10 mBot0">1회 사용량</label>
+                              <input type="text" name="input_03-1-A_11_1" maxlength="100" class="form-control flex_1" id="input_03-1-A_11_1" placeholder="단위까지 정확하게 입력해 주세요.">
+                              <label for="input_03-1-A_11_2" class="mLeft20 mRight10 mBot0">총 사용량</label>
+                              <input type="text" name="input_03-1-A_11_2" maxlength="100" class="form-control flex_1" id="input_03-1-A_11_2" placeholder="단위까지 정확하게 입력해 주세요.">
+                            </div>
+
+                            <div class="form-group row flexTop flexNoWrap mTop20">
+                              <label for="input_03-1-A_12" class="mRight10 mBot0 mTop10 w100">기타 특성</label>
+                              <textarea class="form-control flex_1" rows="3" id="input_03-1-A_12"></textarea>
+                            </div>
+
+                            <div class="row flexMid mTop20">
+                              <label class="mBot0">※ 질병관리청 신고내역 (고위험 병원체인 경우)</label>
+                              <div class="checkbox mLeft20">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" name="check_03-1-A_13" class="custom-control-input" id="check_03-1-A_13" data-toggle="collapse" data-target="#input_03-1-A_13_group" value="1">
+                                  <label class="custom-control-label" for="check_03-1-A_13">해당사항 없음</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap collapse show mTop10 mLeft10" id="input_03-1-A_13_group">
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-A_13-1" value="1">
+                                <label for="check_03-1-A_13-1">분리신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_13-2" value="2">
+                                <label for="check_03-1-A_13-2">이동신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_13-3" value="3">
+                                <label for="check_03-1-A_13-3">법인인가/인수신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_13-4" value="4">
+                                <label for="check_03-1-A_13-4">보존신고</label>
+                              </div>
+                            </div>
+
+                            <div class="row flexMid mTop20">
+                              <label class="mBot0">※ 산업통산자원부 신고내역 (생물작용제인 경우)</label>
+                              <div class="checkbox mLeft20">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" name="check_03-1-A_14" class="custom-control-input" id="check_03-1-A_14" data-toggle="collapse" data-target="#input_03-1-A_14_group" value="1">
+                                  <label class="custom-control-label" for="check_03-1-A_14">해당사항 없음</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap collapse show mTop10 mLeft10 mBot0" id="input_03-1-A_14_group">
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-A_14-1" value="1">
+                                <label for="check_03-1-A_14-1">제조신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_14-2" value="2">
+                                <label for="check_03-1-A_14-2">보유신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-A_14-3" value="3">
+                                <label for="check_03-1-A_14-3">수출입허가</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Guide -->
+                          <div class="col-sm-3 app_guide">
+                            <ul id="general_title_guide">
+                              <li class="red">면제 실험, 기관신고 실험인 경우에는 위해성평가서는 작성하지 않습니다.</li>
+                              <li>국가/기관 승인 실험인 경우에만 위해성평가서를 작성합니다.</li>
+                              <li style="margin-top:130px;">고위험병원체: 「감염병의 예방 및 관리에 관한 법률 시행규칙」 [별표1] </li>
+                              <li>생물작용제: 「생화학무기법 시행령」 [별표 1]</li>
+                              <li style="margin-top:50px;">인수공통 병원성인 경우, 인체 감염증상과 동물 감염증상을 각각 작성합니다.</li>
+                              <li style="margin-top:380px;">위 항목 외에 병원체의 특성을 자유롭게 기술합니다.</li>
+                              <li>바이러스 유전자 이용 시, 실험과정 중 도입 유전자로부터 감염성을 가지는 바이러스가 복원(합성)될 가능성이 있는 경우, 위해정도와 관리방안을 반드시 기재해 주시기 바랍니다.</li>
+                            </ul>
+                          </div>
+                          <!-- <div class="app_divider noGuide"></div>
+
+                          <div class="col-sm-9 flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-danger btn-sm"><i class="fas fa-minus-square mRight5"></i>병원체 삭제</a>
+                          </div> -->
+                        </div>
+                        <!--//input_03-1-A_group - collapse group -->
+                      </div>
+                      <!--//content_wrapper -->
+
+                      <!-- <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-primary btn-substance-insert" id="btn-add"><i class="fas fa-plus-square mRight5"></i>병원체 추가</a>
+                          </div>
+                        </div>
+                      </div> -->
+
+
+                      <div class="content_wrapper mTop10">
+                        <!-- 항목 03-1-B -->
+                        <div class="row app_header">
+                          <h4 class="card-title">
+                            <i class="far fa-plus-square mRight10"></i>B. 약제내성 유전자를 이용하는 경우
+                          </h4>
+                          <div class="header_comment">
+                            <div class="checkbox">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="check_03-1-B" class="custom-control-input" id="check_03-1-B" data-toggle="collapse" data-target="#input_03-1-B_group" value="1">
+                                <label class="custom-control-label" for="check_03-1-B">해당사항 없음</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contents -->
+                        <div class="row app_content collapse show pBot20" id="input_03-1-B_group">
+                          <div class="col-sm-9">
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-B_1" class="mRight10 mBot0 w100">약제내성<br>유전자명</label>
+                              <input type="text" name="input_03-1-B_1" maxlength="100" class="form-control flex_1" id="03-1-B_1">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">숙주</label>
+                              <div class="flex_1">
+                                <div class="checkbox checkbox-primary flexMid">
+                                  <input type="checkbox" id="check_03-1-B_2-1" value="1" data-custom-toggle="visible">
+                                  <label for="check_03-1-B_2-1" class="w80">미생물</label>
+                                  <input type="text" class="form-control form-control-sm hidden" placeholder="종명을 입력해 주세요.">
+                                </div>
+                                <div class="checkbox checkbox-primary flexMid">
+                                  <input type="checkbox" id="check_03-1-B_2-2" value="2" data-custom-toggle="visible">
+                                  <label for="check_03-1-B_2-2" class="w80">동물</label>
+                                  <input type="text" class="form-control form-control-sm hidden" placeholder="종명을 입력해 주세요.">
+                                </div>
+                                <div class="checkbox checkbox-primary flexMid">
+                                  <input type="checkbox" id="check_03-1-B_2-3" value="3" data-custom-toggle="visible">
+                                  <label for="check_03-1-B_2-3" class="w80">식물</label>
+                                  <input type="text" class="form-control form-control-sm hidden" placeholder="종명을 입력해 주세요.">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">분류</label>
+                              <div class="flex_1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" name="radio_03-1-B_3" value="1" id="radio_03-1-B_3-1" class="custom-control-input" data-custom-toggle="visible" checked>
+                                  <label for="radio_03-1-B_3-1" class="custom-control-label">인정 숙주-벡터계를 이용한 다음의 약제내성 유전자의 전달(유전자변형 미생물)<br>
+                                  : ampicillin, chlormphenicol. hygromycin. Kanamycin, streptomycin, tetracycline 내성 유전자</label>
+                                </div>
+                                <div class="custom-control custom-radio mTop10">
+                                  <input type="radio" name="radio_03-1-B_3" value="1" id="radio_03-1-B_3-2" class="custom-control-input" data-custom-toggle="visible">
+                                  <label for="radio_03-1-B_3-2" class="custom-control-label">다음의 약제내성 유전자를 선발표지 유전자(분자마커)로 이용(유전자변형 식물)<br>
+                                  : kanamycin, neomycin(nptⅡ), hygromycin(hph) 내성 유전자</label>
+                                </div>
+                                <div class="custom-control custom-radio mTop10">
+                                  <input type="radio" name="radio_03-1-B_3" value="1" id="radio_03-1-B_3-3" class="custom-control-input" data-custom-toggle="visible">
+                                  <label for="radio_03-1-B_3-3" class="custom-control-label">다음의 약제내성 유전자를 선발표지 유전자로 이용(유전자 변형동물(설치류))<br>
+                                  : kanamycin, neomycin, puromycin, ampicillin, hygromycin, etracycline, spectinomycin, streptomycin, zeocin, blasticidin 내성 유전자</label>
+                                </div>
+                                <div class="custom-control custom-radio flexMid mTop10">
+                                  <input type="radio" name="radio_03-1-B_3" value="1" id="radio_03-1-B_3-4" class="custom-control-input" data-custom-toggle="visible">
+                                  <label for="radio_03-1-B_3-4" class="custom-control-label w80">기타</label>
+                                  <input type="text" class="form-control form-control-sm hidden">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">취득방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-B_4-1" value="1" data-toggle="collapse" data-target="#input_03-1-B_4-1_group">
+                                <label for="check_03-1-B_4-1">자가분리</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-B_4-1_group">
+                                <label for="input_03-1-B_4-1_1" class="mLeft20 mRight10 mBot0">분리원</label>
+                                <input type="text" name="input_03-1-B_4-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-B_4-1_1">
+                                <label for="input_03-1-B_4-1_2" class="mLeft20 mRight10 mBot0">분리방법</label>
+                                <input type="text" name="input_03-1-B_4-1_2" maxlength="100" class="form-control flex_1" id="input_03-1-B_4-1_2">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary w100">
+                                <input type="checkbox" id="check_03-1-B_4-2" value="1" data-toggle="collapse" data-target="#input_03-1-B_4-2_group">
+                                <label for="check_03-1-B_4-2">상용제품 구입</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-B_4-2_group">
+                                <label for="input_03-1-B_4-2_1" class="mLeft20 mRight10 mBot0">구입처</label>
+                                <input type="text" name="input_03-1-B_4-2_1" maxlength="100" class="form-control flex_1" id="input_03-1-B_4-2_1">
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">보관방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-B_5-1" value="1" data-toggle="collapse" data-target="#input_03-1-B_5-1_group">
+                                <label for="check_03-1-B_5-1">보존 중</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-B_5-1_group">
+                                <label for="input_03-1-B_5-1_1" class="mLeft20 mRight10 mBot0">보관방법</label>
+                                <input type="text" name="input_03-1-B_5-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-B_5-1_1">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-B_5-1_2" value="1">
+                                <label for="check_03-1-B_5-1_2">국내 분양 예정</label>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-B_5-1_3" value="1">
+                                <label for="check_03-1-B_5-1_3">수입 예정</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">사용량</label>
+                              <label for="input_03-1-B_6_1" class="mRight10 mBot0">1회 사용량</label>
+                              <input type="text" name="input_03-1-B_6_1" maxlength="100" class="form-control flex_1" id="input_03-1-B_6_1" placeholder="단위까지 정확하게 입력해 주세요.">
+                              <label for="input_03-1-B_6_2" class="mLeft20 mRight10 mBot0">총 사용량</label>
+                              <input type="text" name="input_03-1-B_6_2" maxlength="100" class="form-control flex_1" id="input_03-1-B_6_2" placeholder="단위까지 정확하게 입력해 주세요.">
+                            </div>
+
+                            <div class="form-group row flexTop flexNoWrap mTop20">
+                              <label for="input_03-1-B_7" class="mRight10 mBot0 mTop10 w100">기타 특성</label>
+                              <textarea class="form-control flex_1" rows="3" id="input_03-1-B_7"></textarea>
+                            </div>
+
+                          </div>
+
+                          <!-- Guide -->
+                          <div class="col-sm-3 app_guide">
+                            <ul id="general_title_guide">
+                              <li class="red">면제 실험, 기관신고 실험인 경우에는 위해성평가서는 작성하지 않습니다.</li>
+                              <li>국가/기관 승인 실험인 경우에만 위해성평가서를 작성합니다.</li>
+                              <li style="margin-top:90px;">국가승인 제외대상 약제내성 유전자: 「유전자변형생물체의 국가간 이동 등에 관한 통합고시」 [별표2-2]</li>
+                              <li style="margin-top:370px;">위 항목 외에 병원체의 특성을 자유롭게 기술합니다.</li>
+                            </ul>
+                          </div>
+                          <!-- <div class="app_divider noGuide"></div>
+
+                          <div class="col-sm-9 flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-danger btn-sm"><i class="fas fa-minus-square mRight5"></i>약제내성 유전자 삭제</a>
+                          </div> -->
+
+                        </div>
+                        <!--//input_03-1-B_group - collapse group -->
+                      </div>
+                      <!--//content_wrapper -->
+
+                      <!-- <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-primary btn-substance-insert" id="btn-add"><i class="fas fa-plus-square mRight5"></i>약제내성 유전자 추가</a>
+                          </div>
+                        </div>
+                      </div> -->
+
+
+                      <div class="content_wrapper mTop10">
+                        <!-- 항목 03-1-C -->
+                        <div class="row app_header">
+                          <h4 class="card-title">
+                            <i class="far fa-plus-square mRight10"></i>C. 독소 생성 유전자를 이용하는 경우
+                          </h4>
+                          <div class="header_comment">
+                            <div class="checkbox">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="check_03-1-C" class="custom-control-input" id="check_03-1-C" data-toggle="collapse" data-target="#input_03-1-C_group" value="1">
+                                <label class="custom-control-label" for="check_03-1-C">해당사항 없음</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contents -->
+                        <div class="row app_content collapse show pBot20" id="input_03-1-C_group">
+                          <div class="col-sm-9">
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-C_1" class="mRight10 mBot0 w100">독소생성<br>유전자명</label>
+                              <input type="text" name="input_03-1-C_1" maxlength="100" class="form-control flex_1" id="03-1-C_1">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">숙주</label>
+                              <div class="flex_1">
+                                <div class="checkbox checkbox-primary flexMid">
+                                  <input type="checkbox" id="check_03-1-C_2-1" value="1" data-custom-toggle="visible">
+                                  <label for="check_03-1-C_2-1" class="w80">미생물</label>
+                                  <input type="text" class="form-control form-control-sm hidden" placeholder="종명을 입력해 주세요.">
+                                </div>
+                                <div class="checkbox checkbox-primary flexMid">
+                                  <input type="checkbox" id="check_03-1-C_2-2" value="2" data-custom-toggle="visible">
+                                  <label for="check_03-1-C_2-2" class="w80">동물</label>
+                                  <input type="text" class="form-control form-control-sm hidden" placeholder="종명을 입력해 주세요.">
+                                </div>
+                                <div class="checkbox checkbox-primary flexMid">
+                                  <input type="checkbox" id="check_03-1-C_2-3" value="3" data-custom-toggle="visible">
+                                  <label for="check_03-1-C_2-3" class="w80">식물</label>
+                                  <input type="text" class="form-control form-control-sm hidden" placeholder="종명을 입력해 주세요.">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100">분류</label>
+                              <div class="flex_1">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" name="radio_03-1-C_3" value="1" id="radio_03-1-C_3-1" class="custom-control-input" data-custom-toggle="visible" checked>
+                                  <label for="radio_03-1-C_3-1" class="custom-control-label">국가승인대상 독소 생성 유전자를 이용</label>
+                                </div>
+                                <div class="custom-control custom-radio mTop10">
+                                  <input type="radio" name="radio_03-1-C_3" value="1" id="radio_03-1-C_3-2" class="custom-control-input" data-custom-toggle="visible">
+                                  <label for="radio_03-1-C_3-2" class="custom-control-label">기관승인대상 독소 생성 유전자를 이용</label>
+                                </div>
+                                <div class="custom-control custom-radio flexMid mTop10">
+                                  <input type="radio" name="radio_03-1-C_3" value="1" id="radio_03-1-C_3-3" class="custom-control-input" data-custom-toggle="visible">
+                                  <label for="radio_03-1-C_3-3" class="custom-control-label w80">기타</label>
+                                  <input type="text" class="form-control form-control-sm hidden">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-C_4" class="mRight10 mBot0 w100">LD50</label>
+                              <input type="text" name="input_03-1-C_4" maxlength="100" class="form-control flex_1" id="03-1-C_4" placeholder="독소량과 단위를 함께 입력해 주세요.">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">취득방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-C_5-1" value="1" data-toggle="collapse" data-target="#input_03-1-C_5-1_group">
+                                <label for="check_03-1-C_5-1">자가분리</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-C_5-1_group">
+                                <label for="input_03-1-C_5-1_1" class="mLeft20 mRight10 mBot0">분리원</label>
+                                <input type="text" name="input_03-1-C_5-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-C_5-1_1">
+                                <label for="input_03-1-C_5-1_2" class="mLeft20 mRight10 mBot0">분리방법</label>
+                                <input type="text" name="input_03-1-C_5-1_2" maxlength="100" class="form-control flex_1" id="input_03-1-C_5-1_2">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary w100">
+                                <input type="checkbox" id="check_03-1-C_5-2" value="1" data-toggle="collapse" data-target="#input_03-1-C_5-2_group">
+                                <label for="check_03-1-C_5-2">상용제품 구입</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-C_5-2_group">
+                                <label for="input_03-1-C_5-2_1" class="mLeft20 mRight10 mBot0">구입처</label>
+                                <input type="text" name="input_03-1-C_5-2_1" maxlength="100" class="form-control flex_1" id="input_03-1-C_5-2_1">
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">보관방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-C_6-1" value="1" data-toggle="collapse" data-target="#input_03-1-C_6-1_group">
+                                <label for="check_03-1-C_6-1">보존 중</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-C_6-1_group">
+                                <label for="input_03-1-C_6-1_1" class="mLeft20 mRight10 mBot0">보관방법</label>
+                                <input type="text" name="input_03-1-C_6-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-C_6-1_1">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-C_6-1_2" value="1">
+                                <label for="check_03-1-C_6-1_2">국내 분양 예정</label>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-C_6-1_3" value="1">
+                                <label for="check_03-1-C_6-1_3">수입 예정</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">사용량</label>
+                              <label for="input_03-1-C_7_1" class="mRight10 mBot0">1회 사용량</label>
+                              <input type="text" name="input_03-1-C_7_1" maxlength="100" class="form-control flex_1" id="input_03-1-C_7_1" placeholder="단위까지 정확하게 입력해 주세요.">
+                              <label for="input_03-1-C_7_2" class="mLeft20 mRight10 mBot0">총 사용량</label>
+                              <input type="text" name="input_03-1-C_7_2" maxlength="100" class="form-control flex_1" id="input_03-1-C_7_2" placeholder="단위까지 정확하게 입력해 주세요.">
+                            </div>
+
+                            <div class="form-group row flexTop flexNoWrap mTop20">
+                              <label for="input_03-1-C_8" class="mRight10 mBot0 mTop10 w100">기타 특성</label>
+                              <textarea class="form-control flex_1" rows="3" id="input_03-1-C_8"></textarea>
+                            </div>
+                          </div>
+
+                          <!-- Guide -->
+                          <div class="col-sm-3 app_guide">
+                            <ul id="general_title_guide">
+                              <li class="red">면제 실험, 기관신고 실험인 경우에는 위해성평가서는 작성하지 않습니다.</li>
+                              <li>국가/기관 승인 실험인 경우에만 위해성평가서를 작성합니다.</li>
+                              <li style="margin-top:30px;">
+                                국가승인 제외대상 단백질 독소 목록:<br>
+                                - 보튤리늄 독소(A,B,C,D,E,F형)<br>
+                                - 파상풍 독소<br>
+                                - 이질 신경 독소<br>
+                                - 디프테리아 독소<br>
+                                - 기타 척추동물에 대하여 몸무게 1kg당 50% 치사 독소량이 100ng 미만의 수치를 갖는 것으로 알려진 독소
+                              </li>
+                              <li>
+                                기관승인대상 단백질 독소 목록<br>
+                                - Abrin<br>
+                                - Clostridium perfringens epsilon toxin<br>
+                                - Conotoxins<br>
+                                - Ricin<br>
+                                - Saxitoxin<br>
+                                - Shiga-like toxin<br>
+                                - Shigatoxin<br>
+                                - Tetrodotoxin<br>
+                                - 기타 척추동물에 대하여 몸무게 1kg당 50% 치사 독소량이 0.1㎍ 이상 100㎍ 이하인 것으로 알려진 독소
+                              </li>
+                              <li style="margin-top:100px;">위 항목 외에 병원체의 특성을 자유롭게 기술합니다.</li>
+                            </ul>
+                          </div>
+                          <!-- <div class="app_divider noGuide"></div>
+
+                          <div class="col-sm-9 flexCenter mBot20">
+                            <a href="javascript: void(0)" class="btn btn-outline-danger btn-sm"><i class="fas fa-minus-square mRight5"></i>독소생성 유전자 삭제</a>
+                          </div> -->
+                        </div>
+                        <!--//input_03-1-C_group - collapse group -->
+                      </div>
+                      <!--//content_wrapper -->
+
+                      <!-- <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-primary btn-substance-insert" id="btn-add"><i class="fas fa-plus-square mRight5"></i>독소생성 유전자 추가</a>
+                          </div>
+                        </div>
+                      </div> -->
+
+
+                      <div class="content_wrapper mTop10">
+                        <!-- 항목 03-1-D -->
+                        <div class="row app_header">
+                          <h4 class="card-title">
+                            <i class="far fa-plus-square mRight10"></i>D. 독소를 정제 및 생산 등의 취급을 하는 경우
+                          </h4>
+                          <div class="header_comment">
+                            <div class="checkbox">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="check_03-1-D" class="custom-control-input" id="check_03-1-D" data-toggle="collapse" data-target="#input_03-1-D_group" value="1">
+                                <label class="custom-control-label" for="check_03-1-D">해당사항 없음</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contents -->
+                        <div class="row app_content collapse show pBot20" id="input_03-1-D_group">
+                          <div class="col-sm-9">
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-D_1" class="mRight10 mBot0 w100">독소명</label>
+                              <input type="text" name="input_03-1-D_1" maxlength="100" class="form-control flex_1" id="03-1-D_1">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-D_2" class="mRight10 mBot0 w100">용도</label>
+                              <input type="text" name="input_03-1-D_2" maxlength="100" class="form-control flex_1" id="03-1-D_2">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-D_3" class="mRight10 mBot0 w100">LD50</label>
+                              <input type="text" name="input_03-1-D_3" maxlength="100" class="form-control flex_1" id="03-1-D_3" placeholder="독소량과 단위를 함께 입력해 주세요.">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label for="input_03-1-D_4" class="mRight10 mBot0 w100">용도</label>
+                              <input type="text" name="input_03-1-D_4" maxlength="100" class="form-control flex_1" id="03-1-D_4">
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">취득방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-D_5-1" value="1" data-toggle="collapse" data-target="#input_03-1-D_5-1_group">
+                                <label for="check_03-1-D_5-1">자가분리</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-D_5-1_group">
+                                <label for="input_03-1-D_5-1_1" class="mLeft20 mRight10 mBot0">분리원</label>
+                                <input type="text" name="input_03-1-D_5-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-D_5-1_1">
+                                <label for="input_03-1-D_5-1_2" class="mLeft20 mRight10 mBot0">분리방법</label>
+                                <input type="text" name="input_03-1-D_5-1_2" maxlength="100" class="form-control flex_1" id="input_03-1-D_5-1_2">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary w100">
+                                <input type="checkbox" id="check_03-1-D_5-2" value="1" data-toggle="collapse" data-target="#input_03-1-D_5-2_group">
+                                <label for="check_03-1-D_5-2">상용제품 구입</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-D_5-2_group">
+                                <label for="input_03-1-D_5-2_1" class="mLeft20 mRight10 mBot0">구입처</label>
+                                <input type="text" name="input_03-1-D_5-2_1" maxlength="100" class="form-control flex_1" id="input_03-1-D_5-2_1">
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">보관방법</label>
+                              <div class="checkbox checkbox-primary w100 mTop10">
+                                <input type="checkbox" id="check_03-1-D_6-1" value="1" data-toggle="collapse" data-target="#input_03-1-D_6-1_group">
+                                <label for="check_03-1-D_6-1">보존 중</label>
+                              </div>
+                              <div class="flexMid flex_1 collapse" id="input_03-1-D_6-1_group">
+                                <label for="input_03-1-D_6-1_1" class="mLeft20 mRight10 mBot0">보관방법</label>
+                                <input type="text" name="input_03-1-D_6-1_1" maxlength="100" class="form-control flex_1" id="input_03-1-D_6-1_1">
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-D_6-1_2" value="1">
+                                <label for="check_03-1-D_6-1_2">국내 분양 예정</label>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap">
+                              <label class="mRight10 mBot0 w100"></label>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-D_6-1_3" value="1">
+                                <label for="check_03-1-D_6-1_3">수입 예정</label>
+                              </div>
+                            </div>
+
+                            <div class="form-group row flexMid flexNoWrap mBot5">
+                              <label class="mRight10 mBot0 w100">사용량</label>
+                              <label for="input_03-1-D_7_1" class="mRight10 mBot0">1회 사용량</label>
+                              <input type="text" name="input_03-1-D_7_1" maxlength="100" class="form-control flex_1" id="input_03-1-D_7_1" placeholder="단위까지 정확하게 입력해 주세요.">
+                              <label for="input_03-1-D_7_2" class="mLeft20 mRight10 mBot0">총 사용량</label>
+                              <input type="text" name="input_03-1-D_7_2" maxlength="100" class="form-control flex_1" id="input_03-1-D_7_2" placeholder="단위까지 정확하게 입력해 주세요.">
+                            </div>
+
+                            <div class="form-group row flexTop flexNoWrap mTop20">
+                              <label for="input_03-1-D_8" class="mRight10 mBot0 mTop10 w100">기타 특성</label>
+                              <textarea class="form-control flex_1" rows="3" id="input_03-1-D_8"></textarea>
+                            </div>
+
+                            <div class="row flexMid mTop20">
+                              <label class="mBot0">※ 산업통산자원부 신고내역</label>
+                              <div class="checkbox mLeft20">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" name="check_03-1-D_9" class="custom-control-input" id="check_03-1-D_9" data-toggle="collapse" data-target="#input_03-1-D_9_group" value="1">
+                                  <label class="custom-control-label" for="check_03-1-D_9">해당사항 없음</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row flexMid flexNoWrap collapse show mTop10 mLeft10 mBot0" id="input_03-1-D_9_group">
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="check_03-1-D_9-1" value="1">
+                                <label for="check_03-1-D_9-1">제조신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-D_9-2" value="2">
+                                <label for="check_03-1-D_9-2">보유신고</label>
+                              </div>
+                              <div class="checkbox checkbox-primary mLeft20">
+                                <input type="checkbox" id="check_03-1-D_9-3" value="3">
+                                <label for="check_03-1-D_9-3">수출입허가</label>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <!-- Guide -->
+                          <div class="col-sm-3 app_guide">
+                            <ul id="general_title_guide">
+                              <li class="red">면제 실험, 기관신고 실험인 경우에는 위해성평가서는 작성하지 않습니다.</li>
+                              <li>국가/기관 승인 실험인 경우에만 위해성평가서를 작성합니다.</li>
+                              <li style="margin-top:30px;">
+                                독소 목록 「생화학무기법 시행령」 [별표2]<br>
+                                1. 보툴리늄 독소(Botulinum toxins)<br>
+                                2. 웰치균 독소(Clostridium perfringens epsilon toxins)<br>
+                                3. 코노 독소(Conotoxin)<br>
+                                4. 시가 독소(Shiga toxin)<br>
+                                5. 포도상구균 장 독소(Staphylococcus aureus toxins)<br>
+                                6. 복어독(Tetrodotoxin)<br>
+                                7. 베로톡신(Verotoxin)<br>
+                                8. 마이크로시스틴(시안지노신)(Microcystin(Cyanginosin))<br>
+                                9. 아플라톡신(Aflatoxins)<br>
+                                10. 아브린(Abrin)<br>
+                                11. Diacetoxyscirpenol toxin<br>
+                                12. T-2 toxin<br>
+                                13. 볼켄신 독소(Volkensin toxin)
+                              </li>
+                              <li style="margin-top:80px;">위 항목 외에 병원체의 특성을 자유롭게 기술합니다.</li>
+                            </ul>
+                          </div>
+                          <!-- <div class="app_divider noGuide"></div>
+
+                          <div class="col-sm-9 flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-danger btn-sm"><i class="fas fa-minus-square mRight5"></i>독소 삭제</a>
+                          </div> -->
+
+                        </div>
+                        <!--//input_03-1-D_group - collapse group -->
+                      </div>
+                      <!--//content_wrapper -->
+
+                      <!-- <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="flexCenter">
+                            <a href="javascript: void(0)" class="btn btn-outline-primary btn-substance-insert" id="btn-add"><i class="fas fa-plus-square mRight5"></i>독소 추가</a>
+                          </div>
+                        </div>
+                      </div> -->
+
+
+                      <!-- 항목 03-2 -->
+                      <div class="app_anchor" id="form_03-2"></div>
+                      <div class="row app_header mTop40">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>3-2. 생물안전정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <!-- 항목 03-2_1 -->
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap mBot0">
+                            <label class="mRight10 w100">생물안전등급</label>
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="check_03-2_1-1" value="1">
+                              <label for="check_03-2_1-1">BSL1</label>
+                            </div>
+                            <div class="checkbox checkbox-primary mLeft20">
+                              <input type="checkbox" id="check_03-2_1-2" value="2">
+                              <label for="check_03-2_1-2">BSL2</label>
+                            </div>
+                            <div class="checkbox checkbox-primary mLeft20">
+                              <input type="checkbox" id="check_03-2_1-3" value="3">
+                              <label for="check_03-2_1-3">BSL3</label>
+                            </div>
+                            <div class="checkbox checkbox-primary mLeft20">
+                              <input type="checkbox" id="check_03-2_1-4" value="4">
+                              <label for="check_03-2_1-4">BSL4</label>
+                            </div>
+                          </div>
+                          <!-- 항목 03-2_2 -->
+                          <div class="form-group row flexTop flexNoWrap">
+                            <label for="input_03-2_1-5" class="mRight10 mBot0 mTop10 w100">판단 근거</label>
+                            <textarea class="form-control flex_1" rows="3" id="input_03-2_1-5"></textarea>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>실험에 사용하는 생물체의 감염 가능성 및 파급력을 상세히 기재하여 생물안전등급 판단근거를 제시합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row app_content mTop10">
+                        <!-- 항목 03-2_3 -->
+                        <div class="col-sm-9">
+                          <div class="row">
+                            <label class="mRight10">경로별 감염노출 가능성 평가</label>
+                            <li class="content_comment mLeft20">해당하는 노출경로를 모두 입력해 주세요.</li>
+                          </div>
+                          <table class="table text-center list_table">
+                            <colgroup>
+                              <col width="200">
+                              <col width="100">
+                              <col width="*">
+                              <col width="80">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>노출 경로</th>
+                                <th>감염 가능성</th>
+                                <th>응급조치 방법</th>
+                                <th>삭제</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected disabled>노출 경로 선택</option>
+                                    <optgroup label="—">
+                                      <option>눈, 점막</option>
+                                      <option>피부</option>
+                                      <option>호흡기</option>
+                                      <option>경구 섭취</option>
+                                      <option>주사, 상처</option>
+                                      <option>마취제</option>
+                                    </optgroup>
+                                    <optgroup label="—">
+                                      <option value="new" data-custom-toggle='visible'>직접입력</option>
+                                    </optgroup>
+                                  </select>
+                                  <input class="form-control form-control-sm hidden mTop5" type="text">
+                                </td>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected disabled>선택</option>
+                                    <option>상</option>
+                                    <option>중</option>
+                                    <option>하</option>
+                                  </select>
+                                  <input class="form-control form-control-sm hidden mTop5" type="text">
+                                </td>
+                                <td><input type="text" maxlength="20" class="form-control form-control-sm"></td>
+                                <td>
+                                  <a href="#" class="btn btn-xs btn-outline-danger"><i class="far fa-trash-alt mRight5"></i>삭제</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- <div class="flexCenter mBot20">
+                            <a href="javascript: void(0)" class="btn btn-xs btn-outline-primary btn-tr-add"><i class="fas fa-user-plus mRight5"></i>노출경로 추가</a>
+                          </div> -->
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>노출경로가 다수인 경우에는 입력란을 추가하여 입력합니다.</li>
+                            <li>응급조치 방법과 감염 시 사용되는 치료제를 기재합니다.</li>
+                            <li>응급상황 발생 시 보고체계와 이송 의료기관을 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row app_content mTop10">
+                        <!-- 항목 03-2_4 -->
+                        <div class="col-sm-9">
+                          <div class="form-group row flexTop flexNoWrap">
+                            <label for="input_03-2_4" class="mRight10 mBot0 mTop10 w100">소독 및<br>멸균 방법</label>
+                            <textarea class="form-control flex_1" rows="5" id="input_03-2_4"></textarea>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>실험 재료와 장비의 소독, 멸균 방법을 상세히 기재합니다.</li>
+                            <li>소독, 멸균 작업내역 등의 기록을 유지 보관하는 방법을 기재합니다.</li>
+                            <li>각 생물체 및 물질에 적합한 불활성화 방법을 구체적으로 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row app_content mTop10">
+                        <!-- 항목 03-2_5 -->
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap mBot10">
+                            <label class="mRight10 mBot-15 w100">예방 및<br>치료 방법</label>
+                            <div class="checkbox checkbox-primary w80">
+                              <input type="checkbox" id="check_03-2_5-1" value="1" data-toggle="collapse" data-target="#input_03-2_5-1_group">
+                              <label for="check_03-2_5-1" class="mBot0">예방백신</label>
+                            </div>
+                            <div class="flexMid flex_1 collapse" id="input_03-2_5-1_group">
+                              <label for="input_03-2_5-1" class="w50 mLeft20 mRight10 mBot0">백신명</label>
+                              <input type="text" name="input_03-2_5-1" maxlength="100" class="form-control flex_1" id="input_03-2_5-1">
+                            </div>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap mBot10">
+                            <label class="mRight10 mBot0 w100"></label>
+                            <div class="checkbox checkbox-primary w80">
+                              <input type="checkbox" id="check_03-2_5-2" value="1" data-toggle="collapse" data-target="#input_03-2_5-2_group">
+                              <label for="check_03-2_5-2" class="mBot0">치료제</label>
+                            </div>
+                            <div class="flexMid flex_1 collapse" id="input_03-2_5-2_group">
+                              <label for="input_03-2_5-2" class="w50 mLeft20 mRight10 mBot0">치료제명</label>
+                              <input type="text" name="input_03-2_5-2" maxlength="100" class="form-control flex_1" id="input_03-2_5-2">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>감염 예방을 위한 백신이나 감염시 사용할 수 있는 치료제를 표기하고 상세내용을 기술합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row app_content mTop15">
+                        <!-- 항목 03-2_6 -->
+                        <div class="col-sm-9">
+                          <div class="form-group row flexTop flexNoWrap">
+                            <label for="input_03-2_6" class="mRight10 mBot0 mTop10 w100">감염 시<br>치료 방법</label>
+                            <textarea class="form-control flex_1" rows="3" id="input_03-2_6"></textarea>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop20">
+                          <ul id="">
+                            <li>감염 시 의학적 특기사항을 상세히 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row app_content mTop10">
+                        <!-- 항목 03-2_7, 03-2_8, 03-2_9 -->
+                        <div class="col-sm-9">
+                          <div class="row">
+                            <label class="mRight10">안전사항</label>
+                            <li class="content_comment mLeft20">해당하는 모든 항목을 선택해 주세요.</li>
+                          </div>
+                          <table class="table list_table pad_left">
+                            <colgroup>
+                              <col width="150">
+                              <col width="*">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>구분</th>
+                                <th>상세 내역</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>개인 보호장비<br>(PPE)</td>
+                                <td>
+                                  <div class="form-group flexMid flexNoWrap mBot0">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" id="check_03-2_7-1" value="1">
+                                      <label for="check_03-2_7-1" class="mBot0">보호신발</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_7-2" value="2">
+                                      <label for="check_03-2_7-2" class="mBot0">장갑</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_7-3" value="3">
+                                      <label for="check_03-2_7-3" class="mBot0">보안경</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_7-4" value="4">
+                                      <label for="check_03-2_7-4" class="mBot0">안면 보호구</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_7-5" value="5">
+                                      <label for="check_03-2_7-5" class="mBot0">실험복(전신 보호구)</label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group flexMid flexNoWrap mTop10 mBot0">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" id="check_03-2_7-6" value="1" data-toggle="collapse" data-target="#input_03-2_7-6_group">
+                                      <label for="check_03-2_7-6" class="mBot0">마스크/호흡 보호구</label>
+                                    </div>
+                                    <div class="flexMid flex_1 collapse mLeft30" id="input_03-2_7-6_group">
+                                      <label for="input_03-2_7-6_1" class="mRight10 mBot0">종류</label>
+                                      <input type="text" name="input_03-2_7-6_1" maxlength="100" class="form-control flex_1" id="input_03-2_7-6_1">
+                                    </div>
+                                  </div>
+                                  <div class="form-group flexMid flexNoWrap mTop10 mBot0">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" id="check_03-2_7-7" value="1" data-toggle="collapse" data-target="#input_03-2_7-7_group">
+                                      <label for="check_03-2_7-7" class="mBot0">기타 보호장비</label>
+                                    </div>
+                                    <div class="flexMid flex_1 collapse mLeft30" id="input_03-2_7-7_group">
+                                      <input type="text" name="input_03-2_7-7_1" maxlength="100" class="form-control flex_1" id="input_03-2_7-7_1">
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>안전장비 및 설비</td>
+                                <td>
+                                  <div class="form-group flexMid flexNoWrap mBot0">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" id="check_03-2_8-1" value="1">
+                                      <label for="check_03-2_8-1" class="mBot0">비상샤워</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_8-2" value="2">
+                                      <label for="check_03-2_8-2" class="mBot0">눈세척장비</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_8-3" value="3">
+                                      <label for="check_03-2_8-3" class="mBot0">아이솔레이트</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mLeft30">
+                                      <input type="checkbox" id="check_03-2_8-4" value="4">
+                                      <label for="check_03-2_8-4" class="mBot0">흄후드</label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group flexMid flexNoWrap mTop10 mBot0">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" id="check_03-2_8-5" value="1" data-toggle="collapse" data-target="#input_03-2_8-5_group">
+                                      <label for="check_03-2_8-5" class="mBot0">생물안전작업대</label>
+                                    </div>
+                                    <div class="flexMid flex_1 collapse mLeft30" id="input_03-2_8-6_group">
+                                      <label for="input_03-2_8-6_1" class="mRight10 mBot0">종류</label>
+                                      <input type="text" name="input_03-2_8-6_1" maxlength="100" class="form-control flex_1" id="input_03-2_8-6_1">
+                                    </div>
+                                  </div>
+                                  <div class="form-group flexMid flexNoWrap mTop10 mBot0">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" id="check_03-2_8-7" value="1" data-toggle="collapse" data-target="#input_03-2_8-7_group">
+                                      <label for="check_03-2_8-7" class="mBot0">기타 안전장비</label>
+                                    </div>
+                                    <div class="flexMid flex_1 collapse mLeft30" id="input_03-2_8-7_group">
+                                      <input type="text" name="input_03-2_8-7_1" maxlength="100" class="form-control flex_1" id="input_03-2_8-7_1">
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>보호장비/안전장비<br>미보유 시 대처방안</td>
+                                <td>
+                                  <textarea class="form-control flex_1" rows="3" id="input_03-2_9"></textarea>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li style="margin-top:160px;">위험군 2등급 이상의 실험을 수행하는 경우, 반드시 생물안전작업대(BSC)를 사용해야 하는지 확인합니다.</li>
+                            <li style="margin-top:40px;">장비 미 보유 시 실험 전후 소독 방법 등 대처방안을 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row app_content mTop10">
+                        <!-- 항목 03-2_10 -->
+                        <div class="col-sm-9">
+                          <div class="form-group row flexMid flexNoWrap mBot10">
+                            <label class="mRight10 mBot-15 w100">생물체 운송<br>및 보관방법</label>
+                            <div class="checkbox checkbox-primary w100">
+                              <input type="checkbox" id="check_03-2_10-1" value="1" data-toggle="collapse" data-target="#input_03-2_10-1_group">
+                              <label for="check_03-2_10-1" class="mBot0">운송계획 있음</label>
+                            </div>
+                            <div class="flexMid flex_1 collapse" id="input_03-2_10-1_group">
+                              <label for="input_03-2_10-1" class="w50 mLeft20 mRight10 mBot0">운송방법</label>
+                              <input type="text" name="input_03-2_10-1" maxlength="100" class="form-control flex_1" id="input_03-2_10-1">
+                            </div>
+                          </div>
+                          <div class="form-group row flexMid flexNoWrap mBot10">
+                            <label class="mRight10 mBot0 w100"></label>
+                            <div class="checkbox checkbox-primary w100">
+                              <input type="checkbox" id="check_03-2_10-2" value="1" data-toggle="collapse" data-target="#input_03-2_10-2_group">
+                              <label for="check_03-2_10-2" class="mBot0">보관계획 있음</label>
+                            </div>
+                            <div class="flexMid flex_1 collapse" id="input_03-2_10-2_group">
+                              <label for="input_03-2_10-2" class="w50 mLeft20 mRight10 mBot0">보관방법</label>
+                              <input type="text" name="input_03-2_10-2" maxlength="100" class="form-control flex_1" id="input_03-2_10-2">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0"></div>
+                      </div>
+
+                      <div class="row app_content mTop15">
+                        <!-- 항목 03-2_11 -->
+                        <div class="col-sm-9">
+                          <div class="form-group row flexTop flexNoWrap">
+                            <label for="input_03-2_11" class="mRight10 mBot0 mTop10 w100">폐기물<br>처리 방법</label>
+                            <textarea class="form-control flex_1" rows="3" id="input_03-2_11"></textarea>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>소속기관 자체 폐기물관리 규정에 근거하여 폐기물 처리방법을 입력합니다.</li>
+                            <li>폐기물의 보관장소, 폐기물 보관 방법을 기재하고 위탁 처리를 하는 경우 위탁업체명을 입력합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider noGuide"></div>
+                      </div>
+
+
+                      <!-- 항목 04-1 -->
+                      <div class="app_anchor" id="form_04-1"></div>
+                      <div class="row app_header mTop20">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>4-1. 연구 책임자 서약서</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <!-- 신청서 내용이 모두 출력되는 화면에서는 필요없음 -->
+                      <!-- <div class="col-sm-9 comment_box blue_box mBot20">
+                        <div class="comment_title"><i class="far fa-file-alt mRight10"></i>심의 신청서 내용 확인</div>
+                        <ol class="mTop3 mBot0">
+                          <li class=""><a href="#" onClick="newWindowPopup('./_popup_app-IBC_info_1.html');">심의 신청서<button type="button" class="btn btn-primary btn_xxxs mLeft15"><i class="far fa-copy mRight5"></i>신청서 보기</button></a></li>
+                          <li class="mTop5"><a href="#" onClick="newWindowPopup('./_popup_app-IBC_info_2.html');">연구 계획서<button type="button" class="btn btn-primary btn_xxxs mLeft15"><i class="far fa-copy mRight5"></i>계획서 보기</button></a></li>
+                          <li class="mTop5"><a href="#" onClick="newWindowPopup('./_popup_app-IBC_info_3.html');">위해성 평가서<button type="button" class="btn btn-primary btn_xxxs mLeft15"><i class="far fa-copy mRight5"></i>평가서 보기</button></a></li>
+                        </ol>
+                      </div> -->
+                      <!-- contents -->
+                      <div class="row app_content">
+                        <!-- <div class="col-sm-9">
+                          <li class="content_comment"></li>
+                        </div> -->
+                        <div class="col-sm-9">
+                          <div class="noHover">
+                            <div class="pLeft10 indent5">
+                              본인은 국내 생물안전 관련 법률 및 한국대학교병원의 생물안전위원회 규정을 충분히 숙지하고 있으며, 상기에 기재된 내용을 정확하게 작성하였음을 확인합니다.<br>
+                              또한 본 실험에 참여하는 모든 시험‧연구종사자의 생물안전을 위한 교육 및 정보제공에 대해 책임을 다할 것을 서약합니다.
+                            </div>
+                          </div>
+                          <div class="IBC_agree">
+                            <div class="agree_date">
+                              제출 일자<span class="date">-년 -월 -일</span></div>
+                            <div class="agree_author">
+                              연구 책임자<span class="director">-</span>
+                              <div class="checkbox checkbox-primary">
+                                <input type="checkbox" id="agreement">
+                                <label class="custom-control-label blue_deep" for="agreement"></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Guide -->
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="compliance_matters_pledge_guide">
+                            <li>확인란에 표기하는 것으로 정식 서명을 대체합니다.</li>
+                          </ul>
+                        </div>
+                        <!-- <div class="app_divider"></div> -->
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                <!--//card-body-->
+
+                <!-- Card Footer -->
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <!-- 임시저장 : "신청서 계속 작성" 버튼 출력 -->
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_confirm"><i class="fas fa-edit mRight5"></i>변경 승인 신청서 제출</a>
+
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="/html/researcher/experiment_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>실험 목록 보기</a>
+                  <a href="javascript: void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" data-move-to="#bottom_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              <!--//card -->
+
+            </div><!--//col-->
+          </div><!--//row-->
+          <!--//page title end breadcrumb -->
+
+        </div>
+        <!--//container-fluid -->
+
+        <footer id="footer" class="footer text-center"></footer>
+        <!--//footer-->
+      </div>
+      <!--//page content -->
+    </div>
+    <!--//page-wrapper -->
+
+
+    <!-- Modal: 변경 신청서  -->
+    <div class="modal draggable fade in" data-backdrop="false" data-keyboard="false" id="modal_changeApp">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class='modal_hint'>
+          <div class="hint_header">이 부분을 드래그하여 움직일 수 있습니다.</div>
+          <!-- <div class="hint_title">이 부분을 클릭하면 신청서의 해당항목으로 이동합니다.</div> -->
+        </div>
+        <div class="modal-content">
+          <div class="modal-header bg-primary flexMid">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">변경 심의 신청서 [ <span class="register_num_children">HUM-2020-IB0001-M1</span> ]</h5>
+            <div class="btn_shrink flexCentral"><i class="fas fa-arrow-down"></i></div>
+            <!--
+              심사중: div.expiration 태그 추가
+              심사 지연: div.expiration.timiout 추가
+              심사 종료: 태그 삭제
+            -->
+            <!-- <div class="expiration">전문 심사 종료 <span class="timer">2일 9시간 12분 전</span></div> -->
+          </div>
+          <!--//modal-header-->
+          <div class="modal-body">
+            <div class="card-body noPadding pLeft15">
+              <h5 class="mTop0 mBot2 task_title_ko">국문 연구 과제명</h5>
+              <p class="text-muted mBot10 task_title_en">영문 연구 과제명</p>
+              <ul class="card_sum noBullet">
+                <li><span class="sum_label">연구 책임자:</span><span class="sum_content task_director">-</span></li>
+                <li><span class="sum_label">소속 부서:</span><span class="sum_content task_ditrect_dept">-</span></li>
+                <li><span class="sum_label">연락처:</span><span class="sum_content task_director_contact">- / -@-</span></li>
+                <li><span class="sum_label">심의 유형:</span><span class="sum_content judge_type_str">IBC</span></li>
+                <li><span class="sum_label">연구 기간:</span><span class="sum_content"><span class='task_approved_date'>-</span> ~ <span class='task_period'>-</span> (총 <span class='task_dayz'>-</span>일)</span></li>
+              </ul>
+
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-primary waves-effect waves-light btn-sm" onclick="newWindowPopup('./_popup_app-IBC_info_all.html');"><i class="fas fa-download mRight5"></i>심의 신청 서류 다운로드</button>
+              </div>
+              <div class="comment_box red_box red mTop10">
+                <ul class="pLeft15 mBot0">
+                  <li>심의신청서 및 연구계획서의 원안과 다르게 실험을 시행해야 하는 경우<br>반드시 변경심의신청서를 제출하여 승인 받은 후에 실험을 개시합니다.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body pTop20">
+
+              <div class="form-group">
+
+                <div class="app_anchor mTop-20" id="review_top"></div>
+
+                <div class="comment pHside20">
+                  <ul class="pLeft15 mBot0">
+                    <li>변경 신청의 심의는 신청 대상이 되는 <span class="red">실험의 심사 절차와 동일한 절차</span>로 진행됩니다.</li>
+                    <li class="noBullet">※ 심사 절차는 심의 신청서 <a href="javascript:void(0);" class="blue_deep underline move-to-selected" data-move-to-target="#form_01-3">1-3. 실험 분류</a>에 따라 <span class="red">승인대상 심사</span>와 <span class="red">신고/면제대상 심사</span>로 나뉩니다.</li>
+                  </ul>
+                </div>
+
+                <form>
+                  <!-- change_01 -->
+                  <ul class="list-group mTop30">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_01" data-toggle="collapse" data-target=".change_01" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_01">실험수행자의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_01-2"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_01 collapse">
+                      <label class="flex_1">변경 전:</label>
+                      <table class="table text-center list_table mTop10">
+                        <colgroup>
+                          <col width="50">   <!-- 1. 연구 책임자 -->
+                          <col width="50">   <!-- 2. 실험담당 -->
+                          <col width="*">    <!-- 3. 성명 -->
+                          <col width="*">    <!-- 4. 부서 -->
+                          <col width="*">    <!-- 5. 직책 -->
+                          <col width="*">    <!-- 6. 전공<br>분야 -->
+                          <col width="*">    <!-- 7. 휴대전화 -->
+                          <col width="*" class="hidden">  <!-- 8. Email -->
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="pHside0">연구<br>책임자</th>
+                            <th class="pHside0">실험담당</th>
+                            <th>성명</th>
+                            <th>부서</th>
+                            <th>직책</th>
+                            <th>전공<br>분야</th>
+                            <th>휴대전화</th>
+                            <th class="hidden">Email</th>
+                          </tr>
+                        </thead>
+                        <tbody class="white_bg_50">
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_old" value="1" checked readonly>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_old" value="1" disabled>
+                              </div>
+                            </td>
+                            <td>홍길동</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td>010-1234-5678</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_old" value="2" disabled>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_old" value="2" checked readonly>
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td>010-1234-5678</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_old" value="3" disabled>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_old" value="3" disabled>
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td>010-1234-5678</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <label class="flex_1">변경 후:</label>
+                      <button type="button" class="btn btn-primary btn-xs mLeft10" data-toggle="modal" data-target="#modal_staff">참여자 변경</button>
+                       <!-- 초기 값: 변경 전 참여자 목록 -->
+                      <table class="table text-center list_table thick mTop10">
+                        <colgroup>
+                          <col width="50">   <!-- 1. 연구 책임자 -->
+                          <col width="50">   <!-- 2. 실험담당 -->
+                          <col width="*">    <!-- 3. 성명 -->
+                          <col width="*">    <!-- 4. 부서 -->
+                          <col width="*">    <!-- 5. 직책 -->
+                          <col width="*">    <!-- 6. 전공<br>분야 -->
+                          <col width="*">    <!-- 7. 휴대전화 -->
+                          <col width="*" class="hidden">  <!-- 8. Email -->
+                          <col width="60">   <!-- 9. 삭제 -->
+                        </colgroup>
+                        <thead class="dark">
+                          <tr>
+                            <th class="pHside0">연구<br>책임자</th>
+                            <th class="pHside0">실험담당</th>
+                            <th>성명</th>
+                            <th>부서</th>
+                            <th>직책</th>
+                            <th>전공<br>분야</th>
+                            <th>휴대전화</th>
+                            <th class="hidden">Email</th>
+                            <th>삭제</th>
+                          </tr>
+                        </thead>
+                        <tbody class="white_bg">
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_new" value="1" checked>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_new" value="1">
+                              </div>
+                            </td>
+                            <td>홍길동</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td>010-1234-5678</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                            <td>
+                              <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_new" value="2">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_new" value="2" checked>
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td>010-1234-5678</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                            <td>
+                              <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="task_director_new" value="2">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="custom-radio">
+                                <input type="radio" name="exp_manager_new" value="2">
+                              </div>
+                            </td>
+                            <td>홍길동2</td>
+                            <td>약학과</td>
+                            <td>학부생</td>
+                            <td>수의학</td>
+                            <td>010-1234-5678</td>
+                            <td class="hidden">manager@company.co.kr</td>
+                            <td>
+                              <a href="javascript:void(0);" class="btn btn-outline-danger btn_xxs btn-staff-delete">삭제</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <label class="flex_1" for="change_01-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_01-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_01" class="custom-file-input" id="regFile_01">
+                          <label class="custom-file-label" for="regFile_01" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_02 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_02" data-toggle="collapse" data-target=".change_02" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_02">연구시설의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_01-2"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_02 collapse">
+                      <label class="flex_1" for="change_02-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_02-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_02-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_02-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_02" class="custom-file-input" id="regFile_02">
+                          <label class="custom-file-label" for="regFile_02" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_03 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_03" data-toggle="collapse" data-target=".change_03" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_03">승인 기간의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_01-1"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_03 collapse">
+                      <label class="flex_1">변경 전:</label>
+                      <div class="bullet mTop5">2021년 3월 3일 ~ 2021년 12월 31일</div>
+                      <label class="flex_1 mTop20">변경 후:</label>
+                      <div class="form-group flexMid">
+                        <label for="general_end_date" class="bullet mRight10 mBot0">2021년 3월 3일 ~ </label>
+                        <input class="form-control wCalendar" type="date" value="2021-12-31" id="general_end_date"> <!-- 초기 값: 변경 전 종료일 -->
+                      </div>
+                      <label class="flex_1" for="change_03-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_03-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_03" class="custom-file-input" id="regFile_03">
+                          <label class="custom-file-label" for="regFile_03" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_04 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_04" data-toggle="collapse" data-target=".change_04" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_04">연구 목적, 내용, 방법의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_02-3"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_04 collapse">
+                      <label class="flex_1" for="change_04-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_04-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_04-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_04-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_04" class="custom-file-input" id="regFile_04">
+                          <label class="custom-file-label" for="regFile_04" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_05 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_05" data-toggle="collapse" data-target=".change_05" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_05">취급 생물체의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-1"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_05 collapse">
+                      <label class="flex_1" for="change_05-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_05-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_05-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_05-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_05" class="custom-file-input" id="regFile_05">
+                          <label class="custom-file-label" for="regFile_05" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_06 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_06" data-toggle="collapse" data-target=".change_06" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_06">생물안전정보의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-2"></select>
+                          <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_06 collapse">
+                      <label class="flex_1" for="change_06-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_06-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_06-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_06-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_06" class="custom-file-input" id="regFile_06">
+                          <label class="custom-file-label" for="regFile_06" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_07 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_07" data-toggle="collapse" data-target=".change_07" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_07">신고사항의 변경</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <!-- <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-2"></select> -->
+                          <select class="form-control btn-outline-primary small_select move-to-selected"></select>
+                          <!-- 초기 선택 값이 없는 경우 "기본 선택 되돌리기" 불필요 -->
+                          <!-- <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a> -->
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_07 collapse">
+                      <label class="flex_1" for="change_07-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_07-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_07-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_07-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_07" class="custom-file-input" id="regFile_07">
+                          <label class="custom-file-label" for="regFile_07" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- change_08 -->
+                  <ul class="list-group mTop2">
+                    <li class="list-group-item">
+                      <div class="custom-control custom-checkbox flexMid flexBetween">
+                        <input type="checkbox" class="custom-control-input" id="change_08" data-toggle="collapse" data-target=".change_08" data-custom-toggle='visible'>
+                        <label class="custom-control-label mRight20" for="change_08">기타</label>
+                        <div class="flexMid flexRight flex_1 hidden">
+                          <!-- <select class="form-control btn-outline-primary small_select move-to-selected" data-selected="form_03-2"></select> -->
+                          <select class="form-control btn-outline-primary small_select move-to-selected"></select>
+                          <!-- 초기 선택 값이 없는 경우 "기본 선택 되돌리기" 불필요 -->
+                          <!-- <a href="javascript:void(0);" class="btn btn_reset_select btn-outline-primary" title="기본 선택으로 되돌리기"><i class="fas fa-redo-alt"></i></a> -->
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item change_08 collapse">
+                      <label class="flex_1" for="change_08-1">변경 내용:</label>
+                      <textarea class="form-control" rows="2" id="change_08-1"></textarea>
+                      <label class="flex_1 mTop10" for="change_08-2">변경 사유:</label>
+                      <textarea class="form-control" rows="2" id="change_08-2"></textarea>
+                      <div class="flexMid mTop5">
+                        <label class="mRight10 mBot0">관련 자료:</label>
+                        <div class="custom-file flex_1">
+                          <input type="file" name="regFile_08" class="custom-file-input" id="regFile_08">
+                          <label class="custom-file-label" for="regFile_08" data-button-text="첨부 File 선택"></label>
+                        </div>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+                <!-- 제출 확인 -->
+                <div class="sign_area pBot0">
+                  <div class="checkbox checkbox-primary flexRight mTop20">
+                    <input type="checkbox" id="check_01">
+                    <label class="custom-control-label blue_deep" for="check_01">위와 같이 변경 심의 신청서를 제출합니다.</label>
+                  </div>
+                  <div class="mTop10 flexMid flexRight">
+                    <div class="agree_date today_str">2021년 3월 11일</div>
+                    <div class="agree_author mTop0 mLeft20">연구 책임자<span class="reviewer">-</span></div>
+                  </div>
+                </div>
+                <!--//제출 확인 -->
+
+              </div>
+            </div>
+            <!--//card-body-->
+
+            <div class="card-footer pSide20 border_red supplement_comment">
+              <div class="checkbox checkbox-danger">
+                <input type="checkbox" id="" value="1" checked readonly>
+                <label>신청서 보완 요청</label>
+              </div>
+              <div class="data">
+                변경 요청한 실험동물의 종과 수량을 다시 확인하고 제출해주세요.
+              </div>
+            </div>
+
+            <div class="comment mTop10">※ 하단의 <span class="blue_vivid">변경항목 수정</span>을 클릭하여 항목을 수정할 수 있습니다.</div>
+          </div>
+          <!--//modal-body-->
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary waves-effect waves-light btn-sm" id="review_summary"><i class="fas fa-download mRight5"></i>변경항목만 보기</button>
+            <button type="button" class="btn btn-primary btn-sm pHside15" data-toggle="modal" data-target="#modal_confirm"><i class="fas fa-check mRight5"></i>IBC 변경 심의 신청서 제출</button>
+            <a href="#review_top" class="btn btn-outline-secondary btn-sm waves-light" id="move_top" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>첫 항목으로</a>
+          </div>
+          <!--//modal-footer-->
+
+        </div>
+      </div>
+    </div>
+    <!--//Modal -->
+
+    <!-- Modal: 신청서 제출 확인 -->
+    <div class="modal fade" id="modal_confirm">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">변경 승인 신청서 제출</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <!-- <i class="typcn typcn-warning-outline symbol"></i> -->
+                <!-- v -->
+                <i class="typcn typcn-input-checked symbol"></i>
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성한 동물 실험계획 변경 승인 신청서<br>
+                  [<span class="red underline register_num2">HUM-2020-IA0001-M1</span>]을<br>
+                  제출하여 심의절차를 진행하시겠습니까?
+                </h5>
+                <!-- <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span> -->
+               <!--  <span class="badge bg-soft-secondary">Disable Services</span>
+                <small class="text-muted ml-2">07 Oct 2020</small>
+                <ul class="mt-3 mb-0">
+                  <li>Lorem Ipsum is dummy text.</li>
+                  <li>It is a long established reader.</li>
+                  <li>Contrary to popular belief, Lorem simply.</li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <button type="button" onclick="onClickSubmit();" class="btn btn-primary" data-dismiss="modal">제출</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+
+
+    <!-- jQuery  -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    <!-- common -->
+    <script src="/assets/js/common/common.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- custom js for this page -->
+    <script src="/html/researcher/IBC/common_application_new-IBC.js"></script>
+    <script src="/html/researcher/IBC/experiment_list-IBC_new_change.js"></script>
+
+  </body>
+
+</html>

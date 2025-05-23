@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">새로운 동물 실험 계획서</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IA0001-01</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-01_1.html" class="row process_content active sub_2 active_sub_2" data-process-num="1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-02_1.html" class="row process_content" data-process-num="2">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-03_1.html" class="row process_content" data-process-num="3">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-04_1.html" class="row process_content" data-process-num="4">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-05_1.html" class="row process_content" data-process-num="5">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-06_1.html" class="row process_content" data-process-num="6">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-07_1.html" class="row process_content" data-process-num="7">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-08_1.html" class="row process_content" data-process-num="8">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-09_1.html" class="row process_content" data-process-num="9">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-10_1.html" class="row process_content" data-process-num="10">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-11_1.html" class="row process_content" data-process-num="11">
+                          <span>자가 점검</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-4. 연구 책임자</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="15%">
+                              <col width="30%">
+                              <col width="15%">
+                              <col width="40%">
+                            </colgroup>
+                            <tbody id="general_director">
+                              <tr>
+                                <td class="info_name">성명</td>
+                                <td id="general_director_name">홍길동</td>
+                                <td class="info_name">Email</td>
+                                <td id="general_director_email">gildong.hong@lab.co.kr</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">소속 부서</td>
+                                <td id="general_director_dept">동물 실험실</td>
+                                <td class="info_name">교육 일자</td>
+                                <td id="general_director_edu_date">2020-01-06</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">직책</td>
+                                <td id="general_director_position">교수</td>
+                                <td class="info_name">교육 기관명</td>
+                                <td id="general_director_edu_instition">수의사 협회</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">전공 분야</td>
+                                <td id="general_director_major_field">수의학</td>
+                                <td class="info_name">교육 이수 번호</td>
+                                <td id="general_director_edu_course_num">000-0000-0000</td>
+                              </tr>
+                              <tr>
+                                <td class="info_name">휴대 전화</td>
+                                <td id="general_director_phoneno">010-1234-5678</td>
+                                <td class="info_name">동물실험 경력 년수</td>
+                                <td>
+                                  <div class="btn-group">
+                                    <select class="form-control btn-outline-primary small_select" id="general_director_select">
+                                      <option selected="selected" disabled="disabled">경력 선택</option>
+                                      <option>=1년 미만</option>
+                                      <option>=1년 ~ 3년</option>
+                                      <option>=3년 이상</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_director_guide">
+                            <li>연구책임자 및 동물실험수행자의 숙련도와 교육이수 여부에 대한 정보가 정확히 기재되었는지 확인합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-5. 실험 수행자</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table text-center list_table">
+                            <colgroup>
+                              <col width="70">   
+                              
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="*">    
+                              <col width="130">  
+                              <col width="80">   
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>실험동물<br>관리담당</th>
+                                
+                                <th>성명</th>
+                                <th>부서</th>
+                                <th>직책</th>
+                                <th>전공<br>분야</th>
+                                <th>휴대전화</th>
+                                <th>Email</th>
+                                <th>교육이수 번호</th>
+                                <th>교육기관명</th>
+                                <th>동물실험<br>경력년수</th>
+                                <th>삭제</th>
+                              </tr>
+                            </thead>
+                            <tbody id="general_expt">
+                              <tr>
+                                <td>
+                                  <div class="custom-radio">
+                                    <input type="radio" id="org_conflict_1" name="exp_manager" value="1" class="" checked="checked">
+                                  </div>
+                                </td>
+                                
+                                <td>홍길동</td>
+                                <td>약학과</td>
+                                <td>학부생</td>
+                                <td>수의학</td>
+                                <td>010-1234-5678</td>
+                                <td>manager@company.co.kr</td>
+                                <td>000-0000-0000</td>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected="selected" disabled="disabled">경력</option>
+                                    <option>1년 미만</option>
+                                    <option>1년 ~ 3년</option>
+                                    <option>3년 이상</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class="far fa-trash-alt mRight5"></i>삭제</a>
+                                </td>
+                              </tr>
+                              <tr class="add_row">
+                                <td colspan="11">
+                                  <a href="javascript:void(0);" class="btn btn-xs btn-outline-primary" data-toggle="modal" data-target="#modal_staff"><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_expt_guide">
+                            <li>실험 수행자가 기관의 리스트에 없는 경우 행정간사에게 연락하여 사전 등록을 요청해야 합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-6. 관련 자료 첨부</h4>
+                        <div class="header_comment">본 동물실험 관련하여 별도의 참조자료가 필요한 경우 파일을 첨부해 주십시오.</div>
+                      </div>
+                      
+                      <div class="row app_content content-1-6">
+                        
+                        <div class="col-sm-9" id="general_ref">
+                          <div class="row flexMid">
+                            <label for="input_01-6_1" class="mRight10 mBot0 w100">관련 자료 1 :</label>
+                            <div class="custom-file flex_1 uploaded_file_box">
+                              <a href="#" class="data">이미 첨부된 자료 File.zip</a>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-outline-primary mLeft10 btn-file-add" title="첨부 File 추가"><i class="fas fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                          <div class="row flexMid mTop5">
+                            <label for="input_01-6_2" class="mRight10 mBot0 w100">관련 자료 2 :</label>
+                            <div class="custom-file flex_1">
+                              <input type="file" name="ref_file_1" class="custom-file-input" id="input_01-6_2">
+                              <label class="custom-file-label" for="input_01-6_2" data-button-text="첨부 File 선택"></label>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-outline-primary mLeft10 btn-file-add" title="첨부 File 추가"><i class="fas fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="general_ref_guide">
+                            <li>승인 신청하고자 하는 동물실험과 관련된 참조 자료가 있으면 별도의 파일을 첨부하여 제출할 수 있습니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="./application_new-01_1.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="./application_new-02_1.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="#" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" data-toggle="modal" data-target="#modal_tempSave"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_staff" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_staff_1">실험 수행자 추가</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="card-body">
+
+              <table class="table list_table" id="researcher_list">
+                <thead>
+                  <tr>
+                    
+                    <th class="text-center">성명</th>
+                    <th>부서</th>
+                    <th>직책</th>
+                    <th>전공분야</th>
+                    <th>휴대전화</th>
+                    <th>Email</th>
+                    <th>교육이수 번호</th>
+                    <th>교육기관명</th>
+                  </tr>
+                </thead>
+                <tbody id="other-staff">
+                  <tr class="staff-row">
+                    
+                    <td class="text-center">홍길동</td>
+                    <td>약학과</td>
+                    <td>학부생</td>
+                    <td>수의학</td>
+                    <td>010-1234-5678</td>
+                    <td>manager@company.co.kr</td>
+                    <td>000-0000-0000</td>
+                    <td>OO대학교</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="text-center text-muted">
+                <span class="red">추가할 실험 수행자를 선택하면 신청서에 추가됩니다.</span>
+              </div>
+            </div>
+            
+          </div>
+          
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+          </div>
+          
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../assets/js/di4js.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new-01_2.js"></script>
+
+  </body>
+
+</html>

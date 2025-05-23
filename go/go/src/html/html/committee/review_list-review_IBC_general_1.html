@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/rating/themes/rating.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="committee">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+    
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">심의 신청서 일반 심사</h4>
+                    <div class="comment">항목별 일반 심사의 총평입니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    
+                    <div class="step active">심의 진행</div>
+                    
+                    <div class="step">실험 수행</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  <div class="flexMid mTop20">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>항목별 전문심사 결과 및 평가</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+                  <table class="table list_table mTop20" id="expertReview_table">
+                    <colgroup>
+                      <col width="*">   
+                      <col width="*">   
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>평가 항목</th>
+                        <th>항목별 전문심사 의견</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1. 일반정보</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>2. 동물실험 정보</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>3. 실험동물 정보</td>
+                        <td class="max_w300 noComment">심사의견 없음
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4. 실험물질 정보</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>5. 동물실험 방법</td>
+                        <td class="max_w300 noComment">심사의견 없음
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6. 고통등급</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>7. 고통경감 방안</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>8. 사육관리</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>9. 안락사</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                      <tr>
+                        <td>10. 연구자 준수사항</td>
+                        <td class="max_w300 noComment">심사의견 없음</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <div class="comment_box gray_box review_box">
+                    <div class="">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 총평</h4>
+                      <div class="data mTop5" id="expert_review_total_review"></div>
+                    </div>
+
+                    <div class="mTop30">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 결과</h4>
+                      
+                      <div class="custom-control custom-radio flexMid mTop10">
+                        <input type="radio" name="radio_01_group" value="2" class="custom-control-input" id="radio_02" checked="checked" readonly="readonly">
+                        <label class="custom-control-label w80" id="expert_review_result">조건부 승인</label>
+                      </div>
+                      
+                      <div class="data mTop5" id="expert_review_result_text"></div>
+                    </div>
+
+                    <div class="sign_area">
+                      <div class="checkbox checkbox-primary mTop20">
+                        <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                        <label class="custom-control-label blue_deep">위와 같이 전문심사 결과를 제출합니다.</label>
+                      </div>
+                      <div class="mTop10 flexMid pRight10">
+                        <div class="agree_date" id="expert_submit_date">-년 -월 -일</div>
+                        <div class="agree_author mTop0 mLeft20">전문 위원<span class="reviewer" id="experter">* * *</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  <div class="comment_box blue_box review_box mTop20">
+                    <div class="mTop10">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심의 평가서</h4>
+                      <div class="header_comment">본 연구계획의 항목별 심사평가 결과를 입력해 주세요.</div>
+                    </div>
+
+                    <table class="table list_table mTop20" id="generalReview_table">
+                      <colgroup>
+                        <col width="*">   
+                        <col width="10%" class="min_w100"> 
+                        <col width="10%" class="min_w100">
+                        <col width="10%" class="min_w100">
+                        <col width="10%" class="min_w100">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>평가 항목</th>
+                          <th colspan="100%">평가 결과</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="100%" class="review_title">심의분류 적합성</td>
+                        </tr>
+                        <tr>
+                          <td>국가승인, 기관승인, 기관신고 및 면제실험의 분류가 적합한가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_01-1" value="1" id="radio_general_01-1-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_01-1-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_01-1" value="2" id="radio_general_01-1-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_01-1-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_01-1" value="3" id="radio_general_01-1-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_01-1-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="100%" class="review_title">비상조치 체계 마력</td>
+                        </tr>
+                        <tr>
+                          <td>비상 연락망이 가춰져 있는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-1" value="1" id="radio_general_02-1-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_02-1-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-1" value="2" id="radio_general_02-1-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_02-1-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-1" value="3" id="radio_general_02-1-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_02-1-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-1" value="0" id="radio_general_02-1-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_02-1-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                          <td>비상 조치를 마련하였는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-2" value="1" id="radio_general_02-2-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_02-2-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-2" value="2" id="radio_general_02-2-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_02-2-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-2" value="3" id="radio_general_02-2-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_02-2-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_02-2" value="0" id="radio_general_02-2-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_02-2-4">해당없음</label>
+                            </div>
+                          </td>
+                        
+
+                        <tr>
+                          <td colspan="100%" class="review_title">위험등급 분류 및 적합성</td>
+                        </tr>
+                        <tr>
+                          <td>유전자 변형생물체의 위험등급 분류가 적절한가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_03-1" value="1" id="radio_general_03-1-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_03-1-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_03-1" value="2" id="radio_general_03-1-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_03-1-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_03-1" value="3" id="radio_general_03-1-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_03-1-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>유전 물질의 특징을 파악하고 있는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_03-2" value="1" id="radio_general_03-2-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_03-2-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_03-2" value="2" id="radio_general_03-2-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_03-2-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_03-2" value="3" id="radio_general_03-2-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_03-2-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="100%" class="review_title">병원성, 독성 및 알레르기 유발성 숙지</td>
+                        </tr>
+                        <tr>
+                          <td>병원균의 감염경로, 전파능력을 숙지하고 있는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-1" value="1" id="radio_general_04-1-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_04-1-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-1" value="2" id="radio_general_04-1-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_04-1-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-1" value="3" id="radio_general_04-1-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_04-1-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-1" value="0" id="radio_general_04-1-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_04-1-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>득성 및 알레르기 유발성에 대한 정보를 알고 있는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-2" value="1" id="radio_general_04-2-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_04-2-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-2" value="2" id="radio_general_04-2-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_04-2-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-2" value="3" id="radio_general_04-2-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_04-2-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_04-2" value="0" id="radio_general_04-2-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_04-2-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="100%" class="review_title">예방조치 및 치료방법 존재여부 파악</td>
+                        </tr>
+                        <tr>
+                          <td>백신 및 치료제가 존재하는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-1" value="1" id="radio_general_05-1-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_05-1-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-1" value="2" id="radio_general_05-1-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-1-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-1" value="3" id="radio_general_05-1-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-1-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-1" value="0" id="radio_general_05-1-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-1-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>가용한 백신을 접종 받았는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-2" value="1" id="radio_general_05-2-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_05-2-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-2" value="2" id="radio_general_05-2-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-2-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-2" value="3" id="radio_general_05-2-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-2-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-2" value="0" id="radio_general_05-2-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-2-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>가용한 치료제를 준비하였는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-3" value="1" id="radio_general_05-3-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_05-3-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-3" value="2" id="radio_general_05-3-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-3-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-3" value="3" id="radio_general_05-3-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-3-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_05-3" value="0" id="radio_general_05-3-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_05-3-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="100%" class="review_title">페기물 처리방안</td>
+                        </tr>
+                        <tr>
+                          <td>페기물 불활성화 방안이 마련되었는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-1" value="1" id="radio_general_06-1-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_06-1-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-1" value="2" id="radio_general_06-1-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_06-1-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-1" value="3" id="radio_general_06-1-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_06-1-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-1" value="0" id="radio_general_06-1-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_06-1-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>페기물 처리방인이 마련되었는가?</td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-2" value="1" id="radio_general_06-2-1" class="custom-control-input" checked="checked">
+                              <label class="custom-control-label" for="radio_general_06-2-1">예</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-2" value="2" id="radio_general_06-2-2" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_06-2-2">아니오</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-2" value="3" id="radio_general_06-2-3" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_06-2-3">보완필요</label>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" name="radio_general_06-2" value="0" id="radio_general_06-2-4" class="custom-control-input">
+                              <label class="custom-control-label" for="radio_general_06-2-4">해당없음</label>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="mTop30">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>일반심사 투표하기</h4>
+                      <div class="header_comment">본 실험계획에 대한 일반심사 위원의 의견을 제시해 주세요.</div>
+                    </div>
+
+                    <div class="mTop15" id="normal_review_result">
+                      <div class="custom-control custom-radio flexMid">
+                        <input type="radio" name="radio_11_group" value="1" class="custom-control-input" id="radio_11" data-custom-toggle="visible" checked="checked">
+                        <label class="custom-control-label w50" for="radio_11">찬성</label>
+                      </div>
+                      <div class="custom-control custom-radio flexMid mTop10">
+                        <input type="radio" name="radio_11_group" value="0" class="custom-control-input" id="radio_12" data-custom-toggle="visible">
+                        <label class="custom-control-label w50" for="radio_12">반대</label>
+                        <input type="text" class="form-control form-control-sm hidden">
+                      </div>
+                    </div>
+
+                    <div class="sign_area">
+                      <div class="checkbox checkbox-primary mTop20">
+                        <input type="checkbox" id="check_11">
+                        <label class="custom-control-label blue_deep" for="check_11">위와 같이 일반심사 결과를 제출합니다.</label>
+                      </div>
+                      <div class="mTop10 flexMid pRight10">
+                        <div class="agree_date" id="normal_submit_date">-년 -월 -일</div>
+                        <div class="agree_author mTop0 mLeft20">일반 위원<span class="reviewer" id="submiter">나 일 반</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <div class="expiration mRight10">일반 심사 종료<span class="timer">2일 9시간 12분 전</span></div>
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_finish_review"><i class="fas fa-check mRight5"></i>일반 심사 완료</a>
+                  <a href="javascript:newWindowPopup('/html/committee/IBC/_popup_app-IBC_info_all.html');" class="btn btn-outline-primary waves-effect waves-light mLeft20"><i class="fas fa-check mRight5"></i>실험 계획서 보기</a>
+                  <a href="./review_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_finish_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">일반 심사 완료</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">생물안전위원회 심의 신청서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의<br>일반 심사를 마치겠습니까?
+                </h5>
+                <span class="bg-soft-secondary">일반 심사 결과가 저장되고, 최종 심의가 진행됩니다.<br>일반 심사를 마친 심의 신청서는 <span class="red underline">심사기록</span>메뉴에서 확인할 수 있습니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="javascript:void(0);" onclick="onClickNormalReviewFinishSubmit();" class="btn btn-primary">일반 심사 완료</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./review_list-review_IBC_general_1.js"></script>
+    <script src="../../plugins/rating/jquery.barrating.min.js"></script>
+    <script src="../../assets/js/common/rating.init.js"></script>
+
+  </body>
+
+</html>

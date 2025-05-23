@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="chairman">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">최종 심의</h4>
+                    <div class="comment">심사가 종료되고 최종 심의가 필요한 신청서 및 보고서 목록 입니다.</div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card hidden" id="application_list">
+                <div class="card-header">
+                  <div class="flexMid">
+                    <h4 class="card-title">최종 심의 대상 목록</h4>
+                    <div class="mLeft20" id="type_changer">
+                      <div class="radio radio-primary form-check-inline">
+                        <input type="radio" id="type1" value="card_type" name="list_type" class="mRight5" checked="checked">
+                        <label for="type1" class="mBot0">Card 형</label>
+                      </div>
+                      <div class="radio radio-primary form-check-inline">
+                        <input type="radio" id="type2" value="list_type" name="list_type" class="mRight5">
+                        <label for="type2" class="mBot0">List 형</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexMid">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  
+                  <table id="datatable" class="table list_table noSide nowrap w100p card_type">
+                    <colgroup>
+                      <col width="135">   
+                      <col width="100">   
+                      <col width="*">     
+                      <col width="80">    
+                      <col width="80">    
+                      <col width="80">    
+                      <col width="120">   
+                      <col width="80">    
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="120">   
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>접수 번호</th>
+                        <th>접수 일자</th>
+                        <th>과제명</th>
+                        <th class="thick">심의 유형</th>
+                        <th>서식 유형</th>
+                        <th>진행 단계</th>
+                        <th>진행 상태</th>
+                        <th>작성자</th>
+                        <th>소속 기관</th>
+                        <th>소속 부서</th>
+                        <th class="text-center no-order noCard_type">행정 처리 실행</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr data-url="./reviewConfirm_list-review_end.html" data-id="1" class="IACUC">
+                        <td data-title="접수 번호:" class="order_1">-</td>
+                        <td data-title="접수 일자:">-</td>
+                        <td data-title="과제명:" class="short_col title_col">-</td>
+                        <td data-title="심의 유형:" class="order_start committee_color committee_border committee_bg">IACUC</td>
+                        <td data-title="서식 유형:">-</td>
+                        <td data-title="진행 단계:" class="line_top short_col">-</td>
+                        <td data-title="진행 상태:" class="line_bottom">-</td>
+                        <td data-title="작성자:">-</td>
+                        <td data-title="소속 기관:">-</td>
+                        <td data-title="소속 부서:">-</td>
+                        <td class="text-center action_buttons wide_buttons order_end">
+                          
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./reviewConfirm_list.js"></script>
+
+  </body>
+
+</html>

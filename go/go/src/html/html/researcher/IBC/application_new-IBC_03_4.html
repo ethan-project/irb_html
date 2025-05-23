@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">생물안전위원회 심의 신청</h4>
+                    <div class="comment">새로운 IBC 심의 신청서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-IBC_01_1.html" class="row process_content" data-process-num="1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_02_1.html" class="row process_content" data-process-num="2">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_03_1.html" class="row process_content active sub_5 active_sub_4" data-process-num="3">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-IBC_04_1.html" class="row process_content" data-process-num="4">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>3-1. 취급 생물체 및 물질 정보</h4>
+                        <div class="header_comment">
+                          <div class="checkbox">
+                            <div class="custom-control custom-checkbox">
+                              
+                              <input type="checkbox" name="ibc_risk_toxin_handling_check-main_check" class="custom-control-input" id="ibc_risk_toxin_handling_check-main_check" data-toggle="collapse" data-target="#main-3-1-D" value="1">
+                              <label class="custom-control-label" for="ibc_risk_toxin_handling_check-main_check">D.항목 - 해당사항 없음</label>
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                      <div id="main-3-1-D" class="collapse show hidden">
+                        <div class="content_wrapper mBot10">
+                          
+                          <div class="row app_header">
+                            <h4 class="card-title">
+                              <i class="far fa-plus-square mRight10"></i>D. 독소를 정제 및 생산 등의 취급을 하는 경우
+                            </h4>
+                            <div class="header_comment"></div>
+                          </div>
+                          
+                          <div class="row app_content collapse show input_03-1-D_group pBot20" id="input_03-1-D_group">  
+                            <div class="col-sm-9">
+                              <div class="form-group row flexMid flexNoWrap">
+                                <label for="input_03-1-D_1" class="mRight10 mBot0 w100">독소명</label>
+                                <input type="text" name="input_03-1-D_1" maxlength="100" class="form-control flex_1" id="03-1-D_1">
+                              </div>
+
+                              <div class="form-group row flexMid flexNoWrap">
+                                <label for="input_03-1-D_2" class="mRight10 mBot0 w100">용도</label>
+                                <input type="text" name="input_03-1-D_2" maxlength="100" class="form-control flex_1" id="03-1-D_2">
+                              </div>
+
+                              <div class="form-group row flexMid flexNoWrap">
+                                <label for="input_03-1-D_3" class="mRight10 mBot0 w100">LD50</label>
+                                <input type="text" name="input_03-1-D_3" maxlength="100" class="form-control flex_1" id="03-1-D_3" placeholder="독소량과 단위를 함께 입력해 주세요.">
+                              </div>
+
+                              <div class="form-group row flexMid flexNoWrap">
+                                <label for="input_03-1-D_4" class="mRight10 mBot0 w100">용도</label>
+                                <input type="text" name="input_03-1-D_4" maxlength="100" class="form-control flex_1" id="03-1-D_4">
+                              </div>
+                              
+                              <div class="form-group row flexTop flexNoWrap mTop20">
+                                <label class="mRight10 w100 mTop8">획득방법</label>
+                                <div class="flex_1 mTop5">
+                                  <div class="custom-control custom-radio flexMid">
+                                    <input type="radio" name="radio_03-1-D_5" value="1" id="radio_03-1-D_5-1" class="custom-control-input" data-custom-toggle="visible" checked="checked">
+                                    <label class="custom-control-label" for="radio_03-1-D_5-1">구매</label>
+                                    <label for="input_03-1-D_5-1_1" class="mLeft20 mRight10 mBot0 hidden show">구입처</label>
+                                    <input type="text" class="form-control form-control-sm flex_1 hidden show">
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="radio_03-1-D_5" value="2" id="radio_03-1-D_5-2" class="custom-control-input" data-custom-toggle="visible">
+                                    <label class="custom-control-label" for="radio_03-1-D_5-2">증여</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="radio_03-1-D_5" value="3" id="radio_03-1-D_5-3" class="custom-control-input" data-custom-toggle="visible">
+                                    <label class="custom-control-label" for="radio_03-1-D_5-3">자체 생산 또는 개발</label>
+                                  </div>
+                                  <div class="custom-control custom-radio flexMid mTop10">
+                                    <input type="radio" name="radio_03-1-D_5" value="4" id="radio_03-1-D_5-4" class="custom-control-input" data-custom-toggle="visible">
+                                    <label class="custom-control-label w80" for="radio_03-1-D_5-4">기타</label>
+                                    <input type="text" class="form-control form-control-sm hidden">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group row flexTop flexNoWrap mTop20">
+                                <label class="mRight10 w100">획득경로</label>
+                                <div class="flex_1">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="radio_03-1-D_6" value="1" id="radio_03-1-D_6-1" class="custom-control-input" data-custom-toggle="visible" checked="checked">
+                                    <label class="custom-control-label" for="radio_03-1-D_6-1">국내분양</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="radio_03-1-D_6" value="2" id="radio_03-1-D_6-2" class="custom-control-input" data-custom-toggle="visible">
+                                    <label class="custom-control-label" for="radio_03-1-D_6-2">수입</label>
+                                  </div>
+                                  <div class="custom-control custom-radio flexMid mTop10">
+                                    <input type="radio" name="radio_03-1-D_6" value="3" id="radio_03-1-D_6-3" class="custom-control-input" data-custom-toggle="visible">
+                                    <label class="custom-control-label w80" for="radio_03-1-D_6-3">기타</label>
+                                    <input type="text" class="form-control form-control-sm hidden">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group row flexTop flexNoWrap mTop20">
+                                <label for="input_03-1-D_7" class="mRight10 w100 mTop5">분리추출 과정</label>
+                                <textarea class="form-control flex_1" rows="3" id="input_03-1-D_7" placeholder="자가분리를 시행하는 경우 분리추출과정을 기재해 주세요"></textarea>
+                              </div>
+
+                              <div class="form-group row flexTop flexNoWrap mTop20">
+                                <label for="input_03-1-D_8" class="mRight10 mBot0 mTop10 w100">기타 특성</label>
+                                <textarea class="form-control flex_1" rows="3" id="input_03-1-D_8"></textarea>
+                              </div>
+
+                              <div class="row flexMid mTop20">
+                                <label class="mBot0">※ 산업통상자원부 신고내역</label>
+                                <div class="checkbox mLeft20">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="check_03-1-D_9" class="custom-control-input" id="check_03-1-D_9" data-toggle="collapse" data-target="#input_03-1-D_9_group" value="1">
+                                    <label class="custom-control-label" for="check_03-1-D_9">해당사항 없음</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group row flexMid flexNoWrap mTop10 mLeft10 mBot0 collapse show" id="input_03-1-D_9_group">
+                                <div class="checkbox checkbox-primary">
+                                  <input type="checkbox" id="check_03-1-D_9-1" value="1">
+                                  <label for="check_03-1-D_9-1">제조신고</label>
+                                </div>
+                                <div class="checkbox checkbox-primary mLeft20">
+                                  <input type="checkbox" id="check_03-1-D_9-2" value="2">
+                                  <label for="check_03-1-D_9-2">보유신고</label>
+                                </div>
+                                <div class="checkbox checkbox-primary mLeft20">
+                                  <input type="checkbox" id="check_03-1-D_9-3" value="3">
+                                  <label for="check_03-1-D_9-3">수출입허가</label>
+                                </div>
+                              </div>
+
+                            </div>
+
+                            
+                            <div class="col-sm-3 app_guide">
+                              <ul id="general_title_guide">
+                                <li class="red">면제 실험, 기관신고 실험인 경우에는 위해성평가서는 작성하지 않습니다.</li>
+                                <li>국가/기관 승인 실험인 경우에만 위해성평가서를 작성합니다.</li>
+                                <li style="margin-top:30px;">
+                                  독소 목록 「생화학무기법 시행령」 [별표2]<br>
+                                  1. 보툴리늄 독소(Botulinum toxins)<br>
+                                  2. 웰치균 독소(Clostridium perfringens epsilon toxins)<br>
+                                  3. 코노 독소(Conotoxin)<br>
+                                  4. 시가 독소(Shiga toxin)<br>
+                                  5. 포도상구균 장 독소(Staphylococcus aureus toxins)<br>
+                                  6. 복어독(Tetrodotoxin)<br>
+                                  7. 베로톡신(Verotoxin)<br>
+                                  8. 마이크로시스틴(시안지노신)(Microcystin(Cyanginosin))<br>
+                                  9. 아플라톡신(Aflatoxins)<br>
+                                  10. 아브린(Abrin)<br>
+                                  11. Diacetoxyscirpenol toxin<br>
+                                  12. T-2 toxin<br>
+                                  13. 볼켄신 독소(Volkensin toxin)
+                                </li>
+                                <li style="margin-top:80px;">위 항목 외에 병원체의 특성을 자유롭게 기술합니다.</li>
+                              </ul>
+                            </div>
+                            <div class="app_divider noGuide"></div>
+
+                            <div class="col-sm-9 flexCenter">
+                              <a href="javascript: void(0)" class="btn btn-outline-danger btn-sm item_remove_btn"><i class="fas fa-minus-square mRight5"></i>독소 삭제</a>
+                            </div>
+
+                          </div>
+                        </div>
+                        
+
+                        <div class="row app_content collapse show input_03-1-D_group">  
+                          <div class="col-sm-9">
+                            <div class="flexCenter">
+                              <a href="javascript: void(0)" class="btn btn-outline-primary item_new_btn" id="btn-add"><i class="fas fa-plus-square mRight5"></i>독소 추가</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="javascript:void(0);" onclick="validCheckAfterClickPrePage();" id="app_page_navi_pre_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="javascript:void(0);" onclick="validCheckAfterClickNextPage();" id="app_page_navi_next_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
+                    <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" onclick="validCheckAfterClickTempSave();"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
+                  <a href="../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_tempSave" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
+                <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+               
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+            <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    
+
+    
+    <script src="/html/researcher/IBC/application_new-IBC_03_4.js"></script>
+
+  </body>
+
+</html>

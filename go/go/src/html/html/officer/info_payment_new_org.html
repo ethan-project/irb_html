@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">서비스 이용권 결제</h4>
+                    <div class="comment">
+                      현재 <span class="red">이용중</span>이거나 <span class="red">이용전인 서비스 이용권</span>을 확인하고 새로운 이용권을 결제할 수 있습니다.
+                    </div>
+                  </div>
+                  <div class="col-auto align-self-center export_buttons"></div>
+                </div>
+              </div>
+              
+
+              <div class="card">
+                <div class="card-header">
+                  
+
+                  <div class="row comment_box blue_box mHside20 mVside10">
+                    <div class="col-sm-5">
+                      <div class="flexMid">
+                        <h4 class="card-title"><i class="far fa-credit-card mRight10"></i><span class="blue_deep">사용중</span>인 서비스 이용권</h4>
+                      </div>
+                      <div class="mTop10">
+                        <ul class="mBot5">
+                          <li class="mTop10">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">서비스 이용권 명:</label>
+                              <div class="blue_deep">IPSAP 서비스 1개월 이용권</div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">이용 기간:</label>
+                              <div class="blue_deep">2021-05-11 ~ 2021-06-10<span class="red mLeft10">( 만료 21일전 )</span></div>
+                            </div>
+                          </li>
+                          <li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">결제 일시:</label>
+                              <div class="blue_deep">2021-05-09 16:14:30</div>
+                            </div>
+                          </li>
+                          <li class="mTop10 red noBullet">
+                            ※ 결제한 순서대로 이용권이 사용됩니다.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 border_left_thick pLeft30">
+                      <div class="flexMid">
+                        <h4 class="card-title"><i class="far fa-credit-card mRight10"></i><span class="blue_deep">대기중</span>인 서비스 이용권</h4>
+                      </div>
+                      <div class="mTop10">
+                        <ul class="mBot5">
+                          <li class="mTop10">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">서비스 이용권 명:</label>
+                              <div class="blue_deep">IPSAP 서비스 6개월 이용권</div>
+                            </div>
+                          </li><li class="mTop5">
+                            <div class="flexMid">
+                              <label class="mRight10 mBot0">이용 기간:</label>
+                              <div class="blue_deep">6 개월</div>
+                            </div>
+                          </li>
+                          
+                          <li class="mTop10 red noBullet">
+                            ※ 등록된 서비스 이용권이 없습니다.
+                          </li>
+                          <li class="mTop10 red noBullet">
+                            <div class="flexMid">
+                              <button type="button" class="btn btn-primary btn_xxs" data-toggle="collapse" data-target="#cart">IPSAP 이용권 구매<i class="far fa-file mLeft5"></i></button>
+                              <span class="red mLeft10">※ 이용 기간 만료 전에 이용권을 구매하여 등록할 수 있습니다.</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-body pHside40 pVside20 collapse" id="cart">
+                  <div class="row">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>IPSAP 서비스 이용권 구매</h4>
+                    <button type="button" class="btn btn-secondary btn_xxs mLeft20" data-toggle="collapse" data-target="#cart">다음에 구매하기</button>
+                  </div>
+                  <div class="mTop10">
+                    <table class="table list_table nowrap fs_large">
+                      <colgroup>
+                        <col width="100">  
+                        <col width="140">  
+                        <col width="*">    
+                      </colgroup>
+                      <tbody id="plan_list_forbuying">
+                        <tr data-url="#" class="">
+                          <td class="fw_bold pLeft20 pVside15">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 서비스 12개월 이용권<br>
+                            
+                            <span class="fs_small fw_normal mLeft25">IPSAP 서비스 1년 이용권입니다. (12개월 정가에서 10% 할인)</span>
+                          </td>
+                          <td class="text-right pRight20"><div class="price">3,000,000<span class="fs_12p mLeft5">원</span></div></td>
+                          <td><button type="button" class="btn btn-primary btn_xxs purchase_item">구매하기</button></td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="fw_bold pLeft20 pVside15">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 서비스 6개월 이용권<br>
+                            
+                            <span class="fs_small fw_normal mLeft25">IPSAP 서비스 6개월 이용권입니다. (6개월 정가에서 8% 할인)</span>
+                          </td>
+                          <td class="text-right pRight20"><div class="price">1,800,000<span class="fs_12p mLeft5">원</span></div></td>
+                          <td><button type="button" class="btn btn-primary btn_xxs" data-toggle="modal" data-target="#modal_prepare">구매하기</button></td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="fw_bold pLeft20 pVside15">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 서비스 3개월 이용권<br>
+                            
+                            <span class="fs_small fw_normal mLeft25">IPSAP 서비스 3개월 이용권입니다. (3개월 정가에서 5% 할인)</span>
+                          </td>
+                          <td class="text-right pRight20"><div class="price">900,000<span class="fs_12p mLeft5">원</span></div></td>
+                          <td><button type="button" class="btn btn-primary btn_xxs" data-toggle="modal" data-target="#modal_prepare">구매하기</button></td>
+                        </tr>
+                        <tr data-url="#" class="">
+                          <td class="fw_bold pLeft20 pVside15">
+                            
+                            <i class="far fa-credit-card mRight10"></i>IPSAP 서비스 30일 이용권<br>
+                            
+                            <span class="fs_small fw_normal mLeft25">IPSAP 서비스 30일 이용권입니다.</span>
+                          </td>
+                          <td class="text-right pRight20"><div class="price">300,000<span class="fs_12p mLeft5">원</span></div></td>
+                          <td><button type="button" class="btn btn-primary btn_xxs" data-toggle="modal" data-target="#modal_prepare">구매하기</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="card-body pHside30">
+                  <div class="flexMid mBot10">
+                    <div class="search_info">검색 결과</div>
+                    <div class="search_form"></div>
+                  </div>
+                  
+                  <table id="datatable" class="table list_table noSide nowrap">
+                    <colgroup>
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>결제 일시</th>
+                        <th>결제 번호</th>
+                        <th>결제 내용</th>
+                        <th class="text-right">최종 결제 금액(원)</th>
+                        <th class="text-center">결제 수단</th>
+                        <th>이용 기간</th>
+                        <th class="text-center no-order">증명서 발급</th>
+                      </tr>
+                    </thead>
+                    <tbody id="plan_list_alreadybought">
+                      
+                      <tr data-url="./info_payment_new-info.html" class="deposited">
+                        <td>2021-05-13 16:01:45</td>
+                        <td class="ipsapNo">20210215001</td>
+                        <td>IPSAP 서비스 6개월 이용권</td>
+                        <td class="text-right pRight10">1,800,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="period">이용전</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                      <tr data-url="./info_payment_new-info.html" class="inUse">
+                        <td>2021-05-11 09:25:31</td>
+                        <td class="ipsapNo">20210201001</td>
+                        <td>IPSAP 서비스 1개월 이용권</td>
+                        <td class="text-right pRight10">300,000</td>
+                        <td class="text-center">신용카드</td>
+                        <td class="period">2021-05-11 ~ 2021-06-10</td>
+                        <td class="text-center">
+                          <a href="./info_payment_list-cert.html" class="btn btn-primary btn_xxs">증명서 발급<i class="far fa-file mLeft5"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" data-keyboard="false" id="modal_prepare" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IPSAP 서비스 이용권 구매</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10 pTop10">
+                
+                <i class="fas fa-cart-arrow-down symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="lh_vivid mBot10">아래의 정보로 결제를 진행하고자 하는 경우,<br><span class="pink_vivid">구매하기</span> 버튼을 눌러 주세요.</h5>
+              </div>
+            </div>
+
+            <form name="plan_info" class="pHside40 pVside20 border_top">
+              <h5><i class="fas fa-plus-square mRight10"></i>서비스 이용권 정보</h5>
+              <input type="hidden" class="planseq">
+              <div class="flexMid mTop10">
+                <label class="text-right w80 fw_bold mRight20">이용권 명</label>
+                <span class="fs_semi fw_bold modal_payment_title">IPSAP 서비스 3개월 이용권</span>
+              </div>
+              <div class="flexMid">
+                <label class="text-right w80 fw_bold mRight20">이용 금액</label>
+                <span class="fs_semi fw_bold"><span class="red fs_large modal_payment_price">1,800,000</span> 원</span>
+              </div>
+              <div class="flexMid border_top mTop10 pTop10">
+                <h5><i class="fas fa-plus-square mRight10"></i>구매자 정보</h5>
+                <div class="checkbox mLeft20">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" name="payment_type" class="custom-control-input" id="is_sameUser" value="true" checked="checked">
+                    <label class="custom-control-label" for="is_sameUser">사용자와 동일합니다.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="flexMid mTop10">
+                <label for="buyer_name" class="text-right w80 fw_bold mRight20 mBot3">이름</label>
+                <input type="text" maxlength="20" class="form-control form-control-sm fs_semi w150" id="buyer_name" value="홍길동" readonly="readonly">
+              </div>
+              <div class="flexMid mTop5">
+                <label for="buyer_phone" class="text-right w80 fw_bold mRight20 mBot3">연락처</label>
+                <input type="text" maxlength="20" class="form-control form-control-sm fs_semi w150" id="buyer_phone" value="010-1234-5678" readonly="readonly">
+              </div>
+              <div class="flexMid mTop5">
+                <label for="buyer_email" class="text-right w80 fw_bold mRight20 mBot3">Email 주소</label>
+                <input type="text" maxlength="40" class="form-control form-control-sm fs_semi flex_1" id="buyer_email" value="gdhong@company.ac.kr" readonly="readonly">
+              </div>
+            </form>
+            <form name="payForm" accept-charset="euc-kr">
+              <input type="hidden" name="GoodsName">
+              <input type="hidden" name="Amt">
+              <input type="hidden" name="MID">
+              <input type="hidden" name="EdiDate">
+              <input type="hidden" name="Moid">
+              <input type="hidden" name="SignData">
+              <input type="hidden" name="ReqReserved">
+              <input type="hidden" name="CharSet" value="utf-8">
+              <input type="hidden" name="PayMethod" value="CARD,BANK">
+              
+              <input type="hidden" name="BuyerName">
+              <input type="hidden" name="BuyerTel">
+              <input type="hidden" name="BuyerEmail">
+            </form>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" id="excute_break" onclick="orderAssign();">구매하기</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="https://web.nicepay.co.kr/v3/webstd/js/nicepay-3.0.js"></script>
+    <script src="/html/officer/info_payment_common.js"></script>
+    <script src="/html/officer/info_payment_new.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body class="admin">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="admin_topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">사용자 정보 관리</h4>
+                    <div class="comment">사용자의 정보를 확인, 변경할 수 있습니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="comment">※ 본인이 사용자 정보를 등록하지 않은 <span class="green_vivid">등록 대기중인 사용자</span>는 온라인 심사 서비스를 <span class="red">이용할 수 없습니다.</span></div>
+                </div>
+                <div class="card-body pVside20 pHside40">
+
+                    <div class="row">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>사용자의 소속 정보</h4>
+                      <div class="header_comment mLeft20">
+                        
+                        
+                      </div>
+                    </div>
+                    
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          
+                          <tr>
+                            <td class="info_name">소속 기관명</td>
+                            <td class="data"><span class="gray mRight5">(국문)</span><span>한국2 대학교</span><span class="mLeft20"></span><span class="gray mRight5">(영문)</span><span>Hankuk University 2</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">기관 코드</td>
+                            <td class="data">HUM</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">참여 권한</td>
+                            
+                            <td class="data unregistered"><span class="label auth_label">연구원</span><span class="label auth_label">행정담당</span></td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">소속 부서</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">직책</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">전공 분야</td>
+                            <td class="data">-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="row mTop15">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>사용자의 계정 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name">등록 상태</td>
+                            
+                            <td class="status unregistered">등록 대기</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">성명</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">연락처</td>
+                            <td class="data">010 - 1234 - 5678</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">Email</td>
+                            <td class="data">gildong.hong@lab.co.kr</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">비밀번호</td>
+                            <td>
+                              
+                              <button type="button" class="btn btn-danger btn_xxs noMinWidth" data-toggle="modal" data-target="#modal_init_pw" disabled="disabled"><i class="fas fa-lock-open mRight5"></i>비밀번호 초기화</button>
+                            </td>
+                          </tr>
+                          
+                          
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="row mTop15">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>사용자의 동물실험 교육 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row pHside10 mTop10">
+                      <table class="table info_table">
+                        <colgroup>
+                          <col width="200">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td class="info_name">교육 일자</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">교육 기관명</td>
+                            <td class="data">-</td>
+                          </tr>
+                          <tr>
+                            <td class="info_name">교육 이수번호</td>
+                            <td class="data">-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <a href="./user_list-edit.html" class="btn btn-primary waves-effect waves-light mLeft0 disabled"><i class="fas fa-edit mRight5"></i>정보 수정</a>
+                  <a href="#" class="btn btn-danger waves-effect waves-light mLeft10" data-toggle="modal" data-target="#modal_expell"><i class="fas fa-sign-out-alt mRight5"></i>회원 강제 탈퇴</a>
+                  <a href="./user_list.html" class="btn btn-outline-secondary waves-effect waves-light mLeft20"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="admin_footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_all_joining" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 소속된 타 기관 정보</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body pHside30">
+            <div class="text-center">
+              현재 접속한 기관 외에 내가 소속된 타기관 목록입니다. <span class="pink_vivid">소속 기관으로 이동하기</span>를 클릭하여 해당 기관으로 이동할 수 있습니다.
+            </div>
+
+            <table class="table info_table mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="info_name">소속 기관명</td>
+                  <td class="data flexMid">
+                    <span class="">
+                      <span class="gray mRight5">(국문)</span>한국 대학교 2<br>
+                      <span class="gray mRight5">(영문)</span>Hankuk University Second
+                    </span>
+                    <a href="" class="btn btn-danger btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="info_name">기관 코드</td>
+                  <td class="data">HUN</td>
+                </tr>
+                <tr>
+                  <td class="info_name">참여 권한</td>
+                  <td class="data"><span class="label auth_label">심사위원</span></td>
+                </tr>
+                <tr>
+                  <td class="info_name">소속 정보</td>
+                  <td class="data">
+                    <span class=""><span class="gray mRight5">부서)</span>-</span>
+                    <span class="mLeft10"><span class="gray mRight5">직책)</span>-</span>
+                    <span class="mLeft10"><span class="gray mRight5">분야)</span>-</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="table info_table mTop10">
+              <colgroup>
+                <col width="25%">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="info_name">소속 기관명</td>
+                  <td class="data flexMid">
+                    <span class="">
+                      <span class="gray mRight5">(국문)</span>한국 대학교 3<br>
+                      <span class="gray mRight5">(영문)</span>Hankuk University Third
+                    </span>
+                    <a href="" class="btn btn-danger btn_xxs mLeft20"><i class="fas fa-external-link-alt mRight5"></i>소속 기관으로 이동하기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="info_name">기관 코드</td>
+                  <td class="data">HUP</td>
+                </tr>
+                <tr>
+                  <td class="info_name">참여 권한</td>
+                  <td class="data"><span class="label auth_label">심사위원</span></td>
+                </tr>
+                <tr>
+                  <td class="info_name">소속 정보</td>
+                  <td class="data">
+                    <span class=""><span class="gray mRight5">부서)</span>동물 임상실</span>
+                    <span class="mLeft10"><span class="gray mRight5">직책)</span>-</span>
+                    <span class="mLeft10"><span class="gray mRight5">분야)</span>-</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">확인</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_init_pw" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">사용자 비밀번호 초기화</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">선택한 사용자의 <span class="pink_vivid">비밀번호를 초기화</span> 하시겠습니까?</h5>
+                <h6 class="lh_vivid">해당 사용자에게 비밀번호 초기화 안내가 발송됩니다.</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="./user_list.html" class="btn btn-primary">비밀번호 초기화 실행</a>
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_expell" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">사용자 강제 탈퇴</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                <i class="typcn typcn-warning-outline symbol"></i>
+                
+                
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">선택한 사용자를 강제 탈퇴시키겠습니까?</h5>
+                <h6 class="lh_vivid">해당 사용자에게 탈퇴 안내가 발송되고,<br>
+                  <span class="pink_vivid">해당 기관의 심사 서비스 이용이 즉시 제한</span>됩니다.</h6>
+                <h6 class="lh_vivid">다만, 사용자가 본인의 탈퇴 안내 Email에서<br>
+                  서비스 이용 재개 기능을 <span class="pink_vivid">7일 이내에 실행</span>하는 경우<br>
+                  <span class="pink_vivid">탈퇴가 취소</span>됩니다.<br>
+                  <span class="black underline">(단, <span class="red">등록 대기자는 탈퇴 안내 없이 즉시 탈퇴</span>됩니다.)</span></h6>
+                <span class="bg-soft-secondary">영구 탈퇴 절차는 관리자에게 문의하시기 바랍니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            
+            <a href="./user_list.html" class="btn btn-primary">강제 탈퇴 실행</a>
+            <a href="#" class="btn btn-outline-secondary" data-dismiss="modal">취소</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="/html/admin/common_admin.js"></script>
+    <script src="/html/admin/user_list-info.js"></script>
+
+  </body>
+
+</html>

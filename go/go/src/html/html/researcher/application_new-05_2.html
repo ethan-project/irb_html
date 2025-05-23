@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">새로운 동물 실험 계획서</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IA0001-01</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-01_1.html" class="row process_content" data-process-num="1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-02_1.html" class="row process_content" data-process-num="2">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-03_1.html" class="row process_content" data-process-num="3">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-04_1.html" class="row process_content" data-process-num="4">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-05_1.html" class="row process_content active sub_2 active_sub_2" data-process-num="5">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-06_1.html" class="row process_content" data-process-num="6">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-07_1.html" class="row process_content" data-process-num="7">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-08_1.html" class="row process_content" data-process-num="8">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-09_1.html" class="row process_content" data-process-num="9">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-10_1.html" class="row process_content" data-process-num="10">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-11_1.html" class="row process_content" data-process-num="11">
+                          <span>자가 점검</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>5-5. 외과적 처치</h4>
+                        <div class="header_comment">
+                          <div class="custom-control custom-switch switch-primary d-inline-block mHside10">
+                            <input type="checkbox" class="custom-control-input" id="animal_exp_surgical-main_check" data-toggle="collapse" data-target="#content_05-5">
+                            <label class="custom-control-label w30" for="animal_exp_surgical-main_check">사용</label>
+                            
+                            
+                          </div>
+                          <span>※ 외과적 처치가 필요한 경우 해당사항을 입력해 주세요</span>
+                        </div>
+                      </div>
+                      
+                      <div class="row app_content collapse" id="content_05-5">
+                        <div class="col-sm-9">
+                          <div class="form-group" id="animal_exp_surgical_kind">
+                          
+                          
+                            <div class="form-check-inline">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="check_05-5_2" name="operation_type" value="1" class="custom-control-input" checked="checked">
+                                <label class="custom-control-label" for="check_05-5_2">생존 수술</label>
+                              </div>
+                            </div>
+                            <div class="form-check-inline">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="check_05-5_3" name="operation_type" value="1" class="custom-control-input">
+                                <label class="custom-control-label" for="check_05-5_3">비생존 수술</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-9">
+                          <h6 class="content_title"><i class="fas fa-square mini mRight5"></i>외과적 처치방법</h6>
+                          <li class="content_comment">구체적인 수술방법, 투여약물 등을 자세히 입력해 주세요.</li>
+                          <div class="row col-sm-12">
+                            <textarea class="form-control" rows="5" id="animal_exp_surgical_method_text"></textarea>
+                            
+                            
+                          </div>
+                          <div class="row col-sm-12 mTop20">
+                            <li class="content_comment">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                          </div>
+                          <div class="col-sm-12 flexMid" id="animal_exp_surgical_method_file">
+                          
+                          
+                            <label for="file_05-5" class="mRight10 mBot0 w80">관련 자료 :</label>
+                            <div class="custom-file flex_1">
+                              <input type="file" name="file_05-5" class="custom-file-input" id="file_05-5">
+                              <label class="custom-file-label" for="file_05-5" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                            </div>
+                            <a href="#" class="btn btn-outline-danger mLeft5" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="animal_exp_surgical_guide">
+                          
+                          
+                            <li>생존수술이 포함되는 경우, 동물의 마취와 진통, 감염예방을 위한 약물을 기술하고, 무균적 수술을 위한 내용을 기재합니다.</li>
+                            <li>비생존수술의 경우에는 적합한 안락사 방법을 기재합니다.</li>
+                            <li>복수의 대규모 수술은 권장하지 않으며, 절차상 필요하다면 사유와 근거 문서를 명시해야 합니다.</li>
+                            <li>기재해야 할 내용<br>
+                              수술준비<br>
+                              마취 및 수술 전 처치<br>
+                              수술 방법<br>
+                              수술 후 처치</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>5-6. 동물 반출</h4>
+                        <div class="header_comment red"></div>
+                      </div>
+                      
+                      <div class="row app_content" id="content_05-6">
+                        <div class="col-sm-9">
+                          <li class="content_comment">동물반출 시기와 사유를 기재해  주세요.</li>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="flexMid">
+                            <label for="animal_exp_export_time" class="mRight10 mBot0 w100">반출 시기 :</label>
+                            <input type="text" name="animal_exp_export_time" maxlength="30" class="form-control" id="animal_exp_export_time" placeholder="예) 혈관 조명술 시행 시">
+                            
+                            
+                          </div>
+                          <div class="flexMid mTop5">
+                            <label for="animal_exp_export_reason" class="mRight10 mBot0 w100">반출 사유 :</label>
+                            <input type="text" name="animal_exp_export_reason" maxlength="30" class="form-control" id="animal_exp_export_reason" placeholder="예) 기관 내에 혈관 조명술 장비 미확보로 인하여 외부 시설에서 수행 예정임">
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>5-7. 시료 채취</h4>
+                        <div class="header_comment red"></div>
+                      </div>
+                      
+                      <div class="row app_content" id="content_05-2">
+                        <div class="col-sm-9">
+                          <li class="content_comment">해당하는 항목에 모두 체크하고 목록에 없는 경우, '<span class="underline">기타</span>'를 선택하고 직접 입력해 주세요.</li>
+                        </div>
+                        <div class="col-sm-4" id="animal_exp_sample_check_odd">
+                        
+                        
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_05-7_1" value="1">
+                            <label for="check_05-7_1"></label>
+                          </div>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_05-7_2" value="2">
+                            <label for="check_05-7_2"></label>
+                          </div>
+                        </div>
+                        <div class="col-sm-5" id="animal_exp_sample_check_even">
+                        
+                        
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="check_05-7_3" value="3">
+                            <label for="check_05-7_3"></label>
+                          </div>
+                          <div class="checkbox checkbox-primary flexMid pLeft3">
+                            
+                            <input type="checkbox" id="check_05-7_8" value="new" data-custom-toggle="visible">
+                            <label class="w50" for="check_05-7_8">기타</label>
+                            <input type="text" class="form-control form-control-sm hidden">
+                          </div>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="flexMid">
+                            <label for="animal_exp_sample_string" class="mRight10 mBot0 w100">채취 방법 :</label>
+                            <input type="text" name="animal_exp_sample_string" maxlength="30" class="form-control" id="animal_exp_sample_string">
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="animal_exp_substance_guide">
+                          
+                          
+                            <li>시료의 종류와 채취방법에 대해 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>5-8. 실험 물질</h4>
+                        <div class="header_comment red"></div>
+                      </div>
+                      
+                      <div class="row app_content" id="content_05-2">
+                        <div class="col-sm-9">
+                          <li class="content_comment">실험물질을 사용하는 경우 세부사항을 모두 입력해 주세요.</li>
+                        </div>
+                        <div class="col-sm-9">
+
+                          <table class="w-100">
+                            <colgroup>
+                              <col width="100">
+                              <col width="*">
+                              <col width="240">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="animal_exp_substance_list">
+                              
+                            </tbody>
+                          </table>
+
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="animal_exp_substance_list_guide">
+                          
+                          
+                            <li>실험동물에게 투여하는 실험물질에 대한 세부정보를 기재합니다.</li>
+                          </ul>
+                        </div>
+
+                        <div class="col-sm-9 mTop0">
+                          
+                            
+                            
+                            
+                              
+                            
+                            
+                              
+                            
+                            
+                          
+
+                          
+                            
+                            
+                          <div class="flexMid mTop10">
+                            <label for="animal_exp_substance_method2" class="mRight10 mBot0 w100">폐기 방법 :</label>
+                            <input type="text" name="" maxlength="100" class="form-control" id="animal_exp_substance_method2" placeholder="표준 작업지침서 등에 따른 폐기방법을 입력해 주세요..">
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop20">
+                          <ul id="animal_exp_substance_method_guide">
+                          
+                          
+                            <li>실험물질 외에도 주사용바늘이나 수술용 칼날 등 의료 폐기물도 폐기해야 하며, 전용용기에 담아 보관 후에 지정된 처리업자를 통해 안전하게 처리합니다.</li>
+                            <li>「폐기물관리법 시행령[별표2]」</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="./application_new-05_1.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="./application_new-06_1.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="#" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" data-toggle="modal" data-target="#modal_tempSave"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../assets/js/di4js.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new-05_2.js"></script>
+
+  </body>
+
+</html>

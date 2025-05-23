@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/rating/themes/rating.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="admin">
+
+    <div class="page-wrapper popup" id="print_region">
+    <div class="page-wrapper popup">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="title_area">
+                    
+                    <h4 class="card-title flexMid">동물실험 계획서 심사 결과<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  
+                  <div class="mTop20 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>실험 계획서 원안 (기본 정보)</h4>
+                    <div class="header_comment mLeft20 noPrint">
+                      
+                    </div>
+                  </div>
+                  <div class="mTop10" id="coding_title_area">
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">국문 :</label>
+                      <span class="data">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">영문 :</label>
+                      <span class="data">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">연구 기간 :</label>
+                      <span class="data">~</span>
+                    </div>
+                  </div>
+
+                  <div class="mTop30 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 결과</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+                  <table class="table list_table mTop20" id="expertReview_table">
+                    <colgroup>
+                      <col width="*">   
+                      <col width="*">   
+                      <col width="*">   
+                      <col class="evaluation_score" width="*">   
+                      <col class="evaluation_yn" width="*">   
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>평가 항목</th>
+                        <th>세부 평가 기준</th>
+                        <th>항목별 전문심사 의견</th>
+                        <th class="text-center evaluation_score">전문심사 점수 평가</th>
+                        <th class="text-center evaluation_yn">전문심사 적부 판정</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1. 일반정보</td>
+                        <td>
+                          <ul>
+                            <li>동물실험 수행자의 교육·훈련·경험의 적정성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center evaluation_score">-</td>
+                        <td class="text-center evaluation_yn">-</td>
+                      </tr>
+                      <tr>
+                        <td>2. 동물실험 정보</td>
+                        <td>
+                          <ul>
+                            <li>과학적인 근거에 따라 동물실험 목적의 타당성</li>
+                            <li>동물실험 목적에 따른 3Rs 대안방법 정보검색의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>3. 실험동물 정보</td>
+                        <td>
+                          <ul>
+                            <li>실험동물 공급처의 적절성</li>
+                            <li>실험동물의 종/계통과 마리수 산정 기준의 적절성</li>
+                            <li>실험동물의 사육시설 및 사육조건의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음
+                          
+                        </td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>4. 실험물질 정보</td>
+                        <td>
+                          <ul>
+                            <li>관련 법률 및 주무관청 보고사항에 따른 실험물질 정보의 확인</li>
+                            <li>생물학적 위해 또는 재해유발물질 관련 해당 위원회의 승인여부 확인</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>5. 동물실험 방법</td>
+                        <td>
+                          <ul>
+                            <li>동물실험 일정과 절차 방법에 대한 과학적 타당성</li>
+                            <li>동물실험의 전과정에 대한 상세내용 이해</li>
+                            <li>동물실험 절차의 윤리적인 고려 및 관리방안의 적절성</li>
+                            <li>수술 등 전문기술이 포함된 경우 전문성 및 숙련도의 적절성</li>
+                            <li>물질의 투여용량, 투여방법에 따른 동물에게 미치는 부작용에 대한 고려</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>6. 고통등급</td>
+                        <td>
+                          <ul>
+                            <li>동물에게 영향을 주는 고통 및 스트레스 등급 평가의 적절성</li>
+                            <li>고통경감 조치에 대한 관리방안의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>7. 고통경감 방안</td>
+                        <td>
+                          <ul>
+                            <li>종별 특성에 따라 고통과 스트레스를 평가하기 위한 관찰빈도 및 계획의 적절성</li>
+                            <li>수의학적 관리방안에 대한 계획의 적절성</li>
+                            <li>인도적인 종료시점 기준적용의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>8. 사육관리</td>
+                        <td>
+                          <ul>
+                            <li>실험동물 종별 특성에 적합한 사육환경의 적절성</li>
+                            <li>실험동물 복지를 고려한 환경 풍부화 도구의 사용</li>
+                            <li>급이, 급수, 행동 등의 제한이 있는 경우 사유의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>9. 안락사</td>
+                        <td>
+                          <ul>
+                            <li>실험동물 종에 따른 안락사 방법의 적절성</li>
+                            <li>실험목적에 따른 안락사 방법의 적절성</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>10. 연구자 준수사항</td>
+                        <td>
+                          <ul>
+                            <li>실험수행자를 위한 안전대책의 마련 여부</li>
+                          </ul>
+                        </td>
+                        <td class="max_w400 noComment">심사의견 없음</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="text-right">총점</td>
+                        <td class="text-center evaluation_score" id="total_sum"><span class="pass"></span> / -</td>
+                        <td class="text-center evaluation_yn" id="total_account"><span class="pass"></span> / -</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+
+                  <div class="comment_box gray_box review_box mTop10">
+                    <div class="">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 총평</h4>
+                      <div class="data mTop5" id="expert_review_total_review">-</div>
+                    </div>
+
+                    <div class="mTop30">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>전문심사 결과</h4>
+                      
+                      <div class="custom-control custom-radio flexMid mTop10">
+                        
+                        <input type="radio" name="radio_01_group" value="2" class="custom-control-input" id="radio_02" checked="checked" readonly="readonly">
+                        <label class="custom-control-label w80" id="expert_review_result">-</label>
+                      </div>
+                      
+                      <div class="data mTop5" id="expert_review_result_text">-</div>
+                    </div>
+
+                    <div class="sign_area">
+                      <div class="checkbox checkbox-primary mTop20">
+                        
+                        <input type="checkbox" id="check_01" checked="checked" readonly="readonly">
+                        <label class="custom-control-label blue_deep">위와 같이 전문심사 결과를 제출합니다.</label>
+                      </div>
+                      <div class="mTop10 flexMid pRight10">
+                        <div class="agree_date" id="expert_submit_date">-년 -월 -일</div>
+                        
+                        <div class="agree_author mTop0 mLeft20">전문 위원<span class="reviewer" id="experter">* * *</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  
+                  <div class="mTop20 page_breaker">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>일반심사 결과</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+
+                  <table class="table text-center list_table mTop20">
+                    <colgroup>
+                      <col width="50">    
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="*">     
+                      <col width="120">   
+                      <col width="*">     
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>심사 위원</th>
+                        <th>구분</th>
+                        <th>심사 완료시간</th>
+                        <th class="text-left">심사 결과</th>
+                        <th>비고</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr class="agree">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="result text-left pLeft20">-</td>
+                        <td>-</td>
+                      </tr>
+                      
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="4">심사 집계 결과</td>
+                        <td colspan="2" class="text-left pLeft20">
+                          <span class="agree">찬성:<span class="result mHside5">-</span>명</span>
+                          <span class="disagree mLeft15">반대:<span class="result mHside5">-</span>명</span>
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+
+                  <div class="mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>최종심의 결과</h4>
+                    <div class="header_comment mLeft20"></div>
+                  </div>
+                  <div class="comment_box gray_box review_box">
+                    <div class="custom-control custom-radio flexMid">
+                      
+                      <input type="radio" name="radio_100_group" value="0" class="custom-control-input" checked="checked">
+                      <label class="custom-control-label mRight10" for="radio_101" id="final_judge_result">-</label>
+                    </div>
+                    
+                    <div class="data mTop5" id="final_judge_result_text">-</div>
+                  </div>
+                  <div class="app_anchor" id="bottom_anchor"></div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                  <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                  <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_disagree_comment">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">반대 투표 사유</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                
+                
+                <i class="typcn typcn-info-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h6 class="mBot5">동물 실험 계획서 [<span class="red underline register_num2">-</span>]의
+                  <div>반대 투표 사유는 다음과 같습니다.</div>
+                </h6>
+                <div class="thin mTop10 oppose_reason">
+                  -
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_agree_comment">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">찬성 투표 사유</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                
+                
+                <i class="typcn typcn-info-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h6 class="mBot5">심사 대상 신청서 [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의
+                  <div>친성 투표 사유는 다음과 같습니다.</div>
+                </h6>
+                <div class="thin mTop10 agree_reason">
+                  심사한 동물 실험 계획은 다음과 같은 사유로 찬성을 결정합니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_spinner" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered flexCentral flexColumn">
+        <div class="spinner-border text-light" role="status"></div>
+        <div class="spinner_comment mTop15">저장중 입니다.</div>
+      </div>
+    </div>
+    
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="./common_officer.js"></script>
+    <script src="./_popup_review-info.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+  </div></body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    <!-- App css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">생물안전위원회 심의 신청서 - 상세보기</h4>
+                    <div class="comment">작성한 IBC 심의 신청서의 내용을 확인합니다.</div>
+                  </div>
+                </div><!--//row-->
+              </div>
+
+              <!--
+                위원회 class: .IBC
+                1-3. 실험 분류 의 선택에 따라 추가 class 변경
+                (체크된 항목 중 가장 등급이 높은 Class 선택)
+                기본      : .IBC_initial (기본 상태)
+                국가 승인 : .IBC_nat_approval
+                기관 승인 : .IBC_ins_approval
+                기관 신고 : .IBC_ins_report
+                면제      : .IBC_exemption
+              -->
+              <div class="card thick IBC hidden">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 심의</div>
+                    <!-- <div class="apptype_title">변경 심의</div> -->
+                    <div class="apptype_date">미승인</div>
+                    <!-- <div class="apptype_date">승인: 2021-01-31</div> -->
+                    <!-- <div class="apptype_date">반려: 2021-01-31</div> -->
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step active">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <!-- 전문, 일반, 최종 심의 모두 "심의 진행" -->
+                    <div class="step">심의 진행</div>
+                    <div class="step">실험 수행</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IBC_icon_top.png">IBC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="">
+                        <!--
+                          Process 비활성화 : .inactive
+
+                          * 신청서 작성 상태일 경우
+                          작성중   : .pending   (작성한 항목과 미완료 항목이 같이 존재하는 경우)
+                          작성완료 : .completed (모든 항목의 작성이 완료된 경우)
+                          보완중   : .supplement(행정 검토에 의해 보완이 필요한 경우)
+
+                          * 신청서가 제출된 이후의 상태(행정검토 ~ 최종심의)일 경우
+                          검토중   : .pending   (검토한 항목과 미완료 항목이 같이 존재하는 경우)
+                          검토완료 : .completed (모든 항목의 검토가 완료된 경우)
+                         -->
+                        <div class="app_summary">
+                          <span class="review_type committee_color IBC">IBC</span>
+                          <div class="card-title task_title_ko">-</div>
+                          <div class="title_desc task_director_all">(연구 책임자 : -)</div>
+                          <div class="text-muted mb-0"><span class="register_num">-</span></div>
+                        </div>
+                        <a href="#" class="row process_content" data-process-num="1" data-move-to="#form_01-1">
+                          <span>심의 신청서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="2" data-move-to="#form_02-1">
+                          <span>연구 계획서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="3" data-move-to="#form_03-1">
+                          <span>위해성 평가서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="#" class="row process_content" data-process-num="4" data-move-to="#form_04-1">
+                          <span>연구책임자 서약서</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents" id="all_app_r"></div>
+                    <!--//app_contents -->
+                  </div>
+                  <!--//app_frame -->
+                </div>
+                <div class="app_anchor" id="bottom_anchor"></div>
+                <!--//card-body-->
+
+                <!-- Card Footer -->
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <!-- 반려 : "연장 신청" 버튼 출력 -->
+                  <a href="./experiment_list-IBC_new_change.html?clickto=change_03" class="btn btn-primary waves-effect waves-light mLeft0 hidden"><i class="fas fa-redo-alt mRight5"></i>연장 신청</a>
+                  <!-- 실험중, 과제종료 이후 : "심사 결과 보기" 버튼 출력 -->
+                  <a href="javascript:void(0);" onClick="newWindowPopup('./_popup_review-IBC_info.html');" class="btn btn-primary waves-effect waves-light mLeft0 hidden"><i class="fas fa-check mRight5"></i>심사 결과 보기</a>
+                  <!-- <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a> -->
+
+                  <button type="button" class="btn btn-primary waves-effect waves-light mLeft20" data-toggle="modal" data-target="#modal_dup_app"><i class="fas fa-edit mRight5"></i>신청서 복제</button>
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                  <a href="javascript:void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript:void(0);" data-move-to="#footer_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              <!--//card -->
+
+            </div><!--//col-->
+          </div><!--//row-->
+          <!--//page title end breadcrumb -->
+
+        </div>
+        <!--//container-fluid -->
+
+        <footer id="footer" class="footer text-center"></footer>
+        <!--//footer-->
+      </div>
+      <!--//page content -->
+    </div>
+    <!--//page-wrapper -->
+
+    <!-- Modal: 임시저장 확인 -->
+    <div class="modal fade" id="modal_tempSave" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <!-- <i class="typcn typcn-warning-outline symbol"></i> -->
+                <!-- v -->
+                <i class="typcn typcn-input-checked symbol"></i>
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
+                <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+               <!--  <span class="badge bg-soft-secondary">Disable Services</span>
+                <small class="text-muted ml-2">07 Oct 2020</small>
+                <ul class="mt-3 mb-0">
+                  <li>Lorem Ipsum is dummy text.</li>
+                  <li>It is a long established reader.</li>
+                  <li>Contrary to popular belief, Lorem simply.</li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+            <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+    <!-- Modal: 신청서 삭제 -->
+    <div class="modal fade" id="modal_del_app" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">작성중인 신청서 삭제</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <i class="typcn typcn-warning-outline symbol"></i>
+                <!-- v -->
+                <!-- <i class="typcn typcn-input-checked symbol"></i> -->
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성중인 신청서를 <span class="red">삭제</span>하시겠습니까?</h5>
+                <span class=""><span class="red">삭제한 신청서는 복구가 불가능</span>하니 주의하시기 바랍니다.</span>
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <!-- 현 신청서 삭제하고 "전체 신청서/보고서"로 이동 -->
+            <a href="javascript:void(0);" class="btn btn-outline-danger">신청서 삭제</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+    <!-- Modal: 이전 모든 신청서 -->
+    <div class="modal fade" id="modal_allApp_list" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modalAddress_1">내가 신청한 모든 신청서</h5>
+            <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="card-body noPadding">
+              <div class="text-center">
+                <h5 class="mTop5">신청 정보를 복제할 IACUC 신규 신청서를 선택해주세요.</h5>
+                <div class="noMargin">
+                  내가 신청한 <span class="more_comment pink_vivid">최근 <span data-val-name="init_visible_count"></span>건</span>의 IACUC 신규 승인 신청서 목록입니다.<br>
+                  <span class="more_comment">목록 마지막의 "<span class="blue_vivid">더보기</span>"를 클릭하면 나머지 목록을 확인할 수 있습니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="list-group available_app mb-3">
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 1</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 2</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 3</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 4</a>
+                <a href="#" class="list-group-item"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 5</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 6</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 7</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 8</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 9</a>
+                <a href="#" class="list-group-item hidden"><i class="far fa-file-alt text-secondary mr-2"></i>동물 실험 계획서 10</a>
+                <a href="#" onclick="viewHiddenApp(this);" class="list-group-item text-center"><i class="fas fa-angle-double-down text-secondary mr-2"></i>더보기</a>
+              </div>
+              <div class="text-center text-muted">
+                <span class="red comment_alt">실험 계획서를 선택하면, 신청서 정보가 복제됩니다.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">취소</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+    <!-- Modal: 신청서 복제 -->
+    <div class="modal fade" id="modal_dup_app">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">신청서 복제</h5>
+          </div>
+          <!--//modal-header-->
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                <!-- ! -->
+                <!-- <i class="typcn typcn-warning-outline symbol"></i> -->
+                <!-- v -->
+                <i class="typcn typcn-input-checked symbol"></i>
+                <!-- i -->
+                <!-- <i class="typcn typcn-info-outline symbol"></i> -->
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">동물 실험 계획서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의 내용을 복제하여<br>
+                  <div>새로운 승인 신청서를 작성 하시겠습니까?</div>
+                </h5>
+                <span class="bg-soft-secondary">신청서 복제는 &quot;<span class="red">신규 승인 신청서</span>&quot;만 가능합니다.</span>
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+          <div class="modal-footer">
+            <!-- 저장하고 전문 심사 평가표 작성으로 이동 -->
+            <!-- <a href="javascript:void(0);" class="btn btn-primary">신청서 복제</a> -->
+            <button type="button" class="btn btn-primary" id="btn_dup_app">신청서 복제</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          <!--//modal-footer-->
+        </div>
+      </div>
+    </div>
+    <!--//modal-->
+
+
+    <!-- jQuery  -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    <!-- common -->
+    <script src="/assets/js/common/common.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- custom js for this page -->
+    <!-- <script src="/html/researcher/IBC/common_application_new-IBC.js"></script> -->
+    <script src="/html/researcher/IBC/application_list-IBC_info.js"></script>
+
+  </body>
+
+</html>

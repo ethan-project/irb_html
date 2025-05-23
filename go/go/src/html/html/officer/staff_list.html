@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">사용자 목록</h4>
+                    <div class="comment">기관의 실험, 심사, 행정에 참여할 수 있는 사용자 목록입니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">사용자 목록</h4>
+                  <div class="flexMid">
+                    <div class="search_info"></div>
+                    <div class="search_form"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+
+                   <table id="datatable" class="table list_table noSide nowrap" data-buttons-text="사용자 등록, 사용자 일괄 등록" data-buttons-icon="fas fa-edit, fas fa-edit" data-buttons-url="./staff_list-new.html, ./staff_list-new_multiple.html">
+                      <colgroup>
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                        <col width="*">   
+                      </colgroup>
+                      <thead data-page-length="15" data-init-order="2" data-order-direction="asc">
+                        <tr>
+                          <th>소속 기관</th>
+                          <th>참여 권한</th>
+                          <th>성명</th>
+                          <th>소속 부서</th>
+                          <th>직책</th>
+                          <th>전공 분야</th>
+                          <th>휴대전화</th>
+                          <th>Email</th>
+                          <th>교육 일자</th>
+                          <th>교육 기관</th>
+                          <th>교육이수 번호</th>
+                          <th>등록 상태</th>
+                        </tr>
+                      </thead>
+                      
+                      <tbody class="hidden">
+                        <tr data-url="./staff_list-info.html" class="registered">
+                          <td>한국 대학교</td>
+                          <td><span class="blue_deep">행정 간사</span>, 연구원</td>
+                          <td>홍길동</td>
+                          <td>수의학과</td>
+                          <td>교수</td>
+                          <td>수의학</td>
+                          <td>010-1234-5678</td>
+                          <td>kildong.hong@hankook.ac.kr</td>
+                          <td>2020-01-15</td>
+                          <td>한국 대학교</td>
+                          <td>000-0000-0000</td>
+                          <td class="status">정상</td>
+                        </tr>
+                        <tr data-url="./staff_list-info.html" class="registered">
+                          <td>한국 대학교</td>
+                          <td>연구원, 심사 위원</td>
+                          <td>김연구</td>
+                          <td>수의학과</td>
+                          <td>교수</td>
+                          <td>수의학</td>
+                          <td>010-1234-5678</td>
+                          <td>user01@hankook.ac.kr</td>
+                          <td>2020-01-13</td>
+                          <td>한국 대학교</td>
+                          <td>000-0000-0000</td>
+                          <td class="status">정상</td>
+                        </tr>
+                        
+                        <tr data-url="./staff_list-info2.html" class="unregistered">
+                          <td>한국 대학교</td>
+                          <td>연구원</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>010-1234-5678</td>
+                          <td>user02@hankook.ac.kr</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td class="status">등록 대기</td>
+                        </tr>
+                        
+                        <tr data-url="./staff_list-info.html" class="withdrawn">
+                          <td>한국 대학교</td>
+                          <td>연구원</td>
+                          <td>나탈퇴</td>
+                          <td>수의학과</td>
+                          <td>학부생</td>
+                          <td>수의학</td>
+                          <td>010-1234-5678</td>
+                          <td>user03@hankook.ac.kr</td>
+                          <td>2020-01-10</td>
+                          <td>한국 대학교</td>
+                          <td>000-0000-0000</td>
+                          <td class="status">탈퇴</td>
+                        </tr>
+                        
+                        <tr data-url="./staff_list-info.html" class="expelled">
+                          <td>한국 대학교</td>
+                          <td>연구원</td>
+                          <td>나강퇴</td>
+                          <td>수의학과</td>
+                          <td>학부생</td>
+                          <td>수의학</td>
+                          <td>010-1234-5678</td>
+                          <td>user04@hankook.ac.kr</td>
+                          <td>2020-01-10</td>
+                          <td>한국 대학교</td>
+                          <td>000-0000-0000</td>
+                          <td class="status">탈퇴 (-5일)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                </div>
+                
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+      </div>
+      
+    </div>
+    
+
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables/jszip.min.js"></script>
+    
+    
+    <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+    
+    <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+    <script src="../../assets/js/common/datatable.init.js"></script>
+    <script src="./staff_list.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+  </body>
+
+</html>

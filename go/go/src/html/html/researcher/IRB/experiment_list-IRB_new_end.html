@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="app_anchor" id="top_anchor"></div>
+            <div class="col-sm-12">
+
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    
+                    <h4 class="page-title">보고서 - 작성</h4>
+                    <div class="comment">완료된 실험의 종료 보고서를 작성합니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IRB">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="apptype_title">종료 보고</div>
+
+                    <div class="apptype_date">미승인</div>
+                    
+                    
+                    
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid">연구 종료 보고서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">종료 보고 접수 번호 :<span class="register_num">접수 후 발급</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step active">신청서 작성</div>
+                    <div class="step">행정 검토</div>
+                    <div class="step">전문 심사</div>
+                    <div class="step">일반 심사</div>
+                    <div class="step">최종 심의</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-12 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심의 신청서 원안 (기본 정보)</h4>
+                        <div class="header_comment mLeft20">
+                          <button type="button" onclick="newWindowPopup('./_popup_app-IRB_info_all.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>심의 신청서 원안 보기</button>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9 pLeft20">
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">국문 :</label>
+                            <span class="data" id="name_ko">-</span>
+                          </div>
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">영문 :</label>
+                            <span class="data" id="name_en">-</span>
+                          </div>
+                          <div class="flexMid">
+                            <label class="mRight10 mBot0">연구 기간 :</label>
+                            <span class="data"><span id="approved_dttm"></span> ~ <span id="general_end_date"></span></span>
+                          </div>
+                          <div class="mTop5">
+                            <label class="mRight10 mBot0 sum_label">실험 분류:</label>
+                            <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">심의 대상</button>
+                            <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">인간대상 연구</button>
+                          </div>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      
+                      <div class="app_anchor" id="form_01"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>보고 내용</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="15%">
+                              <col width="65%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td class="info_name text-center">보고 구분</td>
+                                <td colspan="2" class="border_left pLeft20">
+                                  <span class="flexMid mVside10">
+                                    <div class="custom-control custom-radio">
+                                      <input type="radio" name="form_01-1" value="1" class="custom-control-input" id="form_01-1_1">
+                                      <label class="custom-control-label" for="form_01-1_1">조기 종료보고</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mLeft20">
+                                      <input type="radio" name="form_01-1" value="1" class="custom-control-input" id="form_01-1_2">
+                                      <label class="custom-control-label" for="form_01-1_2">종료 보고</label>
+                                    </div>
+                                  </span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구 종료 일자</td>
+                                <td colspan="2" class="border_left pLeft20">
+                                  <input class="form-control wCalendar" type="date" id="form_01-2">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">조기 종료 사유</td>
+                                <td colspan="2" class="border_left pLeft20">
+                                  <textarea class="form-control" rows="3" placeholder="직접 입력해주세요." id="form_01-3"></textarea>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="general_title_guide">
+                            <li>종료 보고는 연구종료 3개월 이내에 작성하여 제출해야 합니다.</li>
+                            <li>연구계획서 상의 종료일 이전에 연구를 종료하는 경우에 조기 종료 보고를 선택합니다.</li>
+                            <li>현재까지 진행된 연구 상황에 대해 기술하시기 바랍니다. 진행된 연구 자료의 처리 방법과 연구대상자에 대한 조치를 자세히 기재하시기 바랍니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      
+                      <div class="app_anchor" id="form_02"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>연구결과 요약</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="15%">
+                              <col width="65%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td rowspan="2" class="info_name text-center">연구 수행 기간</td>
+                                <td class="border_left pLeft20 pVside15">연구 예정 기간</td>
+                                <td class="border_left pLeft20">
+                                  <span class="data">2021-01-01</span> ~ <span class="data">2022.12.13</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="border_left pLeft20 pVside15">실제 연구 기간</td>
+                                <td class="border_left pLeft20">
+                                  <div class="flexMid"><input class="form-control wCalendar" type="date" id="form_02-1_1"><span class="mHside10">~</span><input class="form-control wCalendar" type="date" id="form_02-1_2"></div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구 수행 방법</td>
+                                <td colspan="2" class="border_left pLeft20">
+                                  <textarea class="form-control" rows="3" placeholder="연구 수행 방법을 구체적으로 입력해주세요." id="form_02-2"></textarea>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구 결과 요약</td>
+                                <td colspan="2" class="border_left pLeft20">
+                                  <textarea class="form-control" rows="3" placeholder="구체적으로 입력해주세요." id="form_02-3"></textarea>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="info_name text-center">연구 결과물<br>(해당 내용 모두 선택)</td>
+                                <td colspan="2" class="border_left pLeft20 pVside20">
+                                  <div class="checkbox checkbox-primary">
+                                    <input type="checkbox" name="form_02-4" id="form_02-4_1" value="1">
+                                    <label for="form_02-4_1" class="mBot0">결과 보고서</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop10">
+                                    <input type="checkbox" name="form_02-4" id="form_02-4_2" value="2">
+                                    <label for="form_02-4_2" class="mBot0">논문</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mTop10">
+                                    <input type="checkbox" name="form_02-4" id="form_02-4_3" value="3">
+                                    <label for="form_02-4_3" class="mBot0">학술대회 발표자료</label>
+                                  </div>
+                                  <div class="flexMid mTop10">
+                                    <div class="checkbox checkbox-primary w80">
+                                      <input type="checkbox" name="form_02-4" id="form_02-4_4" value="3" data-custom-toggle="focus" data-target="#form_02-4_5">
+                                      <label for="form_02-4_4" class="mBot0">기타</label>
+                                    </div>
+                                    <input type="text" name="form_02-4" maxlength="50" class="form-control flex_1" id="form_02-4_5">
+                                  </div>
+                                  <div class="comment red mTop5">※ 위에서 선택한 항목의 문서를 아래 &quot;첨부 서류&quot;에 File 첨부해주세요.</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="general_title_guide">
+                            <li>실제 연구가 종료된 일자를 입력합니다.</li>
+                            <li>심의신청서 및 연구계획서를 참조하여 실제 수행된 연구 방법과 결과를 요약하여 기재합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      
+                      <div class="app_anchor" id="form_03"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>연구 대상자 정보</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="20%">
+                              <col width="15%">
+                              <col width="65%">
+                            </colgroup>
+                            <tbody>
+                              
+                              <tr>
+                                <td class="info_name text-center">연구 대상자<br>(연구 계획서)</td>
+                                <td class="border_left text-center data">
+                                  <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">인간대상 연구</button>
+                                </td>
+                                <td class="border_left data">전체: - 명<span class="mHside10">/</span>한국대학교: - 명</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="info_name text-center">보고일 현재<br>등록현황</td>
+                                <td class="border_left text-center data">
+                                  <button type="button" class="btn btn-outline-primary btn-round btn_tag btn_tag_sm">인간대상 연구</button>
+                                </td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <label for="form_02-1_1" class="mRight10 mBot0 mRight10">전체 :</label>
+                                    <input type="text" name="form_02-1_1" maxlength="3" class="form-control w50 mRight5" id="form_02-1_1">명
+                                    <span class="mHside10">/</span>
+                                    <label for="form_02-1_2" class="mRight10 mBot0 mRight10">한국 대학교 병원 :</label>
+                                    <input type="text" name="form_02-1_2" maxlength="3" class="form-control w50 mRight5" id="form_02-1_2">명
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="4" class="info_name text-center">연구 대상자<br>세부현황</td>
+                                <td class="border_left text-center">선별검사 현황</td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <label for="form_02-2_1" class="mRight10 mBot0 mRight10">선별검사 :</label>
+                                    <input type="text" name="form_02-2_1" maxlength="3" class="form-control w50 mRight5" id="form_02-2_1">명
+                                    <span class="mHside10">+</span>
+                                    <label for="form_02-2_2" class="mRight10 mBot0 mRight10">섬별검사 탈락 :</label>
+                                    <input type="text" name="form_02-2_2" maxlength="3" class="form-control w50 mRight5" id="form_02-2_2">명
+                                    <span class="mHside10">=</span>
+                                    <input type="text" name="form_02-2_3" maxlength="3" class="form-control w50 mRight5" id="form_02-2_3" readonly="readonly">명
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">선별검사 탈락사유</td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <label for="form_02-3_1" class="mRight10 mBot0 mRight10">선정기준 미달 :</label>
+                                    <input type="text" name="form_02-3_1" maxlength="3" class="form-control w50 mRight5" id="form_02-3_1">명
+                                    <span class="mHside10">/</span>
+                                    <label for="form_02-3_2" class="mRight10 mBot0 mRight10">기타 :</label>
+                                    <input type="text" name="form_02-3_2" maxlength="3" class="form-control w50 mRight5" id="form_02-3_2">명
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">등록현황</td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <label for="form_02-4_1" class="mRight10 mBot0 mRight10">중도탈락 :</label>
+                                    <input type="text" name="form_02-4_1" maxlength="3" class="form-control w50 mRight5" id="form_02-4_1">명
+                                    <span class="mHside10">+</span>
+                                    <label for="form_02-4_2" class="mRight10 mBot0 mRight10">진행중 :</label>
+                                    <input type="text" name="form_02-4_2" maxlength="3" class="form-control w50 mRight5" id="form_02-4_2">명
+                                    <span class="mHside10">+</span>
+                                    <label for="form_02-4_3" class="mRight10 mBot0 mRight10">완료 :</label>
+                                    <input type="text" name="form_02-4_3" maxlength="3" class="form-control w50 mRight5" id="form_02-4_3">명
+                                    <span class="mHside10">=</span>
+                                    <input type="text" name="form_02-4_4" maxlength="3" class="form-control w50 mRight5" id="form_02-4_4" readonly="readonly">명
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-center">중도탈락 사유<br>(해당항목 모두 표기)</td>
+                                <td colspan="2" class="border_left pSide20">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_02-5" id="form_02-5_1" value="3" data-custom-toggle="focus" data-target="#form_02-5_2">
+                                      <label for="form_02-5_1" class="mBot0">동의 철회</label>
+                                    </div>
+                                    <input type="text" name="form_02-5" maxlength="50" class="form-control w50 mRight5" id="form_02-5_2">명
+                                  </div>
+                                  <div class="flexMid mTop5">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_02-5" id="form_02-5_3" value="3" data-custom-toggle="focus" data-target="#form_02-5_4">
+                                      <label for="form_02-5_3" class="mBot0">이상반응발생</label>
+                                    </div>
+                                    <input type="text" name="form_02-5" maxlength="50" class="form-control w50 mRight5" id="form_02-5_4">명
+                                  </div>
+                                  <div class="flexMid mTop5">
+                                    <div class="checkbox checkbox-primary w120">
+                                      <input type="checkbox" name="form_02-5" id="form_02-5_5" value="3" data-custom-toggle="focus" data-target="#form_02-5_6">
+                                      <label for="form_02-5_5" class="mBot0">기타</label>
+                                    </div>
+                                    <input type="text" name="form_02-5" maxlength="50" class="form-control w50 mRight5" id="form_02-5_6">명
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td rowspan="3" class="info_name text-center">연구 대상자 관련<br>보고사항</td>
+                                <td class="border_left text-center">중대한 이상 반응 보고</td>
+                                <td class="border_left data">- 건</td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">예상치 못한 문제발생 보고</td>
+                                <td class="border_left data">- 건</td>
+                              </tr>
+                              <tr>
+                                <td class="border_left text-center">연구계획 위반/이탈 보고</td>
+                                <td class="border_left data">- 건</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="">
+                            <li>연구 종료 시점의 연구대상자 현황을 입력합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+
+                      
+                      
+                      <div class="app_anchor" id="form_04"></div>
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>첨부 서류</h4>
+                        <div class="header_comment"></div>
+                      </div>
+
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="300">
+                              <col width="*">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>서류명</th>
+                                <th class="border_left">파일 첨부</th>
+                              </tr>
+                            </thead>
+                            <tbody id="">
+                              <tr>
+                                <td>
+                                  <input type="text" name="form_04-3_1" maxlength="50" class="form-control" id="form_04-3_1" value="기타 서류 1">
+                                </td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <div class="custom-file uploaded_file_box">
+                                      <a href="#" class="data">files.zip</a>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="text" name="form_04-3_2" maxlength="50" class="form-control" id="form_04-3_2">
+                                </td>
+                                <td class="border_left">
+                                  <div class="flexMid">
+                                    <div class="custom-file">
+                                      <input type="file" name="file_04-3-2" class="custom-file-input" id="file_04-3-2">
+                                      <label class="custom-file-label" for="file_04-3-2" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                                    </div>
+                                    <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="flexCenter">
+                            <a href="javascript:void(0)" class="btn btn-outline-primary item_new_btn" id="btn-add"><i class="fas fa-plus-square mRight5"></i>서류 추가</a>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="general_title_guide">
+                            <li>연구결과물 및 필요서류를 첨부하여 제출합니다.</li>
+                            <li>확인란에 표기하는 것으로 정식 서명을 대체합니다.</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+
+                      
+                      <div class="col-sm-9 sign_area">
+                        <div class="IRB_agree">
+                          <div class="checkbox checkbox-primary mTop10">
+                            <input type="checkbox" id="check_01">
+                            <label class="custom-control-label blue_deep" for="check_01">위와 같이 종료 보고서를 제출합니다.</label>
+                          </div>
+                          <div class="agree_date today_str">-년 -월 -일</div>
+                          <div class="agree_author">연구 책임자<span class="reviewer">-</span></div>
+                        </div>
+                      </div>
+                      
+
+                    </div>
+                    
+                  </div>
+                  
+
+                  <div class="app_anchor" id="bottom_anchor"></div>
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_confirm"><i class="fas fa-edit mRight5"></i>IRB 종료 보고서 제출</a>
+
+                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                  <a href="/html/researcher/experiment_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>실험 목록 보기</a>
+                  <a href="javascript: void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" data-move-to="#bottom_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <div class="modal fade" id="modal_confirm">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">IRB 종료 보고서 제출</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">작성한 생명윤리위원회 종료 보고서<br>
+                  [<span class="red underline register_num2">-</span>]을<br>
+                  제출하여 심의절차를 진행하시겠습니까?
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" onclick="onClickSubmit();" class="btn btn-primary" data-dismiss="modal">제출</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/assets/js/di4js.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    
+
+  </body>
+
+</html>

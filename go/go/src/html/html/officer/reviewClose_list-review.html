@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="officer">
+    
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="app_anchor" id="top_anchor"></div>
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">신청서 심사 종료 설정</h4>
+                    <div class="comment">신청서의 심사를 종료 시킵니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">-</span></p>
+                  </div>
+                  <div class="progress_area">
+                    <div class="step">신청서 작성</div>
+                    <div class="step">심사 설정</div>
+                    <div class="step">전문 심사</div>
+                    
+                    <div class="step active">일반 심사<div class="expiration timeout"><div class="timer"></div></div></div>
+                    <div class="step">최종 심의</div>
+                    <div class="step">실험 수행</div>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body pHside40">
+
+                  
+                  <div class="mTop20 flexMid">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>실험 계획서 원안 (기본 정보)</h4>
+                    <div class="header_comment mLeft20">
+                      <button type="button" onclick="newWindowPopup('./_popup_application-info.html');" class="btn btn-primary btn_xxs noMinWidth"><i class="far fa-file mRight5"></i>실험 계획서 원안 보기</button>
+                    </div>
+                  </div>
+                  <div class="mTop10" id="coding_title_area">
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">국문 :</label>
+                      <span class="data">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">영문 :</label>
+                      <span class="data">-</span>
+                    </div>
+                    <div class="flexMid">
+                      <label class="mRight10 mBot0">연구 기간 :</label>
+                      <span class="data">~</span>
+                    </div>
+                  </div>
+
+                  
+                  <div class="mTop30">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심사 기한</h4>
+                    <div class="header_comment mLeft20">심사 기한과 메시지 전송 조건을 설정해 주세요.</div>
+                  </div>
+
+                  <div class="mTop10 flexMid">
+                    <div class="form-group flexMid mLeft20">
+                      <label for="date_1" class="mRight10 mBot0">전문 심사 종료 :</label>
+                      <span class="data expert_deadline">2021-02-01 13:45:00</span>
+                    </div>
+                    <div class="form-group flexMid mLeft40">
+                      
+                      <label for="date_2" class="mRight10 mBot0">일반 심사 종료 :</label>
+                      
+                      <span class="data red normal_deadline">2021-02-11 23:59:59</span>
+                      
+                      <button type="button" class="btn btn-danger btn_xxs mLeft20" id="change_deadline_btn" data-custom-toggle="visible"><i class="fas fa-file-alt mRight5"></i>종료 일자 변경</button>
+                      <div class="flexMid mLeft30 hidden">
+                        <label for="date_3" class="mRight10 mBot0">일반 심사 종료일을</label>
+                        <input type="number" maxlength="3" class="form-control form-control-sm w70" min="0" value="0" id="date_3">
+                        <div class="btn-group mLeft5">
+                          <select class="form-control btn-outline-primary small_select" id="select_dayhour" disabled="disabled">
+                            <option selected="selected">일</option>
+                            <option>시간</option>
+                          </select>
+                        </div>
+                        <div class="btn-group mLeft5">
+                          <select class="form-control btn-outline-primary small_select" id="select_pullpush">
+                            <option selected="selected">미루기</option>
+                            <option>당기기</option>
+                          </select>
+                        </div>
+                      </div>
+                      <span class="mLeft10 data red changed_deadline hidden">2021-02-11 23:59:59</span>
+                      
+                    </div>
+                  </div>
+
+                  
+                  <div class="mTop15">
+                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>일반심사 집계 현황</h4>
+                    <div class="header_comment mLeft20">
+                      <span class="pink_vivid">심사를 완료하지 않은 심사 위원을 변경</span>할 수 있습니다.
+                    </div>
+                  </div>
+
+                  <div class="row mTop10">
+                    <table class="table text-center list_table mBot10">
+                      <colgroup>
+                        <col width="50">    
+                        <col width="*">     
+                        <col width="*">     
+                        <col width="*">     
+                        <col width="100">   
+                        <col width="*">     
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>심사 위원</th>
+                          <th>구분</th>
+                          <th>심사 완료시간</th>
+                          <th class="text-left">심사 결과</th>
+                          <th>비고</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="agree">
+                          <td>1</td>
+                          <td>김내부1</td>
+                          <td>내부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">찬성</td>
+                          <td>-</td>
+                        </tr>
+                        <tr class="agree">
+                          <td>2</td>
+                          <td>김내부2</td>
+                          <td>내부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">찬성</td>
+                          <td>-</td>
+                        </tr>
+                        <tr class="timeout">
+                          <td>3</td>
+                          <td>김내부3</td>
+                          <td>내부</td>
+                          <td>-</td>
+                          <td class="result text-left pLeft20">-</td>
+                          <td>
+                            <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal_change_reviewer"><i class="fas fa-random mRight5"></i>심사 위원 변경</button>
+                            <button type="button" class="btn btn-outline-danger btn-xs mLeft5" data-toggle="modal" data-target="#modal_remove_reviewer"><i class="fas fa-times mRight5"></i>제외</button>
+                          </td>
+                        </tr>
+                        <tr class="disagree">
+                          <td>4</td>
+                          <td>김내부4</td>
+                          <td>내부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">반대</td>
+                          <td>
+                            <a href="#" data-toggle="modal" data-target="#modal_disagree_comment" class="red"><i class="fas fa-comment-dots mRight5"></i>반대 사유</a>
+                          </td>
+                        </tr>
+                        <tr class mleft10="agree">
+                          <td>5 mLeft10</td>
+                          <td>이외부1</td>
+                          <td>외부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">찬성</td>
+                          <td>-</td>
+                        </tr>
+                        <tr class mleft10="disagree">
+                          <td>6 mLeft10</td>
+                          <td>이외부2</td>
+                          <td>외부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">반대</td>
+                          <td>
+                            <a href="#" data-toggle="modal" data-target="#modal_disagree_comment" class="red"><i class="fas fa-comment-dots mRight5"></i>반대 사유</a>
+                          </td>
+                        </tr>
+                        <tr class mleft10="agree">
+                          <td>7 mLeft10</td>
+                          <td>이외부3</td>
+                          <td>외부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">찬성</td>
+                          <td>-</td>
+                        </tr>
+                        <tr class mleft10="agree">
+                          <td>8 mLeft10</td>
+                          <td>이외부4</td>
+                          <td>외부</td>
+                          <td>2021-02-11 11:32</td>
+                          <td class="result text-left pLeft20">찬성</td>
+                          <td>-</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="4">심사 집계 현황</td>
+                          <td colspan="2" class="text-left pLeft20">
+                            <span class="agree">찬성:<span class="result mHside5">5</span>명</span>
+                            <span class="disagree mLeft15">반대:<span class="result mHside5">2</span>명</span>
+                            <span class="agree mLeft15">미이행:<span class="result mHside5">1</span>명</span>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+
+                </div>
+                
+
+                
+                <div id="footer_anchor"></div>
+                <div class="card-footer flexCenter side_type">
+                  
+                  <div class="expiration timeout mRight10">일반 심사 종료<span class="timer">0일 1시간 10분 초과</span></div>
+                  <a id="btn_finish" href="#" class="btn btn-primary waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_close_review"><i class="fas fa-check mRight5"></i>심사 종료</a>
+                  <a id="btn_continue" href="#" class="btn btn-danger waves-effect waves-light mLeft0" data-toggle="modal" data-target="#modal_resume_review"><i class="fas fa-check mRight5"></i>심사 재개</a>
+
+                  <a href="./reviewClose_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                  <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#footer_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_close_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">심사 종료 및 최종 심의 시작</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">심사 대상 신청서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의 심사를 마치고,
+                  <div>최종 심의를 시작하시겠습니까?</div>
+                </h5>
+                <span class="bg-soft-secondary">연구 책임자에게 일반심사 종료 안내 메시지가 발송되며,<br>최종 심의 과정을 시작합니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="javascript:void(0);" onclick="onClickFinish();" class="btn btn-primary">심사 종료 및 최종 심의 시작</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_change_reviewer" tabindex="-1" role="dialog" aria-labelledby="modal_change_reviewer" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white" id="modal_staff_1">심사 위원 변경</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="la la-times"></i></span>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <div class="card-body">
+              <div class="mBot20">
+                <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>심사 위원 배정</h4>
+                <div class="header_comment mLeft20">
+                  심사위원의 <span class="pink_vivid">위원 변경(내부/외부)을 선택</span>하면 기존 심사위원이 교체됩니다. 심사위원 교체 후 <span class="pink_vivid">심사 재개</span>를 실행하면 변경된 심사위원에게 심사 개시를 알리는 안내가 발송되고, 일반 심사가 재개됩니다.<br>
+                  ※ 심사 기한이 만료된 심사는 <span class="red">심사 기한을 변경</span>해야 심사를 재개할 수 있습니다.
+                </div>
+              </div>
+              <table class="table text-center list_table mBot10">
+                <colgroup>
+                  <col width="*">     
+                  <col width="*">     
+                  <col width="*">     
+                  <col width="*">     
+                  <col width="100">   
+                  <col width="*">     
+                  <col width="100">   
+                  <col width="*">     
+                  <col width="*">     
+                  <col width="100">   
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>성명</th>
+                    <th>부서</th>
+                    <th>직책</th>
+                    <th>전공분야</th>
+                    <th>휴대전화</th>
+                    <th>Email</th>
+                    <th>교육 일자</th>
+                    <th>교육 기관명</th>
+                    <th>교육이수 번호</th>
+                    <th class="blue_deep">위원 변경</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>김교수1</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5678</td>
+                    <td>manager@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수2</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select committee_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="내부">내부</option>
+                        <option value="외부">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수3</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수4</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수5</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수6</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수7</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수8</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수9</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>김교수10</td>
+                    <td>실험실</td>
+                    <td>교수</td>
+                    <td>수의학</td>
+                    <td>010-1234-5679</td>
+                    <td>manager2@company.co.kr</td>
+                    <td>2021-01-03</td>
+                    <td>수의사협회</td>
+                    <td>000-0000-0000</td>
+                    <td>
+                      <select class="form-control btn-outline-primary small_select">
+                        <option value="0" selected="selected">선택</option>
+                        <option value="1">내부</option>
+                        <option value="2">외부</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+          </div>
+          
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_remove_reviewer">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">심사 위원 제외</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">선택한 심사 위원을 대상 신청서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의
+                  <div>일반 심사에서 제외하시겠습니까?</div>
+                </h5>
+                <span class="bg-soft-secondary">
+                  본 심사에 <span class="underline">미참여한 심사 위원은 심사에서 제외</span>가 가능하며,<br>
+                  심사위원 제외 후에, 해당 심사의 종료 가능여부를 다시 판단합니다.
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="javascript:void(0);" onclick="onClickRemoveMember();" class="btn btn-primary">심사 위원 제외</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_resume_review">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">일반 심사 재개</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                <i class="typcn typcn-input-checked symbol"></i>
+                
+                
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h5 class="mBot5">심사 대상 신청서<br>
+                  [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의
+                  <div>일반 심사를 재개하시겠습니까?</div>
+                </h5>
+                <span class="bg-soft-secondary">
+                  심사를 재개하면, <span class="red">변경된 심사위원에게 심사 개시 안내 메시지</span>가<br>자동으로 발송되고, 일반 심사가 계속 진행됩니다.<br>
+                  ※ 심사 기한이 만료된 심사는 <span class="pink_vivid red">심사 기한을 변경</span>해야 심사를 재개할 수 있습니다.
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <a href="javascript:void(0);" onclick="onClickResume();" class="btn btn-primary">일반 심사 재개</a>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="modal_agree_comment">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">찬성 투표 사유</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                
+                
+                <i class="typcn typcn-info-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h6 class="mBot5">심사 대상 신청서 [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의
+                  <div>친성 투표 사유는 다음과 같습니다.</div>
+                </h6>
+                <div class="thin mTop10 agree_reason">
+                  심사한 동물 실험 계획은 다음과 같은 사유로 찬성을 결정합니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="modal fade" id="modal_disagree_comment">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h5 class="modal-title m-0 text-white">반대 투표 사유</h5>
+          </div>
+          
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 text-right pRight10">
+                
+                
+                
+                
+                
+                <i class="typcn typcn-info-outline symbol"></i>
+              </div>
+              <div class="col-lg-9 pBot10">
+                <h6 class="mBot5">심사 대상 신청서 [<span class="red underline register_num2">HUM_2020_IA0001-00</span>]의
+                  <div>반대 투표 사유는 다음과 같습니다.</div>
+                </h6>
+                <div class="thin mTop10 oppose_reason">
+                  심사한 동물 실험 계획은 다음과 같은 사유로 반대를 결정합니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    
+    <script src="./reviewClose_list-review.js"></script>
+
+  </body>
+
+</html>

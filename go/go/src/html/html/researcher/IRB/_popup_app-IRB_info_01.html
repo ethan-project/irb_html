@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+
+    
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div class="page-wrapper popup" id="print_region">
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="app_anchor" id="top_anchor"></div>
+          <div class="col-sm-12">
+
+            
+            <div class="card thick IRB hidden">
+              <div class="card-header flexBetween">
+                <div class="title_area">
+                  <h4 class="card-title flexMid task_title_ko">IRB 신규 심의 - 심의 신청서<span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                  <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">-</span></p>
+                </div>
+                <div class="progress_area">
+                  
+                </div>
+                <div class="desc_area">
+                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
+                </div>
+              </div>
+              <div class="card-body pHside40">
+                <div class="row noMargin app_frame">
+                  <div class="col-sm-12 app_col app_contents">
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-1. 연구과제 기본 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 과제명</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label for="irb_general_title_name_ko" class="mRight10 mBot0 w50">국문 :</label>
+                          <span class="data" id="general_title_name_ko">-</span>
+                        </div>
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label for="irb_general_title_name_en" class="mRight10 mBot0 w50">영문 :</label>
+                          <span class="data" id="general_title_name_en">-</span>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_title_guide">
+                          <li>동물실험의 목적과 내용을 내포하는 과제명을 간결, 명확하게 지정합니다.</li>
+                          <li>영문 과제명은 국제적으로 통용될 수 있도록 지정합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 기간</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <div class="form-group row flexMid">
+                          <label class="mRight10 mBot0 w50">시작일 :</label>
+                          <span>IRB 위원회 승인일</span>
+                        </div>
+                        <div class="form-group row flexMid">
+                          <label for="general_end_date" class="mRight10 mBot0 w50">종료일 :</label>
+                          <span class="data" id="general_end_date">-</span>
+                        </div>
+                        <div class="form-group row flexMid">
+                          <label class="mRight10 mBot0">실험일수 :</label>
+                          <div class="data" id="total_date">위원회 승인 이후부터 실험 일수를 계산합니다.</div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_date_cnt_guide">
+                          <li>승인 받고자 하는 총 연구기간을 입력합니다.</li>
+                          <li>1년을 초과하는 연구의 경우 1년이 경과하기 전에 지속심의(중간보고)를 신청하여야 합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구비 지원 기관</h5>
+                      <div class="header_comment">
+                        <div class="checkbox">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="agree_form_01-3" class="custom-control-input" id="" data-toggle="collapse" data-target="#input_01-3_group" value="1" disabled="disabled">
+                            <label class="custom-control-label" for="general_fund_org-main_check">해당사항 없음</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row app_content collapse show" id="input_01-3_group">
+                      <div class="col-sm-9">
+                        <div class="form-group row flexMid flexNoWrap">
+                          <label for="general_fund_org_name" class="mRight10 mBot0 w100">연구 기관명 :</label>
+                          <span class="data" id="general_fund_org_name">-</span>
+                        </div>
+                        <div class="row">
+                          <label for="input_01-3_3" class="mRight10 mBot0 w100">이해 상충여부 :</label>
+                          <div id="irb_general_fund_conflict">
+                            <div class="custom-control custom-radio d-block">
+                              <input type="radio" name="org_conflict" value="1" class="custom-control-input" id="input_01-3_3" checked="checked" readonly="readonly">
+                              <label class="custom-control-label" for="input_01-3_3">이해상충 없음 : 연구비지원기관과 경제적 또는 기타 이행상충 없음을 신고함</label>
+                            </div>
+                            <div class="custom-control custom-radio mTop10">
+                              <input type="radio" id="input_01-3_4" name="org_conflict" value="2" class="custom-control-input" disabled="disabled">
+                              <label class="custom-control-label" for="input_01-3_4">이해상충 있음 : 이해상충 관련사항은 별도로 보고함.</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_fund_org_guide">
+                          <li>연구비를 지원받는 경우, 기관명과 이해상충 여부를 입력합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+
+                    
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-2. 연구원 정보</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구 책임자</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="15%">
+                            <col width="30%">
+                            <col width="15%">
+                            <col width="40%">
+                          </colgroup>
+                          <tbody id="general_director">
+                            <tr>
+                              <td class="info_name">성명</td>
+                              <td class="data" id="general_director_name">-</td>
+                              <td class="info_name">Email</td>
+                              <td class="data" id="general_director_email">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">소속 부서</td>
+                              <td class="data" id="general_director_dept">-</td>
+                              <td class="info_name">교육 일자</td>
+                              <td class="data" id="general_director_edu_date">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">직책</td>
+                              <td class="data" id="general_director_position">-</td>
+                              <td class="info_name">교육 기관명</td>
+                              <td class="data" id="general_director_edu_instition">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">전공 분야</td>
+                              <td class="data" id="general_director_major_field">-</td>
+                              <td class="info_name">교육 이수 번호</td>
+                              <td class="data" id="general_director_edu_course_num">-</td>
+                            </tr>
+                            <tr>
+                              <td class="info_name">휴대 전화</td>
+                              <td class="data" id="general_director_phoneno">-</td>
+                              <td class="info_name">동물실험 경력 년수</td>
+                              <td class="data" id="general_director_select">-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_director_guide">
+                          <li>연구책임자의 교육이수 정보가 최신의 정보인지 확인하고 실험 경력년수를 입력합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>연구원 등록</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <table class="table text-center list_table">
+                          <colgroup>
+                            <col width="130">  
+                            <col width="*">    
+                            <col width="*">    
+                            <col width="*">    
+                            <col width="*">    
+                            <col width="*">    
+                            <col width="*">    
+                            <col width="*">    
+                            <col width="130">  
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>연구자 구분</th>
+                              <th>성명</th>
+                              <th>부서</th>
+                              <th>직책</th>
+                              <th>휴대전화</th>
+                              <th>Email</th>
+                              <th>교육이수 번호</th>
+                              <th>교육기관명</th>
+                              <th>동물실험<br>경력년수</th>
+                            </tr>
+                          </thead>
+                          <tbody id="general_expt">
+                            <tr class="data">
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                              <td>-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_expt_guide">
+                          <li>연구자가 기관의 리스트에 없는 경우 행정간사에 연락하여 사전 등록을 요청해야 합니다.</li>
+                          <li>리스트에서 연구자를 선택한 후에 연구자 구분사항 및 동물실험 경력을 입력합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+
+                    
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-3. 연구유형 및 심의분류</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content">
+                      <div class="col-sm-9">
+                        <li class="content_comment">선택한 항목에따라 심의 절차(심의/면제)와 연구 대상(1-4.)이 변경됩니다.</li>
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="40%">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th class="text-center">구분</th>
+                              <th class="text-center border_left">
+                                <div class="checkbox checkbox-primary">
+                                  <input type="checkbox" id="general_human_research" value="1" class="reset_review_type">
+                                  <label class="custom-control-label mBot0">인간대상 연구</label>
+                                </div>
+                              </th>
+                              <th class="text-center border_left">
+                                <div class="checkbox checkbox-primary">
+                                  <input type="checkbox" id="general_body_research" value="1" class="reset_review_type">
+                                  <label class="custom-control-label mBot0">인체 유래물 연구</label>
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody id="">
+                            <tr>
+                            </tr><tr>
+                              <td class="pLeft20">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" name="general_object" value="1" class="custom-control-input reset_review_type" id="form_01-3-3">
+                                  <label class="custom-control-label mBot0">심의 대상</label>
+                                </div>
+                              </td>
+                              <td class="align-top border_left">
+                                <ul class="mTop10 mBot0">
+                                  <li>사람을 대상으로 물리적으로 개입하는 연구: 연구대상자를 직접 조작하거나 연구대상자의 환경을 조작하여 자료를 얻는 연구</li>
+                                  <li>의사소통, 대인 접촉 등의 상호작용을 통하여 수행하는 연구: 연구대상자의 행동관찰, 대면(對面) 설문조사 등으로 자료를 얻는 연구</li>
+                                  <li>개인을 식별할 수 있는 정보를 이용하는 연구: 연구대상자를 직접ㆍ간접적으로 식별할 수 있는 정보를 이용하는 연구</li>
+                                </ul>
+                              </td>
+                              <td class="align-top border_left">
+                                <ul class="mTop10 mBot0">
+                                  <li>인체로부터 수집하거나 채취한 조직ㆍ세포ㆍ혈액ㆍ체액 등 인체 구성물 또는 이들로부터 분리된 혈청, 혈장, 염색체, DNA(Deoxyribonucleic acid), RNA(Ribonucleic acid), 단백질 등을 직접 조사·분석하는 연구(생명윤리 및 안전에 관한 법률 적용 연구)</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pLeft20">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" name="general_object" value="2" class="custom-control-input reset_review_type" id="form_01-3-4">
+                                  <label class="custom-control-label mBot0">심의 면제</label>
+                                </div>
+                              </td>
+                              <td class="align-top border_left">
+                                <ul class="mTop10 mBot0">
+                                  <li>연구대상자를 직접 조작하거나 그 환경을 조작하는 연구 중 다음 각 항목의 어느 하나에 해당하는 연구</li>
+                                  <li class="sub_list">약물투여, 혈액채취 등 침습적(侵襲的) 행위를 하지 않는 연구</li>
+                                  <li class="sub_list">신체적 변화가 따르지 않는 단순 접촉 측정장비 또는 관찰장비만을 사용하는 연구</li>
+                                  <li class="sub_list">「식품위생법 시행규칙」 제3조에 따라 판매 등이 허용되는 식품 또는 식품첨가물을 이용하여 맛이나 질을 평가하는 연구</li>
+                                  <li class="sub_list">「화장품법」 제8조에 따른 안전기준에 맞는 화장품을 이용하여 사용감 또는 만족도 등을 조사하는 연구</li>
+                                  <li class="sub_list">연구대상자등을 직접 대면하더라도 연구대상자등이 특정되지 않고 「개인정보 보호법」 제23조에 따른 민감정보를 수집하거나 기록하지 않는 연구</li>
+                                  <li class="sub_list">연구대상자등에 대한 기존의 자료나 문서를 이용하는 연구</li>
+                                </ul>
+                              </td>
+                              <td class="align-top border_left">
+                                <ul class="mTop10 mBot0">
+                                  <li>연구자가 개인정보를 수집ㆍ기록하지 않은 연구 중 다음 각 항목의 어느 하나에 해당하는 연구</li>
+                                  <li class="sub_list">인체유래물 은행이 수집ㆍ보관하고 있는 인체유래물과 그로부터 얻은 유전정보(이하 "인체유래물등"이라 한다)를 제공받아 사용하는 연구로서 인체유래물등을 제공한 인체유래물은행을 통하지 않으면 개인정보를 확인할 수 없는 연구</li>
+                                  <li class="sub_list">의료기관에서 치료 및 진단을 목적으로 사용하고 남은 인체유래물등을 이용하여 정확도 검사 등 검사실 정도관리 및 검사법 평가 등을 수행하는 연구</li>
+                                  <li class="sub_list">인체유래물을 직접 채취하지 않는 경우로서 일반 대중이 이용할 수 있도록 인체유래물로부터 분리ㆍ가공된 연구재료(병원체, 세포주 등을 포함한다)를 사용하는 연구</li>
+                                  <li class="sub_list">연구자가 인체유래물 기증자의 개인식별정보를 알 수 없으며, 연구를 통해 얻어진 결과가 기증자 개인의 유전적 특징과 관계가 없는 연구. 다만, 배아줄기세포주를 이용한 연구는 제외한다.</li>
+                                  <li>「초ㆍ중등교육법」 제2조 및 「고등교육법」 제2조에 따른 학교와 보건복지부장관이 정하는 교육기관에서 통상적인 교육과정의 범위에서 실무와 관련하여 수행하는 연구</li>
+                                  <li>공중보건상 긴급한 조치가 필요한 상황에서 국가 또는 지방자치단체가 직접 수행하거나 위탁한 연구</li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <li class="content_comment" id="select_content">
+                        </li>
+                        <li class="content_comment general_judgement_area">
+                          <span class="fw_bold mRight10">심의 종류:</span>
+                          <div class="form-check-inline">
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="input_01-3-1" name="general_judgement" value="1" class="custom-control-input">
+                              <label class="custom-control-label mBot0">정규 심의</label>
+                            </div>
+                            <div class="custom-control custom-radio mLeft20">
+                              <input type="radio" id="input_01-3-2" name="general_judgement" value="2" class="custom-control-input">
+                              <label class="custom-control-label mBot0">신속 심의</label>
+                            </div>
+                          </div>
+                        </li>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide" style="margin-top:230px;">
+                        <ul id="general_director_guide">
+                          <li>「식품위생법 시행규칙」 제3조 (판매 등이 허용되는 식품 등)</li>
+                          <li>「화장품법」 제8조 (화장품 안전기준 등)</li>
+                          <li>초ㆍ중등교육법」 제2조 (학교의 종류)</li>
+                          <li>「고등교육법」 제2조 (학교의 종류)</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header general_exempt_reason hidden">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>심의 면제 사유서</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content general_exempt_reason hidden">
+                      <div class="col-sm-9">
+                        <div class="row col-sm-12">
+                          <span class="data" id="general_exempt_reason_text">-</span>
+                        </div>
+                        <div class="row col-sm-12 mTop20">
+                          <li class="content_comment">상세한 설명을 위해 필요한 자료가 있을경우, File로 첨부할 수 있습니다.</li>
+                        </div>
+                        <div class="row col-sm-12" id="general_exempt_reason_file">
+                          <label for="file_01-3-2" class="flexMid mBot0 w80">관련 자료 :</label>
+                          <div class="custom-file flex_1">
+                            <input type="file" name="file_01-3-2" class="custom-file-input" id="file_01-3-2">
+                            <label class="custom-file-label" for="file_01-3-2" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide">
+                        <ul id="general_director_guide">
+                          <li>수행하려는 연구가 심의 면제인 경우에만 작성합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-4. 연구 대상</h4>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_header general_human_research hidden">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>인간대상 연구</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content general_human_research hidden">
+                      <div class="col-sm-9">
+                        
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="*">
+                            <col width="*">
+                            <col width="*">
+                          </colgroup>
+                          <tbody id="">
+                            <tr>
+                              <td>연구대상 수</td>
+                              <td colspan="2" class="border_left">
+                                <div class="flexMid">
+                                  <label for="form_01_4-1_1" class="mRight10 mBot0 mRight10">전체 :</label>
+                                  <span class="data mRight5" id="general_human_all">-</span> 명
+                                  <span class="mHside10">/</span>
+                                  <label for="form_01_4-1_2" class="mRight10 mBot0 mRight10 inst_name">한국 대학교 병원 :</label>
+                                  <span class="data mRight5" id="general_human_institution">-</span> 명
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>연구대상 특성<br>(해당항목 모두표기)</td>
+                              <td colspan="2" class="border_left pHside20 pVside20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-2_1" value="1">
+                                    <label class="mBot0">건강인</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-2_2" value="2">
+                                    <label class="mBot0">환자</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3" value="3" data-toggle="collapse" data-target="#form_01-4-2_3_group">
+                                    <label class="mBot0">취약한 환경에 있는 연구 대상자</label>
+                                  </div>
+                                </div>
+                                <div class="row pLeft20 collapse" id="form_01-4-2_3_group">
+                                  <div class="col-sm-6" id="">
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-1" value="4">
+                                      <label class="mBot0">임산부</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-3" value="5">
+                                      <label class="mBot0">영/소아</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-5" value="6">
+                                      <label class="mBot0">장애인</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-7" value="7">
+                                      <label class="mBot0">말기환자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-9" value="8">
+                                      <label class="mBot0">연구기관, 연구책임자, 의뢰자 등의 피 고용인</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6" id="">
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-2" value="9">
+                                      <label class="mBot0">수감자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-4" value="10">
+                                      <label class="mBot0">연구자의 연구원이나 학생</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-6" value="11">
+                                      <label class="mBot0">집단 시설에 수용된 자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-8" value="12">
+                                      <label class="mBot0">군인 또는 군대조직에 의한 연구대상자 모집</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mTop15">
+                                      <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3-10" value="13">
+                                      <label class="mBot0">기타 동의 능력이 제한된 사람</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>모집방법</td>
+                              <td colspan="2" class="border_left pLeft20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-3_1" value="14">
+                                    <label class="mBot0">광고, 인터넷, 이메일</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-3_2" value="15">
+                                    <label class="mBot0">개별접촉</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="form_01_4-3_3" id="general_recruit_etc_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-3_4_group">
+                                    <label class="mBot0">기타</label>
+                                  </div>
+                                  <div class="collapse" id="input_01_4-3_4_group">
+                                    <span class="data" id="general_recruit_etc_input">-</span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" class="pLeft20">
+                                <div class="checkbox checkbox-primary">
+                                  <input type="checkbox" name="human_experiment_check" id="general_experiment" value="16">
+                                  <label class="custom-control-label mBot0">실험연구 해당</label>
+                                </div>
+                              </td>
+                              <td class="border_left">방법</td>
+                              <td class="border_left pLeft20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-4_1" value="17">
+                                    <label class="mBot0">대상자 조작</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-4_2" value="18">
+                                    <label class="mBot0">환경 조작</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="form_01_4-4_3" id="general_experiment_method_etc_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-4_4_group">
+                                    <label class="mBot0">기타</label>
+                                  </div>
+                                  <div class="collapse" id="input_01_4-4_4_group">
+                                    <span class="data" id="general_experiment_method_etc_input">-</span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="border_left">시술내용</td>
+                              <td class="border_left pLeft20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-5_1" value="19">
+                                    <label class="mBot0">침습적(채혈, 투약, 섭취, 도포 등)</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-5_2" value="20">
+                                    <label class="mBot0">비침습적(관찰, 설문, 면담 등)</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="border_left">용도</td>
+                              <td class="border_left pLeft20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-6_1" value="21">
+                                    <label class="mBot0">식품</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-6_2" value="22">
+                                    <label class="mBot0">생화학적 제제</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-6_3" value="23">
+                                    <label class="mBot0">화장품</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="purpose_2_basic_0" id="general_experiment_purpose_etc_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-6_5_group">
+                                    <label class="mBot0">기타</label>
+                                  </div>
+                                  <div class="collapse" id="input_01_4-6_5_group">
+                                    <span class="data" id="general_experiment_purpose_etc_input">-</span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pLeft20">
+                                <div class="checkbox checkbox-primary">
+                                  <input type="checkbox" name="human_experiment_check" id="investgate" value="24">
+                                  <label class="custom-control-label mBot0" for="investgate">조사연구 해당</label>
+                                </div>
+                              </td>
+                              <td colspan="2" class="border_left pHside20 pVside20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-7_1" value="25">
+                                    <label class="mBot0">실험, 대조군 연구</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-7_2" value="26">
+                                    <label class="mBot0">코호트 연구</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-7_3" value="27">
+                                    <label class="mBot0">단면조사 연구</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-7_4" value="28">
+                                    <label class="mBot0">설문조사</label>
+                                  </div>
+                                </div>
+                                <div class="flexMid mTop10">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-7_8" value="29">
+                                    <label class="mBot0">행동관찰</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="human_experiment_check" id="form_01_4-7_9" value="30">
+                                    <label class="mBot0">면담조사</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="purpose_2_basic_0" id="general_investgate_etc_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-6_7_group">
+                                    <label class="mBot0">기타</label>
+                                  </div>
+                                  <div class="collapse" id="input_01_4-6_7_group">
+                                    <span class="data" id="general_investgate_etc_input">-</span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide mTop0">
+                        <ul id="general_director_guide">
+                          <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                          <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                          <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                    
+                    <div class="row app_header general_body_research hidden">
+                      <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>인체유래물 연구</h5>
+                      <div class="header_comment"></div>
+                    </div>
+                    
+                    <div class="row app_content general_body_research hidden">
+                      <div class="col-sm-9">
+                        
+                        <table class="table info_table">
+                          <colgroup>
+                            <col width="*">
+                            <col width="*">
+                          </colgroup>
+                          <tbody id="">
+                            <tr>
+                              <td>연구대상 수</td>
+                              <td class="border_left">
+                                <div class="flexMid">
+                                  <label for="form_01_4-8_1" class="mRight10 mBot0 mRight10">전체 :</label>
+                                  <span class="data mRight5" id="general_body_all">-</span> 명
+                                  <span class="mHside10">/</span>
+                                  <label for="form_01_4-8_2" class="mRight10 mBot0 mRight10 inst_name">한국 대학교 병원 :</label>
+                                  <span class="data mRight5" id="general_body_institution">-</span> 명
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>검체 종류</td>
+                              <td class="border_left pHside20 pVside20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="general_body_research_check" id="form_01_4-9_1" value="1">
+                                    <label class="mBot0">혈액</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="general_body_research_check" id="form_01_4-9_2" value="2">
+                                    <label class="mBot0">체액</label>
+                                  </div>
+                                </div>
+                                <div class="flexMid mTop10">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="general_body_research_check" id="form_01_4-9_3" value="3">
+                                    <label class="mBot0">조직</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="purpose_2_basic_0" id="general_sample_type_etc_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-9_5_group">
+                                    <label class="mBot0">기타</label>
+                                  </div>
+                                  <div class="collapse" id="input_01_4-9_5_group">
+                                    <span class="data" id="general_sample_type_etc_input">-</span> 
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>수집 방법</td>
+                              <td class="border_left pHside20 pVside20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="general_body_research_check" id="form_01_4-10_1" value="4">
+                                    <label for="form_01_4-10_1" class="mBot0">직접 수집하여 이용</label>
+                                  </div>
+                                </div>
+                                <div class="flexMid mTop10">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="purpose_2_basic_0" id="general_collect_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-10_4_group">
+                                    <label for="general_collect_check-main_check" class="mBot0">인체유래물 은행 이용</label>
+                                  </div>
+                                  <div class="collapse flexMid flex_1" id="input_01_4-10_4_group">
+                                    <label class="mRight10 mBot0">제공 은행</label>
+                                    <span class="data" id="general_collect_input">-</span> 
+                                  </div>
+                                </div>
+                                <div class="flexMid mTop10">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="purpose_2_basic_0" id="general_sample_type_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-10_7_group">
+                                    <label class="mBot0">기타</label>
+                                  </div>
+                                  <div class="collapse flexMid flex_1" id="input_01_4-10_7_group">
+                                    <label class="mRight10 mBot0">제공처</label>
+                                    <span class="data" id="general_sample_type_input">-</span> 
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>익명화 여부</td>
+                              <td class="border_left pHside20 pVside20">
+                                <div class="flexMid">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="general_body_research_check" id="form_01_4-11_1" value="5">
+                                    <label>익명화 인체유래물</label>
+                                  </div>
+                                </div>
+                                <div class="flexMid mTop10">
+                                  <div class="checkbox checkbox-primary mRight30">
+                                    <input type="checkbox" name="purpose_2_basic_0" id="general_anonymity_check-main_check" value="1" data-toggle="collapse" data-target="#input_01_4-11_4_group">
+                                    <label class="mBot0">익명화 필요</label>
+                                  </div>
+                                  <div class="collapse flexMid flex_1" id="input_01_4-11_4_group">
+                                    <label class="mRight10 mBot0">익명화 방법</label>
+                                    <span class="data" id="general_anonymity_input">-</span> 
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="border_left">인체유래물<br>보관 여부</td>
+                              <td class="border_left pHside20 pVside20">
+                                <div id="general_bdoy_store_flag">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01_4-12" value="1" class="custom-control-input" id="form_01_4-12_1" checked="checked">
+                                    <label class="custom-control-label" for="form_01_4-12_1">예</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="form_01_4-12" value="2" class="custom-control-input" id="form_01_4-12_2">
+                                    <label class="custom-control-label" for="form_01_4-12_2">아니오</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="border_left">유전학적 정보<br>보관 여부</td>
+                              <td class="border_left pHside20 pVside20">
+                                <div id="general_genetic_store_flag">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" name="form_01_4-13" value="1" class="custom-control-input" id="form_01_4-13_1" checked="checked">
+                                    <label class="custom-control-label" for="form_01_4-13_1">예</label>
+                                  </div>
+                                  <div class="custom-control custom-radio mTop10">
+                                    <input type="radio" name="form_01_4-13" value="2" class="custom-control-input" id="form_01_4-13_2">
+                                    <label class="custom-control-label" for="form_01_4-13_2">아니오</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide mTop0">
+                        <ul id="general_director_guide">
+                          <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                          <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                          <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                        </ul>
+                      </div>
+                      <div class="app_divider sub_divider"></div>
+                    </div>
+
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div id="bottom_anchor"></div>
+              
+
+              
+              <div id="footer_anchor"></div>
+              <div class="card-footer flexCenter side_type">
+                <a href="javascript:printRegion('#print_region', '.card-footer')" class="btn btn-primary waves-light mLeft0"><i class="fas fa-print mRight5"></i>인쇄</a>
+                <a href="javascript: void(0);" class="btn btn-danger waves-effect waves-light mLeft0" id="btn_pdf"><i class="far fa-file-pdf mRight5"></i>PDF 다운로드</a>
+                <a href="javascript:window.close();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-times mRight5"></i>닫기</a>
+
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light mLeft20" data-move-to="#top_anchor"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
+                <a href="javascript: void(0);" class="btn btn-outline-secondary waves-light only_side_type mLeft0" data-move-to="#bottom_anchor"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
+              </div>
+
+            </div>
+            
+
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+    </div>
+    
+
+
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/metismenu.min.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/feather.min.js"></script>
+    <script src="/assets/js/simplebar.min.js"></script>
+    <script src="/assets/js/moment.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="/assets/js/common/common.js"></script>
+
+    
+    <script src="/assets/js/app.js"></script>
+
+    
+    <script src="./_popup_app-IRB_info_01.js"></script>
+
+    
+    <script src="/assets/vendors/pdf/jspdf.min.js"></script>
+    <script src="/assets/vendors/pdf/bluebird.min.js"></script>
+    <script src="/assets/vendors/pdf/html2canvas_0.5.min.js"></script>
+
+  </body>
+
+</html>

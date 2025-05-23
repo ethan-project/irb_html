@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.png">
+
+    
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/common/common.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="researcher">
+
+    <div id="leftsidenav" class="left-sidenav"></div>
+
+    <div class="page-wrapper">
+      
+      <div id="topbar" class="topbar"></div>
+
+      
+      <div class="page-content">
+        <div class="container-fluid">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                    <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="card thick IACUC">
+                <div class="card-header flexBetween">
+                  <div class="apptype_area committee_bg">
+                    <div class="apptype_title">신규 승인</div>
+                    
+                    
+                    
+                    
+                    <div class="apptype_date">미승인</div>
+                    
+                  </div>
+                  <div class="title_area">
+                    <h4 class="card-title flexMid"><span class="task_title_ko">새로운 동물 실험 계획서</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : 홍길동)</span></h4>
+                    <p class="text-muted mb-0">신규 승인 접수 번호 :<span class="register_num">HUM-2020-IA0001-01</span></p>
+                  </div>
+                  <div class="desc_area">
+                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IACUC_icon_top.png">IACUC</h4>
+                  </div>
+                </div>
+                <div class="card-body noPadding">
+                  <div class="row noMargin app_frame">
+                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                    <div class="col-sm-2 app_col app_proceess">
+                      <div class="proceess_area fade_in" id="application_left_step_navi">
+                        
+                        <a href="./application_new-01_1.html" class="row process_content" data-process-num="1">
+                          <span>일반정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-02_1.html" class="row process_content" data-process-num="2">
+                          <span>동물실험 목적</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-03_1.html" class="row process_content" data-process-num="3">
+                          <span>실험동물 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-04_1.html" class="row process_content" data-process-num="4">
+                          <span>실험물질 정보</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-05_1.html" class="row process_content" data-process-num="5">
+                          <span>동물실험 방법</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-06_1.html" class="row process_content active" data-process-num="6">
+                          <span>고통등급</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-07_1.html" class="row process_content" data-process-num="7">
+                          <span>고통경감 방안</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-08_1.html" class="row process_content" data-process-num="8">
+                          <span>사육관리</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-09_1.html" class="row process_content" data-process-num="9">
+                          <span>안락사</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-10_1.html" class="row process_content" data-process-num="10">
+                          <span>연구책임자 준수사항</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                        <a href="./application_new-11_1.html" class="row process_content" data-process-num="11">
+                          <span>자가 점검</span>
+                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-10 app_col app_contents">
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>6-1. 고통 등급 분류</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <li class="content_comment">해당하는 고통 등급을 선택해 주세요.</li>
+                        </div>
+                        <div class="col-sm-9" id="pain_grage">
+                        
+                        
+                          <div class="form-group custom-control custom-radio">
+                            <input type="radio" id="input_06-1_1" name="input_06-1" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="input_06-1_1">Grade A : 원생동물 또는 무척추 동물을 사용하는 실험음</label>
+                          </div>
+                          <div class="form-group custom-control custom-radio">
+                            <input type="radio" id="input_06-1_2" name="input_06-1" value="2" class="custom-control-input">
+                            <label class="custom-control-label" for="input_06-1_2">Grade B : 척추동물을 사용하지만 거의 고통을 주지 않는 실험</label>
+                          </div>
+                          <div class="form-group custom-control custom-radio">
+                            <input type="radio" id="input_06-1_4" name="input_06-1" value="3" class="custom-control-input">
+                            <label class="custom-control-label" for="input_06-1_4">Grade C : 척추동물에게 약간의 스트레스 혹은 단기간의 통증을 주는 실험</label>
+                          </div>
+                          <div class="form-group custom-control custom-radio">
+                            <input type="radio" id="input_06-1_5" name="input_06-1" value="4" class="custom-control-input">
+                            <label class="custom-control-label" for="input_06-1_5">Grade D : 척추동물에게 중증도 이상의 고통이나 억압을 동반하는 실험</label>
+                          </div>
+                          <div class="form-group custom-control custom-radio">
+                            <input type="radio" id="input_06-1_6" name="input_06-1" value="5" class="custom-control-input">
+                            <label class="custom-control-label" for="input_06-1_6">Grade E : 척추동물에게 극심한 고통이나 억압 또는 회피할 수 없는 스트레스를 유발하는 실험</label>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="pain_grage_guide">
+                          
+                          
+                            <li>실험동물 군별로 고통정도가 다른 경우에는 가장 큰 고통이 유발되는 동물군 기준으로 고통등급을 설정합니다.</li>
+                            <li>참조자료 「고통등급 해당사례]</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>6-2. 고통등급 D (실험 동물의 고통 경감 방안)</h4>
+                        <div class="header_comment red">※ 고통등급 D의 경우 반드시 작성해 주세요.</div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-12">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="pain_d_anesthetic-main_check" value="1" data-toggle="collapse" data-target="#pain_d_anesthetic_group">
+                            <label for="pain_d_anesthetic-main_check">마취제, 진통제 등을 사용</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="pain_d_anesthetic_group">
+                        
+                        <div class="col-sm-9">
+                          <table class="table text-center list_table">
+                            <colgroup>
+                              <col width="200">
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                              <col width="80">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th>약물 종류</th>
+                                <th>약물명</th>
+                                <th>투여량</th>
+                                <th>투여 경로</th>
+                                <th>삭제</th>
+                              </tr>
+                            </thead>
+                            <tbody class="pain_d_anesthetic">
+                              <tr>
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected="selected" disabled="disabled">종류 선택</option>
+                                    <optgroup label="—">
+                                      <option>마취제</option>
+                                      <option>항생,소염제</option>
+                                      <option>진통제</option>
+                                      <option>수액</option>
+                                    </optgroup>
+                                    <optgroup label="—">
+                                      <option value="new" data-custom-toggle="visible">직접입력</option>
+                                    </optgroup>
+                                  </select>
+                                  <input class="form-control form-control-sm hidden mTop5" type="text">
+                                </td>
+                                <td><input type="text" maxlength="20" class="form-control form-control-sm" placeholder="예) Cefazoline"></td>
+                                <td><input type="text" maxlength="20" class="form-control form-control-sm" placeholder="예) 10~30mg/kg"></td>
+                                
+                                <td>
+                                  <select class="form-control btn-outline-primary small_select">
+                                    <option selected="selected" disabled="disabled">투여경로 선택</option>
+                                    <optgroup label="—">
+                                      <option>IM(근육주사)</option>
+                                      <option>IP(복강주사)</option>
+                                      <option>IV(정맥주사)</option>
+                                      <option>PO(경구투여)</option>
+                                      <option>SC(피하주사)</option>
+                                    </optgroup>
+                                    <optgroup label="—">
+                                      <option value="new" data-custom-toggle="visible">직접입력</option>
+                                    </optgroup>
+                                  </select>
+                                  <input class="form-control form-control-sm hidden mTop5" type="text">
+                                </td>
+                                <td>
+                                  <a href="#" class="btn btn-xs btn-outline-danger"><i class="far fa-trash-alt mRight5"></i>삭제</a>
+                                </td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                          <div class="flexCenter mBot20">
+                            <a href="javascript: void(0)" class="btn btn-xs btn-outline-primary btn-tr-add"><i class="fas fa-user-plus mRight5"></i>약물 추가</a>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide">
+                          <ul id="pain_d_guide">
+                          
+                          
+                            <li>고통등급 D인 실험에서 동물의 고통 및 스트레스를 완화할 수 있는 방법을 제시합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary flexMid pLeft3">
+                            <input type="checkbox" id="pain_d_etc-main_check" value="1" data-custom-toggle="visible">
+                            <label for="pain_d_etc-main_check" class="w50">기타</label>
+                            <input type="text" class="form-control form-control-sm hidden" id="pain_d_etc_text" placeholder="사육환경 개선 등의 구체적인 내용을 입력해 주세요.">
+                            
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_d_etc_guide">
+                          
+                          
+                            <li>도피행동 등 통증의 강도를 동물 스스로가 제어하여 고통을 경감시킬 수 있도록 필요한 방안을 기재합니다.</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                        <div class="col-sm-9">
+                          <label for="input_06-3_4">고통 및 스트레스 경감을 위한 관리방안</label>
+                          
+                          <textarea class="form-control" id="pain_d_3_text" rows="3" placeholder="구체적인 사유를 입력해 주세요.&#13;&#10;예) 사육환경을 개선하거나 사료섭취의 편리 제공,유동식 제공, 탈수보정을 위한 수책 처치 등"></textarea>
+                        </div>
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_d_3_text_guide">
+                          
+                          
+                            <li>고통 및 스트레스 완화 방안를 위한 구체적인 관리방안을 기재합니다.</li>
+                            <li>「동물보호법 제23조(동물실험의 원칙)」</li>
+                          </ul>
+                        </div>
+                        <div class="app_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_header">
+                        <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>6-3. 고통등급 E (동물실험을 수행하는 사유 및 관리 방안)</h4>
+                        <div class="header_comment red">※ 고통등급 E의 경우 반드시 작성해 주세요.</div>
+                      </div>
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="pain_e_1-main_check" value="1" data-toggle="collapse" data-target="#input_06-3_1">
+                            <label for="pain_e_1-main_check">인도적 종료시점 기준에 따라 안락사를 적용하지만, 연구목적 상 고통경감을 위한 진정제나 진통제를 투여할 수 없는 경우</label>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_06-3_1">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="3" id="pain_e_1_text" placeholder="구체적인 사유를 입력해 주세요.&#13;&#10;예) 통증실험 수행으로 진통제를 사용하면 연구결과에 영향을 미침"></textarea>
+                          
+                          
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_e_1_guide">
+                          
+                          
+                            <li>연구목적 상 약물투여가 불가하거나 고통경감 방법이 없는 경우, 상세 사유를 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="pain_e_2-main_check" value="1" data-toggle="collapse" data-target="#input_06-3_2">
+                            <label for="pain_e_2-main_check">고통경감을 위한 진정제, 진통제, 마취제 등을 사용하지만 잠재적 고통이나 통증이 예상되는 경우</label>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_06-3_2">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="3" id="pain_e_2_text" placeholder="구체적인 사유를 입력해 주세요."></textarea>
+                          
+                          
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_e_2_guide">
+                          
+                          
+                            <li>항생제, 소염제의 사용이 불가하한 실험의 경우 관찰 빈도수와 관리방안을 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="pain_e_3-main_check" value="1" data-toggle="collapse" data-target="#input_06-3_3">
+                            <label for="pain_e_3-main_check">연구목적 상 실험동물의 폐사율을 확인해야 하는 경우</label>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                      <div class="row app_content collapse" id="input_06-3_3">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" rows="3" id="pain_e_3_text" placeholder="구체적인 사유를 입력해 주세요."></textarea>
+                          
+                          
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_e_3_guide">
+                          
+                          
+                            <li>인도적 종료시점을 채택하지 않고 동물의 죽음을 종료시점으로 해야 하는 경우 불가피한 사유를 기재합니다.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                      
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <label for="input_06-3_4">고통 및 스트레스 경감을 위한 관리방안</label>
+                          
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <textarea class="form-control" id="pain_e_4_text" rows="3" placeholder="구체적인 사유를 입력해 주세요.&#13;&#10;예) 사육환경을 개선하거나 사료섭취의 편리 제공,유동식 제공, 탈수보정을 위한 수책 처치 등"></textarea>
+                          
+                          
+                        </div>
+                        
+                        <div class="col-sm-3 app_guide mTop0">
+                          <ul id="pain_e_4_guide">
+                          
+                          
+                            <li>고통 및 스트레스 완화 방안를 위한 구체적인 관리방안을 기재합니다.</li>
+                            <li>「동물보호법 제23조(동물실험의 원칙)」</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="app_divider"></div>
+                      </div>
+
+                    
+                    <div class="row app_header">
+                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>6-4. 특별 고려사항(Special Consideration) – AAALAC PROGRAM : Animal Usage </h4>
+                      <div class="header_comment red">※ 해당하는 항목이 있는 경우 모두 선택해 주세요.</div>
+                    </div>
+                    
+                    <div class="row app_content" id="content_06-4">
+                      <div class="col-sm-9" id="special_consideration">
+                      </div>
+                      
+                      <div class="col-sm-3 app_guide mTop0">
+                        <ul id="special_consideration_guide">
+                        
+                        
+                          <li>aaalac 인증 프로그램에 참여하는 경우 동물관리 및 이용 프로그램 평가를 위한 정보를 제공합니다.</li>
+                          <li>동물 보호 시설 외부의 실험실에서 사용되거나 수용될 수 있는 동물을 포함하여 연구, 교육 또는 시험에 사용하도록 승인된 모든 동물에 대한 정보가 제공되어야 합니다.</li>
+                          <li>중요한 것은 회복 수술 절차, 구속에 필요한 행동 또는 기타 실험 및 위험한 물질에 잠재적으로 노출되는 것과 관련된 실험동물 정보를 제공합니다.</li>                          
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+                </div>
+                
+
+                
+                <div class="card-footer flexCenter" id="appplication_page_navi">
+                  <a href="./application_new-05_2.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
+                  <a href="./application_new-07_1.html" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true"><i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
+                  <a href="#" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" data-toggle="modal" data-target="#modal_tempSave"><i class="fas fa-check mRight5"></i>임시 저장</a>
+
+                  
+                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                </div>
+
+              </div>
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+
+        <footer id="footer" class="footer text-center"></footer>
+        
+      </div>
+      
+    </div>
+    
+
+    
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/metismenu.min.js"></script>
+    <script src="../../assets/js/waves.js"></script>
+    <script src="../../assets/js/feather.min.js"></script>
+    <script src="../../assets/js/simplebar.min.js"></script>
+    <script src="../../assets/js/moment.js"></script>
+    <script src="../../assets/js/di4js.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../plugins/tippy/tippy.all.min.js"></script>
+
+    
+    <script src="../../assets/js/common/common.js"></script>
+
+    
+    <script src="../../assets/js/app.js"></script>
+
+    
+    <script src="../../html/researcher/application_new-06_1.js"></script>
+
+  </body>
+
+</html>
