@@ -7,5 +7,8 @@ src/google.golang.org
 src/gopkg.in
 src/donghun_run_ipsap.sh
 src/test.go
+src/go.mod
+src/ipsap
+go/go/config
 bin
 pkg
