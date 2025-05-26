@@ -238,7 +238,7 @@ class ItemParser {
   }
 
   getItemFromList(listObj, item_name, no_save) {
-    console.log("listObj, item_name, no_save", listObj, item_name, no_save)
+    // console.log("listObj, item_name, no_save", listObj, item_name, no_save)
     try {
       for (const [key, value] of Object.entries(listObj)) {
         if (key == item_name) return new ItemData(item_name, value, this, no_save);

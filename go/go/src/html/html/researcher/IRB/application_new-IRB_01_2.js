@@ -23,8 +23,8 @@ function makeExptUserList() {
                                         <td>${a}</td>\n        <td>\n     
                                              <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class=""></i>삭제</a>\n        </td>\n      </tr>`;
    }),
-      // (n +=
-      //    '\n  <tr class="add_row">\n    <td colspan="11">\n      <a href="javascript:void(0);" onclick="openModelOtherStaff();" class="btn btn-xs btn-outline-primary" ><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>\n    </td>\n  </tr>\n  </tbody>'),
+      (n +=
+         '\n  <tr class="add_row">\n    <td colspan="11">\n      <a href="javascript:void(0);" onclick="openModelOtherStaff();" class="btn btn-xs btn-outline-primary" ><i class="fas fa-user-plus mRight5"></i>실험 수행자 선택 추가</a>\n    </td>\n  </tr>\n  </tbody>'),
       $("#general_expt").replaceWith(n),
       $.each(r, function (e, t) {
          var n = `general_expt_${t.user_seq}_radio`;
