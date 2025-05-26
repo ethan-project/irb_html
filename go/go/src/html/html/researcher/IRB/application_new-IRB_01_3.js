@@ -1,1 +1,117 @@
-var g_object,g_for_people;function changePageNavigation(e,t){"2"==e?appNaviNextPage():1==t?appItemSaveTemporary(appNavigationCallback,{PAGE_ID:"PAGE_1_4"}):appItemSaveTemporary(appNavigationCallback,{PAGE_ID:"PAGE_1_5"})}"undefined"==typeof api_js&&document.write("<script src='/assets/js/common/api.js'><\/script>"),"undefined"==typeof const_js&&document.write("<script src='/assets/js/common/const.js'><\/script>"),document.write("<script src='/html/researcher/IRB/common_application_new-IRB.js'><\/script>"),$(document).ready((function(){function e(){var e=[];1==$("input:radio[name ='general_object']:checked").val()?($(".general_judgement_area").removeClass("hidden"),e.push("심의 대상"),g_object=$("input:radio[name ='general_object']:checked").val()):($(".general_judgement_area").addClass("hidden"),e.push("심의 면제"),g_object=$("input:radio[name ='general_object']:checked").val()),$('input:checkbox[id="general_human_research"]').is(":checked")&&(e.push("인간대상 연구"),g_for_people=$('input:checkbox[id="general_human_research"]:checked').val()),$('input:checkbox[id="general_body_research"]').is(":checked")&&e.push("인체 유래물 연구"),function(e){$("#select_content").empty();var t='<span class="fw_bold mRight10">선택 항목:</span>';for(let a=0;a<e.length;a++)t+=`<button type="button" class="btn btn-outline-primary btn-round btn_tag mRight5"> \n                  ${e[a]}\n                </button>`;$("#select_content").append(t)}(e)}function t(t){var a="general_object",n=t.getItemData(a).getStringValue("0");$(`input:radio[name ='general_object']:input[value='${n}']`).click(),irbResetLeftNavi(n);a="general_human_research",n=t.getItemData(a).getStringValue("0");g_for_people=n,1==n?$('input:checkbox[id="general_human_research"]').attr("checked",!0):$('input:checkbox[id="general_human_research"]').attr("checked",!1);a="general_body_research";1==(n=t.getItemData(a).getStringValue("0"))?$('input:checkbox[id="general_body_research"]').attr("checked",!0):$('input:checkbox[id="general_body_research"]').attr("checked",!1);a="general_judgement",n=t.getItemData(a).getStringValue("0");$(`input:radio[name ='general_judgement']:input[value='${n}']`).click(),e(),$(".card").removeClass("hidden")}loadApplicationParams(),g_AppItemParser=new ItemParser(g_AppInfo.appSeq),g_AppItemParser.load({"filter.query_items":"general_division"},t),$(".reset_review_type").change((function(){1==$(this).val()?($(".process_content").eq(1).attr("onclick",""),$(".process_content").eq(2).attr("onclick","")):($(".process_content").eq(1).attr("onclick","APP_IRB_NAVIGATION.navigate('PAGE_2_1');"),$(".process_content").eq(2).attr("onclick","APP_IRB_NAVIGATION.navigate('PAGE_3_1');")),e()}));var a=function(e,t){this.phase="page1_3",this.btn_type=t};a.prototype.check=function(){if("nextPage"==this.btn_type){if(!$("#general_human_research").is(":checked")&&!$("#general_body_research").is(":checked"))return void alert("인간 대상 연구 혹은 인체 유래물 연구 중 반드시 하나 이상 체크해 주세요.");changePageNavigation(g_object,g_for_people)}else{if(!$("#general_human_research").is(":checked")&&!$("#general_body_research").is(":checked"))return void alert("인간 대상 연구 혹은 인체 유래물 연구 중 반드시 하나 이상 체크해 주세요.");saveTemporary()}},di.autowired(!1).register("validator_nextPage").as(a).withConstructor().withProperties().prop("btn_type").val("nextPage").register("validator_tempSave").as(a).withConstructor().withProperties().prop("btn_type").val("tempSave")}));
+var g_object, g_for_people;
+function changePageNavigation(e, t) {
+  "2" == e
+    ? appNaviNextPage()
+    : 1 == t
+    ? appItemSaveTemporary(appNavigationCallback, { PAGE_ID: "PAGE_1_4" })
+    : appItemSaveTemporary(appNavigationCallback, { PAGE_ID: "PAGE_1_5" });
+}
+"undefined" == typeof api_js &&
+  document.write("<script src='/assets/js/common/api.js'></script>"),
+  "undefined" == typeof const_js &&
+    document.write("<script src='/assets/js/common/const.js'></script>"),
+  document.write(
+    "<script src='/html/researcher/IRB/common_application_new-IRB.js'></script>"
+  ),
+  $(document).ready(function () {
+    function e() {
+      var e = [];
+      1 == $("input:radio[name ='general_object']:checked").val()
+        ? ($(".general_judgement_area").removeClass("hidden"),
+          e.push("심의 대상"),
+          (g_object = $("input:radio[name ='general_object']:checked").val()))
+        : ($(".general_judgement_area").addClass("hidden"),
+          e.push("심의 면제"),
+          (g_object = $("input:radio[name ='general_object']:checked").val())),
+        $('input:checkbox[id="general_human_research"]').is(":checked") &&
+          (e.push("인간대상 연구"),
+          (g_for_people = $(
+            'input:checkbox[id="general_human_research"]:checked'
+          ).val())),
+        $('input:checkbox[id="general_body_research"]').is(":checked") &&
+          e.push("인체 유래물 연구"),
+        (function (e) {
+          $("#select_content").empty();
+          var t = '<span class="fw_bold mRight10">선택 항목:</span>';
+          for (let a = 0; a < e.length; a++)
+            t += `<button type="button" class="btn btn-outline-primary btn-round btn_tag mRight5"> \n                  ${e[a]}\n                </button>`;
+          $("#select_content").append(t);
+        })(e);
+    }
+    function t(t) {
+      var a = "research_type_check",
+        n = t.getItemData(a).getStringValue("0");
+      $(`input:radio[name ='research_type_check']:input[value='${n}']`).click(),
+        irbResetLeftNavi(n);
+      (a = "general_human_research"),
+        (n = t.getItemData(a).getStringValue("0"));
+      (g_for_people = n),
+        1 == n
+          ? $('input:checkbox[id="general_human_research"]').attr("checked", !0)
+          : $('input:checkbox[id="general_human_research"]').attr(
+              "checked",
+              !1
+            );
+      a = "general_body_research";
+      1 == (n = t.getItemData(a).getStringValue("0"))
+        ? $('input:checkbox[id="general_body_research"]').attr("checked", !0)
+        : $('input:checkbox[id="general_body_research"]').attr("checked", !1);
+      (a = "general_judgement"), (n = t.getItemData(a).getStringValue("0"));
+      $(`input:radio[name ='general_judgement']:input[value='${n}']`).click(),
+        e(),
+        $(".card").removeClass("hidden");
+    }
+    loadApplicationParams(),
+      (g_AppItemParser = new ItemParser(g_AppInfo.appSeq)),
+      g_AppItemParser.load({ "filter.query_items": "general_division,research_type_check" }, t),
+      $(".reset_review_type").change(function () {
+        1 == $(this).val()
+          ? ($(".process_content").eq(1).attr("onclick", ""),
+            $(".process_content").eq(2).attr("onclick", ""))
+          : ($(".process_content")
+              .eq(1)
+              .attr("onclick", "APP_IRB_NAVIGATION.navigate('PAGE_2_1');"),
+            $(".process_content")
+              .eq(2)
+              .attr("onclick", "APP_IRB_NAVIGATION.navigate('PAGE_3_1');")),
+          e();
+      });
+    var a = function (e, t) {
+      (this.phase = "page1_3"), (this.btn_type = t);
+    };
+    (a.prototype.check = function () {
+      if ("nextPage" == this.btn_type) {
+        if (
+          !$("#general_human_research").is(":checked") &&
+          !$("#general_body_research").is(":checked")
+        )
+          return void alert(
+            "인간 대상 연구 혹은 인체 유래물 연구 중 반드시 하나 이상 체크해 주세요."
+          );
+        changePageNavigation(g_object, g_for_people);
+      } else {
+        /*if (
+          !$("#general_human_research").is(":checked") &&
+          !$("#general_body_research").is(":checked")
+        )
+          return void alert(
+            "인간 대상 연구 혹은 인체 유래물 연구 중 반드시 하나 이상 체크해 주세요."
+          );*/
+        saveTemporary();
+      }
+    }),
+      di
+        .autowired(!1)
+        .register("validator_nextPage")
+        .as(a)
+        .withConstructor()
+        .withProperties()
+        .prop("btn_type")
+        .val("nextPage")
+        .register("validator_tempSave")
+        .as(a)
+        .withConstructor()
+        .withProperties()
+        .prop("btn_type")
+        .val("tempSave");
+  });

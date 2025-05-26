@@ -675,8 +675,8 @@ class ItemParser {
 
       var old_item_data = this.getItemData(key);
       console.log("item_type_str", old_item_data?.dataObj?.info?.item_type_str)
-            console.log("itemName", old_item_data?.itemName)
-            console.log("key", key)
+      console.log("itemName", old_item_data?.itemName)
+      console.log("key", key)
 
       if (old_item_data == undefined) continue;
 
@@ -1020,7 +1020,12 @@ class ItemParser {
         ret[key] = dataObj;
         continue;
       }
-
+    if (old_item_data.itemName == "research_type_check") {
+          var strData = new Object();
+          var data = $('input[name="research_type_check"]:checked').val();
+          strData["0"] = $('input[name="research_type_check"]:checked').val();
+          dataObj["data"] = strData;
+        }
       if (old_item_data.itemName == "general_object") {
         var strData = new Object();
         var data = $('input[name="general_object"]:checked').val();
@@ -1049,9 +1054,7 @@ class ItemParser {
 
       if (key == 'general_director' || key == 'general_expt') {
         for (const memberObj of value.member) {
-          console.log("'edu_course' in memberObj", 'edu_course' in memberObj)
           // if ('edu_course' in memberObj) {
-            console.log(" makeEduCourse(memberObj.user_seq) makeEduCourse(memberObj.user_seq)",  makeEduCourse(memberObj.user_seq))
             memberObj.edu_course = makeEduCourse(memberObj.user_seq);
           // }
         }

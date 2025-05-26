@@ -5,6 +5,7 @@ if (typeof ipsap_item_parser_js == 'undefined') document.write("<script src='/as
 var g_AppItemParser = undefined;
 
 function appItemSaveTemporary(callbackFunc, userData) {
+  console.log("userData", userData)
   if (g_AppItemParser == undefined) return;
 
   g_AppItemParser.save(false, callbackFunc, userData);

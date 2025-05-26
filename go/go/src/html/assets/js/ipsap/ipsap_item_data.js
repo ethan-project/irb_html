@@ -335,6 +335,7 @@ class ItemData {
   }
 
   applyMultiFileValue(max_cnt, tag_id, prefix_text, labelclass) {
+    console.log("max_cnt, tag_id, prefix_text, labelclass", max_cnt, tag_id, prefix_text, labelclass)
     var item_this = this;
 
     if (labelclass == undefined) {
