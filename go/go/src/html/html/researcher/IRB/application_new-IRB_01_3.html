@@ -239,10 +239,32 @@
                       <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">심의 분류</label>
                       <div class="col-md-3">
                         <select class="form-control btn-outline-primary small_select" id="type_of_research2">
-                          <option selected="selected" disabled="disabled">경력 선택</option>
-                          <option>심의대상</option>
-                          <option>심의면제</option>
+                          <option value="A" selected="selected">경력 선택</option>
+                          <option value="B">심의대상</option>
+                          <option value="C">심의면제</option>
                         </select>
+                      </div>
+                      <div id="showoptionB" class="col-md-6 hidden">
+                        <div id="consent_method" class="form-check-inline">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" name="form_03_1-1" value="1" class="custom-control-input" id="form_03_1-1_1" checked="">
+                            <label class="custom-control-label" for="form_03_1-1_1">정규 심의</label>
+                          </div>
+                          <div class="custom-control custom-radio mLeft20">
+                            <input type="radio" name="form_03_1-1" value="2" class="custom-control-input" id="form_03_1-1_2">
+                            <label class="custom-control-label" for="form_03_1-1_2">신속 심의</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="showoptionC" class="col-md-6 hidden">
+                        <div  class="col-md-12"><label>심의면제 확인서 첨부 :​​</label>   <a href="javascript:void(0);" class="btn btn-outline-green mLeft5 btn-file-add" title="첨부 File 삭제"><i class="fas fa-plus-square"></i></a></div>
+                        <div class="flexMid col-md-8" id="doc_required_expt_form">
+                          <div class="custom-file">
+                            <input type="file" name="file_04-1-1" class="custom-file-input" id="file_04-1-1">
+                            <label class="custom-file-label" for="file_04-1-1" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                          </div>
+                          <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                        </div>
                       </div>
                       <!-- end type of reseach 2 -->
                     </div>

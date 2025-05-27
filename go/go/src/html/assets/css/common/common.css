@@ -318,6 +318,7 @@ br+.footer_item::before  { content:none !important; }
 .mSide50   { margin:50px !important; }
 
 .pSide10   { padding:10px !important; }
+.pSide15   { padding:15px !important; }
 .pSide20   { padding:20px !important; }
 .pSide30   { padding:30px !important; }
 .pSide40   { padding:40px !important; }
@@ -422,6 +423,7 @@ a.border_bottom_thick  { border-bottom:2px solid rgba(200,210,220, 1.0) !importa
 .flexCenter_self      { display:flex; align-self:center; }
 .flexCentral          { display:flex; align-items:center; justify-content:center; }
 .flexWrap             { display:flex; flex-wrap:wrap; }
+.flexWrapGap          { display:flex; flex-direction: row; flex-wrap:wrap; column-gap: 30px; row-gap: 10px; }
 .flexNoWrap           { display:flex; flex-wrap:nowrap; }
 .flexSelfStrech       { display:flex; align-self:stretch; }
 .flexMid_SelfStrech   { display:flex; align-items:center; align-self:stretch; }

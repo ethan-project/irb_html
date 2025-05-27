@@ -1,7 +1,7 @@
 "undefined" == typeof api_js && document.write("<script src='/assets/js/common/api.js'></script>"),
    "undefined" == typeof const_js && document.write("<script src='/assets/js/common/const.js'></script>"),
    "undefined" == typeof ipsap_item_module_js && document.write("<script src='/assets/js/ipsap/ipsap_item_module.js'></script>"),
-   document.write("<script src='/html/researcher/IBC/common_application_new-IBC.js'></script>");
+   document.write("<script src='/html/researcher/IRB/common_application_new-IRB.js'></script>");
 var inst_info = JSON.parse(COMM.getCookie("institution_info")),
    inst_seq = null == inst_info ? 0 : inst_info.institution_seq,
    user_info = JSON.parse(COMM.getCookie("user_info")),
@@ -115,7 +115,7 @@ function mappingAppInfo(e) {
 function mappingGeneralDirector(e) {
    var t = null;
    if (null == (t = g_AppInfo.appObj.application_type == IPSAP.APPLICATION_TYPE.NEW ? e.getItemData("general_director") : e.getParentItemData("general_director")).dataObj.saved_data) return;
-   t.initMembersIBC();
+   t.initMembersIRB();
    let a = contents.find(".info_table").eq(0).find("tbody"),
       n = t.dataObj.saved_data.data[0];
    (n.info.tmp_phoneno = n.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")), (n.info.tmp_edu_date = n.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"));
@@ -295,7 +295,7 @@ function onClickReviewRetry() {
       appItemSubmit(onCompleteReviewRetry, IPSAP.APP_SUBMIT_TYPE_PARAM.RETRY_CHECKING);
 }
 function onCompleteReviewRetry(e, t, a) {
-   e ? (window.location.href = "/html/officer/IBC/reviewOffice_list-IBC_review.html") : alert(`행정 검토 재실행을 실패했습니다.\n(${t.em})`);
+   e ? (window.location.href = "/html/officer/IRB/reviewOffice_list-IRB_review.html") : alert(`행정 검토 재실행을 실패했습니다.\n(${t.em})`);
 }
 function setMemberCount() {
    $(".pro_cnt").text($("#pro > tr").length), $(".norm_in_cnt").text($("#norm_in > tr").length), $(".norm_out_cnt").text($("#norm_out > tr").length);

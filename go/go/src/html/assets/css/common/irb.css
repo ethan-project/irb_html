@@ -17,6 +17,16 @@
    background-color: #fff9f3;
 }
 
+.irb_box_yellow_01_4 {
+  background-color: #fff9f3;
+  width: 15%;
+  text-align: center;
+  word-wrap: break-word;     /* Break long words */
+  word-break: break-word;    /* Break words when necessary */
+  white-space: normal;       /* Allow wrapping */
+}
+
+
 .irb_box_textFile_yellow {
    display: flex;
    align-items: center;
@@ -40,4 +50,44 @@
    width: 98%;
    display: block;
    margin: 0 auto;
+}
+
+
+ /* Anh Huu  */
+ .hidden:not(.show)    { display: none !important; }
+.btn-outline-green {
+    color: #5de26f;
+    border-color: #5de26f
+}
+ 
+.btn-outline-green:hover {
+    color: #fff;
+    background-color: #5de26f;
+    border-color: #5de26f
+}
+ 
+.btn-outline-green:focus,.btn-outline-green.focus {
+    box-shadow: 0 0 0 .15rem rgba(139, 214, 155, 0.5)
+}
+ 
+.btn-outline-green.disabled,.btn-outline-green:disabled {
+    color: #5de26f;
+    background-color: transparent
+}
+ 
+.btn-outline-green:not(:disabled):not(.disabled):active,.btn-outline-green:not(:disabled):not(.disabled).active,.show>.btn-outline-green.dropdown-toggle {
+    color: #fff;
+    background-color: #5de26f;
+    border-color: #5de26f
+}
+ 
+.btn-outline-green:not(:disabled):not(.disabled):active:focus,.btn-outline-green:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-green.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .15rem rgba(139, 214, 155, 0.5)
+}
+/* Targets the first cell (td) in every row */
+#IRBContent #form_01_4_A table tbody tr td:first-of-type{
+    background-color: #fff9f3  !important;
+    width: 15%  !important;
+    text-align: center  !important;
+    font-weight:500 !important;
 }

@@ -32,6 +32,7 @@ class ItemParser {
       type: CONST.API_TYPE.GET,
       data: param,
       success: function (data) {
+        console.log("data api =>", data)
         if (data.rt == "ok") {
           class_this.dataObj = data.data;
           class_this.guideObj = data.guide;

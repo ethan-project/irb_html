@@ -8,32 +8,21 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    
     <link rel="shortcut icon" href="/assets/images/common/favicon.png">
-
-    
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
     <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
-
+    <link href="/assets/css/common/irb.css" rel="stylesheet" type="text/css">
   </head>
-
   <body class="researcher">
-
     <div id="leftsidenav" class="left-sidenav"></div>
-
     <div class="page-wrapper">
-
       <div id="topbar" class="topbar"></div>
-
-      
       <div class="page-content">
         <div class="container-fluid">
-          
           <div class="row">
             <div class="col-sm-12">
               <div class="page-title-box">
@@ -44,24 +33,11 @@
                   </div>
                 </div>
               </div>
-
-              
-              <div class="card thick IRB hidden">
+              <div class="card thick IRB hidden" id="IRBContent">
                 <div class="card-header flexBetween">
                   <div class="apptype_area committee_bg">
                     <div class="apptype_title">신규 심의</div>
-                    
-                    
-                    
-                    
-                    
-                    
-
                     <div class="apptype_date">미승인</div>
-                    
-                    
-                    
-                    
                   </div>
                   <div class="title_area">
                     <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
@@ -76,7 +52,7 @@
                     <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
                     <div class="col-sm-2 app_col app_proceess">
                       <div class="proceess_area fade_in" id="application_left_step_navi">
-                        
+
                         <a href="./application_new-IRB_01_1.html" class="row process_content active sub_6 active_sub_5" data-process-num="1">
                           <span>심의 신청서</span>
                           <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div><div class="sub_process p6"></div></div>
@@ -99,23 +75,19 @@
                         </a>
                       </div>
                     </div>
-
                     <div class="col-sm-10 app_col app_contents">
-
-                      
-                      <div class="row app_header">
+                      <!-- old -->
+                      <div class="row app_header hidden">
                         <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-4. 연구 대상</h4>
                         <div class="header_comment"></div>
                       </div>
-                      
-                      <div class="row app_header">
+                      <div class="row app_header hidden" id="old">
                         <h5 class="card-title_sub"><i class="fas fa-genderless mRight10"></i>인간대상 연구</h5>
                         <div class="header_comment"></div>
                       </div>
-                      
-                      <div class="row app_content">
+                      <div class="hidden row app_content">
                         <div class="col-sm-9">
-                          
+
                           <table class="table info_table">
                             <colgroup>
                               <col width="*">
@@ -339,7 +311,7 @@
                             </tbody>
                           </table>
                         </div>
-                        
+
                         <div class="col-sm-3 app_guide mTop0">
                           <ul id="general_director_guide">
                             <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
@@ -349,95 +321,2409 @@
                         </div>
                         <div class="app_divider sub_divider"></div>
                       </div>
+                      <!-- end old -->
+                     <!-- [ 1-4  ] A. 인간대상 연구(실험연구)​​ -->
+                  <div id="form_01_4_A">
+                      <div class="row app_header" id="headerTypeA">
+                        <h4 class="card-title">[ 1-4 . A ] 인간대상 연구(실험연구)</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div id="ContentTypeA">
+                        <!-- box 1: 1 . 연구 방법 -->
+                        <div class="row app_header">
+                        <h5 class="card-title_sub">1 . 연구 방법</h5>
+                        <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
 
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>연구 방법</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-1-checkbox" id="form_01_4-A-1_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-1_1">대상자 조작</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-1-checkbox" id="form_01_4-A-1_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-1_2">환경조작</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-1-checkbox" id="form_01_4-A-1_3" value="3" checked="">
+                                        <label class="mBot0" for="form_01_4-A-1_3">기타</label>
+                                      </div>
+                                      <!-- <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="human_experiment_check" id="form_01_4-2_3" value="3" data-toggle="collapse" data-target="#form_01-4-2_3_group">
+                                        <label class="mBot0" for="form_01_4-2_3">취약한 환경에 있는 연구 대상자</label>
+                                      </div> -->
+                                      <input type="text" name="form_01_4-1-A-1_4-input" class="form-control w200 mRight5" id="form_01_4-A-1_4">
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>시술 내용</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-2-checkbox" id="form_01_4-A-2_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-2_1">침습적(채혈, 투약, 섭취 등)</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-2-checkbox" id="form_01_4-A-2_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-2_2">비침습적(관찰, 설문, 면담 등)</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>연구 내용</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-3-checkbox" id="form_01_4-A-3_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-3_1">의약품</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-3-checkbox" id="form_01_4-A-3_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-3_2">의료기기</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-3-checkbox" id="form_01_4-A-3_3" value="3" checked="">
+                                        <label class="mBot0" for="form_01_4-A-3_3">식품</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-3-checkbox" id="form_01_4-A-3_4" value="4" checked="">
+                                        <label class="mBot0" for="form_01_4-A-3_4">생물학적 제재</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-3-checkbox" id="form_01_4-A-3_5" value="5" checked="">
+                                        <label class="mBot0" for="form_01_4-A-3_5">화장품</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-3-checkbox" id="form_01_4-A-3_6" value="6">
+                                        <label class="mBot0" for="form_01_4-A-3_6">기타</label>
+                                      </div>
+                                      <input type="text" name="form_01_4-A-3_7_input" class="form-control w200 mRight5" id="form_01_4-A-3_7_input" disabled>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>대상군 선택</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-4-checkbox" id="form_01_4-A-4_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-4_1">단일군 연구</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-4-checkbox" id="form_01_4-A-4_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-4_2">실험/대조군 연구</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>수집/이용 범위</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-5-checkbox" id="form_01_4-A-5_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-5_1">개인식별 정보</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-5-checkbox" id="form_01_4-A-5_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-5_2">임상정보</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-5-checkbox" id="form_01_4-A-5_3" value="3" checked="">
+                                        <label class="mBot0" for="form_01_4-5_3">약학정보</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-5-checkbox" id="form_01_4-A-5_4" value="4" checked="">
+                                        <label class="mBot0" for="form_01_4-A-5_4">기타</label>
+                                      </div>
+                                      <input type="text" name="form_01_4-A-5_5_input" class="form-control w200 mRight5" id="form_01_4-A-5_5_input">
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="col-sm-3 app_guide mTop0">
+                            <!-- <ul id="general_director_guide">
+                              <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                              <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                              <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                            </ul> -->
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                        <!-- end box 1-->
+                        <!-- box 2: 2 . 연구 대상자 -->
+                        <div class="row app_header">
+                        <h5 class="card-title_sub">2 . 연구 대상자</h5>
+                        <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
+
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>연구대상 수</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <label class="mBot0  mRight10" for="form_01_4-A-b2-1_1">전체:</label>
+                                      <input type="text" name="form_01_4-1-A-b2-1_1-input" class="form-control w100 mRight5" id="form_01_4-A-b2-1_1"><label class="mBot0">명</label>
+                                      <label class="mBot0  mRight10 mLeft10">/</label>
+                                      <label class="mBot0  mRight10" for="form_01_4-A-b2-1_2">제이드애플</label>
+                                      <input type="text" name="form_01_4-1-A-b2-1_2-input" class="form-control w100 mRight5" id="form_01_4-A-b2-1_2"><label class="mBot0">명</label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>대상자 정보​</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <label class="mBot0  mRight10" for="form_01_4-A-b2-2_1">연구대상 특성:</label>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-2-checkbox" id="form_01_4-A-b2-2_1" value="1">
+                                        <label class="mBot0" for="form_01_4-A-b2-2_1">건강인</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-2-checkbox" id="form_01_4-A-b2-2_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b2-2_2">환자</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-2-checkbox" id="form_01_4-A-b2-2_3" value="3"  data-toggle="collapse" data-target="#form_01-4-A-b2-2-group">
+                                        <label class="mBot0" for="form_01_4-A-b2-2_3">취약한 환경에 있는 연구 대상자</label>
+                                      </div>
+                                    </div>
+                                    <div class="row collapse mTop15" id="form_01-4-A-b2-2-group">
+                                      <div class="col-sm-12">
+                                        <label class="mBot0  mRight10">취약한 환경에 있는 연구 대상자:</label>
+                                      </div>
+                                      <div class="col-sm-12 flexMid mTop10">
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-1" value="1">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-1">임산부</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-2" value="2">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-2">수감자</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-3" value="3">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-3">영/소아, 아동(18세 미만)​</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-4" value="4">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-4">연구자의 연구원이나 학생​</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-5" value="5">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-5">장애인​</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-6" value="6">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-6">시설에 수용된 자</label>
+                                        </div>
+
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-7" value="7">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-7">말기환자​</label>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-12 flexMid mTop10">
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-8" value="8">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-8">군인 또는 군대조직에 의한 연구 대상자 모집</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-9" value="9">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-9">연구기관, 연구책임자, 의뢰자 등의 피고용인</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b2-2-group_check" id="form_01_4-A-b2-2_4-10" value="10">
+                                          <label class="mBot0" for="form_01_4-A-b2-2_4-10">기타 동의 능력이 제한된 사람​</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>연구 내용</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-3-checkbox" id="form_01_4-A-b2-3_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-3_1">의약품</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-3-checkbox" id="form_01_4-A-b2-3_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b2-3_2">의료기기</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-3-checkbox" id="form_01_4-A-b2-3_3" value="3" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-3_3">식품</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-3-checkbox" id="form_01_4-A-b2-3_4" value="4" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-3_4">생물학적 제재</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-3-checkbox" id="form_01_4-A-b2-3_5" value="5" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-3_5">화장품</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-3-checkbox" id="form_01_4-A-b2-3_6" value="6">
+                                        <label class="mBot0" for="form_01_4-A-b2-3_6">기타</label>
+                                      </div>
+                                      <input type="text" name="form_01_4-A-b2-3_7_input" class="form-control w200 mRight5" id="form_01_4-A-b2-3_7_input" disabled>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>선정/제외 기준여부</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-4-checkbox" id="form_01_4-A-b2-4_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-4_1">단일군 연구</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-4-checkbox" id="form_01_4-A-b2-4_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b2-4_2">실험/대조군 연구</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>수집/이용 범위</td>
+                                  <td colspan="2" class="border_left">
+                                    <div id="consent_contact_flag">
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flag_0_1" name="consent_contact_flag_0" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
+                                          <label class="custom-control-label" for="consent_contact_flag_0_1">예</label>
+
+                                        </div>
+                                      </div>
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flag_0_2" name="consent_contact_flag_0" value="2" class="custom-control-input" data-custom-toggle="visible">
+                                          <label class="custom-control-label" for="consent_contact_flag_0_2">아니오</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>모집 방법</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-5-checkbox" id="form_01_4-A-b2-5_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-5_1">모집문건(광고, 인터넷, 이메일 등)​</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-5-checkbox" id="form_01_4-A-b2-5_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b2-5_2">개별 접촉</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b2-5-checkbox" id="form_01_4-A-b2-5_3" value="3"  checked="">
+                                        <label class="mBot0" for="form_01_4-A-b2-5_3">해당 없음</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="col-sm-3 app_guide mTop0">
+                            <!-- <ul id="general_director_guide">
+                              <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                              <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                              <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                            </ul> -->
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                        <!-- end box 2-->
+                        <!-- box 3: 3 . 인체유래물의 특성 -->
+                        <div class="row app_header">
+                        <h5 class="card-title_sub">3 . 인체유래물의 특성</h5>
+                        <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
+
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>인체유래물 정보</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b3-1-checkbox" id="form_01_4-A-b3-1_1" value="1"  data-toggle="collapse" data-target="#form_01-4-A-b3-1-group">
+                                        <label class="mBot0" for="form_01_4-A-b3-1_1">해당사항 없음</label>
+                                      </div>
+                                    </div>
+                                    <div class="row collapse mTop15" id="form_01-4-A-b3-1-group">
+                                      <div class="col-sm-12 flexMid mTop10">
+                                        <label class="mBot0  mRight10">인체유래물 수집방법:</label>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b3-2-group_check" id="form_01_4-A-b3-2_1-1" value="1" checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-2_1-1">직접 수집</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b3-2-group_check" id="form_01_4-A-b3-2_1-2" value="2">
+                                          <label class="mBot0" for="form_01_4-A-b3-2_1-2">수감자</label>
+                                        </div>
+                                      </div>
+                                      <div class="col-sm-12 flexMid mTop10">
+                                        <label class="mBot0  mRight10">제공정보:</label>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b3-3-group_check" id="form_01_4-A-b3-3_1-1" value="1"  checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-3_1-1">인체유래은행 외 기관 및 연구자</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b3-3-group_check" id="form_01_4-A-b3-3_1-2" value="2"  checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-3_1-2">인체유래은행</label>
+                                        </div>
+                                        <label class="mBot0  mRight10">(  은행명:</label>
+                                        <input type="text" name="form_01-4-A-b3-3_3-1_input" class="form-control w100 mRight5" id="form_01-4-A-b3-3_3-1_input">
+                                        <label class="mBot0  mRight10">/  은행허가번호:</label>
+                                        <input type="text" name="form_01-4-A-b3-3_3-2_input" class="form-control w100 mRight5" id="form_01-4-A-b3-3_3-2_input">
+                                        <label class="mBot0  mRight10">)</label>
+                                      </div>
+                                      <div class="col-sm-12 flexMid mTop10">
+                                        <label class="mBot0  mRight10">종류 및 수량:</label>
+                                        <div class="checkbox checkbox-primary mRight15">
+                                          <input type="checkbox" name="form_01-4-A-b3-4-group_check" id="form_01_4-A-b3-4_1-1" value="1"  checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-4_1-1">혈액</label>
+                                        </div>
+                                        <input type="text" name="form_01-4-A-b3-4_1-1_input" class="form-control w50 mRight5" id="form_01-4-A-b3-4_1-1_input">
+                                        <label class="mBot0  mRight30">개</label>
+                                        <div class="checkbox checkbox-primary mRight15">
+                                          <input type="checkbox" name="form_01-4-A-b3-4-group_check" id="form_01_4-A-b3-4_1-2" value="2"  checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-4_1-2">조직</label>
+                                        </div>
+                                        <input type="text" name="form_01-4-A-b3-4_1-2_input" class="form-control w50 mRight5" id="form_01-4-A-b3-4_1-2_input">
+                                        <label class="mBot0  mRight30">개</label>
+                                        <div class="checkbox checkbox-primary mRight15">
+                                          <input type="checkbox" name="form_01-4-A-b3-4-group_check" id="form_01_4-A-b3-4_1-3" value="3"  checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-4_1-3">체액</label>
+                                        </div>
+                                        <input type="text" name="form_01-4-A-b3-4_1-3_input" class="form-control w50 mRight5" id="form_01-4-A-b3-4_1-3_input">
+                                        <label class="mBot0  mRight30">개</label>
+                                        <div class="checkbox checkbox-primary mRight15">
+                                          <input type="checkbox" name="form_01-4-A-b3-4-group_check" id="form_01_4-A-b3-4_1-4" value="4"  checked="">
+                                          <label class="mBot0" for="form_01_4-A-b3-4_1-4">기타</label>
+                                        </div>
+                                        <input type="text" name="form_01-4-A-b3-4_1-3_input" class="form-control w100 mRight5" id="form_01-4-A-b3-4_1-3_input" placeholder="인체유래물 명칭">
+                                        <input type="text" name="form_01-4-A-b3-4_1-4_input" class="form-control w50 mRight5" id="form_01-4-A-b3-4_1-4_input">
+                                        <label class="mBot0  mRight5">개</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="col-sm-3 app_guide mTop0">
+                            <!-- <ul id="general_director_guide">
+                              <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                              <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                              <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                            </ul> -->
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                        <!-- end box 3-->
+                        <!-- box 4: 4 . 수집 및 이용 정보 범위 -->
+                        <div class="row app_header">
+                        <h5 class="card-title_sub">4 . 수집 및 이용 정보 범위</h5>
+                        <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>수집·이용 정보</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b4-1-checkbox" id="form_01_4-A-b4-1_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b4-1_1">해당사항 없음</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b4-1-checkbox" id="form_01_4-A-b4-1_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b4-1_2">해당사항 없음</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b4-1-checkbox" id="form_01_4-A-b4-1_3" value="3">
+                                        <label class="mBot0" for="form_01_4-A-b4-1_3">해당사항 없음</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight15">
+                                        <input type="checkbox" name="form_01_4-A-b4-1-checkbox" id="form_01_4-A-b4-1_4" value="4" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b4-1_4">해당사항 없음</label>
+                                      </div>
+                                      <input type="text" name="form_01_4-1-A-b4-1_5-input" class="form-control w150 mRight5" id="form_01_4-A-b4-1_5">
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>유전학적 정보이용</td>
+                                  <td colspan="2" class="border_left">
+                                    <div id="consent_contact_flag2">
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flag2_0_1" name="consent_contact_flag2_0" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
+                                          <label class="custom-control-label" for="consent_contact_flag2_0_1">예</label>
+
+                                        </div>
+                                      </div>
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flag2_0_2" name="consent_contact_flag2_0" value="2" class="custom-control-input" data-custom-toggle="visible">
+                                          <label class="custom-control-label" for="consent_contact_flag2_0_2">아니오</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="col-sm-3 app_guide mTop0">
+                            <!-- <ul id="general_director_guide">
+                              <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                              <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                              <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                            </ul> -->
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                        <!-- end box 4-->
+                        <!-- box 5: 5 . 기증자 정보 -->
+                        <div class="row app_header">
+                          <h5 class="card-title_sub">5 . 기증자 정보</h5>
+                          <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>기증자 정보​​</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <label class="mBot0  mRight10" for="form_01_4-A-b5-2_1">연구대상 특성:</label>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b5-2-checkbox" id="form_01_4-A-b5-2_1" value="1">
+                                        <label class="mBot0" for="form_01_4-A-b5-2_1">건강인</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b5-2-checkbox" id="form_01_4-A-b5-2_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b5-2_2">환자</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b5-2-checkbox" id="form_01_4-A-b5-2_3" value="3">
+                                        <label class="mBot0" for="form_01_4-A-b5-2_3">취약한 환경에 있는 연구 대상자</label>
+                                      </div>
+                                    </div>
+                                    <div class="row mTop15">
+                                      <div class="col-sm-12">
+                                        <label class="mBot0  mRight10">취약한 환경에 있는 연구 대상자:</label>
+                                      </div>
+                                      <div class="col-sm-12 flexMid mTop10">
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-1" value="1">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-1">임산부</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-2" value="2">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-2">수감자</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-3" value="3">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-3">영/소아, 아동(18세 미만)</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-4" value="4">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-4">연구자의 연구원이나 학생</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-5" value="5">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-5">장애인</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-6" value="6">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-6">시설에 수용된 자</label>
+                                        </div>
+
+
+                                        </div>
+                                        <div class="col-sm-12 flexMid mTop10">
+                                          <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-7" value="7">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-7">말기환자</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-8" value="8">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-8">군인 또는 군대조직에 의한 연구 대상자 모집</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-9" value="9">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-9">연구기관, 연구책임자, 의뢰자 등의 피고용인</label>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-12 flexMid mTop10">
+                                          <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01-4-A-b5-2-group_check" id="form_01_4-A-b5-2_4-10" value="10">
+                                          <label class="mBot0" for="form_01_4-A-b5-2_4-10">기타 동의 능력이 제한된 사람</label>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>선정/제외 기준여부</td>
+                                  <td colspan="2" class="border_left">
+                                    <div id="consent_contact_flagb5">
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb5_0_1" name="consent_contact_flagb5_0" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
+                                          <label class="custom-control-label" for="consent_contact_flagb5_0_1">예</label>
+
+                                        </div>
+                                      </div>
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb5_0_2" name="consent_contact_flagb5_0" value="2" class="custom-control-input" data-custom-toggle="visible">
+                                          <label class="custom-control-label" for="consent_contact_flagb5_0_2">아니오</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>모집 방법</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b5-5-checkbox" id="form_01_4-A-b5-5_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b5-5_1">모집문건(광고, 인터넷, 이메일 등)​</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b5-5-checkbox" id="form_01_4-A-b5-5_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b5-5_2">개별 접촉</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b5-5-checkbox" id="form_01_4-A-b5-5_3" value="3"  checked="">
+                                        <label class="mBot0" for="form_01_4-A-b5-5_3">해당 없음</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="col-sm-3 app_guide mTop0">
+                            <!-- <ul id="general_director_guide">
+                              <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                              <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                              <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                            </ul> -->
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                        <!-- end box 5-->
+                        <!-- box 6: 6 . 인체유래물의 관리 -->
+                        <div class="row app_header">
+                        <h5 class="card-title_sub">6 . 인체유래물의 관리</h5>
+                        <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>익명화 여부</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b6-1-checkbox" id="form_01_4-A-b6-1_1" value="1">
+                                        <label class="mBot0" for="form_01_4-A-b6-1_1">익명화된 인체유래물</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b6-1-checkbox" id="form_01_4-A-b6-1_2" value="2" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b6-1_2">익명화가 필요함</label>
+                                      </div>
+                                      <label class="mBot0  mRight10">( 익명화 방법:</label>
+                                      <input type="text" name="form_01-4-A-b6-1_3_input" class="form-control w100 mRight5" id="form_01-4-A-b6-1-3_input">
+                                      <label class="mBot0  mRight10">)</label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>익명화 책임주체</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b6-2-checkbox" id="form_01_4-A-b6-2_1" value="1" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b6-2_1">제공기관</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b6-2-checkbox" id="form_01_4-A-b6-2_2" value="2">
+                                        <label class="mBot0" for="form_01_4-A-b6-2_2">연구자</label>
+                                      </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                        <input type="checkbox" name="form_01_4-A-b6-2-checkbox" id="form_01_4-A-b6-2_3" value="3" checked="">
+                                        <label class="mBot0" for="form_01_4-A-b6-2_3">기타</label>
+                                      </div>
+                                      <input type="text" name="form_01-4-A-b6-2_4_input" class="form-control w100 mRight5" id="form_01-4-A-b6-2-4_input">
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>인체유래물 보관 여부</td>
+                                  <td colspan="2" class="border_left">
+                                    <div id="consent_contact_flagb6_1">
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb6_1_0_1" name="consent_contact_flagb6_1_0" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
+                                          <label class="custom-control-label" for="consent_contact_flagb6_1_0_1">예</label>
+
+                                        </div>
+                                      </div>
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb6_1_0_2" name="consent_contact_flagb6_1_0" value="2" class="custom-control-input" data-custom-toggle="visible">
+                                          <label class="custom-control-label" for="consent_contact_flagb6_1_0_2">아니오</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>유전학적 정보보관 여부</td>
+                                  <td colspan="2" class="border_left">
+                                    <div id="consent_contact_flagb6_2">
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb6_2_0_1" name="consent_contact_flagb6_2_0" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
+                                          <label class="custom-control-label" for="consent_contact_flagb6_2_0_1">예</label>
+
+                                        </div>
+                                      </div>
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb6_2_0_2" name="consent_contact_flagb6_2_0" value="2" class="custom-control-input" data-custom-toggle="visible">
+                                          <label class="custom-control-label" for="consent_contact_flagb6_2_0_2">아니오</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div class="col-sm-3 app_guide mTop0">
+                            <!-- <ul id="general_director_guide">
+                              <li>인간을 대상으로 하는 심의대상 연구를 수행할 경우 작성합니다.</li>
+                              <li>공동연구기관이 있는 경우 전체 연구대상 수와 소속 기관의 연구대상 수를 구분하여 입력합니다</li>
+                              <li>취약한 환경에 있는 사람을 연구대상자로 하는 경우, 해당되는 세부항목을 모두 표기 합니다.</li>
+                            </ul> -->
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                        <!-- end box 6-->
+                         <!-- box 7: 7 . 제공기관 상세정보 -->
+                        <div class="row app_header">
+                        <h5 class="card-title_sub">7 . 제공기관 상세정보</h5>
+                        <div class="header_comment"></div>
+                        </div>
+                        <div class="row app_content">
+                          <div class="col-sm-9">
+                            <table class="table info_table">
+                              <colgroup>
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                              </colgroup>
+                              <tbody id="">
+                                <tr>
+                                  <td>기관정보</td>
+                                  <td colspan="2" class="border_left">
+                                    <div class="flexMid">
+                                      <label class="mBot0  mRight10">기관명:</label>
+                                      <input type="text" name="form_01-4-A-b7-1_1_input" class="form-control w350 mRight5" id="form_01-4-A-b7-1-1_input">
+                                    </div>
+                                    <div class="flexMid mTop15">
+                                      <label class="mBot0  mRight10">기관명:</label>
+                                      <textarea  name="form_01_4_E_B7_1_2" class="form-control w-100 mRight10" id="form_01_4_E_B7_1_2" rows="3"></textarea>
+                                    </div>
+                                    <div class="flexMid  mTop15">
+                                    <label class="mRight20">제공기관 기관위원회 심의여부:</label>
+                                    <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb7_1_0_1" name="consent_contact_flagb7_1_0" value="1" class="custom-control-input" checked="">
+                                          <label class="custom-control-label" for="consent_contact_flagb7_1_0_1">승인</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb7_2_0_2" name="consent_contact_flagb7_1_0" value="2" class="custom-control-input" >
+                                          <label class="custom-control-label" for="consent_contact_flagb7_2_0_2">심의진행중</label>
+                                        </div>
+                                      </div>
+                                      <div class="form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                          <input type="radio" id="consent_contact_flagb7_2_0_3" name="consent_contact_flagb7_1_0" value="3" class="custom-control-input" >
+                                          <label class="custom-control-label" for="consent_contact_flagb7_2_0_3">미승인</label>
+                                        </div>
+                                      </div>
+                                  </div>                                                                                                                                      
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="app_divider sub_divider"></div>
+                        </div>
+                         <!-- end box 7-->
+                      </div>
                     </div>
+                      <!-- [ 1-4 . B ] 인간대상 연구(조사연구)​​ -->
+                  <div id="form_01_4_B">
+                     <div class="row app_header">
+                        <h4 class="card-title">[ 1-4 . B ] 인간대상 연구(조사연구)​</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                    <!-- 1 . 조사연구 방법 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">1 . 조사연구 방법</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">조사연구 방법</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_1">실험/대조군 연구</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_2" value="2">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_2">코흐트 연구</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_3" value="3">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_3">단면조사 연구​</label>
+                                    </div>
+                                       <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_4" value="4">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_4">설문연구​​</label>
+                                    </div>
+                                       <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_5" value="5">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_5">행동 관찰​</label>
+                                    </div>
+                                       <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_6" value="6">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_6">면담조사​</label>
+                                    </div>
+                                       <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_1_checkbox" id="form_01_4_B_B1_1_7" value="7" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B1_1_7">기타</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_B_B1_1_8" class="form-control w180 mRight10" id="form_01_4_B_B1_1_8">
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">조사내용의 민감성</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_B_B1_2_radio" id="form_01_4_B_B1_2_1" value="1" checked>
+                                        <label for="form_01_4_B_B1_2_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_B_B1_2_radio" id="form_01_4_B_B1_2_2" value="2">
+                                      <label  for="form_01_4_B_B1_2_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">수집/이용 범위</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_3_checkbox" id="form_01_4_B_B1_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B1_3_1">역학정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_3_checkbox" id="form_01_4_B_B1_3_2" value="2">
+                                      <label class="mBot0" for="form_01_4_B_B1_3_2">임상정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_3_checkbox" id="form_01_4_B_B1_3_3" value="3"  checked="">
+                                      <label class="mBot0" for="form_01_4_B_B1_3_3">개인식별 정보​</label>
+                                    </div>
+                                      <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B1_3_checkbox" id="form_01_4_B_B1_3_4" value="4"  checked="">
+                                      <label class="mBot0" for="form_01_4_B_B1_3_4">기타</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_B_B1_3_5" class="form-control w180 mRight10" id="form_01_4_B_B1_3_5">
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                     <!-- 2 . 연구 대상자 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">2 . 연구 대상자</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                       <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">연구대상 수</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight10">전체:</span>
+                                    <input type="text" name="form_01_4_B_B2_1_1" class="form-control w180 mRight10" id="form_01_4_B_B2_1_1">
+                                    <span class="mRight10">명</span>
+                                    <span class="mRight10">/</span>
+                                    <span class="mRight10">제이드애플</span>
+                                    <input type="text" name="form_01_4_B_B2_1_2" class="form-control w180 mRight10" id="form_01_4_B_B2_1_2">
+                                    <span>명</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold" rowspan="2">대상자 정보​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                    <div class="flexMid">
+                                        <span class="mRight30">연구대상 특성:</span>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01_4_B_B2_2_checkbox" id="form_01_4_B_B2_2_1" value="1" >
+                                          <label class="mBot0" for="form_01_4_B_B2_2_1">건강인</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary mRight30">
+                                          <input type="checkbox" name="form_01_4_B_B2_2_checkbox" id="form_01_4_B_B2_2_2" value="2" >
+                                          <label class="mBot0" for="form_01_4_B_B2_2_2">환자</label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary">
+                                          <input type="checkbox" name="form_01_4_B_B2_2_checkbox" id="form_01_4_B_B2_2_3" value="3" checked="">
+                                          <label class="mBot0" for="form_01_4_B_B2_2_3">취약한 환경에 있는 연구 대상자</label>
+                                        </div>
+                                      </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" class="border_left pSide15">
+                                  <p>취약한 환경에 있는 연구 대상자:</p>
+                                  <div class="flexWrapGap">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_1">임산부</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_2" value="2">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_2">수감자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_3" value="3">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_3">영/소아, 아동(18세 미만)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_4">연구자의 연구원이나 학생​​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_5" value="5">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_5">장애인​</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_6" value="6">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_6">시설에 수용된 자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_7" value="7">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_7">말기환자​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_8" value="8" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_8">군인 또는 군대조직에 의한 연구 대상자 모집</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_9" value="9">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_9">연구기관, 연구책임자, 의뢰자 등의 피고용인</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_3_checkbox" id="form_01_4_B_B2_3_10" value="10">
+                                      <label class="mBot0" for="form_01_4_B_B2_3_10">기타 동의 능력이 제한된 사람​</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">선정/제외 기준여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_B_B2_4_radio" id="form_01_4_B_B2_4_1" value="1" checked>
+                                        <label for="form_01_4_B_B2_4_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_B_B2_4_radio" id="form_01_4_B_B2_4_2" value="2">
+                                      <label  for="form_01_4_B_B2_4_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                                <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">모집 방법</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B2_5_checkbox" id="form_01_4_B_B2_5_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B2_5_1">모집문건(광고, 인터넷, 이메일 등)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_B_B2_5_checkbox" id="form_01_4_B_B2_5_2" value="2">
+                                      <label class="mBot0" for="form_01_4_B_B2_5_2">개별 접촉</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_B_B2_5_checkbox" id="form_01_4_B_B2_5_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_B_B2_5_3">해당 없음​</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
                   </div>
-                </div>
-                
+                       <!-- [ 1-4 . C ] 인체유래물 연구​ -->
+                  <div id="form_01_4_C">
+                      <div class="row app_header">
+                        <h4 class="card-title">[ 1-4 . C ] 인체유래물 연구</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                       <!-- 1 . 인체유래물의 특성 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">1 . 인체유래물의 특성</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">인체유래물 수집방법</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B1_1_checkbox" id="form_01_4_C_B1_1_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_1_1">직접 수집</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B1_1_checkbox" id="form_01_4_C_B1_1_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B1_1_2">제공받아 이용</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                             <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">제공정보</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B1_2_checkbox" id="form_01_4_C_B1_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_2_1">인체유래은행 외 기관 및 연구자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B1_2_checkbox" id="form_01_4_C_B1_2_2" value="2"  checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_2_2">인체유래은행</label>
+                                    </div>
+                                    <span class="mRight10">(  은행명:</span>
+                                    <input type="text" name="form_01_4_C_B1_2_3" class="form-control w180 mRight10" id="form_01_4_C_B1_2_3">
+                                    <span class="mRight10">/  은행허가번호:</span>
+                                    <input type="text" name="form_01_4_C_B1_2_4" class="form-control w180 mRight10" id="form_01_4_C_B1_2_4">
+                                    <span>)</span>
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">종류 및 수량</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_C_B1_3_checkbox" id="form_01_4_C_B1_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_3_1">혈액</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_C_B1_3_2" class="form-control w50  mRight10" id="form_01_4_C_B1_3_2">
+                                    <span class="mRight30">개</span>
 
-                
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_C_B1_3_checkbox" id="form_01_4_C_B1_3_3" value="2" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_3_3">혈액</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_C_B1_3_4" class="form-control w50  mRight10" id="form_01_4_C_B1_3_4">
+                                    <span class="mRight30">개</span>
+
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_C_B1_3_checkbox" id="form_01_4_C_B1_3_5" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_3_5">체액</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_C_B1_3_6" class="form-control w50  mRight10" id="form_01_4_C_B1_3_6">
+                                    <span class="mRight30">개</span>
+
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_C_B1_3_checkbox" id="form_01_4_C_B1_3_7" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B1_3_7">체액</label>
+                                    </div>
+                                    <input type="text" value="인체유래물 명칭" name="form_01_4_C_B1_3_8" class="form-control w150 mRight10" id="form_01_4_C_B1_3_8">
+                                    <input type="text" name="form_01_4_C_B1_3_9" class="form-control w50  mRight10" id="form_01_4_C_B1_3_9">
+                                    <span class="mRight30">개</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                        <!--2 . 수집 및 이용 정보 범위 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">2 . 수집 및 이용 정보 범위</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">수집·이용 정보</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B2_1_checkbox" id="form_01_4_C_B2_1_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B2_1_1">역학정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B2_1_checkbox" id="form_01_4_C_B2_1_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B2_1_2">임상정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B2_1_checkbox" id="form_01_4_C_B2_1_3" value="3">
+                                      <label class="mBot0" for="form_01_4_C_B2_1_3">개인식별정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B2_1_checkbox" id="form_01_4_C_B2_1_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B2_1_4">기타</label>
+                                    </div>
+                                   <input type="text" name="form_01_4_C_B2_1_5" class="form-control w200  mRight10" id="form_01_4_C_B2_1_5">
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">유전학적 정보이용</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B2_2_radio" id="form_01_4_C_B2_2_1" value="1" checked>
+                                        <label for="form_01_4_C_B2_2_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B2_2_radio" id="form_01_4_C_B2_2_2" value="2">
+                                      <label  for="form_01_4_C_B2_2_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                   
+                                  </div>
+                                </td>
+                              </tr>
+                           
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                         <!--3 . 기증자 정보-->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">3 . 기증자 정보</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold" rowspan="2">기증자 정보​​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight30">연구대상 특성:</span>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B3_1_checkbox" id="form_01_4_C_B3_1_1" value="1" >
+                                      <label class="mBot0" for="form_01_4_C_B3_1_1">건강인</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B3_1_checkbox" id="form_01_4_C_B3_1_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B3_1_2">환자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B3_1_checkbox" id="form_01_4_C_B3_1_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B3_1_3">취약한 환경에 있는 연구 대상자</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                 <td class="border_left pSide15">
+                                  <p>취약한 환경에 있는 연구 대상자:</p>
+                                  <div class="flexWrapGap">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_1">임산부</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_2">수감자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_3" value="3">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_3">영/소아, 아동(18세 미만)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_4">연구자의 연구원이나 학생​​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_5" value="5">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_5">장애인​</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_6" value="6">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_6">시설에 수용된 자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_7" value="7">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_7">말기환자​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_8" value="8" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_8">군인 또는 군대조직에 의한 연구 대상자 모집</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_9" value="9">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_9">연구기관, 연구책임자, 의뢰자 등의 피고용인</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_C_B3_2_checkbox" id="form_01_4_C_B3_2_10" value="10">
+                                      <label class="mBot0" for="form_01_4_C_B3_2_10">기타 동의 능력이 제한된 사람​</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">선정/제외 기준여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B3_3_radio" id="form_01_4_C_B3_3_1" value="1" checked>
+                                        <label for="form_01_4_C_B3_3_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B3_3_radio" id="form_01_4_C_B3_3_2" value="2">
+                                      <label  for="form_01_4_C_B3_3_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                             <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold" rowspan="2">모집 방법​​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B3_4_checkbox" id="form_01_4_C_B3_4_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B3_4_1">모집문건(광고, 인터넷, 이메일 등)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B3_4_checkbox" id="form_01_4_C_B3_4_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B3_4_2">개별 접촉</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B3_4_checkbox" id="form_01_4_C_B3_4_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B3_4_3">해당 없음</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                      <!--4 . 인체유래물의 관리-->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">4 . 인체유래물의 관리</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">익명화 여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B4_1_checkbox" id="form_01_4_C_B4_1_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B4_1_1">익명화된 인체유래물</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B4_1_checkbox" id="form_01_4_C_B4_1_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B4_1_2">익명화가 필요함</label>
+                                    </div>
+                                    <span class="mRight10">( 익명화 방법:</span>
+                                     <input type="text" name="form_01_4_C_B4_1_3" class="form-control w200  mRight10" id="form_01_4_C_B4_1_3">
+                                   <span>)</span>
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">익명화 책임주체</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B4_2_checkbox" id="form_01_4_C_B4_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_C_B4_2_1">제공기관</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B4_2_checkbox" id="form_01_4_C_B4_2_2" value="2">
+                                      <label class="mBot0" for="form_01_4_C_B4_2_2">연구자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_C_B4_2_checkbox" id="form_01_4_C_B4_2_3" value="3">
+                                      <label class="mBot0" for="form_01_4_C_B4_2_3">기타</label>
+                                    </div>
+                                     <input type="text" name="form_01_4_C_B4_2_4" class="form-control w200" id="form_01_4_C_B4_2_4">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">인체유래물 보관 여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B4_3_radio" id="form_01_4_C_B4_3_1" value="1" checked>
+                                        <label for="form_01_4_C_B4_3_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B4_3_radio" id="form_01_4_C_B4_3_2" value="2">
+                                      <label  for="form_01_4_C_B4_3_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">유전학적 정보보관 여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B4_4_radio" id="form_01_4_C_B4_4_1" value="1" checked>
+                                        <label for="form_01_4_C_B4_4_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B4_4_radio" id="form_01_4_C_B4_4_2" value="2">
+                                      <label  for="form_01_4_C_B4_4_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                           
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                      <!--5 . 제공기관 상세정보 -->
+                      <div class="row app_header justify-between">
+                        <div class="flexBetween items-center col-sm-9">
+                            <h5 class="card-title_sub">5 . 제공기관 상세정보</h5>
+                            <div class="mRight10">
+                              <a href="javascript:void(0);"  class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal_staff"><i class=""></i>기관 추가</a>
+                            </div>
+                        </div>
+                        <div class="header_comment">
+                        </div>
+                      </div>
+                       <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">기관정보</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight30">기관명:</span>
+                                    <input type="text" name="form_01_4_C_B5_1_1" class="form-control w400 mRight10" id="form_01_4_C_B5_1_1">
+                                  </div>
+                                   <div class="flexMid mVside10">
+                                    <span class="mRight30">소재지:</span>
+                                    <textarea  name="form_01_4_C_B5_1_2" class="form-control w-100 mRight10" id="form_01_4_C_B5_1_2" rows="3"></textarea>
+                                  </div>
+                                   <div class="flexMid">
+                                    <span class="mRight30">제공기관 기관위원회 심의여부:</span>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B5_1_radio" id="form_01_4_C_B5_1_3" value="1" checked>
+                                        <label for="form_01_4_C_B5_1_3">
+                                          승인
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_C_B5_1_radio" id="form_01_4_C_B5_1_4" value="2">
+                                      <label  for="form_01_4_C_B5_1_4">
+                                        심의진행중
+                                      </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_C_B5_1_radio" id="form_01_4_C_B5_1_5" value="3">
+                                      <label  for="form_01_4_C_B5_1_5">
+                                        미승인
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                                
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                  </div>
+
+                      <!-- [ 1-4 . D ] 배아줄기세포주 이용연구 -->
+                  <div id="form_01_4_D">
+                      <div class="row app_header">
+                        <h4 class="card-title">[ 1-4 . D ] 배아줄기세포주 이용연구</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                        <!-- 1 . 제공기관 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">1 . 제공기관</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">기관명</td>
+                                <td colspan="2" class="border_left pSide15">
+                                    <input type="text" name="form_01_4_D_B1_1_1" class="form-control w-100 mRight5" id="form_01_4_D_B1_1_1">
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">제공기관 기관위원회 심의여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_D_B2_2_radio" id="form_01_4_D_B2_2_1" value="1" checked>
+                                        <label for="form_01_4_D_B2_2_1">
+                                          승인
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_D_B2_2_radio" id="form_01_4_D_B2_2_2" value="2">
+                                      <label  for="form_01_4_D_B2_2_2">
+                                        심의진행중
+                                      </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_D_B2_2_radio" id="form_01_4_D_B2_2_3" value="3">
+                                      <label  for="form_01_4_D_B2_2_3">
+                                        미승인
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                        <!-- 2 . 줄기세포주의 특성​ -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">2 . 줄기세포주의 특성​</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">수량</td>
+                                <td colspan="2" class="border_left pSide15">
+                                    <input type="text" name="form_01_4_D_B2_1_1" class="form-control w-100 mRight5" id="form_01_4_D_B2_1_1">
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">제공받는 정보범위</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_D_B2_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_D_B2_2_1">역학정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_E_B2_2_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_2">임상정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_E_B2_2_3" value="3" >
+                                      <label class="mBot0" for="form_01_4_E_B2_2_3">개인식별정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_E_B2_2_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_4">기타</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B2_2_5" class="form-control w200 mRight5" id="form_01_4_E_B2_2_5">
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">등록여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_D_B2_3_radio" id="form_01_4_D_B2_3_1" value="1" checked>
+                                        <label for="form_01_4_D_B2_3_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_D_B2_3_radio" id="form_01_4_D_B2_3_2" value="2">
+                                      <label  for="form_01_4_D_B2_3_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                        <!-- 3 . 줄기세포주 보관 및 폐기방법​ -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">3 . 줄기세포주 보관 및 폐기방법​</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                        <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">기관정보​</td>
+                                <td class="border_left pSide15">
+                                    <textarea  name="form_01_4_D_B3_1_1" class="form-control w-100 mRight10" id="form_01_4_D_B3_1_1" rows="3"></textarea>
+                                </td>
+                              </tr>
+                                
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                  </div>
+                  <div id="form_01_4_E">
+                      <!-- [ 1-4 . E ] DTC 연구(소비자 직접의뢰 유전자 검사) -->
+                      <div class="row app_header">
+                        <h4 class="card-title">[ 1-4 . E ] DTC 연구(소비자 직접의뢰 유전자 검사)</h4>
+                        <div class="header_comment"></div>
+                      </div>
+                       <!-- 1 . 연구 방법 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">1 . 연구 방법</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">연구 방법</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_1_checkbox" id="form_01_4_E_B1_1_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_1_1">대상자 조작</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_1_checkbox" id="form_01_4_E_B1_1_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B1_1_2">환경조작</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_1_checkbox" id="form_01_4_E_B1_1_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_1_3">기타</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B1_1_4" class="form-control w200 mRight5" id="form_01_4_E_B1_1_4">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">시술 내용</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_2_checkbox" id="form_01_4_E_B1_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_2_1">침습적(채혈, 투약, 섭취 등)</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_2_checkbox" id="form_01_4_E_B1_2_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B1_2_2">비침습적(관찰, 설문, 면담 등)</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">연구 내용</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_3_checkbox" id="form_01_4_E_B1_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_3_1">의약품</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_3_checkbox" id="form_01_4_E_B1_3_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B1_3_2">의료기기</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_3_checkbox" id="form_01_4_E_B1_3_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_3_3">식품</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_3_checkbox" id="form_01_4_E_B1_3_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_3_4">생물학적 제재</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_3_checkbox" id="form_01_4_E_B1_3_5" value="5" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_3_5">화장품</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_3_checkbox" id="form_01_4_E_B1_3_6" value="6" >
+                                      <label class="mBot0" for="form_01_4_E_B1_3_6">기타</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B1_3_7" class="form-control w200 mRight5" id="form_01_4_E_B1_3_8" disabled>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">대상군 선택</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_4_checkbox" id="form_01_4_E_B1_4_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_4_1">단일군 연구</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_4_checkbox" id="form_01_4_E_B1_4_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B1_4_2">실험/대조군 연구</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">수집/이용 범위</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_5_checkbox" id="form_01_4_E_B1_5_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_5_1">개인식별 정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_5_checkbox" id="form_01_4_E_B1_5_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B1_5_2">임상정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_5_checkbox" id="form_01_4_E_B1_5_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_5_3">약학정보</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B1_5_checkbox" id="form_01_4_E_B1_5_4" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B1_5_4">기타</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B1_5_5" class="form-control w200 mRight5" id="form_01_4_E_B1_5_5">
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                      <!-- 2 . 연구 대상자 -->
+                       <div class="row app_header">
+                        <h5 class="card-title_sub">2 . 연구 대상자</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">연구대상 수</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight15">전체:</span>
+                                    <input type="text" name="form_01_4_E_B2_1_1" class="form-control w200 mRight5" id="form_01_4_E_B2_1_1">
+                                    <span class="mRight15">명</span>
+                                    <span class="mRight15">/</span>
+                                    <span class="mRight15">제이드애플</span>
+                                    <input type="text" name="form_01_4_E_B2_1_2" class="form-control w200 mRight5" id="form_01_4_E_B2_1_2">
+                                    <span>명</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold" rowspan="2">대상자 정보​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight15">연구대상 특성:</span>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_E_B2_2_1" value="1">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_1">건강인</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_E_B2_2_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_2">환자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_2_checkbox" id="form_01_4_E_B2_2_3" value="3"  checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_3">취약한 환경에 있는 연구 대상자</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                 <td class="border_left pSide15">
+                                  <p>취약한 환경에 있는 연구 대상자:</p>
+                                  <div class="flexWrapGap">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_1">임산부</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_2">수감자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_3" value="3">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_3">영/소아, 아동(18세 미만)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_4">연구자의 연구원이나 학생​​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_5" value="5">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_5">장애인​</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_6" value="6">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_6">시설에 수용된 자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_7" value="7">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_7">말기환자​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_8" value="8" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_8">군인 또는 군대조직에 의한 연구 대상자 모집</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_9" value="9">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_9">연구기관, 연구책임자, 의뢰자 등의 피고용인</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B2_3_checkbox" id="form_01_4_E_B2_3_10" value="10">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_10">기타 동의 능력이 제한된 사람​</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">선정/제외 기준여부</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                   <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B2_4_radio" id="form_01_4_E_B2_4_1" value="1" checked>
+                                        <label for="form_01_4_E_B2_4_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_E_B2_4_radio" id="form_01_4_E_B2_4_2" value="2">
+                                      <label  for="form_01_4_E_B2_4_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">모집 방법</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_5_checkbox" id="form_01_4_E_B2_5_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_5_1">모집문건(광고, 인터넷, 이메일 등)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_5_checkbox" id="form_01_4_E_B2_5_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B2_5_2">개별 접촉</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B2_4_checkbox" id="form_01_4_E_B2_5_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_5_3">해당 없음​</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                      <!-- 3 . 인체유래물의 특성 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">3 . 인체유래물의 특성</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold" rowspan="2">인체유래물 정보​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B3_1_checkbox" id="form_01_4_E_B3_1_1" value="1">
+                                      <label class="mBot0" for="form_01_4_E_B3_1_1">해당사항 없음</label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                 <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight20">인체유래물 수집방법:</span>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B3_2_checkbox" id="form_01_4_E_B3_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_1">직접 수집</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B3_2_checkbox" id="form_01_4_E_B3_2_2" value="1">
+                                      <label class="mBot0" for="form_01_4_E_B2_2_2">제공받아 이용</label>
+                                    </div>
+                                  </div>
+                                   <div class="flexMid mVside10">
+                                    <span class="mRight20">제공정보:</span>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B3_3_checkbox" id="form_01_4_E_B3_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_1">인체유래은행 외 기관 및 연구자</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B3_3_checkbox" id="form_01_4_E_B3_3_2" value="2" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_2">인체유래은행</label>
+                                    </div>
+                                      <span class="mRight10">( 은행명:</span>
+                                      <input type="text" name="form_01_4_E_B2_3_3" class="form-control w150 mRight5" id="form_01_4_E_B2_3_3">
+                                      <span class="mRight10">/  은행허가번호:</span>
+                                      <input type="text" name="form_01_4_E_B2_3_4" class="form-control w150 mRight5" id="form_01_4_E_B2_3_4">
+                                      <span class="mLeft10">)</span>
+                                  </div>
+                                  <div class="flexMid">
+                                    <span class="mRight20">종류 및 수량:</span>
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_E_B3_4_checkbox" id="form_01_4_E_B3_4_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B2_3_1">혈액</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B2_3_2" class="form-control w50 mRight5" id="form_01_4_E_B2_3_2">
+                                    <span class="mRight30">개</span>
+
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_E_B3_4_checkbox" id="form_01_4_E_B3_4_3" value="2" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B3_4_3">조직</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B3_4_4" class="form-control w50 mRight5" id="form_01_4_E_B3_4_4">
+                                    <span class="mRight30">개</span>
+
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_E_B3_4_checkbox" id="form_01_4_E_B3_4_5" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B3_4_5">체액</label>
+                                    </div>
+                                    <input type="text" name="form_01_4_E_B3_4_6" class="form-control w50 mRight5" id="form_01_4_E_B3_4_6">
+                                    <span class="mRight30">개</span>
+
+                                    <div class="checkbox checkbox-primary mRight20">
+                                      <input type="checkbox" name="form_01_4_E_B3_4_checkbox" id="form_01_4_E_B3_4_7" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B3_4_7">기타</label>
+                                    </div>
+                                    <input type="text" value="인체유래물 명칭" name="form_01_4_E_B3_4_8" class="form-control w150 mRight5" id="form_01_4_E_B3_4_8">
+                                    <input type="text" name="form_01_4_E_B3_4_9" class="form-control w50 mRight5" id="form_01_4_E_B3_4_9">
+                                    <span class="mRight10">개</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                      <!-- 4 . 수집 및 이용 정보 범위 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">4 . 수집 및 이용 정보 범위</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">수집·이용 정보​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B4_1_checkbox" id="form_01_4_E_B4_1_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B4_1_1">역학정보</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B4_1_checkbox" id="form_01_4_E_B4_1_2" value="2" >
+                                      <label class="mBot0" for="form_01_4_E_B4_1_2">임상정보</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B4_1_checkbox" id="form_01_4_E_B4_1_3" value="3" >
+                                      <label class="mBot0" for="form_01_4_E_B4_1_3">개인식별정보</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B4_1_checkbox" id="form_01_4_E_B4_1_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B4_1_4">기타</label>
+                                  </div>
+                                 <input type="text" name="form_01_4_E_B4_1_5" class="form-control w200 mRight5" id="form_01_4_E_B4_1_5">
+                                </td>
+                              </tr>
+                              <tr>
+                                 <td class="irb_box_yellow_01_4 fw_bold">유전학적 정보이용​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                   <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B4_2_radio" id="form_01_4_E_B4_2_1" value="1" checked>
+                                        <label for="form_01_4_E_B4_2_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_E_B4_2_radio" id="form_01_4_E_B4_2_1" value="2">
+                                      <label  for="form_01_4_E_B4_2_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                         <!--5 . 기증자 정보 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">5 . 기증자 정보</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold" rowspan="2">기증자 정보​​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight30">연구대상 특성:</span>
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B5_1_checkbox" id="form_01_4_E_B5_1_1" value="1">
+                                      <label class="mBot0" for="form_01_4_E_B5_1_1">건강인</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B5_1_checkbox" id="form_01_4_E_B5_1_2" value="2" >
+                                      <label class="mBot0" for="form_01_4_E_B4_1_2">환자</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B5_1_checkbox" id="form_01_4_E_B5_1_3" value="3" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B5_1_3">취약한 환경에 있는 연구 대상자</label>
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                 <td class="border_left pSide15" id="form_01_4_E_B5_2_row">
+                                  <p>취약한 환경에 있는 연구 대상자:</p>
+                                 <div class="flexWrapGap">
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_1">임산부</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_2" value="2">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_2">수감자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_3" value="3">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_3">영/소아, 아동(18세 미만)​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_4" value="4" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_4">연구자의 연구원이나 학생​​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_5" value="5">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_5">장애인​</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_6" value="6">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_6">시설에 수용된 자</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_7" value="7">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_7">말기환자​</label>
+                                    </div>
+                                    <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_8" value="8" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_8">군인 또는 군대조직에 의한 연구 대상자 모집</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_9" value="9">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_9">연구기관, 연구책임자, 의뢰자 등의 피고용인</label>
+                                    </div>
+                                     <div class="checkbox checkbox-primary">
+                                      <input type="checkbox" name="form_01_4_E_B5_2_checkbox" id="form_01_4_E_B5_2_10" value="10">
+                                      <label class="mBot0" for="form_01_4_E_B5_2_10">기타 동의 능력이 제한된 사람​</label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                 <td class="irb_box_yellow_01_4 fw_bold">유전학적 정보이용​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                   <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B5_3_radio" id="form_01_4_E_B5_3_1" value="1" checked>
+                                        <label for="form_01_4_E_B5_3_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_E_B5_3_radio" id="form_01_4_E_B5_3_2" value="2">
+                                      <label  for="form_01_4_E_B5_3_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">모집 방법​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B5_3_checkbox" id="form_01_4_E_B5_3_1" value="1" checked="">
+                                      <label class="mBot0" for="form_01_4_E_B5_3_1">모집문건(광고, 인터넷, 이메일 등)​</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B5_3_checkbox" id="form_01_4_E_B5_3_2" value="2" >
+                                      <label class="mBot0" for="form_01_4_E_B5_3_2">개별 접촉</label>
+                                  </div>
+                                  <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B5_3_checkbox" id="form_01_4_E_B5_3_3" value="3" checked="" >
+                                      <label class="mBot0" for="form_01_4_E_B5_3_3">해당 없음</label>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+                        <!--6 . 인체유래물의 관리 -->
+                      <div class="row app_header">
+                        <h5 class="card-title_sub">6 . 인체유래물의 관리</h5>
+                        <div class="header_comment"></div>
+                      </div>
+                       <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">익명화 여부​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B6_1_checkbox" id="form_01_4_E_B6_1_1" value="1">
+                                      <label class="mBot0" for="form_01_4_E_B6_1_1">익명화된 인체유래물</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B6_1_checkbox" id="form_01_4_E_B6_1_2" value="2"  checked="">
+                                      <label class="mBot0" for="form_01_4_E_B6_1_2">익명화가 필요함</label>
+                                  </div>
+                                  <span class="mRight10">( 익명화 방법:</span>
+                                  <input type="text" name="form_01_4_E_B6_1_3" class="form-control w200 mRight10" id="form_01_4_E_B6_1_3">
+                                  <span>)</span>
+                                </td>
+                              </tr>
+                                  <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">익명화 책임주체​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B6_2_checkbox" id="form_01_4_E_B6_2_1" value="1">
+                                      <label class="mBot0" for="form_01_4_E_B6_2_1">제공기관</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B6_2_checkbox" id="form_01_4_E_B6_2_2" value="2"  checked="">
+                                      <label class="mBot0" for="form_01_4_E_B6_2_2">연구자</label>
+                                  </div>
+                                   <div class="checkbox checkbox-primary mRight30">
+                                      <input type="checkbox" name="form_01_4_E_B6_2_checkbox" id="form_01_4_E_B6_2_3" value="3"  checked="">
+                                      <label class="mBot0" for="form_01_4_E_B6_2_3">기타</label>
+                                  </div>
+                                  <input type="text" name="form_01_4_E_B6_2_4" class="form-control w200 mRight10" id="form_01_4_E_B6_2_4">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">인체유래물 보관 여부​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                   <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B6_3_radio" id="form_01_4_E_B6_3_1" value="1" checked>
+                                        <label for="form_01_4_E_B6_3_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_E_B6_3_radio" id="form_01_4_E_B6_3_2" value="2">
+                                      <label  for="form_01_4_E_B6_3_1">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                               <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">유전학적 정보보관 여부​</td>
+                                <td colspan="2" class="border_left pSide15">
+                                  <div class="flexMid">
+                                   <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B6_4_radio" id="form_01_4_E_B6_4_1" value="1" checked>
+                                        <label for="form_01_4_E_B6_4_1">
+                                          예
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_E_B6_4_radio" id="form_01_4_E_B6_4_2" value="2">
+                                      <label  for="form_01_4_E_B6_4_2">
+                                        아니오
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                      </div>
+
+                         <!--7 . 제공기관 상세정보 -->
+                       <div class="row app_header justify-between">
+                        <div class="flexBetween items-center col-sm-9">
+                            <h5 class="card-title_sub">7 . 제공기관 상세정보</h5>
+                            <div class="mRight10">
+                              <a href="javascript:void(0);"  class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal_staff"><i class=""></i>기관 추가</a>
+                            </div>
+                        </div>
+                        <div class="header_comment">
+                        </div>
+                      </div>
+                      <div class="row app_content">
+                        <div class="col-sm-9">
+                          <table class="table info_table">
+                            <colgroup>
+                              <col width="*">
+                              <col width="*">
+                              <col width="*">
+                            </colgroup>
+                            <tbody id="">
+                              <tr>
+                                <td class="irb_box_yellow_01_4 fw_bold">기관정보​</td>
+                                <td class="border_left pSide15">
+                                  <div class="flexMid">
+                                    <span class="mRight30">기관명:</span>
+                                    <input type="text" name="form_01_4_E_B7_1_1" class="form-control w400 mRight10" id="form_01_4_E_B7_1_1">
+                                  </div>
+                                   <div class="flexMid mVside10">
+                                    <span class="mRight30">소재지:</span>
+                                    <textarea  name="form_01_4_E_B7_1_2" class="form-control w-100 mRight10" id="form_01_4_E_B7_1_2" rows="3"></textarea>
+                                  </div>
+                                   <div class="flexMid">
+                                    <span class="mRight30">제공기관 기관위원회 심의여부:</span>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B7_1_radio" id="form_01_4_E_B7_1_3" value="1" checked>
+                                        <label for="form_01_4_E_B7_1_3">
+                                          승인
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline mRight30">
+                                      <input  type="radio" name="form_01_4_E_B7_1_radio" id="form_01_4_E_B7_1_4" value="2">
+                                      <label  for="form_01_4_E_B7_1_4">
+                                        심의진행중
+                                      </label>
+                                    </div>
+                                    <div class="radio radio-primary form-check-inline">
+                                      <input  type="radio" name="form_01_4_E_B7_1_radio" id="form_01_4_E_B7_1_5" value="3">
+                                      <label  for="form_01_4_E_B7_1_5">
+                                        미승인
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                                
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="app_divider sub_divider"></div>
+                    </div>
+              </div>
+            </div>
+        </div>
                 <div class="card-footer flexCenter" id="appplication_page_navi">
                   <a href="javascript:void(0);" onclick="appNaviPrePage();" id="app_page_navi_pre_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
                     <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
                   <a href="javascript:void(0);" onclick="appNaviNextPage();" id="app_page_navi_next_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
                     <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
                   <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" onclick="saveTemporary();"><i class="fas fa-check mRight5"></i>임시 저장</a>
-
                   <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
                   <a href="../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
                 </div>
               </div>
-              
-
             </div>
           </div>
-          
-
-
         </div>
-
         <footer id="footer" class="footer text-center"></footer>
-
       </div>
-      
     </div>
-    
 
-    
     <div class="modal fade" id="modal_tempSave" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header bg-primary">
             <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
           </div>
-          
-
           <div class="modal-body">
             <div class="row">
               <div class="col-lg-3 text-right pRight10">
-                
-                
-                
                 <i class="typcn typcn-input-checked symbol"></i>
-                
-                
               </div>
               <div class="col-lg-9 pBot10">
                 <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
                 <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
-               
               </div>
             </div>
           </div>
-          
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
             <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
           </div>
-          
         </div>
       </div>
     </div>
-    
 
-    
     <div class="modal fade" id="modal_del_app" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bg-primary">
             <h5 class="modal-title m-0 text-white">작성중인 신청서 삭제</h5>
           </div>
-          
-
           <div class="modal-body">
             <div class="row">
               <div class="col-lg-3 text-right pRight10">
-                
                 <i class="typcn typcn-warning-outline symbol"></i>
-                
-                
-                
-                
               </div>
               <div class="col-lg-9 pBot10">
                 <h5 class="mBot5">작성중인 신청서를 <span class="red">삭제</span>하시겠습니까?</h5>
@@ -445,21 +2731,14 @@
               </div>
             </div>
           </div>
-          
           <div class="modal-footer">
-            
             <a href="javascript:void(0);" class="btn btn-outline-danger" onclick="tempSaveAppDelete();">신청서 삭제</a>
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
           </div>
-          
         </div>
       </div>
     </div>
-    
 
-
-
-    
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery-ui.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
@@ -471,16 +2750,8 @@
     <script src="/assets/js/di4js.min.js"></script>
     <script src="/plugins/daterangepicker/daterangepicker.js"></script>
     <script src="/plugins/tippy/tippy.all.min.js"></script>
-
-    
     <script src="/assets/js/common/common.js"></script>
-
-    
     <script src="/assets/js/app.js"></script>
-
-    
     <script src="/html/researcher/IRB/application_new-IRB_01_4.js"></script>
-
   </body>
-
 </html>

@@ -1,10 +1,47 @@
-var g_object, g_for_people;
-function changePageNavigation(e, t) {
-  "2" == e
-    ? appNaviNextPage()
-    : 1 == t
-    ? appItemSaveTemporary(appNavigationCallback, { PAGE_ID: "PAGE_1_4" })
-    : appItemSaveTemporary(appNavigationCallback, { PAGE_ID: "PAGE_1_5" });
+var g_object, g_for_people,g_research_type;
+function dataMappingFunc(e) {
+  0 == e.app_seq &&
+    e.addMoreSaveTag("application_info", {
+      data: g_AppInfo.appObj
+    }), getIACUCAppList(), modalGetIACUCAppList();
+  var a = "general_title";
+  (t = e.getItemData(a)).applyTextMapValue(
+    a + "_name_ko",
+    "name_ko"
+  ), t.applyTextMapValue(a + "_name_en", "name_en");
+  a = "general_end_date";
+  (t = e.getItemData(a)).applyCalanderValue(a);
+  a = "ibc_general_experiment_cnt";
+  (t = e.getItemData(a)).applyTextValue();
+  a = "ibc_general_experiment_degree";
+  (t = e.getItemData(a)).applyTextValue();
+  a = "ibc_general_fund_org";
+  (t = e.getItemData(a)).applyMainCheckValueInCheckBox(
+    "ibc_general_fund_org-main_check"
+  ) && $("#input_01-3_group").addClass("collapse").removeClass("show");
+  a = "ibc_general_fund_org_name";
+  (t = e.getItemData(a)).applyTextValue();
+  a = "ibc_general_fund_conflict";
+  null != (t = e.getItemData(a)) && t.makeHtmlRadioType();
+  a = "ibc_general_fund_start_date";
+  (t = e.getItemData(a)).applyCalanderValue(a);
+  a = "ibc_general_fund_end_date";
+  (t = e.getItemData(a)).applyCalanderValue(a);
+  a = "ibc_general_experiment";
+  var t,
+    n = (t = e.getItemData(a)).getStringValue("0"),
+    i = [];
+  "" != n && (i = n.split(",")), i.length > 0 &&
+    ibcResetLeftNavi(i), e.deleteSaveTag(["ibc_general_experiment"]), $(
+    ".card"
+  ).removeClass("hidden");
+}
+function changePageNavigation() {
+  g_research_type = $("input:radio[name ='research_type_check']:checked").val();
+  console.log('e==>',g_research_type);
+  if(g_research_type){
+    appNaviNextPage();
+  }
 }
 "undefined" == typeof api_js &&
   document.write("<script src='/assets/js/common/api.js'></script>"),
@@ -14,30 +51,6 @@ function changePageNavigation(e, t) {
     "<script src='/html/researcher/IRB/common_application_new-IRB.js'></script>"
   ),
   $(document).ready(function () {
-    function e() {
-      var e = [];
-      1 == $("input:radio[name ='general_object']:checked").val()
-        ? ($(".general_judgement_area").removeClass("hidden"),
-          e.push("심의 대상"),
-          (g_object = $("input:radio[name ='general_object']:checked").val()))
-        : ($(".general_judgement_area").addClass("hidden"),
-          e.push("심의 면제"),
-          (g_object = $("input:radio[name ='general_object']:checked").val())),
-        $('input:checkbox[id="general_human_research"]').is(":checked") &&
-          (e.push("인간대상 연구"),
-          (g_for_people = $(
-            'input:checkbox[id="general_human_research"]:checked'
-          ).val())),
-        $('input:checkbox[id="general_body_research"]').is(":checked") &&
-          e.push("인체 유래물 연구"),
-        (function (e) {
-          $("#select_content").empty();
-          var t = '<span class="fw_bold mRight10">선택 항목:</span>';
-          for (let a = 0; a < e.length; a++)
-            t += `<button type="button" class="btn btn-outline-primary btn-round btn_tag mRight5"> \n                  ${e[a]}\n                </button>`;
-          $("#select_content").append(t);
-        })(e);
-    }
     function t(t) {
       var a = "research_type_check",
         n = t.getItemData(a).getStringValue("0");
@@ -58,8 +71,38 @@ function changePageNavigation(e, t) {
         : $('input:checkbox[id="general_body_research"]').attr("checked", !1);
       (a = "general_judgement"), (n = t.getItemData(a).getStringValue("0"));
       $(`input:radio[name ='general_judgement']:input[value='${n}']`).click(),
-        e(),
         $(".card").removeClass("hidden");
+        $("#type_of_research2").on("change", (e) => {
+          console.log(e.currentTarget);
+          const selectedValue = $(e.currentTarget).val();
+          console.log(selectedValue);
+          if(selectedValue === "B") {
+            //$("#showoptionB").removeClass("hidden").addClass("show").fadeIn();
+            if ($("#showoptionB").hasClass("hidden")) {
+                $("#showoptionB").removeClass("hidden");
+                $("#showoptionB").addClass("show").fadeIn();
+            }
+            if ($("#showoptionC").hasClass("show")) {
+                $("#showoptionC").removeClass("show");
+                $("#showoptionC").addClass("hidden").css("display", "none").fadeIn();
+            }
+          }
+          if(selectedValue === "C") {
+            //$("#showoptionC").removeClass("hidden").addClass("show").fadeIn();
+            if ($("#showoptionC").hasClass("hidden")) {
+                $("#showoptionC").removeClass("hidden");
+                $("#showoptionC").addClass("show").fadeIn();
+            }
+            if ($("#showoptionB").hasClass("show")) {
+                $("#showoptionB").removeClass("show");
+                $("#showoptionB").addClass("hidden").css("display", "none").fadeIn();
+            }
+          }
+          if(selectedValue == "A") {
+            $("#showoptionC").removeClass("show").addClass("hidden").fadeIn();
+            $("#showoptionB").removeClass("show").addClass("hidden").fadeIn();
+          }
+        });
     }
     loadApplicationParams(),
       (g_AppItemParser = new ItemParser(g_AppInfo.appSeq)),
@@ -81,14 +124,14 @@ function changePageNavigation(e, t) {
     };
     (a.prototype.check = function () {
       if ("nextPage" == this.btn_type) {
-        if (
+        /*if (
           !$("#general_human_research").is(":checked") &&
           !$("#general_body_research").is(":checked")
         )
           return void alert(
             "인간 대상 연구 혹은 인체 유래물 연구 중 반드시 하나 이상 체크해 주세요."
-          );
-        changePageNavigation(g_object, g_for_people);
+          );*/
+        changePageNavigation();
       } else {
         /*if (
           !$("#general_human_research").is(":checked") &&
