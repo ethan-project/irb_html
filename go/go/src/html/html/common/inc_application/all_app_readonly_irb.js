@@ -453,5 +453,5 @@ function resetLeftStepNaviIcon() {
       (s && !n) || ($("#btn_finish_review").addClass("disabled"), $("#btn_finish_review_fast").addClass("disabled"));
 }
 $(document).ready(function () {
-   remakeApplicationInfoReadOnly(["supplement"], cbFuncAfterMapping);
+   // remakeApplicationInfoReadOnly(["supplement"], cbFuncAfterMapping);
 });
