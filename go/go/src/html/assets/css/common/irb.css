@@ -8,6 +8,16 @@
    text-align: center;
    padding: 17px;
 }
+.irb_tr_yellow {
+   background-color: #fff9f3;
+}
+.irb_box_info_yellow {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: auto;
+   background-color: #fff9f3;
+}
 
 .irb_box_text_yellow {
    display: flex;

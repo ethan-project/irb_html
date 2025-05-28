@@ -257,21 +257,14 @@
                         </div>
                       </div>
                       <div id="showoptionC" class="col-md-6 hidden">
-                        <div  class="col-md-12"><label>심의면제 확인서 첨부 :​​</label>   <a href="javascript:void(0);" class="btn btn-outline-green mLeft5 btn-file-add" title="첨부 File 삭제"><i class="fas fa-plus-square"></i></a></div>
-                        <div class="flexMid col-md-8" id="doc_required_expt_form">
-                          <div class="custom-file">
-                            <input type="file" name="file_04-1-1" class="custom-file-input" id="file_04-1-1">
-                            <label class="custom-file-label" for="file_04-1-1" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
-                          </div>
-                          <a href="javascript:void(0);" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
-                        </div>
-                      </div>
-                      <!-- end type of reseach 2 -->
+                        <div  class="col-md-12"><label>심의면제 확인서 첨부 :​​</label>   <a href="javascript:void(0);" onclick="addFileInput()" class="btn btn-outline-green mLeft5 btn-file-add" title="첨부 File 삭제"><i class="fas fa-plus-square" ></i></a></div>
+                        <div class="col-md-8" id="doc_required_expt_form"></div>
+                    </div>
                     </div>
                     <div class="row app_content mTop30">
                       <!-- type of research 2 -->
                       <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">자료 안정성 모니터링 수행 주체​</label>
-                      <div class="col-md-6">
+                      <div class="col-md-9 flexMid">
                         <div class="checkbox form-check-inline checkbox-primary">
                           <input type="checkbox" id="data_monitoring_1" value="1" checked>
                           <label for="data_monitoring_1">내부 안전 점검자</label>
