@@ -1,4 +1,5 @@
 function cbFuncAfterMapping(e) {
+   console.log("e",e)
    resetLeftStepNaviIcon(),
       $("input[type=checkbox]").on({
          change: function (e) {
@@ -32,6 +33,7 @@ function resetLeftStepNaviIcon() {
       n = !1,
       i = !1;
    for (const [a, p] of Object.entries(IPSAP.REVIEW_TAG)) {
+      console.log("a,p ", a,p)
       let o = "app_supplement_" + a,
          c = "app_supplement_text_" + a,
          l = p.split("-")[0];
@@ -69,8 +71,7 @@ function onReviewRequest() {
    (g_AppItemParser.targetSavedItemNames = []), g_AppItemParser.addMoreSaveTag("supplement", makeSupplementData()), appItemSubmit(onCompleteReviewRequest, IPSAP.APP_SUBMIT_TYPE_PARAM.SUPPLEMENT);
 }
 function onCompleteReviewRequest(e, t, s) {
-    console.log("e, t, s", e, t, s)
-//    e ? (window.location.href = "./reviewOffice_list.html") : appSubmitHandleError("행정 보완 요청을 실패했습니다.", t);
+   e ? (window.location.href = "./reviewOffice_list.html") : appSubmitHandleError("행정 보완 요청을 실패했습니다.", t);
 }
 function onFinishReview() {
    (g_AppItemParser.targetSavedItemNames = []), g_AppItemParser.addMoreSaveTag("supplement", makeSupplementData()), appItemSubmit(onCompleteFinishReview, IPSAP.APP_SUBMIT_TYPE_PARAM.CHECKING);

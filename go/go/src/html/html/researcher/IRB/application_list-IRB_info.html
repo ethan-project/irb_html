@@ -1,216 +1,201 @@
 <!DOCTYPE html>
 <html lang="ko">
+   <head>
+      <meta charset="utf-8" />
+      <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+      <meta content="" name="author" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <head>
-    <meta charset="utf-8">
-    <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
-    <meta content="" name="author">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="/assets/images/common/favicon.png" />
 
-    
-    <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+      <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+      <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css" />
+   </head>
 
-    
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
-    <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
-
-  </head>
-
-  <body class="researcher">
-
-    <div id="leftsidenav" class="left-sidenav"></div>
-
-    <div class="page-wrapper">
-
-      <div id="topbar" class="topbar"></div>
-
-      
-      <div class="page-content">
-        <div class="container-fluid">
-          
-          <div class="row">
-            <div class="app_anchor" id="top_anchor"></div>
-            <div class="col-sm-12">
-              <div class="page-title-box">
-                <div class="row">
-                  <div class="col">
-                    <h4 class="page-title">생명윤리위원회 심의 신청</h4>
-                    <div class="comment">새로운 IRB 심의 신청서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
-                  </div>
-                </div>
-              </div>
-
-              
-              <div class="card thick IRB hidden">
-                <div class="card-header flexBetween">
-                  <div class="apptype_area committee_bg">
-                    <div class="apptype_title">신규 심의</div>
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    <div class="apptype_date">미승인</div>
-                    
-                    
-                    
-                    
-                  </div>
-                  <div class="title_area">
-                    <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
-                    <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">임시저장 후 발급</span></p>
-                  </div>
-                  <div class="desc_area">
-                    <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
-                  </div>
-                </div>
-                <div class="card-body noPadding">
-                  <div class="row noMargin app_frame">
-                    <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
-                    <div class="col-sm-2 app_col app_proceess">
-                      <div class="proceess_area fade_in" id="">
-                        
-                        <div class="app_summary">
-                          <span class="review_type committee_color IRB">IRB</span>
-                          <div class="card-title task_title_ko">-</div>
-                          <div class="title_desc task_director_all">(연구 책임자 : -)</div>
-                          <div class="text-muted mb-0"><span class="register_num">-</span></div>
+   <body class="researcher">
+      <div id="leftsidenav" class="left-sidenav"></div>
+      <div class="page-wrapper">
+         <div id="topbar" class="topbar"></div>
+         <div class="page-content">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="app_anchor" id="top_anchor"></div>
+                  <div class="col-sm-12">
+                     <div class="page-title-box">
+                        <div class="row">
+                           <div class="col">
+                              <h4 class="page-title">생명윤리위원회 심의 신청</h4>
+                              <div class="comment">
+                                 새로운 IRB 심의 신청서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나,
+                                 <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.
+                              </div>
+                           </div>
                         </div>
-                        <a href="javascript:void(0);" class="row process_content" data-process-num="1" data-move-to="#form_01-1">
-                          <span>심의 신청서</span>
-                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div><div class="sub_process p6"></div></div>
-                        </a>
-                        <a href="javascript:void(0);" class="row process_content" data-process-num="2" data-move-to="#form_02-1">
-                          <span>연구 상세요약서</span>
-                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div><div class="sub_process p6"></div></div>
-                        </a>
-                        <a href="javascript:void(0);" class="row process_content" data-process-num="3" data-move-to="#form_03-1">
-                          <span>동의 취득</span>
-                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div><div class="sub_process p6"></div></div>
-                        </a>
-                        <a href="javascript:void(0);" class="row process_content" data-process-num="4" data-move-to="#form_04-1">
-                          <span>제출 서류</span>
-                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div><div class="sub_process p6"></div></div>
-                        </a>
-                        <a href="javascript:void(0);" class="row process_content" data-process-num="5" data-move-to="#form_05-1">
-                          <span>연구책임자 서약서</span>
-                          <div class="sub_processes"><div class="sub_process p1"></div><div class="sub_process p2"></div><div class="sub_process p3"></div><div class="sub_process p4"></div><div class="sub_process p5"></div><div class="sub_process p6"></div></div>
-                        </a>
-                      </div>
-                    </div>
+                     </div>
+                     <div class="card thick IRB hidden">
+                        <div class="card-header flexBetween">
+                           <div class="apptype_area committee_bg">
+                              <div class="apptype_title">신규 심의</div>
+                              <div class="apptype_date">미승인</div>
+                           </div>
+                           <div class="title_area">
+                              <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                              <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">임시저장 후 발급</span></p>
+                           </div>
+                           <div class="desc_area">
+                              <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png" />IRB</h4>
+                           </div>
+                        </div>
+                        <div class="card-body noPadding">
+                           <div class="row noMargin app_frame">
+                              <div class="col-sm-2 app_col app_proceess_blank"><div class="proceess_area"></div></div>
+                              <div class="col-sm-2 app_col app_proceess">
+                                 <div class="proceess_area fade_in" id="">
+                                    <div class="app_summary">
+                                       <span class="review_type committee_color IRB">IRB</span>
+                                       <div class="card-title task_title_ko">-</div>
+                                       <div class="title_desc task_director_all">(연구 책임자 : -)</div>
+                                       <div class="text-muted mb-0"><span class="register_num">-</span></div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="row process_content" data-process-num="1" data-move-to="#form_01-1">
+                                       <span>심의 신청서</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="javascript:void(0);" class="row process_content" data-process-num="2" data-move-to="#form_02-1">
+                                       <span>연구 상세요약서</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="javascript:void(0);" class="row process_content" data-process-num="3" data-move-to="#form_03-1">
+                                       <span>동의 취득</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="javascript:void(0);" class="row process_content" data-process-num="4" data-move-to="#form_04-1">
+                                       <span>제출 서류</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="javascript:void(0);" class="row process_content" data-process-num="5" data-move-to="#form_05-1">
+                                       <span>연구책임자 서약서</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
 
-                    <div class="col-sm-10 app_col app_contents" id="all_app_r"></div>
+                              <div class="col-sm-10 app_col app_contents" id="all_app_r"></div>
+                           </div>
+                        </div>
+                        <div id="footer_anchor"></div>
+                        <div class="card-footer flexCenter side_type">
+                           <a href="./experiment_list-IRB_new_renew.html" class="btn btn-primary waves-effect waves-light mLeft0 hidden"
+                              ><i class="fas fa-redo-alt mRight5"></i>지속 심의(중간보고) 신청</a
+                           >
+                           <a href="javascript:void(0);" onclick="newWindowPopup('./_popup_review-IRB_info.html');" class="btn btn-primary waves-effect waves-light mLeft0 hidden"
+                              ><i class="fas fa-check mRight5"></i>심사 결과 보기</a
+                           >
+                           <a href="./experiment_list-IRB_new_end.html" class="btn btn-primary waves-effect waves-light mLeft0 hidden"><i class="fas fa-check mRight5"></i>종료 보고</a>
+                           <button type="button" class="btn btn-primary waves-effect waves-light mLeft20" data-toggle="modal" data-target="#modal_dup_app">
+                              <i class="fas fa-edit mRight5"></i>신청서 복제
+                           </button>
+                           <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
+                           <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                           <a href="javascript:void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"
+                              ><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a
+                           >
+                           <a href="javascript:void(0);" data-move-to="#footer_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"
+                              ><i class="fas fa-angle-double-down mRight5"></i>마지막</a
+                           >
+                        </div>
+                     </div>
                   </div>
-                </div>
-                
-
-                
-                <div id="footer_anchor"></div>
-                <div class="card-footer flexCenter side_type">
-                  
-                  <a href="./experiment_list-IRB_new_renew.html" class="btn btn-primary waves-effect waves-light mLeft0 hidden"><i class="fas fa-redo-alt mRight5"></i>지속 심의(중간보고) 신청</a>
-                  
-                  <a href="javascript:void(0);" onclick="newWindowPopup('./_popup_review-IRB_info.html');" class="btn btn-primary waves-effect waves-light mLeft0 hidden"><i class="fas fa-check mRight5"></i>심사 결과 보기</a>
-                  
-                  
-                  <a href="./experiment_list-IRB_new_end.html" class="btn btn-primary waves-effect waves-light mLeft0 hidden"><i class="fas fa-check mRight5"></i>종료 보고</a>
-
-                  <button type="button" class="btn btn-primary waves-effect waves-light mLeft20" data-toggle="modal" data-target="#modal_dup_app"><i class="fas fa-edit mRight5"></i>신청서 복제</button>
-                  <a href="javascript:window.history.back();" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-arrow-left mRight5"></i>이전</a>
-                  <a href="./application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
-                  <a href="javascript:void(0);" data-move-to="#top_anchor" class="btn btn-outline-secondary waves-light mLeft20"><i class="fas fa-angle-double-up mRight5"></i>처음<span class="no_side_type">으로</span></a>
-                  <a href="javascript:void(0);" data-move-to="#footer_anchor" class="btn btn-outline-secondary waves-light only_side_type mLeft0"><i class="fas fa-angle-double-down mRight5"></i>마지막</a>
-                </div>
-
-              </div>
-              
-
+               </div>
             </div>
-          </div>
-          
 
-        </div>
-        
-
-        <footer id="footer" class="footer text-center"></footer>
-        
+            <footer id="footer" class="footer text-center"></footer>
+         </div>
       </div>
-      
-    </div>
-    
 
-
-    
-    <div class="modal fade" id="modal_dup_app">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-primary">
-            <h5 class="modal-title m-0 text-white">신청서 복제</h5>
-          </div>
-          
-
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-3 text-right pRight10">
-                
-                
-                
-                <i class="typcn typcn-input-checked symbol"></i>
-                
-                
-              </div>
-              <div class="col-lg-9 pBot10">
-                <h5 class="mBot5">생명윤리위원회 심의 신청<br>
-                  [<span class="red underline register_num2">HUM_2020_IR0001-00</span>]의 내용을 복제하여<br>
-                  <div>새로운 심의 신청서를 작성 하시겠습니까?</div>
-                </h5>
-                <span class="bg-soft-secondary">신청서 복제는 &quot;<span class="red">신규 심의 신청서</span>&quot;만 가능합니다.</span>
-              </div>
+      <div class="modal fade" id="modal_dup_app">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header bg-primary">
+                  <h5 class="modal-title m-0 text-white">신청서 복제</h5>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-lg-3 text-right pRight10">
+                        <i class="typcn typcn-input-checked symbol"></i>
+                     </div>
+                     <div class="col-lg-9 pBot10">
+                        <h5 class="mBot5">
+                           생명윤리위원회 심의 신청<br />
+                           [<span class="red underline register_num2">HUM_2020_IR0001-00</span>]의 내용을 복제하여<br />
+                           <div>새로운 심의 신청서를 작성 하시겠습니까?</div>
+                        </h5>
+                        <span class="bg-soft-secondary">신청서 복제는 &quot;<span class="red">신규 심의 신청서</span>&quot;만 가능합니다.</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="btn_dup_app">신청서 복제</button>
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+               </div>
             </div>
-          </div>
-          
-          <div class="modal-footer">
-            
-            
-            <button type="button" class="btn btn-primary" id="btn_dup_app">신청서 복제</button>
-            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
-          </div>
-          
-        </div>
+         </div>
       </div>
-    </div>
-    
 
-    
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/jquery-ui.min.js"></script>
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/metismenu.min.js"></script>
-    <script src="/assets/js/waves.js"></script>
-    <script src="/assets/js/feather.min.js"></script>
-    <script src="/assets/js/simplebar.min.js"></script>
-    <script src="/assets/js/moment.js"></script>
-    <script src="/assets/js/di4js.min.js"></script>
-    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="/plugins/tippy/tippy.all.min.js"></script>
-
-    
-    <script src="/assets/js/common/common.js"></script>
-
-    
-    <script src="/assets/js/app.js"></script>
-
-    
-    <script src="/html/researcher/IRB/application_list-IRB_info.js"></script>
-
-  </body>
-
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/jquery-ui.min.js"></script>
+      <script src="/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/js/metismenu.min.js"></script>
+      <script src="/assets/js/waves.js"></script>
+      <script src="/assets/js/feather.min.js"></script>
+      <script src="/assets/js/simplebar.min.js"></script>
+      <script src="/assets/js/moment.js"></script>
+      <script src="/assets/js/di4js.min.js"></script>
+      <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+      <script src="/plugins/tippy/tippy.all.min.js"></script>
+      <script src="/assets/js/common/common.js"></script>
+      <script src="/assets/js/app.js"></script>
+      <script src="/html/researcher/IRB/application_list-IRB_info.js"></script>
+   </body>
 </html>
