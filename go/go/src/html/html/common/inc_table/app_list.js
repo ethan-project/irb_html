@@ -1316,7 +1316,6 @@ function navigateIBC_change(P) {
 }
 function navigateIRB(P) {
     console.log("IPSAP.APPLICATION_TYPE", IPSAP.APPLICATION_TYPE)
-    retu
    switch (saved_list[P].application_type) {
       case IPSAP.APPLICATION_TYPE.NEW:
          navigateIRB_new(P);
