@@ -75,7 +75,6 @@ class ItemParser {
       processData: false,
       success: function (data) {
         main_this.resetFileItems(data);
-
         if (callbackFunc != undefined) callbackFunc(true, data, userData);
       },
       complete: function (data) {},
@@ -675,8 +674,7 @@ class ItemParser {
       let dataObj = {};
 
       var old_item_data = this.getItemData(key);
-      console.log("item_type_str", old_item_data?.dataObj?.info?.item_type_str)
-      console.log("itemName", old_item_data?.itemName)
+      console.log("old_item_data", old_item_data)
       console.log("key", key)
 
       if (old_item_data == undefined) continue;
@@ -1021,12 +1019,46 @@ class ItemParser {
         ret[key] = dataObj;
         continue;
       }
-    if (old_item_data.itemName == "research_type_check") {
+      //START: IRB 01_3
+      console.log("old_item_data.itemName", old_item_data.itemName)
+      if (old_item_data.itemName == "research_type_check") {
           var strData = new Object();
           var data = $('input[name="research_type_check"]:checked').val();
           strData["0"] = { select_ids :  [$('input[name="research_type_check"]:checked').val()]}
           dataObj["data"] = strData;
-        }
+      }
+      if (old_item_data.itemName == "research_danger_check") {
+          var strData = new Object();
+          var data = $('input[name="research_danger_check"]:checked').val();
+          strData["0"] = { select_ids :  [$('input[name="research_danger_check"]:checked').val()]}
+          dataObj["data"] = strData;
+      }
+      if (old_item_data.itemName == "research_field_check") {
+          var strData = new Object();
+          var data = $('input[name="research_field_check"]:checked').val();
+          strData["0"] = { select_ids :  [$('input[name="research_field_check"]:checked').val()]}
+          dataObj["data"] = strData;
+      }
+      if (old_item_data.itemName == "research_institution_check") {
+          var strData = new Object();
+          var data = $('input[name="research_institution_check"]:checked').val();
+          strData["0"] = { select_ids :  [$('input[name="research_institution_check"]:checked').val()]}
+          dataObj["data"] = strData;
+      }
+      if (old_item_data.itemName == "data_monitoring_check") {
+          var strData = new Object();
+          var data = $('input[name="data_monitoring_check"]:checked').val();
+          strData["0"] = {
+            select_ids: $('input[name="data_monitoring_check"]:checked')
+              .map(function () {
+                return $(this).val();
+              })
+              .get()
+          };
+          dataObj["data"] = strData;
+      }
+      //END: IRB 01_3
+
       if (old_item_data.itemName == "general_object") {
         var strData = new Object();
         var data = $('input[name="general_object"]:checked').val();

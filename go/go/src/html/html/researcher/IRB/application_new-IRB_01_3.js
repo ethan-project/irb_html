@@ -32,6 +32,7 @@ function dataMappingFunc(e) {
 }
 function changePageNavigation() {
    g_research_type = $("input:radio[name ='research_type_check']:checked").val();
+
    console.log("e==>", g_research_type);
    if (g_research_type) {
       appNaviNextPage();
@@ -66,15 +67,53 @@ function addFileInput() {
          if (a == "research_type_check") {
             saveData = t.getItemData(a).dataObj.saved_data.data;
             console.log("saveData", saveData);
-            $(`input:radio[name ='research_type_check']:input[value='${saveData[0]?.select_ids[0]}']`).click(), irbResetLeftNavi(n);
+            if ("0" in saveData) {
+               $(`input:radio[name ='research_type_check']:input[value='${saveData[0]?.select_ids[0]}']`).click(), irbResetLeftNavi(n);
+            }
+         }
+         a = "research_danger_check";
+         if (a == "research_danger_check") {
+            saveData = t.getItemData(a).dataObj.saved_data.data;
+            console.log("saveData", saveData);
+            if ("0" in saveData) {
+               $(`input:radio[name ='research_danger_check']:input[value='${saveData[0]?.select_ids[0]}']`).click(), irbResetLeftNavi(n);
+            }
+         }
+         a = "research_field_check";
+         if (a == "research_field_check") {
+            saveData = t.getItemData(a).dataObj.saved_data.data;
+            console.log("saveData", saveData);
+            if ("0" in saveData) {
+               $(`input:radio[name ='research_field_check']:input[value='${saveData[0]?.select_ids[0]}']`).click(), irbResetLeftNavi(n);
+            }
+         }
+         a = "research_institution_check";
+         if (a == "research_institution_check") {
+            saveData = t.getItemData(a).dataObj.saved_data.data;
+            console.log("saveData", saveData);
+            if ("0" in saveData) {
+               $(`input:radio[name ='research_institution_check']:input[value='${saveData[0]?.select_ids[0]}']`).click(), irbResetLeftNavi(n);
+            }
+         }
+         a = "data_monitoring_check";
+         if (a == "data_monitoring_check") {
+            saveData = t.getItemData(a).dataObj.saved_data.data;
+            console.log("saveData", saveData);
+           if ("0" in saveData) {
+               for (const id of saveData["0"].select_ids) {
+                  $(`input:checkbox[name='data_monitoring_check'][value='${id}']`).prop('checked', true);
+                   irbResetLeftNavi(n);
+               }
+            }
+
          }
 
-         (a = "general_human_research"), (n = t.getItemData(a).getStringValue("0"));
-         (g_for_people = n), 1 == n ? $('input:checkbox[id="general_human_research"]').attr("checked", !0) : $('input:checkbox[id="general_human_research"]').attr("checked", !1);
-         a = "general_body_research";
-         1 == (n = t.getItemData(a).getStringValue("0")) ? $('input:checkbox[id="general_body_research"]').attr("checked", !0) : $('input:checkbox[id="general_body_research"]').attr("checked", !1);
-         (a = "general_judgement"), (n = t.getItemData(a).getStringValue("0"));
-         $(`input:radio[name ='general_judgement']:input[value='${n}']`).click(), $(".card").removeClass("hidden");
+         // (a = "general_human_research"), (n = t.getItemData(a).getStringValue("0"));
+         // (g_for_people = n), 1 == n ? $('input:checkbox[id="general_human_research"]').attr("checked", !0) : $('input:checkbox[id="general_human_research"]').attr("checked", !1);
+         // a = "general_body_research";
+         // 1 == (n = t.getItemData(a).getStringValue("0")) ? $('input:checkbox[id="general_body_research"]').attr("checked", !0) : $('input:checkbox[id="general_body_research"]').attr("checked", !1);
+         // (a = "general_judgement"), (n = t.getItemData(a).getStringValue("0"));
+         // $(`input:radio[name ='general_judgement']:input[value='${n}']`).click(), $(".card").removeClass("hidden");
          $("#type_of_research2").on("change", (e) => {
             console.log(e.currentTarget);
             const selectedValue = $(e.currentTarget).val();
@@ -117,7 +156,7 @@ function addFileInput() {
       }
       loadApplicationParams(),
          (g_AppItemParser = new ItemParser(g_AppInfo.appSeq)),
-         g_AppItemParser.load({ "filter.query_items": "general_division,research_type_check" }, t),
+         g_AppItemParser.load({ "filter.query_items": "research_type_check,research_danger_check,research_field_check,research_institution_check,data_monitoring_check,research_field_etc_input" }, t),
          $(".reset_review_type").change(function () {
             1 == $(this).val()
                ? ($(".process_content").eq(1).attr("onclick", ""), $(".process_content").eq(2).attr("onclick", ""))
