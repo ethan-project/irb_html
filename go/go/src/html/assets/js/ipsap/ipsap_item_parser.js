@@ -1024,7 +1024,7 @@ class ItemParser {
     if (old_item_data.itemName == "research_type_check") {
           var strData = new Object();
           var data = $('input[name="research_type_check"]:checked').val();
-          strData["0"] = $('input[name="research_type_check"]:checked').val();
+          strData["0"] = { select_ids :  [$('input[name="research_type_check"]:checked').val()]}
           dataObj["data"] = strData;
         }
       if (old_item_data.itemName == "general_object") {

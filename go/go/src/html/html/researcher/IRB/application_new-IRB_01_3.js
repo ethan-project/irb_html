@@ -38,29 +38,37 @@ function changePageNavigation() {
    }
 }
 function removeFileInput(id) {
-  console.log("box_04-1-"+id)
-    $("#box_04-1-"+id).remove()
+   console.log("box_04-1-" + id);
+   $("#box_04-1-" + id).remove();
 }
 function addFileInput() {
-  const index =  $("#doc_required_expt_form input").length
-  $("#doc_required_expt_form").append(`
+   const index = $("#doc_required_expt_form input").length;
+   $("#doc_required_expt_form").append(`
                         <div class="flexMid mTop15" id="box_04-1-${index + 1}">
                           <div class="custom-file">
                             <input type="file" name="file_04-1-${index + 1}" class="custom-file-input" id="file_04-1-${index + 1}">
                             <label class="custom-file-label" for="file_04-1-${index + 1}" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
                           </div>
-                          <a href="javascript:void(0);" onclick="removeFileInput(${index + 1})" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
+                          <a href="javascript:void(0);" onclick="removeFileInput(${
+                             index + 1
+                          })" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
                         </div>`);
-  
 }
 "undefined" == typeof api_js && document.write("<script src='/assets/js/common/api.js'></script>"),
    "undefined" == typeof const_js && document.write("<script src='/assets/js/common/const.js'></script>"),
    document.write("<script src='/html/researcher/IRB/common_application_new-IRB.js'></script>"),
    $(document).ready(function () {
       function t(t) {
-         var a = "research_type_check",
-            n = t.getItemData(a).getStringValue("0");
-         $(`input:radio[name ='research_type_check']:input[value='${n}']`).click(), irbResetLeftNavi(n);
+         var a = "research_type_check";
+         n = t.getItemData(a).getStringValue("0");
+         console.log("t.getItemData(a)", t.getItemData(a));
+
+         if (a == "research_type_check") {
+            saveData = t.getItemData(a).dataObj.saved_data.data;
+            console.log("saveData", saveData);
+            $(`input:radio[name ='research_type_check']:input[value='${saveData[0]?.select_ids[0]}']`).click(), irbResetLeftNavi(n);
+         }
+
          (a = "general_human_research"), (n = t.getItemData(a).getStringValue("0"));
          (g_for_people = n), 1 == n ? $('input:checkbox[id="general_human_research"]').attr("checked", !0) : $('input:checkbox[id="general_human_research"]').attr("checked", !1);
          a = "general_body_research";

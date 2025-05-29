@@ -2,7 +2,7 @@ const const_js = true;
 
 const CONST = {
   API_PATH: 'https://www.ipsap.co.kr:7375/api/v1.0',
-
+  // API_PATH: 'http://localhost:7375/api/v1.0',
   API_TYPE: {
     GET: 'GET',
     POST: 'POST',
