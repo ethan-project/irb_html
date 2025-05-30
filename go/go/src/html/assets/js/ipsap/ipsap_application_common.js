@@ -70,7 +70,7 @@ const APP_IRB_NAVIGATION = {
    IRB: {
       STEP_CNT: 5,
       STEP_INFO: [
-         { TITLE: "심의신청서", DOT: 6 },
+         { TITLE: "심의신청서", DOT: 4 },
          { TITLE: "연구 상세요약서", DOT: 2 },
          { TITLE: "동의 취득", DOT: 1 },
          { TITLE: "제출 서류", DOT: 2 },
@@ -80,9 +80,9 @@ const APP_IRB_NAVIGATION = {
          { PAGE_ID: "PAGE_1_1", URL: "/html/researcher/IRB/application_new-IRB_01_1.html" },
          { PAGE_ID: "PAGE_1_2", URL: "/html/researcher/IRB/application_new-IRB_01_2.html" },
          { PAGE_ID: "PAGE_1_3", URL: "/html/researcher/IRB/application_new-IRB_01_3.html" },
-         { PAGE_ID: "PAGE_1_3_1", URL: "/html/researcher/IRB/application_new-IRB_01_3_1.html" },
+         // { PAGE_ID: "PAGE_1_3_1", URL: "/html/researcher/IRB/application_new-IRB_01_3_1.html" },
          { PAGE_ID: "PAGE_1_4", URL: "/html/researcher/IRB/application_new-IRB_01_4.html" },
-         { PAGE_ID: "PAGE_1_5", URL: "/html/researcher/IRB/application_new-IRB_01_5.html" },
+         // { PAGE_ID: "PAGE_1_5", URL: "/html/researcher/IRB/application_new-IRB_01_5.html" },
          { PAGE_ID: "PAGE_2_1", URL: "/html/researcher/IRB/application_new-IRB_02_1.html" },
          { PAGE_ID: "PAGE_2_2", URL: "/html/researcher/IRB/application_new-IRB_02_2.html" },
          { PAGE_ID: "PAGE_3_1", URL: "/html/researcher/IRB/application_new-IRB_03_1.html" },

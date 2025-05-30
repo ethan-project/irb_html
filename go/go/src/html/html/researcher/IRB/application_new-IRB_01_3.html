@@ -1,416 +1,417 @@
 <!DOCTYPE html>
 <html lang="ko">
+   <head>
+      <meta charset="utf-8" />
+      <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+      <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+      <meta content="" name="author" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
-  <meta charset="utf-8">
-  <title>IPSAP - 온라인 동물실험 심사 플랫폼</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
-  <meta content="" name="author">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="/assets/images/common/favicon.png" />
 
+      <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+      <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css" />
+      <link href="/assets/css/common/irb.css" rel="stylesheet" type="text/css" />
+   </head>
 
-  <link rel="shortcut icon" href="/assets/images/common/favicon.png">
+   <body class="researcher">
+      <div id="leftsidenav" class="left-sidenav"></div>
 
+      <div class="page-wrapper">
+         <div id="topbar" class="topbar"></div>
 
-  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
-  <link href="/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/common/common.css" rel="stylesheet" type="text/css">
-  <link href="/assets/css/common/irb.css" rel="stylesheet" type="text/css">
+         <div class="page-content">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="page-title-box">
+                        <div class="row">
+                           <div class="col">
+                              <h4 class="page-title">동물실험 계획서 - 작성</h4>
+                              <div class="comment">
+                                 새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나,
+                                 <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.
+                              </div>
+                           </div>
+                        </div>
+                     </div>
 
-</head>
+                     <div class="card thick IRB hidden IRB_review_target">
+                        <div class="card-header flexBetween">
+                           <div class="apptype_area committee_bg">
+                              <div class="apptype_title">신규 심의</div>
 
-<body class="researcher">
+                              <div class="apptype_date">미승인</div>
+                           </div>
+                           <div class="title_area">
+                              <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
+                              <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">임시저장 후 발급</span></p>
+                           </div>
+                           <div class="desc_area">
+                              <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png" />IRB</h4>
+                           </div>
+                        </div>
+                        <div class="card-body noPadding">
+                           <div class="row noMargin app_frame">
+                              <div class="col-sm-2 app_col app_proceess_blank">
+                                 <div class="proceess_area"></div>
+                              </div>
+                              <div class="col-sm-2 app_col app_proceess">
+                                 <div class="proceess_area fade_in" id="application_left_step_navi">
+                                    <a href="./application_new-IRB_01_1.html" class="row process_content active sub_6 active_sub_3" data-process-num="1">
+                                       <span>심의 신청서</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="./application_new-IRB_02_1.html" class="row process_content" data-process-num="2">
+                                       <span>연구 상세요약서</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="./application_new-IRB_03_1.html" class="row process_content" data-process-num="3">
+                                       <span>동의 취득</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="./application_new-IRB_04_1.html" class="row process_content" data-process-num="4">
+                                       <span>제출 서류</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                    <a href="./application_new-IRB_05_1.html" class="row process_content" data-process-num="5">
+                                       <span>연구책임자 서약서</span>
+                                       <div class="sub_processes">
+                                          <div class="sub_process p1"></div>
+                                          <div class="sub_process p2"></div>
+                                          <div class="sub_process p3"></div>
+                                          <div class="sub_process p4"></div>
+                                          <div class="sub_process p5"></div>
+                                          <div class="sub_process p6"></div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
 
-  <div id="leftsidenav" class="left-sidenav"></div>
+                              <div class="col-sm-10 app_col app_contents">
+                                 <div class="row app_header">
+                                    <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-3. 연구유형 및 심의분류</h4>
+                                    <div class="header_comment"></div>
+                                 </div>
+                                 <div class="row col-sm-9 flexCentral irb_border_box">
+                                    <div class="col-sm-2">
+                                       <h4 class="irb-title-12 irb_box_yellow_h150"><i class=""></i> 연구 유형</h4>
+                                    </div>
+                                    <div class="col-sm-4">
+                                       <div id="type_of_research">
+                                          <div class="custom-control custom-radio flexMid">
+                                             <input type="radio" id="type_of_research_1" name="research_type_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="" />
+                                             <label class="custom-control-label" for="type_of_research_1">인간대상연구(실험연구)</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10">
+                                             <input type="radio" id="type_of_research_2" name="research_type_check" value="2" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="type_of_research_2">인간대상연구(조사연구)​</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10">
+                                             <input type="radio" id="type_of_research_3" name="research_type_check" value="3" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="type_of_research_3">인체유래물 연구​</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10">
+                                             <input type="radio" id="type_of_research_4" name="research_type_check" value="4" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="type_of_research_4">배아줄기세포 이용 연구</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10">
+                                             <input type="radio" id="type_of_research_5" name="research_type_check" value="5" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="type_of_research_5">DTC 연구(소비자 직접 의뢰 유전자 검사)​</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- end type of reseach -->
+                                    <!-- cate of research -->
+                                    <div class="col-sm-2">
+                                       <h4 class="irb-title-12 irb_box_yellow_h150"><i class=""></i> 연구 분야</h4>
+                                    </div>
+                                    <!-- type of research -->
 
-  <div class="page-wrapper">
+                                    <div class="col-sm-4">
+                                       <div id="cate_of_research">
+                                          <div class="custom-control custom-radio flexMid w200">
+                                             <input type="radio" id="cate_of_research_1" name="research_field_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="" />
+                                             <label class="custom-control-label" for="cate_of_research_1">의과학분야</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10 w200">
+                                             <input type="radio" id="cate_of_research_2" name="research_field_check" value="2" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="research_field_check">사회과학분야​</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10 w200">
+                                             <input type="radio" id="cate_of_research_3" name="research_field_check" value="3" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="cate_of_research_3">DTC 분야​</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10">
+                                             <input type="radio" id="cate_of_research_4" name="research_field_check" value="4" class="custom-control-input w150" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="cate_of_research_4">기타​​</label>
+                                             <input class="form-control w150 mLeft20" type="text" id="cate_of_research_4_input" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- end cate of reseach -->
+                                 </div>
 
-    <div id="topbar" class="topbar"></div>
+                                 <div class="row col-sm-9 flexCentral irb_border_box">
+                                    <div class="col-sm-2">
+                                       <h4 class="irb-title-12 irb_box_yellow_h150"><i class=""></i> 연구 위험성</h4>
+                                    </div>
+                                    <!-- level of research -->
+                                    <div class="col-sm-4">
+                                       <div id="level_of_research">
+                                          <div class="custom-control custom-radio flexMid w230">
+                                             <input type="radio" id="level_of_research_1" name="research_danger_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="" />
+                                             <label class="custom-control-label" for="level_of_research_1">Level1 (최소위험)</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10 w230">
+                                             <input type="radio" id="level_of_research_2" name="research_danger_check" value="2" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="level_of_research_2">Level2 (최소위험에서 약간 증가)​​</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10 w230">
+                                             <input type="radio" id="level_of_research_3" name="research_danger_check" value="3" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="level_of_research_3">Level3 (중증도 위험)​</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10 w230">
+                                             <input type="radio" id="level_of_research_4" name="research_danger_check" value="4" class="custom-control-input" data-custom-toggle="visible" />
+                                             <label class="custom-control-label w200" for="level_of_research_4">Level4 (고위험, DSMB 필요)​​​</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- end cate of reseach -->
+                                    <!-- place of research -->
+                                    <div class="col-sm-2">
+                                       <h4 class="irb-title-12 irb_box_yellow_h150"><i class=""></i> 연구 기관</h4>
+                                    </div>
+                                    <div class="col-sm-4">
+                                       <div id="place_of_research">
+                                          <div class="custom-control custom-radio flexMid">
+                                             <input
+                                                type="radio"
+                                                id="place_of_research_1"
+                                                name="research_institution_check"
+                                                value="1"
+                                                class="custom-control-input"
+                                                data-custom-toggle="visible"
+                                                checked=""
+                                             />
+                                             <label class="custom-control-label" for="place_of_research_1">단일기관</label>
+                                          </div>
+                                          <div class="custom-control custom-radio flexMid mTop10">
+                                             <input type="radio" id="place_of_research_2" name="research_institution_check" value="2" class="custom-control-input w150" data-custom-toggle="visible" />
+                                             <label class="custom-control-label" for="place_of_research_2">다기관​​</label>
+                                             <input class="form-control w150 mLeft20" type="text" id="place_of_research_2_input" />개
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- end place of reseach -->
+                                 </div>
+                                 <div class="col-sm-9">
+                                    <div class="row irb_border_box irb_yellow mLeft1">
+                                       <div class="col-sm-2">
+                                          <h4 class="irb-title-12"><i class=""></i> 연구 위험성</h4>
+                                       </div>
+                                       <!-- type of research 2 -->
+                                       <div class="row col-sm-10 bg-white hm150 pSide15">
+                                          <select class="form-control IRB btn-outline-primary small_select col-sm-3" id="type_of_research2">
+                                             <option value="A" selected="selected">경력 선택</option>
+                                             <option value="B">심의대상</option>
+                                             <option value="C">심의면제</option>
+                                          </select>
+                                          <div class="col-sm-9">
+                                             <div id="showoptionB" class="col-md-6 hidden">
+                                                <div id="consent_method" class="form-check-inline">
+                                                   <div class="custom-control custom-radio">
+                                                      <input type="radio" name="form_03_1-1" value="1" class="custom-control-input" id="form_03_1-1_1" checked="" />
+                                                      <label class="custom-control-label" for="form_03_1-1_1">정규 심의</label>
+                                                   </div>
+                                                   <div class="custom-control custom-radio mLeft20">
+                                                      <input type="radio" name="form_03_1-1" value="2" class="custom-control-input" id="form_03_1-1_2" />
+                                                      <label class="custom-control-label" for="form_03_1-1_2">신속 심의</label>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div id="showoptionC" class="col-md-6 hidden">
+                                                <div class="col-md-12">
+                                                   <label>심의면제 확인서 첨부 :​​</label>
+                                                   <a href="javascript:void(0);" onclick="addFileInput()" class="btn btn-outline-green mLeft5 btn-file-add" title="첨부 File 삭제"
+                                                      ><i class="fas fa-plus-square"></i
+                                                   ></a>
+                                                </div>
+                                                <div class="col-md-8" id="doc_required_expt_form"></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row col-sm-9 flexCentral irb_border_box">
+                                    <div class="col-sm-2">
+                                       <h4 class="irb-title-12 irb_box_yellow_h150"><i class=""></i> 자료 안정성 모니터링 수행 주체</h4>
+                                    </div>
+                                    <!-- type of research 2 -->
+                                    <div class="col-md-10 flexMid">
+                                       <div class="checkbox form-check-inline checkbox-primary">
+                                          <input type="checkbox" id="data_monitoring_1" value="1" name="data_monitoring_check" checked />
+                                          <label for="data_monitoring_1">내부 안전 점검자</label>
+                                       </div>
+                                       <div class="checkbox form-check-inline checkbox-primary mLeft20">
+                                          <input type="checkbox" id="data_monitoring_2" value="2" name="data_monitoring_check" />
+                                          <label for="data_monitoring_2">독립 안전 점검자​</label>
+                                       </div>
+                                       <div class="checkbox form-check-inline checkbox-primary mLeft20">
+                                          <input type="checkbox" id="data_monitoring_3" value="3" name="data_monitoring_check" checked />
+                                          <label for="data_monitoring_3">자료 안정 모니터링 위원회​</label>
+                                       </div>
+                                    </div>
+                                    <!-- end type of reseach 2 -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
 
+                        <div class="card-footer flexCenter" id="appplication_page_navi">
+                           <a
+                              href="javascript:void(0);"
+                              onclick="appNaviPrePage();"
+                              id="app_page_navi_pre_btn"
+                              class="btn btn-outline-warning waves-effect waves-light tippy-btn"
+                              title="임시저장 후 이전 단계로 이동"
+                              data-tippy-animation="shift-away"
+                              data-tippy-arrow="true"
+                           >
+                              <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a
+                           >
+                           <a
+                              href="javascript:void(0);"
+                              onclick="validCheckAfterClickNextPage();"
+                              id="app_page_navi_next_btn"
+                              class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10"
+                              title="임시저장 후 다음 단계로 이동"
+                              data-tippy-animation="shift-away"
+                              data-tippy-arrow="true"
+                           >
+                              <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a
+                           >
+                           <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" onclick="validCheckAfterClickTempSave();"
+                              ><i class="fas fa-check mRight5"></i>임시 저장</a
+                           >
 
-    <div class="page-content">
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="page-title-box">
-              <div class="row">
-                <div class="col">
-                  <h4 class="page-title">동물실험 계획서 - 작성</h4>
-                  <div class="comment">새로운 실험 계획서를 작성합니다. 이 단계에서 <span class="blue_vivid">임시 저장을 실행</span>하거나, <span class="blue_vivid">단계를 이동하면 자동으로 임시 저장</span>이 진행됩니다.</div>
-                </div>
-              </div>
+                           <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"
+                              ><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a
+                           >
+                           <a href="../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
 
-
-            <div class="card thick IRB hidden IRB_review_target">
-              <div class="card-header flexBetween">
-                <div class="apptype_area committee_bg">
-                  <div class="apptype_title">신규 심의</div>
-
-
-
-
-
-
-
-                  <div class="apptype_date">미승인</div>
-
-
-
-
-                </div>
-                <div class="title_area">
-                  <h4 class="card-title flexMid"><span class="task_title_ko">-</span><span class="title_desc mLeft10 task_director_all">(연구 책임자 : -)</span></h4>
-                  <p class="text-muted mb-0">신규 심의 접수 번호 :<span class="register_num">임시저장 후 발급</span></p>
-                </div>
-                <div class="desc_area">
-                  <h4 class="card_desc committee_color judge_type_str"><img src="/assets/images/common/IRB_icon_top.png">IRB</h4>
-                </div>
-              </div>
-              <div class="card-body noPadding">
-                <div class="row noMargin app_frame">
-                  <div class="col-sm-2 app_col app_proceess_blank">
-                    <div class="proceess_area"></div>
-                  </div>
-                  <div class="col-sm-2 app_col app_proceess">
-                    <div class="proceess_area fade_in" id="application_left_step_navi">
-
-                      <a href="./application_new-IRB_01_1.html" class="row process_content active sub_6 active_sub_3" data-process-num="1">
-                        <span>심의 신청서</span>
-                        <div class="sub_processes">
-                          <div class="sub_process p1"></div>
-                          <div class="sub_process p2"></div>
-                          <div class="sub_process p3"></div>
-                          <div class="sub_process p4"></div>
-                          <div class="sub_process p5"></div>
-                          <div class="sub_process p6"></div>
-                        </div>
-                      </a>
-                      <a href="./application_new-IRB_02_1.html" class="row process_content" data-process-num="2">
-                        <span>연구 상세요약서</span>
-                        <div class="sub_processes">
-                          <div class="sub_process p1"></div>
-                          <div class="sub_process p2"></div>
-                          <div class="sub_process p3"></div>
-                          <div class="sub_process p4"></div>
-                          <div class="sub_process p5"></div>
-                          <div class="sub_process p6"></div>
-                        </div>
-                      </a>
-                      <a href="./application_new-IRB_03_1.html" class="row process_content" data-process-num="3">
-                        <span>동의 취득</span>
-                        <div class="sub_processes">
-                          <div class="sub_process p1"></div>
-                          <div class="sub_process p2"></div>
-                          <div class="sub_process p3"></div>
-                          <div class="sub_process p4"></div>
-                          <div class="sub_process p5"></div>
-                          <div class="sub_process p6"></div>
-                        </div>
-                      </a>
-                      <a href="./application_new-IRB_04_1.html" class="row process_content" data-process-num="4">
-                        <span>제출 서류</span>
-                        <div class="sub_processes">
-                          <div class="sub_process p1"></div>
-                          <div class="sub_process p2"></div>
-                          <div class="sub_process p3"></div>
-                          <div class="sub_process p4"></div>
-                          <div class="sub_process p5"></div>
-                          <div class="sub_process p6"></div>
-                        </div>
-                      </a>
-                      <a href="./application_new-IRB_05_1.html" class="row process_content" data-process-num="5">
-                        <span>연구책임자 서약서</span>
-                        <div class="sub_processes">
-                          <div class="sub_process p1"></div>
-                          <div class="sub_process p2"></div>
-                          <div class="sub_process p3"></div>
-                          <div class="sub_process p4"></div>
-                          <div class="sub_process p5"></div>
-                          <div class="sub_process p6"></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-10 app_col app_contents">
-
-
-
-                    <div class="row app_header">
-                      <h4 class="card-title"><i class="fas fa-plus-square mRight10"></i>1-3. 연구유형 및 심의분류</h4>
-                      <div class="header_comment"></div>
-                    </div>
-                    <div class="row app_content">
-                      <!-- type of research -->
-                      <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">연구 유형</label>
-                      <div class="col-md-3" id="type_of_research">
-                        <div class="custom-control custom-radio flexMid">
-                          <input type="radio" id="type_of_research_1" name="research_type_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
-                          <label class="custom-control-label" for="type_of_research_1">인간대상연구(실험연구)</label>
-
-                        </div>
-                        <div class="custom-control custom-radio flexMid mTop10">
-                          <input type="radio" id="type_of_research_2" name="research_type_check" value="2" class="custom-control-input" data-custom-toggle="visible">
-                          <label class="custom-control-label" for="type_of_research_2">인간대상연구(조사연구)​</label>
-                        </div>
-                        <div class="custom-control custom-radio flexMid mTop10">
-                          <input type="radio" id="type_of_research_3" name="research_type_check" value="3" class="custom-control-input" data-custom-toggle="visible">
-                          <label class="custom-control-label" for="type_of_research_3">인체유래물 연구​</label>
-                        </div>
-                        <div class="custom-control custom-radio flexMid mTop10">
-                          <input type="radio" id="type_of_research_4" name="research_type_check" value="4" class="custom-control-input" data-custom-toggle="visible">
-                          <label class="custom-control-label" for="type_of_research_4">배아줄기세포 이용 연구</label>
-                        </div>
-                        <div class="custom-control custom-radio flexMid mTop10">
-                          <input type="radio" id="type_of_research_5" name="research_type_check" value="5" class="custom-control-input" data-custom-toggle="visible">
-                          <label class="custom-control-label" for="type_of_research_5">DTC 연구(소비자 직접 의뢰 유전자 검사)​</label>
-                        </div>
-                      </div>
-                      <!-- end type of reseach -->
-                      <!-- cate of research -->
-                      <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">연구 분야</label>
-                      <div class="col-md-3" id="cate_of_research">
-                          <div class="custom-control custom-radio flexMid w200">
-                            <input type="radio" id="cate_of_research_1" name="research_field_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
-                            <label class="custom-control-label" for="cate_of_research_1">의과학분야</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10 w200">
-                            <input type="radio" id="cate_of_research_2" name="research_field_check" value="2" class="custom-control-input" data-custom-toggle="visible">
-                            <label class="custom-control-label" for="research_field_check">사회과학분야​</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10 w200">
-                            <input type="radio" id="cate_of_research_3" name="research_field_check" value="3" class="custom-control-input" data-custom-toggle="visible">
-                            <label class="custom-control-label" for="cate_of_research_3">DTC 분야​</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10">
-                            <input type="radio" id="cate_of_research_4" name="research_field_check" value="4" class="custom-control-input  w150" data-custom-toggle="visible">
-                            <label class="custom-control-label" for="cate_of_research_4">기타​​</label>
-                            <input class="form-control w150  mLeft20" type="text" id="cate_of_research_4_input">
-                          </div>
-                      </div>
-                      <!-- end cate of reseach -->
-                    </div>
-                    <div class="row app_content mTop30">
-                      <!-- level of research -->
-                      <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">연구 분야</label>
-                      <div class="col-md-3" id="level_of_research">
-                          <div class="custom-control custom-radio flexMid w230">
-                            <input type="radio" id="level_of_research_1" name="research_danger_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
-                            <label class="custom-control-label" for="level_of_research_1">Level1 (최소위험)</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10 w230">
-                            <input type="radio" id="level_of_research_2" name="research_danger_check" value="2" class="custom-control-input" data-custom-toggle="visible">
-                            <label class="custom-control-label" for="level_of_research_2">Level2 (최소위험에서 약간 증가)​​</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10 w230">
-                            <input type="radio" id="level_of_research_3" name="research_danger_check" value="3" class="custom-control-input" data-custom-toggle="visible">
-                            <label class="custom-control-label" for="level_of_research_3">Level3 (중증도 위험)​</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10 w230">
-                            <input type="radio" id="level_of_research_4" name="research_danger_check" value="4" class="custom-control-input" data-custom-toggle="visible">
-                            <label class="custom-control-label w200" for="level_of_research_4">Level4 (고위험, DSMB 필요)​​​</label>
-                          </div>
-                      </div>
-                      <!-- end cate of reseach -->
-                      <!-- place of research -->
-                      <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">연구 기관</label>
-                      <div class="col-md-3" id="place_of_research">
-                          <div class="custom-control custom-radio flexMid">
-                            <input type="radio" id="place_of_research_1" name="research_institution_check" value="1" class="custom-control-input" data-custom-toggle="visible" checked="">
-                            <label class="custom-control-label" for="place_of_research_1">단일기관</label>
-                          </div>
-                          <div class="custom-control custom-radio flexMid mTop10">
-                            <input type="radio" id="place_of_research_2" name="research_institution_check" value="2" class="custom-control-input w150" data-custom-toggle="visible">
-                            <label class="custom-control-label" for="place_of_research_2">다기관​​</label>
-                            <input class="form-control w150  mLeft20" type="text" id="place_of_research_2_input">개
-                          </div>
-
-                      </div>
-                      <!-- end place of reseach -->
-                    </div>
-                    <div class="row app_content mTop30">
-                      <!-- type of research 2 -->
-                      <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">심의 분류</label>
-                      <div class="col-md-3">
-                        <select class="form-control btn-outline-primary small_select" id="type_of_research2">
-                          <option value="A" selected="selected">경력 선택</option>
-                          <option value="B">심의대상</option>
-                          <option value="C">심의면제</option>
-                        </select>
-                      </div>
-                      <div id="showoptionB" class="col-md-6 hidden">
-                        <div id="consent_method" class="form-check-inline">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" name="form_03_1-1" value="1" class="custom-control-input" id="form_03_1-1_1" checked="">
-                            <label class="custom-control-label" for="form_03_1-1_1">정규 심의</label>
-                          </div>
-                          <div class="custom-control custom-radio mLeft20">
-                            <input type="radio" name="form_03_1-1" value="2" class="custom-control-input" id="form_03_1-1_2">
-                            <label class="custom-control-label" for="form_03_1-1_2">신속 심의</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="showoptionC" class="col-md-6 hidden">
-                        <div  class="col-md-12"><label>심의면제 확인서 첨부 :​​</label>   <a href="javascript:void(0);" onclick="addFileInput()" class="btn btn-outline-green mLeft5 btn-file-add" title="첨부 File 삭제"><i class="fas fa-plus-square" ></i></a></div>
-                        <div class="col-md-8" id="doc_required_expt_form"></div>
-                    </div>
-                    </div>
-                    <div class="row app_content mTop30">
-                      <!-- type of research 2 -->
-                      <label for="col-md-3 input_01-3_3" class="mRight10 mBot0 w100">자료 안정성 모니터링 수행 주체​</label>
-                      <div class="col-md-9 flexMid">
-                        <div class="checkbox form-check-inline checkbox-primary">
-                          <input type="checkbox" id="data_monitoring_1" value="1" name="data_monitoring_check" checked>
-                          <label for="data_monitoring_1">내부 안전 점검자</label>
-                        </div>
-                        <div class="checkbox form-check-inline checkbox-primary mLeft20">
-                          <input type="checkbox" id="data_monitoring_2" value="2" name="data_monitoring_check">
-                          <label for="data_monitoring_2">독립 안전 점검자​</label>
-                        </div>
-                        <div class="checkbox form-check-inline checkbox-primary mLeft20">
-                          <input type="checkbox" id="data_monitoring_3" value="3" name="data_monitoring_check" checked>
-                          <label for="data_monitoring_3">자료 안정 모니터링 위원회​</label>
-                        </div>
-                      </div>
-                      <!-- end type of reseach 2 -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="card-footer flexCenter" id="appplication_page_navi">
-                <a href="javascript:void(0);" onclick="appNaviPrePage();" id="app_page_navi_pre_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn" title="임시저장 후 이전 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
-                  <i class="fas fa-arrow-left mRight5"></i>이전 단계로 이동</a>
-                <a href="javascript:void(0);" onclick="validCheckAfterClickNextPage();" id="app_page_navi_next_btn" class="btn btn-outline-warning waves-effect waves-light tippy-btn mLeft10" title="임시저장 후 다음 단계로 이동" data-tippy-animation="shift-away" data-tippy-arrow="true">
-                  <i class="fas fa-arrow-right mRight5"></i>다음 단계로 이동</a>
-                <a href="javascript:void(0);" class="btn btn-primary btn-outline-dashed waves-effect waves-light mLeft30" onclick="validCheckAfterClickTempSave();"><i class="fas fa-check mRight5"></i>임시 저장</a>
-
-                <a href="javascript:void(0);" class="btn btn-outline-danger waves-effect waves-light mLeft30" id="tmp_app_delete_btn" data-toggle="modal" data-target="#modal_del_app"><i class="fas fa-trash-alt mRight5"></i>신청서 삭제</a>
-                <a href="../application_list.html" class="btn btn-outline-secondary waves-light mLeft0"><i class="fas fa-bars mRight5"></i>목록 보기</a>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
-
+            <footer id="footer" class="footer text-center"></footer>
+         </div>
       </div>
 
-      <footer id="footer" class="footer text-center"></footer>
+      <div class="modal fade" id="modal_tempSave" tabindex="-1">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header bg-primary">
+                  <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
+               </div>
 
-    </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-lg-3 text-right pRight10">
+                        <i class="typcn typcn-input-checked symbol"></i>
+                     </div>
+                     <div class="col-lg-9 pBot10">
+                        <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br />신청서를 계속 작성하시겠습니까?</h5>
+                        <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
+                     </div>
+                  </div>
+               </div>
 
-  </div>
-
-
-
-  <div class="modal fade" id="modal_tempSave" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header bg-primary">
-          <h5 class="modal-title m-0 text-white" id="modal_tempSave_1">신청서 임시저장</h5>
-        </div>
-
-
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-3 text-right pRight10">
-
-
-
-              <i class="typcn typcn-input-checked symbol"></i>
-
-
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
+                  <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
+               </div>
             </div>
-            <div class="col-lg-9 pBot10">
-              <h5 class="mBot5">작성중인 신청서가 임시 저장되었습니다.<br>신청서를 계속 작성하시겠습니까?</h5>
-              <span class="bg-soft-secondary">현재 작성중인 신청서를 계속 작성할 수 있습니다.</span>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">계속 작성</button>
-          <a href="../application_list.html" class="btn btn-outline-secondary">목록 보기</a>
-        </div>
-
+         </div>
       </div>
-    </div>
-  </div>
 
+      <div class="modal fade" id="modal_del_app" tabindex="-1">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header bg-primary">
+                  <h5 class="modal-title m-0 text-white">작성중인 신청서 삭제</h5>
+               </div>
 
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-lg-3 text-right pRight10">
+                        <i class="typcn typcn-warning-outline symbol"></i>
+                     </div>
+                     <div class="col-lg-9 pBot10">
+                        <h5 class="mBot5">작성중인 신청서를 <span class="red">삭제</span>하시겠습니까?</h5>
+                        <span class=""><span class="red">삭제한 신청서는 복구가 불가능</span>하니 주의하시기 바랍니다.</span>
+                     </div>
+                  </div>
+               </div>
 
-  <div class="modal fade" id="modal_del_app" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-primary">
-          <h5 class="modal-title m-0 text-white">작성중인 신청서 삭제</h5>
-        </div>
-
-
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-3 text-right pRight10">
-
-              <i class="typcn typcn-warning-outline symbol"></i>
-
-
-
-
+               <div class="modal-footer">
+                  <a href="javascript:void(0);" class="btn btn-outline-danger" onclick="tempSaveAppDelete();">신청서 삭제</a>
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
+               </div>
             </div>
-            <div class="col-lg-9 pBot10">
-              <h5 class="mBot5">작성중인 신청서를 <span class="red">삭제</span>하시겠습니까?</h5>
-              <span class=""><span class="red">삭제한 신청서는 복구가 불가능</span>하니 주의하시기 바랍니다.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-
-          <a href="javascript:void(0);" class="btn btn-outline-danger" onclick="tempSaveAppDelete();">신청서 삭제</a>
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">취소</button>
-        </div>
-
+         </div>
       </div>
-    </div>
-  </div>
 
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/jquery-ui.min.js"></script>
+      <script src="/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/js/metismenu.min.js"></script>
+      <script src="/assets/js/waves.js"></script>
+      <script src="/assets/js/feather.min.js"></script>
+      <script src="/assets/js/simplebar.min.js"></script>
+      <script src="/assets/js/moment.js"></script>
+      <script src="/assets/js/di4js.min.js"></script>
+      <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+      <script src="/plugins/tippy/tippy.all.min.js"></script>
 
+      <script src="/assets/js/common/common.js"></script>
 
+      <script src="/assets/js/app.js"></script>
 
-
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/jquery-ui.min.js"></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/js/metismenu.min.js"></script>
-  <script src="/assets/js/waves.js"></script>
-  <script src="/assets/js/feather.min.js"></script>
-  <script src="/assets/js/simplebar.min.js"></script>
-  <script src="/assets/js/moment.js"></script>
-  <script src="/assets/js/di4js.min.js"></script>
-  <script src="/plugins/daterangepicker/daterangepicker.js"></script>
-  <script src="/plugins/tippy/tippy.all.min.js"></script>
-
-
-  <script src="/assets/js/common/common.js"></script>
-
-
-  <script src="/assets/js/app.js"></script>
-
-
-  <script src="/html/researcher/IRB/application_new-IRB_01_3.js"></script>
-
-</body>
-
+      <script src="/html/researcher/IRB/application_new-IRB_01_3.js"></script>
+   </body>
 </html>

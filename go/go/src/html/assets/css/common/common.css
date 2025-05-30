@@ -160,7 +160,10 @@ br+.footer_item::before  { content:none !important; }
 
 /* Spacing */
 .mLeft-10     { margin-left:-10px      !important; }
+.mLeft-15     { margin-left:-15px      !important; }
 .mLeft0     { margin-left:0      !important; }
+.mLeft1     { margin-left:1px      !important; }
+.mLeft2     { margin-left:2px      !important; }
 .mLeft3     { margin-left:3px    !important; }
 .mLeft4     { margin-left:4px    !important; }
 .mLeft5     { margin-left:5px    !important; }
@@ -339,6 +342,7 @@ br+.footer_item::before  { content:none !important; }
 .w150       { width:150px !important; }
 .w160       { width:160px !important; }
 .w170       { width:170px !important; }
+.w175       { width:175px !important; }
 .w180       { width:180px !important; }
 .w200       { width:200px !important; }
 .w230       { width:230px !important; }
@@ -363,6 +367,7 @@ br+.footer_item::before  { content:none !important; }
 
 .wCalendar  { width:218px !important; }
 
+.hm150       { min-height:150px  !important; }
 .h50p       { height:50%  !important; }
 .h100p      { height:100% !important; }
 .row3_height{ height:100px !important; }
@@ -1092,7 +1097,7 @@ textarea.red_border                   { color:rgba(0,0,0, 1.0); }
 
 
 .small_select                                       { height:25px; padding:0 1rem; border-color:rgba(  0,120,255, 1.0);
-                                                      background-color:rgba(255,255,255, 1.0) !important; color:rgba(  0,120,255, 1.0) !important; }
+                                                      background-color:rgba(255,255,255, 1.0) !important; color:rgba(  0,120,255, 1.0); }
 .small_select.narrow_padding                        { padding:0 5px; }
 button.btn:not(.noMinWidth)                         { min-width:60px; }
 .btn_xxs                                            { font-size:0.9em; padding:0px 10px; }
@@ -1104,7 +1109,7 @@ button.btn:not(.noMinWidth)                         { min-width:60px; }
 #animal_select_1+input+label::after   { content:'\f053'; font-family:'Font Awesome 5 Free'; font-weight:900; color:rgba( 30,100,255, 1.0); } */
 
       .btn-outline-primary.small_select:hover,
-      .btn-outline-primary.small_select:active      { background-color:rgba(255,255,255, 1.0) !important; color:rgba(  0,120,255, 1.0) !important; }
+      .btn-outline-primary.small_select:active      { background-color:rgba(255,255,255, 1.0) !important; color:rgba(  0,120,255, 1.0); }
 .IBC  .btn-outline-primary                          { color:rgba( 20,170, 20, 1.0) !important; border-color:rgba( 20,170, 20, 1.0) !important; }
 .IBC  .btn-primary:hover,
 .IBC  .btn-primary:active                           { background-color:rgba( 20,170, 20, 1.0) !important; color:rgba(255,255,255, 1.0) !important; border-color:rgba( 20,170, 20, 1.0) !important; }

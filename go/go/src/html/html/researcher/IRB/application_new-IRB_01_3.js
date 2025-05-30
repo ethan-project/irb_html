@@ -39,13 +39,12 @@ function changePageNavigation() {
    }
 }
 function removeFileInput(id) {
-   console.log("box_04-1-" + id);
    $("#box_04-1-" + id).remove();
 }
 function addFileInput() {
    const index = $("#doc_required_expt_form input").length;
    $("#doc_required_expt_form").append(`
-                        <div class="flexMid mTop15" id="box_04-1-${index + 1}">
+                        <div class="flexMid mTop15 w500" id="box_04-1-${index + 1}">
                           <div class="custom-file">
                             <input type="file" name="file_04-1-${index + 1}" class="custom-file-input" id="file_04-1-${index + 1}">
                             <label class="custom-file-label" for="file_04-1-${index + 1}" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
@@ -99,13 +98,12 @@ function addFileInput() {
          if (a == "data_monitoring_check") {
             saveData = t.getItemData(a).dataObj.saved_data.data;
             console.log("saveData", saveData);
-           if ("0" in saveData) {
+            if ("0" in saveData) {
                for (const id of saveData["0"].select_ids) {
-                  $(`input:checkbox[name='data_monitoring_check'][value='${id}']`).prop('checked', true);
-                   irbResetLeftNavi(n);
+                  $(`input:checkbox[name='data_monitoring_check'][value='${id}']`).prop("checked", true);
+                  irbResetLeftNavi(n);
                }
             }
-
          }
 
          // (a = "general_human_research"), (n = t.getItemData(a).getStringValue("0"));
@@ -134,9 +132,9 @@ function addFileInput() {
                if ($("#showoptionC").hasClass("hidden")) {
                   $("#showoptionC").removeClass("hidden");
                   $("#doc_required_expt_form").append(`
-                        <div class="flexMid mTop15" id="box_04-1-1">
+                        <div class="flexMid mTop15 w500" id="box_04-1-1">
                           <div class="custom-file">
-                            <input type="file" name="file_04-1-1" class="custom-file-input" id="file_04-1-1">
+                            <input type="file" name="file_04-1-1" class="custom-file-input " id="file_04-1-1">
                             <label class="custom-file-label" for="file_04-1-1" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
                           </div>
                           <a href="javascript:void(0);"  onclick="removeFileInput(1)" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
@@ -154,6 +152,7 @@ function addFileInput() {
             }
          });
       }
+
       loadApplicationParams(),
          (g_AppItemParser = new ItemParser(g_AppInfo.appSeq)),
          g_AppItemParser.load({ "filter.query_items": "research_type_check,research_danger_check,research_field_check,research_institution_check,data_monitoring_check,research_field_etc_input" }, t),
@@ -163,6 +162,7 @@ function addFileInput() {
                : ($(".process_content").eq(1).attr("onclick", "APP_IRB_NAVIGATION.navigate('PAGE_2_1');"), $(".process_content").eq(2).attr("onclick", "APP_IRB_NAVIGATION.navigate('PAGE_3_1');")),
                e();
          });
+
       var a = function (e, t) {
          (this.phase = "page1_3"), (this.btn_type = t);
       };
@@ -201,4 +201,7 @@ function addFileInput() {
             .withProperties()
             .prop("btn_type")
             .val("tempSave");
+
+      // Show
+      $(".IRB_review_target").removeClass("hidden");
    });
