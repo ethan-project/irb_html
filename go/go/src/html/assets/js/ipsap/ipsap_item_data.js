@@ -303,6 +303,7 @@ class ItemData {
       var newData = {
         "exp_type_code": users[i].exp_type_code,
         "exp_year_code": users[i].exp_year_code,
+        "animal_mng_flag":  users[i].animal_mng_flag,
         "user_seq": users[i].user_seq,
         "info": users[i].info
       };

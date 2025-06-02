@@ -148,7 +148,6 @@
                                                             value="1"
                                                             class="custom-control-input"
                                                             data-custom-toggle="visible"
-                                                            checked=""
                                                          />
                                                          <label class="custom-control-label" for="type_of_research_1">인간대상연구(실험연구)</label>
                                                       </div>
@@ -181,7 +180,6 @@
                                                             value="1"
                                                             class="custom-control-input"
                                                             data-custom-toggle="visible"
-                                                            checked=""
                                                          />
                                                          <label class="custom-control-label" for="cate_of_research_1">의과학분야</label>
                                                       </div>
@@ -204,7 +202,7 @@
                                                             data-custom-toggle="visible"
                                                          />
                                                          <label class="custom-control-label" for="cate_of_research_4">기타​​</label>
-                                                         <input class="form-control w150 mLeft20" type="text" id="cate_of_research_4_input" />
+                                                         <input class="form-control w150 mLeft20" type="text" name="research_field_check_input4" />
                                                       </div>
                                                    </div>
                                                 </td>
@@ -221,7 +219,6 @@
                                                             value="1"
                                                             class="custom-control-input"
                                                             data-custom-toggle="visible"
-                                                            checked=""
                                                          />
                                                          <label class="custom-control-label" for="level_of_research_1">Level1 (최소위험)</label>
                                                       </div>
@@ -271,7 +268,6 @@
                                                             value="1"
                                                             class="custom-control-input"
                                                             data-custom-toggle="visible"
-                                                            checked=""
                                                          />
                                                          <label class="custom-control-label" for="place_of_research_1">단일기관</label>
                                                       </div>
@@ -285,7 +281,8 @@
                                                             data-custom-toggle="visible"
                                                          />
                                                          <label class="custom-control-label" for="place_of_research_2">다기관​​</label>
-                                                         <input class="form-control w150 mLeft20" type="text" id="place_of_research_2_input" />개
+                                                         <input class="form-control w150 mLeft20" type="number" name="research_institution_check_input2" />
+                                                         <span class="mLeft10">개</span>
                                                       </div>
                                                    </div>
                                                 </td>
@@ -294,13 +291,13 @@
                                                 <td class="text-center">연구 위험성</td>
                                                 <td id="general_director_position" colspan="3" class="pSide15">
                                                    <div class="row col-sm-12 bg-white hm150">
-                                                      <select class="form-control IRB btn-outline-primary small_select col-sm-3" id="type_of_research2">
-                                                         <option value="A" selected="selected">경력 선택</option>
-                                                         <option value="B">심의대상</option>
-                                                         <option value="C">심의면제</option>
+                                                      <select class="form-control IRB btn-outline-primary small_select col-sm-3"  name="general_object" >
+                                                         <option value="0" selected="selected">선택</option>
+                                                         <option value="1">심의대상</option>
+                                                         <option value="2">심의면제</option>
                                                       </select>
                                                       <div class="col-sm-9">
-                                                         <div id="showoptionB" class="col-md-6 hidden">
+                                                         <div id="showoption1" class="col-md-6 hidden">
                                                             <div id="consent_method" class="form-check-inline">
                                                                <div class="custom-control custom-radio">
                                                                   <input type="radio" name="general_judgement" value="1" class="custom-control-input" id="general_judgement_1" />
@@ -312,7 +309,7 @@
                                                                </div>
                                                             </div>
                                                          </div>
-                                                         <div id="showoptionC" class="col-md-6 hidden">
+                                                         <div id="showoption2" class="col-md-6 hidden">
                                                             <div class="col-md-12">
                                                                <label>심의면제 확인서 첨부 :​​</label>
                                                                <a href="javascript:void(0);" onclick="addFileInput()" class="btn btn-outline-green mLeft5 btn-file-add" title="첨부 File 삭제"

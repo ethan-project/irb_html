@@ -32,8 +32,6 @@ function dataMappingFunc(e) {
 }
 function changePageNavigation() {
    g_research_type = $("input:radio[name ='research_type_check']:checked").val();
-
-   console.log("e==>", g_research_type);
    if (g_research_type) {
       appNaviNextPage();
    }
@@ -61,36 +59,40 @@ function addFileInput() {
       function t(t) {
          var a = "research_type_check";
          n = t.getItemData(a).getStringValue("0");
-         console.log("t.getItemData(a)", t.getItemData(a));
 
          if (a == "research_type_check") {
             saveData = t.getItemData(a).getSelectValue(0);
-            console.log("saveData", saveData);
             $(`input:radio[name ='research_type_check']:input[value='${saveData}']`).click(), irbResetLeftNavi(n);
          }
          a = "research_danger_check";
          if (a == "research_danger_check") {
             saveData = t.getItemData(a).getSelectValue(0);
-            console.log("saveData", saveData);
             $(`input:radio[name ='research_danger_check']:input[value='${saveData}']`).click(), irbResetLeftNavi(n);
          }
          a = "research_field_check";
          if (a == "research_field_check") {
             saveData = t.getItemData(a).getSelectValue(0);
-            console.log("saveData", saveData);
-            $(`input:radio[name ='research_field_check']:input[value='${saveData}']`).click(), irbResetLeftNavi(n);
+            $(`input:radio[name ='research_field_check']:input[value='${saveData}']`).click()
+            if (saveData == 4) {
+               saveData = t.getItemData(a).getSelectInputValue(0, 4, 0);
+               $("input[name='research_field_check_input4']").val(saveData);
+            }
+            irbResetLeftNavi(n);
          }
          a = "research_institution_check";
          if (a == "research_institution_check") {
             saveData = t.getItemData(a).getSelectValue(0);
-            console.log("saveData", saveData);
-            $(`input:radio[name ='research_institution_check']:input[value='${saveData}']`).click(), irbResetLeftNavi(n);
+            $(`input:radio[name ='research_institution_check']:input[value='${saveData}']`).click()
+            if (saveData == 2) {
+               saveData = t.getItemData(a).getSelectInputValue(0, 2, 0);
+               $("input[name='research_institution_check_input2']").val(saveData);
+            }
+            irbResetLeftNavi(n);
          }
 
          a = "data_monitoring_check";
          if (a == "data_monitoring_check") {
             saveData = t.getItemData(a).getSelectValue(0);
-            console.log("saveData", saveData);
             for (const id of saveData) {
                $(`input:checkbox[name='data_monitoring_check'][value='${id}']`).prop("checked", true);
                irbResetLeftNavi(n);
@@ -101,57 +103,53 @@ function addFileInput() {
          // (g_for_people = n), 1 == n ? $('input:checkbox[id="general_human_research"]').attr("checked", !0) : $('input:checkbox[id="general_human_research"]').attr("checked", !1);
          // a = "general_body_research";
          // 1 == (n = t.getItemData(a).getStringValue("0")) ? $('input:checkbox[id="general_body_research"]').attr("checked", !0) : $('input:checkbox[id="general_body_research"]').attr("checked", !1);
-         //정규 심의
-         // 신속 심의
 
+         //general_judgement
          (a = "general_judgement"), (n = t.getItemData(a).getStringValue("0"));
-         console.log("n => general_judgement", n);
          $(`input:radio[name ='general_judgement']:input[value='${n}']`).click(), $(".card").removeClass("hidden");
-         $("#type_of_research2").on("change", (e) => {
-            console.log(e.currentTarget);
-            const selectedValue = $(e.currentTarget).val();
-            console.log(selectedValue);
-            if (selectedValue === "B") {
-               //$("#showoptionB").removeClass("hidden").addClass("show").fadeIn();
-               if ($("#showoptionB").hasClass("hidden")) {
-                  $("#showoptionB").removeClass("hidden");
-                  $("#showoptionB").addClass("show").fadeIn();
-               }
-               if ($("#showoptionC").hasClass("show")) {
-                  $("#showoptionC").removeClass("show");
-                  $("#showoptionC").addClass("hidden").css("display", "none").fadeIn();
-               }
+
+         //general_object
+         $('select[name="general_object"]').on("change", function () {
+            const val = $(this).val();
+            const $opt1 = $("#showoption1");
+            const $opt2 = $("#showoption2");
+
+            $opt1.removeClass("show").addClass("hidden").hide();
+            $opt2.removeClass("show").addClass("hidden").hide();
+
+            if (val === "1") {
+               $opt1.removeClass("hidden").addClass("show").fadeIn();
             }
-            if (selectedValue === "C") {
-               //$("#showoptionC").removeClass("hidden").addClass("show").fadeIn();
-               if ($("#showoptionC").hasClass("hidden")) {
-                  $("#showoptionC").removeClass("hidden");
+
+            if (val === "2") {
+               if (!$opt2.hasClass("show")) {
+                  $opt2.removeClass("hidden").addClass("show").fadeIn();
                   $("#doc_required_expt_form").append(`
-                        <div class="flexMid mTop15 w500" id="box_04-1-1">
-                          <div class="custom-file">
-                            <input type="file" name="file_04-1-1" class="custom-file-input " id="file_04-1-1">
-                            <label class="custom-file-label" for="file_04-1-1" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
-                          </div>
-                          <a href="javascript:void(0);"  onclick="removeFileInput(1)" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제"><i class="far fa-trash-alt"></i></a>
-                        </div>`);
-                  $("#showoptionC").addClass("show").fadeIn();
+                     <div class="flexMid mTop15 w500" id="box_04-1-1">
+                        <div class="custom-file">
+                           <input type="file" name="file_04-1-1" class="custom-file-input" id="file_04-1-1">
+                           <label class="custom-file-label" for="file_04-1-1" data-button-text="첨부 File 선택">File을 선택해 주세요.</label>
+                        </div>
+                        <a href="javascript:void(0);" onclick="removeFileInput(1)" class="btn btn-outline-danger mLeft5 btn-file-delete" title="첨부 File 삭제">
+                           <i class="far fa-trash-alt"></i>
+                        </a>
+                     </div>
+                     `);
                }
-               if ($("#showoptionB").hasClass("show")) {
-                  $("#showoptionB").removeClass("show");
-                  $("#showoptionB").addClass("hidden").css("display", "none").fadeIn();
-               }
-            }
-            if (selectedValue == "A") {
-               $("#showoptionC").removeClass("show").addClass("hidden").fadeIn();
-               $("#showoptionB").removeClass("show").addClass("hidden").fadeIn();
             }
          });
+         (a = "general_object"), (n = t.getItemData(a).getStringValue("0"));
+         console.log("n => general_object", n);
+         $('select[name="general_object"]').val(n).trigger("change"); // trigger => call change event
       }
 
       loadApplicationParams(),
          (g_AppItemParser = new ItemParser(g_AppInfo.appSeq)),
          g_AppItemParser.load(
-            { "filter.query_items": "research_type_check,research_danger_check,research_field_check,research_institution_check,data_monitoring_check,research_field_etc_input,general_judgement" },
+            {
+               "filter.query_items":
+                  "research_type_check,research_danger_check,research_field_check,research_institution_check,data_monitoring_check,research_field_etc_input,general_judgement,general_object ",
+            },
             t
          ),
          $(".reset_review_type").change(function () {

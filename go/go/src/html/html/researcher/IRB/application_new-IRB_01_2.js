@@ -7,13 +7,14 @@ function makeExptUserList() {
    let r = g_AppItemParser.managedItems[e].member;
    $.each(r, function (e, t) {
       (t.info.tmp_phoneno = t.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")), (t.info.tmp_edu_date = t.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"));
+
       var r = `general_expt_${t.user_seq}_radio`,
          a = makeCourseList(t.user_seq);
       n += `\n      <tr data-id="${t.user_seq}" item_name="general_expt">\n
                <td>\n
                   <div class="custom-radio mLeft20">\n
                      <div class="radio radio-primary form-check-inline">
-                        <input type="radio" id="${r}" name="general_expt" value="${t.user_seq}">
+                        <input type="radio" id="${r}" name="exp_manager" value="${t.user_seq}">
                         <label for="type1"></label>
                      </div>\n
                   </div>\n
@@ -94,7 +95,7 @@ function makeOtherStaffList() {
             var t = "general_director",
                n = e.getItemData(t);
             if (null == n.dataObj.saved_data) return;
-            (n.dataObj.saved_data.data[0].animal_mng_flag = 0), n.initMembers();
+            (n.dataObj.saved_data.data[0].animal_mng_flag = 0), n.initMembersIRB();
             let a = n.dataObj.saved_data.data[0];
 
             if (a) {
