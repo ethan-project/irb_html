@@ -2,28 +2,29 @@ function makeExptUserList() {
    var e = "general_expt",
       t = g_AppItemParser.getItemData(e);
    savedData = t.dataObj.saved_data.data;
-   // if (savedData) {
-   //    console.log("savedData", savedData);
-   // }
+
    n = '<tbody id="general_expt">';
    let r = g_AppItemParser.managedItems[e].member;
    $.each(r, function (e, t) {
       (t.info.tmp_phoneno = t.info.phoneno.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, "$1-$2-$3")), (t.info.tmp_edu_date = t.info.edu_date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"));
       var r = `general_expt_${t.user_seq}_radio`,
          a = makeCourseList(t.user_seq);
-      n += `\n      <tr data-id="${t.user_seq}" item_name="general_expt">\n        <td>\n          <div class="custom-radio">\n     
-               <div class="radio radio-primary form-check-inline">
-                  <input type="radio" id="${r}" name="exp_manager" value="${t.user_seq}">
-                  <label for="type1" class="mLeft10"></label>
-               </div>\n       
-                </div>\n        </td>\n      
-                  <td>${t.info.name}</td>\n   
-                       <td>${t.info.dept_str}</td>\n     
-                          <td>${t.info.position_str}</td>\n    
-                              <td>${t.info.major_field_str}</td>\n   
-                                   <td>${t.info.tmp_phoneno}</td>\n     
-                                      <td>${t.info.email}</td>\n      
-                                        <td>${a}</td>\n        <td>\n     
+      n += `\n      <tr data-id="${t.user_seq}" item_name="general_expt">\n
+               <td>\n
+                  <div class="custom-radio mLeft20">\n
+                     <div class="radio radio-primary form-check-inline">
+                        <input type="radio" id="${r}" name="general_expt" value="${t.user_seq}">
+                        <label for="type1"></label>
+                     </div>\n
+                  </div>\n
+                </td>\n
+                  <td>${t.info.name}</td>\n
+                       <td>${t.info.dept_str}</td>\n
+                          <td>${t.info.position_str}</td>\n
+                              <td>${t.info.major_field_str}</td>\n
+                                   <td>${t.info.tmp_phoneno}</td>\n
+                                      <td>${t.info.email}</td>\n
+                                        <td>${a}</td>\n        <td>\n
                                              <a href="javascript:void(0);" class="btn btn-xs btn-outline-danger btn-staff-delete"><i class=""></i>삭제</a>\n        </td>\n      </tr>`;
    }),
       (n +=
@@ -31,11 +32,7 @@ function makeExptUserList() {
       $("#general_expt").replaceWith(n),
       $.each(r, function (e, t) {
          var n = `general_expt_${t.user_seq}_radio`;
-         // if (t) {
-         //    console.log("t", t);
-         //    console.log("e", e);
-         // }
-         t.animal_mng_flag > 0 && $("#" + n).prop("checked", !0), console.log("savedData[e]?.edu_course", typeof savedData);
+         t.animal_mng_flag > 0 && $("#" + n).prop("checked", !0)
          savedData.length > 0 && savedData[e]?.edu_course && mappingCourseList(t.user_seq, JSON.parse(savedData[e]?.edu_course));
       }),
       $("input[name=exp_manager]").on("change", function () {
@@ -43,6 +40,7 @@ function makeExptUserList() {
          t.changeAttrForMember(e, "animal_mng_flag", 1);
       });
 }
+
 function mappingCourseList(e, t) {
    console.log(e, t);
    let n = !1;
@@ -51,26 +49,16 @@ function mappingCourseList(e, t) {
    }),
       n && $(`.course_${e}`).click();
 }
-function changeHeightBox(state) {
-   if (state) {
-      $("#box_expand1").css("height", "220px");
-      $("#box_expand2").css("height", "220px");
-   } else {
-      $("#box_expand1").css("height", "auto");
-      $("#box_expand2").css("height", "auto");
-   }
-}
+
 function makeCourseList(e) {
    let t = $("#general_director").data("course-title")?.split(","),
-      n = `\n    <button class="btn btn-xs btn-outline-primary course_${e} show w100p" data-toggle="collapse" data-target=".course_${e}" onclick="changeHeightBox(true)">교육이수 정보 입력</button>\n    <div class="course_${e} collapse">`;
+      n = `\n    <button class="btn btn-xs btn-outline-primary course_${e} show w100p" data-toggle="collapse" data-target=".course_${e}">교육이수 정보 입력</button>\n    <div class="course_${e} collapse">`;
    for (course_no in t)
       n += `\n      <div class="flexMid text-left mBot10">\n       
             <span class="w110 left mRight5">${t[course_no]}</span>\n      
             <input type="text" id="${t[course_no]}_${e}" class="form-control form-control-sm w150">\n    
         </div>\n    `;
-   return (
-      (n += `\n      <button class="btn btn-xs btn-outline-secondary w100p mTop5" data-toggle="collapse" data-target=".course_${e}" onclick="changeHeightBox(false)">입력 취소</button>\n    </div>`), n
-   );
+   return (n += `\n      <button class="btn btn-xs btn-outline-secondary w100p mTop5" data-toggle="collapse" data-target=".course_${e}">입력 취소</button>\n    </div>`), n;
 }
 function openModelOtherStaff() {
    makeOtherStaffList(), $("#modal_staff").modal("show");

@@ -159,6 +159,7 @@ br+.footer_item::before  { content:none !important; }
 .center     { text-align:center; }
 
 /* Spacing */
+.mLeft-5     { margin-left:-5px      !important; }
 .mLeft-10     { margin-left:-10px      !important; }
 .mLeft-15     { margin-left:-15px      !important; }
 .mLeft0     { margin-left:0      !important; }
@@ -1077,7 +1078,9 @@ nav,
 /* Form */
 .form-group                           { margin-bottom:15px; }
 input[type=file]                      { cursor:pointer; }
-.custom-file-label::after             { content:attr(data-button-text); }
+.custom-file-label::after             { content:attr(data-button-text);  }
+.IRB .custom-file-label::after             { content:attr(data-button-text); background-color: #E1872D; color: white; }
+
 .custom-control                       { min-height:0; }
 .custom-control-label                 { padding-top:0; line-height:1rem; }
 .custom-control-label::before,

@@ -8,8 +8,17 @@
    text-align: center;
    padding: 17px;
 }
+.irb_text_break {
+   text-align: center;
+   word-wrap: break-word; /* Break long words */
+   word-break: break-word; /* Break words when necessary */
+   white-space: normal; /* Allow wrapping */
+}
 .irb_tr_yellow {
    background-color: #fff9f3;
+}
+.irb_tr_odd_yellow td:nth-child(odd) {
+    background-color: #fff9f3;
 }
 .irb_yellow {
    background-color: #fff9f3;
@@ -45,6 +54,7 @@
    height: 150px;
    background-color: #fff9f3;
 }
+
 
 .irb_box_yellow_w15 {
    background-color: #fff9f3;
